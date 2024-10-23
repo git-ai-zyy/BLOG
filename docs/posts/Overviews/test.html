@@ -6,8 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Yuyang Zhang">
 <meta name="dcterms.date" content="2024-10-23">
+<meta name="description" content="This is an overview of the generative models">
 
 <title>This is the test Image – Yuyang’s Blog</title>
 <style>
@@ -182,7 +182,12 @@ window.Quarto = {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">This is the test Image</h1>
-                                <div class="quarto-categories">
+                  <div>
+        <div class="description">
+          This is an overview of the generative models
+        </div>
+      </div>
+                          <div class="quarto-categories">
                 <div class="quarto-category">Deep Learning</div>
                 <div class="quarto-category">Reinforcement Learning</div>
                 <div class="quarto-category">Generative Model</div>
@@ -193,20 +198,20 @@ window.Quarto = {
   
   <div class="quarto-title-meta">
 
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Yuyang Zhang </p>
-            </div>
-    </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 23, 2024</p>
+        <p class="date">2024-10-23</p>
       </div>
     </div>
     
+      <div>
+      <div class="quarto-title-meta-heading">Last modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">2024-10-23</p>
+      </div>
+    </div>
       
     </div>
     
@@ -233,6 +238,7 @@ window.Quarto = {
   <li><a href="#anomaly-detection" id="toc-anomaly-detection" class="nav-link" data-scroll-target="#anomaly-detection">Anomaly Detection</a></li>
   <li><a href="#data-compressing" id="toc-data-compressing" class="nav-link" data-scroll-target="#data-compressing">Data Compressing</a></li>
   </ul></li>
+  <li><a href="#exercise-2.40" id="toc-exercise-2.40" class="nav-link" data-scroll-target="#exercise-2.40">exercise-2.40</a></li>
   </ul>
 </nav>
 </nav>
@@ -251,7 +257,10 @@ window.Quarto = {
 p(\mathrm{x} | \mathrm{c}, \mathrm{w})
 \]</span> where the <span class="math inline">\(\mathrm{c}\)</span> represents a vector of conditioning variables, for example, a class label(cat, dog,…), a sentence, and the <span class="math inline">\(\mathrm{w}\)</span> represent the learnable parameters of the models.</p>
 <p>Ho<em>weve</em>r, for real world application, the distribution is extremely complex so that we need deep neural network to improved the <u>performance</u> of generative models. There are several important deep generative models:</p>
-<ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><a href="https://quarto.org/docs/websites/website-listings.html">Another Link</a></p>
+</div></div><ul>
 <li>Auto-regressive language model: generate next token based on previous one.</li>
 <li>Models based on <strong>non-linear latent variable models</strong>:
 <ul>
@@ -265,7 +274,8 @@ p(\mathrm{x} | \mathrm{c}, \mathrm{w})
 <li>Deep Energy Based Model</li>
 </ul></li>
 </ul>
-<div id="8d36924a" class="cell">
+<p><a href="https://quarto.org/docs/websites/website-listings.html">external Lin</a></p>
+<div id="9a586ac5" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Heelod World"</span>)<span class="bu">print</span>(<span class="st">"Heelod World"</span>)<span class="bu">print</span>(<span class="st">"Heelod World"</span>)<span class="bu">print</span>(<span class="st">"Heelod World"</span>)<span class="bu">print</span>(<span class="st">"Heelod World"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -322,9 +332,13 @@ p(\mathrm{x} | \mathrm{c}, \mathrm{w})
 <p>asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf</p>
 <p>asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf</p>
 <p>asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf v</p>
-
-
 </section>
+</section>
+<section id="exercise-2.40" class="level1">
+<h1>exercise-2.40</h1>
+<p>This is another chapter</p>
+
+
 </section>
 
 
@@ -584,6 +598,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

@@ -4,14 +4,14 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this blog"
+    "text": "About this blog I’m introducing in how to design and and summary the what has learnd in the"
   },
   {
     "objectID": "posts/Overviews/test.html",
     "href": "posts/Overviews/test.html",
     "title": "This is the test Image",
     "section": "",
-    "text": "The Generative Models use machine learning and deep learning to learn a distribution from training data and then generate new examples from the distribution. The general form can be represented as: \\[\np(\\mathrm{x} | \\mathrm{c}, \\mathrm{w})\n\\] where the \\(\\mathrm{c}\\) represents a vector of conditioning variables, for example, a class label(cat, dog,…), a sentence, and the \\(\\mathrm{w}\\) represent the learnable parameters of the models.\nHowever, for real world application, the distribution is extremely complex so that we need deep neural network to improved the performance of generative models. There are several important deep generative models:\nShow the code\nprint(\"Heelod World\")print(\"Heelod World\")print(\"Heelod World\")print(\"Heelod World\")print(\"Heelod World\")"
+    "text": "The Generative Models use machine learning and deep learning to learn a distribution from training data and then generate new examples from the distribution. The general form can be represented as: \\[\np(\\mathrm{x} | \\mathrm{c}, \\mathrm{w})\n\\] where the \\(\\mathrm{c}\\) represents a vector of conditioning variables, for example, a class label(cat, dog,…), a sentence, and the \\(\\mathrm{w}\\) represent the learnable parameters of the models.\nHowever, for real world application, the distribution is extremely complex so that we need deep neural network to improved the performance of generative models. There are several important deep generative models:\nexternal Lin\nShow the code\nprint(\"Heelod World\")print(\"Heelod World\")print(\"Heelod World\")print(\"Heelod World\")print(\"Heelod World\")"
   },
   {
     "objectID": "posts/Overviews/test.html#semi-supervised-learning",
@@ -51,8 +51,8 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Blog",
+    "title": "Yuyang’s Blog",
     "section": "",
-    "text": "This is the test Image\n\n\n\n\n\n\nDeep Learning\n\n\nReinforcement Learning\n\n\nGenerative Model\n\n\n\n\n\n\n\n\n\nOct 23, 2024\n\n\nYuyang Zhang\n\n\n\n\n\n\nNo matching items"
+    "text": "This is the test Image\n\n\n\n\n\n\nDeep Learning\n\n\nReinforcement Learning\n\n\nGenerative Model\n\n\n\nThis is an overview of the generative models\n\n\n\n\n\nOct 23, 2024\n\n\n4 min\n\n\n646 words\n\n\n10/23/24, 8:51:06 PM\n\n\n\n\n\n\nNo matching items"
   }
 ]

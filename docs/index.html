@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Blog – Yuyang’s Blog</title>
+<title>Yuyang’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-date','listing-title','listing-author','listing-reading-time','listing-description','listing-word-count','listing-categories','listing-file-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
@@ -176,7 +176,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <h1 class="title">Blog</h1>
+      <h1 class="title">Yuyang’s Blog</h1>
                       </div>
   </div>
     
@@ -209,7 +209,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Deep Learning,Reinforcement Learning,Generative Model" data-listing-date-sort="1729685465000" data-listing-file-modified-sort="1729685465363" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="638">
+<div class="quarto-post image-right" data-index="0" data-categories="Deep Learning,Reinforcement Learning,Generative Model" data-listing-date-sort="1729612800000" data-listing-file-modified-sort="1729687866338" data-listing-date-modified-sort="1729687866000" data-listing-reading-time-sort="4" data-listing-word-count-sort="646">
 <div class="thumbnail">
 <p><a href="./posts/Overviews/test.html" class="no-external"></a></p><a href="./posts/Overviews/test.html" class="no-external">
 <p><img loading="lazy" src="./posts/Overviews/Images/DDPG.jpg" class="thumbnail-image"></p>
@@ -234,7 +234,7 @@ Generative Model
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/Overviews/test.html" class="no-external">The Generative Models <strong>use machine</strong> learning and deep learning to learn a distribution from training data and then generate new examples from the distribution. The general…<span class="math display"></span><span class="math inline"></span><span class="math inline"></span></a>
+<a href="./posts/Overviews/test.html" class="no-external">This is an overview of the generative models</a>
 </div>
 </div>
 <div class="metadata">
@@ -242,8 +242,14 @@ Generative Model
 <div class="listing-date">
 Oct 23, 2024
 </div>
-<div class="listing-author">
-Yuyang Zhang
+<div class="listing-reading-time">
+4 min
+</div>
+<div class="metadata-value listing-word-count">
+646 words
+</div>
+<div class="metadata-value listing-file-modified">
+10/23/24, 8:51:06 PM
 </div>
 </a>
 </div>
@@ -503,6 +509,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
