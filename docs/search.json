@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/Overviews/test.html",
+    "href": "posts/Overviews/test.html",
+    "title": "This is the test Image",
+    "section": "",
+    "text": "The Generative Models use machine learning and deep learning to learn a distribution from training data and then generate new examples from the distribution. The general form can be represented as: \\[\np(\\mathrm{x} | \\mathrm{c}, \\mathrm{w})\n\\] where the \\(\\mathrm{c}\\) represents a vector of conditioning variables, for example, a class label(cat, dog,…), a sentence, and the \\(\\mathrm{w}\\) represent the learnable parameters of the models.\nHowever, for real world application, the distribution is extremely complex so that we need deep neural network to improved the performance of generative models. There are several important deep generative models:\nShow the code\nprint(\"Heelod World\")print(\"Heelod World\")print(\"Heelod World\")print(\"Heelod World\")print(\"Heelod World\")"
+  },
+  {
+    "objectID": "posts/Overviews/test.html#semi-supervised-learning",
+    "href": "posts/Overviews/test.html#semi-supervised-learning",
+    "title": "This is the test Image",
+    "section": "Semi-Supervised Learning",
+    "text": "Semi-Supervised Learning"
+  },
+  {
+    "objectID": "posts/Overviews/test.html#imitation-learning",
+    "href": "posts/Overviews/test.html#imitation-learning",
+    "title": "This is the test Image",
+    "section": "Imitation Learning",
+    "text": "Imitation Learning"
+  },
+  {
+    "objectID": "posts/Overviews/test.html#anomaly-detection",
+    "href": "posts/Overviews/test.html#anomaly-detection",
+    "title": "This is the test Image",
+    "section": "Anomaly Detection",
+    "text": "Anomaly Detection"
+  },
+  {
+    "objectID": "posts/Overviews/test.html#data-compressing",
+    "href": "posts/Overviews/test.html#data-compressing",
+    "title": "This is the test Image",
+    "section": "Data Compressing",
+    "text": "Data Compressing\nasda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf\nasda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf v asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf\nasda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf\nasda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf\nasda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf\nasda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf v"
+  },
+  {
+    "objectID": "posts/Overviews/test.html#footnotes",
+    "href": "posts/Overviews/test.html#footnotes",
+    "title": "This is the test Image",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThe evaluation of generative models is a challenging problem. The most common way is to use human evaluation, but it is time-consuming and expensive. The other way is to use the likelihood of the model, but it is not always correlated with the quality of the generated samples.↩︎"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "This is the test Image\n\n\n\n\n\n\nDeep Learning\n\n\nReinforcement Learning\n\n\nGenerative Model\n\n\n\n\n\n\n\n\n\nOct 23, 2024\n\n\nYuyang Zhang\n\n\n\n\n\n\nNo matching items"
+  }
+]
