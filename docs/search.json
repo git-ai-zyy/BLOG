@@ -2,9 +2,9 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "About this blog I’m introducing in how to design and and summary the what has learnd in the"
+    "text": "I am a master student of Singapore Management University majoring in IT in Business with AI track. I am passionate about AI. I have a strong background in computer science and big data. I am proficient in Python. I have experience in machine learning, deep learning. I am a quick learner and a good team player. I like to learn new things summary and show them with each other. Currently I’m looking for a full-time job in AI field."
   },
   {
     "objectID": "posts/Overviews/Overview_PGM.html",
@@ -61,5 +61,40 @@
     "title": "Yuyang’s Blog",
     "section": "",
     "text": "Dive into: Attention is all you need\n\n\n\n\n\n\nPaper\n\n\nCode Implementation\n\n\n\nThis is my understanding of the paper Attention is all you need. This paper introduces the most important model in the Deep Learning field: Transformer. The Transformer is the corner stone of current Large Language Model. This blog includes theory and implmentation of the Transformer using Pytorch from scratch.\n\n\n\n\n\nOct 25, 2024\n\n\n1 min\n\n\n3 words\n\n\n10/25/24, 12:46:44 AM\n\n\n\n\n\n\n\n\n\n\n\n\nOverview: Probabilistic Graphical Models\n\n\n\n\n\n\nProbability\n\n\nOverview\n\n\n\nThis is an overview of Probabilistic Graphical Models. It includes the definition of the Probabilistic Graphical Models, different types of PGMs like Bayesian Networks, Markov Networks, and the different inference algorithms like Variable Elimination, Gibbs Sampling, and Belief Propagation, Variance Inference. Also, it includes the learning methods like Maximum Likelihood Estimation, Maximum A Posteriori Estimation, and Expectation Maximization. \n\n\n\n\n\nOct 25, 2024\n\n\n1 min\n\n\n1 words\n\n\n10/25/24, 12:43:09 AM\n\n\n\n\n\n\n\n\n\n\n\n\nOverview: Optimization Algorithms\n\n\n\n\n\n\nOptmization\n\n\nOverview\n\n\n\nThis is an overview of the Optmization Algorithms. It includes the definition of the optimization algorithms, the most popular optimization algorithms like first-order optmization(e.g. SGD), higher-order optmization(e.g. Newton’s Method) algorithms. Besides, it also includes the applications of those models.\n\n\n\n\n\nOct 25, 2024\n\n\n1 min\n\n\n1 words\n\n\n10/25/24, 12:43:06 AM\n\n\n\n\n\n\n\n\n\n\n\n\nOverview: Deep Reinforcement Learning\n\n\n\n\n\n\nReinforcement Learning\n\n\nOverview\n\n\n\nThis is an overview of the Deep Reinforcement Learning. It includes the defintion of the deep reinforcement learning, some popular algorithms for example deep Q learning and variants, policy gradient methods and actor-critic methods for example A3C, DDPG, and PPO. Besides, it also includes the applications of those models.\n\n\n\n\n\nOct 25, 2024\n\n\n1 min\n\n\n1 words\n\n\n10/25/24, 12:43:03 AM\n\n\n\n\n\n\n\n\n\n\n\n\nOverview: Deep Generative Models\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nThis is an overview of the Deep Generative Models. It includes the most popular generative models like VAE, GAN, and Flow-based models. Besides, it also includes the applications of those models.\n\n\n\n\n\nOct 25, 2024\n\n\n1 min\n\n\n1 words\n\n\n10/25/24, 12:43:00 AM\n\n\n\n\n\n\n\n\n\n\n\n\nOverview: (Multimodal) Large Language Models\n\n\n\n\n\n\nLLM\n\n\nOverview\n\n\n\nThis is an overview of the Muultimodal Large Language Models. It includes the defintion of the large language models, the multimodal large language models, and the applications of those models. Besides, it also includes to fine-tune those models with different methods like LoRA.\n\n\n\n\n\nOct 25, 2024\n\n\n1 min\n\n\n7 words\n\n\n10/25/24, 12:42:57 AM\n\n\n\n\n\n\n\n\n\n\n\n\nOverview: Deep Meta Learning\n\n\n\n\n\n\nMeta Learning\n\n\nOverview\n\n\n\nThis is an overview of the Meta Learning. It includes the definition of the multi-task learning, transfer learning and meta learning. Three most common types of meta-learning algorithms, metric learning, model-based learning, and optimization-based learning are also included. Besides, it also includes the applications of those models.\n\n\n\n\n\nOct 25, 2024\n\n\n1 min\n\n\n1 words\n\n\n10/25/24, 12:42:54 AM\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About Me",
+    "section": "Education",
+    "text": "Education\nSingapore Management University | Singapre Master of IT in Business(AI track) | Sept 2023 -\nUniversity of Wollongong | Computer Science B.S in Big Data | March 2020 - March 2023"
+  },
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "About Me",
+    "section": "",
+    "text": "Wengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018"
+  },
+  {
+    "objectID": "about.html#technical-skills",
+    "href": "about.html#technical-skills",
+    "title": "About Me",
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\nMachine Learning & Deep Learning\nComputer Vision\nNatural Language Processing\nReinforcement Learning\nMeta Learning\nGenerative Model\nUnsupervised Learning\nLarge Language Model\nConvex Optmization\nProbabilitic Graphical Model\nDeep Graph Learning"
+  },
+  {
+    "objectID": "about.html#projects",
+    "href": "about.html#projects",
+    "title": "About Me",
+    "section": "Projects",
+    "text": "Projects"
+  },
+  {
+    "objectID": "about.html#education-1",
+    "href": "about.html#education-1",
+    "title": "About Me",
+    "section": "Education",
+    "text": "Education\nSingapore Management University | Singapre Master of IT in Business(AI track) | Sept 2023 -\nUniversity of Wollongong | Computer Science B.S in Big Data | March 2020 - March 2023"
   }
 ]
