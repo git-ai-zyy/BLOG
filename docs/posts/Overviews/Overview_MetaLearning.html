@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-10-25">
+<meta name="description" content="This is an overview of the Meta Learning. It includes the definition of the multi-task learning, transfer learning and meta learning. Three most common types of meta-learning algorithms, metric learning, model-based learning, and optimization-based learning are also included. Besides, it also includes the applications of those models.">
 
-<title>Yuyang’s Blog</title>
+<title>Overview: Deep Meta Learning – Yuyang’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,68 +70,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-author','listing-reading-time','listing-description','listing-word-count','listing-categories','listing-file-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Yuyang’s Blog">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Overview: Deep Meta Learning – Yuyang’s Blog">
+<meta property="og:description" content="This is an overview of the Meta Learning. It includes the definition of the multi-task learning, transfer learning and meta learning. Three most common types of meta-learning algorithms, metric learning, model-based learning, and optimization-based learning are also included. Besides, it also includes the applications of those models.">
+<meta property="og:image" content="Images/Overview_DML.png">
 <meta property="og:site_name" content="Yuyang's Blog">
 </head>
 
@@ -142,7 +86,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Yuyang’s Blog</span>
     </a>
   </div>
@@ -153,7 +97,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -177,339 +121,70 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Yuyang’s Blog</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Overview: Deep Meta Learning</h1>
+                  <div>
+        <div class="description">
+          This is an overview of the Meta Learning. It includes the definition of the multi-task learning, transfer learning and meta learning. Three most common types of meta-learning algorithms, metric learning, model-based learning, and optimization-based learning are also included. Besides, it also includes the applications of those models.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Meta Learning</div>
+                <div class="quarto-category">Overview</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">2024-10-25</p>
+      </div>
+    </div>
     
+      <div>
+      <div class="quarto-title-meta-heading">Last modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">2024-10-25</p>
+      </div>
+    </div>
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#overview-of-the-deep-meta-learning" id="toc-overview-of-the-deep-meta-learning" class="nav-link active" data-scroll-target="#overview-of-the-deep-meta-learning">Overview of the Deep Meta Learning</a></li>
+  </ul>
+</nav>
+</nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Code Implementation">Code Implementation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Generative Model">Generative Model <span class="quarto-category-count">(1)</span></div><div class="category" data-category="LLM">LLM <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Meta Learning">Meta Learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Optmization">Optmization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Overview">Overview <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Paper">Paper <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Probability">Probability <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Reinforcement Learning">Reinforcement Learning <span class="quarto-category-count">(1)</span></div></div></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="overview-of-the-deep-meta-learning" class="level1">
+<h1>Overview of the Deep Meta Learning</h1>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Paper,Code Implementation" data-listing-date-sort="1729785600000" data-listing-file-modified-sort="1729788190932" data-listing-date-modified-sort="1729788190000" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/Papers/Attention_is_all_you_need.html" class="no-external"></a></p><a href="./posts/Papers/Attention_is_all_you_need.html" class="no-external">
-<p><img loading="lazy" src="./posts/Papers/Images/Attention_is_all_your_need.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/Papers/Attention_is_all_you_need.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Papers/Attention_is_all_you_need.html" class="no-external">Dive into: Attention is all you need</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Papers/Attention_is_all_you_need.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Paper'); return false;">
-Paper
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Code Implementation'); return false;">
-Code Implementation
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Papers/Attention_is_all_you_need.html" class="no-external">This is my understanding of the paper Attention is all you need. This paper introduces the most important model in the Deep Learning field: Transformer. The Transformer is the corner stone of current Large Language Model. This blog includes theory and implmentation of the Transformer using Pytorch from scratch.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Papers/Attention_is_all_you_need.html" class="no-external">
-<div class="listing-date">
-Oct 25, 2024
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-<div class="metadata-value listing-word-count">
-1 words
-</div>
-<div class="metadata-value listing-file-modified">
-10/25/24, 12:43:10 AM
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Probability,Overview" data-listing-date-sort="1729785600000" data-listing-file-modified-sort="1729788189129" data-listing-date-modified-sort="1729788189000" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/Overviews/Overview_PGM.html" class="no-external"></a></p><a href="./posts/Overviews/Overview_PGM.html" class="no-external">
-<p><img loading="lazy" src="./posts/Overviews/Images/Overview_PGM.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/Overviews/Overview_PGM.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Overviews/Overview_PGM.html" class="no-external">Overview: Probabilistic Graphical Models</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Overviews/Overview_PGM.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Probability'); return false;">
-Probability
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Overview'); return false;">
-Overview
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Overviews/Overview_PGM.html" class="no-external">This is an overview of Probabilistic Graphical Models. It includes the definition of the Probabilistic Graphical Models, different types of PGMs like Bayesian Networks, Markov Networks, and the different inference algorithms like Variable Elimination, Gibbs Sampling, and Belief Propagation, Variance Inference. Also, it includes the learning methods like Maximum Likelihood Estimation, Maximum A Posteriori Estimation, and Expectation Maximization. </a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Overviews/Overview_PGM.html" class="no-external">
-<div class="listing-date">
-Oct 25, 2024
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-<div class="metadata-value listing-word-count">
-1 words
-</div>
-<div class="metadata-value listing-file-modified">
-10/25/24, 12:43:09 AM
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Optmization,Overview" data-listing-date-sort="1729785600000" data-listing-file-modified-sort="1729788186579" data-listing-date-modified-sort="1729788186000" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/Overviews/Overview_Optimization.html" class="no-external"></a></p><a href="./posts/Overviews/Overview_Optimization.html" class="no-external">
-<p><img loading="lazy" src="./posts/Overviews/Images/Overview_OA.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/Overviews/Overview_Optimization.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Overviews/Overview_Optimization.html" class="no-external">Overview: Optimization Algorithms</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Overviews/Overview_Optimization.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Optmization'); return false;">
-Optmization
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Overview'); return false;">
-Overview
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Overviews/Overview_Optimization.html" class="no-external">This is an overview of the Optmization Algorithms. It includes the definition of the optimization algorithms, the most popular optimization algorithms like first-order optmization(e.g.&nbsp;SGD), higher-order optmization(e.g.&nbsp;Newton’s Method) algorithms. Besides, it also includes the applications of those models.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Overviews/Overview_Optimization.html" class="no-external">
-<div class="listing-date">
-Oct 25, 2024
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-<div class="metadata-value listing-word-count">
-1 words
-</div>
-<div class="metadata-value listing-file-modified">
-10/25/24, 12:43:06 AM
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Reinforcement Learning,Overview" data-listing-date-sort="1729785600000" data-listing-file-modified-sort="1729788183254" data-listing-date-modified-sort="1729788183000" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/Overviews/Overview_DeepRL.html" class="no-external"></a></p><a href="./posts/Overviews/Overview_DeepRL.html" class="no-external">
-<p><img loading="lazy" src="./posts/Overviews/Images/Overview_DRL.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/Overviews/Overview_DeepRL.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Overviews/Overview_DeepRL.html" class="no-external">Overview: Deep Reinforcement Learning</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Overviews/Overview_DeepRL.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Reinforcement Learning'); return false;">
-Reinforcement Learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Overview'); return false;">
-Overview
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Overviews/Overview_DeepRL.html" class="no-external">This is an overview of the Deep Reinforcement Learning. It includes the defintion of the deep reinforcement learning, some popular algorithms for example deep Q learning and variants, policy gradient methods and actor-critic methods for example A3C, DDPG, and PPO. Besides, it also includes the applications of those models.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Overviews/Overview_DeepRL.html" class="no-external">
-<div class="listing-date">
-Oct 25, 2024
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-<div class="metadata-value listing-word-count">
-1 words
-</div>
-<div class="metadata-value listing-file-modified">
-10/25/24, 12:43:03 AM
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Generative Model,Overview" data-listing-date-sort="1729785600000" data-listing-file-modified-sort="1729788180534" data-listing-date-modified-sort="1729788180000" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/Overviews/Overview_DeepGenerativeModel.html" class="no-external"></a></p><a href="./posts/Overviews/Overview_DeepGenerativeModel.html" class="no-external">
-<p><img loading="lazy" src="./posts/Overviews/Images/Overview_DGM.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/Overviews/Overview_DeepGenerativeModel.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Overviews/Overview_DeepGenerativeModel.html" class="no-external">Overview: Deep Generative Models</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Overviews/Overview_DeepGenerativeModel.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Generative Model'); return false;">
-Generative Model
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Overview'); return false;">
-Overview
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Overviews/Overview_DeepGenerativeModel.html" class="no-external">This is an overview of the Deep Generative Models. It includes the most popular generative models like VAE, GAN, and Flow-based models. Besides, it also includes the applications of those models.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Overviews/Overview_DeepGenerativeModel.html" class="no-external">
-<div class="listing-date">
-Oct 25, 2024
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-<div class="metadata-value listing-word-count">
-1 words
-</div>
-<div class="metadata-value listing-file-modified">
-10/25/24, 12:43:00 AM
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="LLM,Overview" data-listing-date-sort="1729785600000" data-listing-file-modified-sort="1729788177647" data-listing-date-modified-sort="1729788177000" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<div class="thumbnail">
-<p><a href="./posts/Overviews/Overview_(M)LLM.html" class="no-external"></a></p><a href="./posts/Overviews/Overview_(M)LLM.html" class="no-external">
-<p><img loading="lazy" src="./posts/Overviews/Images/OverviewOfMLLM.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/Overviews/Overview_(M)LLM.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Overviews/Overview_(M)LLM.html" class="no-external">Overview: (Multimodal) Large Language Models</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Overviews/Overview_(M)LLM.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('LLM'); return false;">
-LLM
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Overview'); return false;">
-Overview
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Overviews/Overview_(M)LLM.html" class="no-external">This is an overview of the Muultimodal Large Language Models. It includes the defintion of the large language models, the multimodal large language models, and the applications of those models. Besides, it also includes to fine-tune those models with different methods like LoRA.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Overviews/Overview_(M)LLM.html" class="no-external">
-<div class="listing-date">
-Oct 25, 2024
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-<div class="metadata-value listing-word-count">
-7 words
-</div>
-<div class="metadata-value listing-file-modified">
-10/25/24, 12:42:57 AM
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="Meta Learning,Overview" data-listing-date-sort="1729785600000" data-listing-file-modified-sort="1729788174381" data-listing-date-modified-sort="1729788174000" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/Overviews/Overview_MetaLearning.html" class="no-external"></a></p><a href="./posts/Overviews/Overview_MetaLearning.html" class="no-external">
-<p><img loading="lazy" src="./posts/Overviews/Images/Overview_DML.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/Overviews/Overview_MetaLearning.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Overviews/Overview_MetaLearning.html" class="no-external">Overview: Deep Meta Learning</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Overviews/Overview_MetaLearning.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Meta Learning'); return false;">
-Meta Learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Overview'); return false;">
-Overview
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Overviews/Overview_MetaLearning.html" class="no-external">This is an overview of the Meta Learning. It includes the definition of the multi-task learning, transfer learning and meta learning. Three most common types of meta-learning algorithms, metric learning, model-based learning, and optimization-based learning are also included. Besides, it also includes the applications of those models.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Overviews/Overview_MetaLearning.html" class="no-external">
-<div class="listing-date">
-Oct 25, 2024
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-<div class="metadata-value listing-word-count">
-1 words
-</div>
-<div class="metadata-value listing-file-modified">
-10/25/24, 12:42:54 AM
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

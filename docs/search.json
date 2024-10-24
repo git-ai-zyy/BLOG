@@ -7,52 +7,59 @@
     "text": "About this blog I’m introducing in how to design and and summary the what has learnd in the"
   },
   {
-    "objectID": "posts/Overviews/test.html",
-    "href": "posts/Overviews/test.html",
-    "title": "This is the test Image",
+    "objectID": "posts/Overviews/Overview_PGM.html",
+    "href": "posts/Overviews/Overview_PGM.html",
+    "title": "Overview: Probabilistic Graphical Models",
     "section": "",
-    "text": "The Generative Models use machine learning and deep learning to learn a distribution from training data and then generate new examples from the distribution. The general form can be represented as: \\[\np(\\mathrm{x} | \\mathrm{c}, \\mathrm{w})\n\\] where the \\(\\mathrm{c}\\) represents a vector of conditioning variables, for example, a class label(cat, dog,…), a sentence, and the \\(\\mathrm{w}\\) represent the learnable parameters of the models.\nHowever, for real world application, the distribution is extremely complex so that we need deep neural network to improved the performance of generative models. There are several important deep generative models:\nexternal Lin\nShow the code\nprint(\"Heelod World\")print(\"Heelod World\")print(\"Heelod World\")print(\"Heelod World\")print(\"Heelod World\")"
+    "text": "Overview of Probabilistic Graphical Models"
   },
   {
-    "objectID": "posts/Overviews/test.html#semi-supervised-learning",
-    "href": "posts/Overviews/test.html#semi-supervised-learning",
-    "title": "This is the test Image",
-    "section": "Semi-Supervised Learning",
-    "text": "Semi-Supervised Learning"
+    "objectID": "posts/Overviews/Overview_MetaLearning.html",
+    "href": "posts/Overviews/Overview_MetaLearning.html",
+    "title": "Overview: Deep Meta Learning",
+    "section": "",
+    "text": "Overview of the Deep Meta Learning"
   },
   {
-    "objectID": "posts/Overviews/test.html#imitation-learning",
-    "href": "posts/Overviews/test.html#imitation-learning",
-    "title": "This is the test Image",
-    "section": "Imitation Learning",
-    "text": "Imitation Learning"
+    "objectID": "posts/Overviews/Overview_Optimization.html",
+    "href": "posts/Overviews/Overview_Optimization.html",
+    "title": "Overview: Optimization Algorithms",
+    "section": "",
+    "text": "Overview of Optimization Algorithms"
   },
   {
-    "objectID": "posts/Overviews/test.html#anomaly-detection",
-    "href": "posts/Overviews/test.html#anomaly-detection",
-    "title": "This is the test Image",
-    "section": "Anomaly Detection",
-    "text": "Anomaly Detection"
+    "objectID": "posts/Papers/Attention_is_all_you_need.html",
+    "href": "posts/Papers/Attention_is_all_you_need.html",
+    "title": "Dive into: Attention is all you need",
+    "section": "",
+    "text": "Paper Reading: Attention is all you need"
   },
   {
-    "objectID": "posts/Overviews/test.html#data-compressing",
-    "href": "posts/Overviews/test.html#data-compressing",
-    "title": "This is the test Image",
-    "section": "Data Compressing",
-    "text": "Data Compressing\nasda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf\nasda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf v asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf\nasda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf\nasda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf\nasda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf\nasda da asda das ad asda ad asd 3 ada faf asda da asda das ad asda ad asd 3 ada faf v"
+    "objectID": "posts/Overviews/Overview_DeepRL.html",
+    "href": "posts/Overviews/Overview_DeepRL.html",
+    "title": "Overview: Deep Reinforcement Learning",
+    "section": "",
+    "text": "Overview of the Deep Reinforcement Learning\nasdasd\nsdasd"
   },
   {
-    "objectID": "posts/Overviews/test.html#footnotes",
-    "href": "posts/Overviews/test.html#footnotes",
-    "title": "This is the test Image",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nThe evaluation of generative models is a challenging problem. The most common way is to use human evaluation, but it is time-consuming and expensive. The other way is to use the likelihood of the model, but it is not always correlated with the quality of the generated samples.↩︎"
+    "objectID": "posts/Overviews/Overview_(M)LLM.html",
+    "href": "posts/Overviews/Overview_(M)LLM.html",
+    "title": "Overview: (Multimodal) Large Language Models",
+    "section": "",
+    "text": "Overview of the Multimodal Large Language Models"
+  },
+  {
+    "objectID": "posts/Overviews/Overview_DeepGenerativeModel.html",
+    "href": "posts/Overviews/Overview_DeepGenerativeModel.html",
+    "title": "Overview: Deep Generative Models",
+    "section": "",
+    "text": "Overview of the Deep Generative Models"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Yuyang’s Blog",
     "section": "",
-    "text": "This is the test Image\n\n\n\n\n\n\nDeep Learning\n\n\nReinforcement Learning\n\n\nGenerative Model\n\n\n\nThis is an overview of the generative models\n\n\n\n\n\nOct 23, 2024\n\n\n4 min\n\n\n646 words\n\n\n10/23/24, 8:51:06 PM\n\n\n\n\n\n\nNo matching items"
+    "text": "Dive into: Attention is all you need\n\n\n\n\n\n\nPaper\n\n\nCode Implementation\n\n\n\nThis is my understanding of the paper Attention is all you need. This paper introduces the most important model in the Deep Learning field: Transformer. The Transformer is the corner stone of current Large Language Model. This blog includes theory and implmentation of the Transformer using Pytorch from scratch.\n\n\n\n\n\nOct 25, 2024\n\n\n1 min\n\n\n1 words\n\n\n10/25/24, 12:43:10 AM\n\n\n\n\n\n\n\n\n\n\n\n\nOverview: Probabilistic Graphical Models\n\n\n\n\n\n\nProbability\n\n\nOverview\n\n\n\nThis is an overview of Probabilistic Graphical Models. It includes the definition of the Probabilistic Graphical Models, different types of PGMs like Bayesian Networks, Markov Networks, and the different inference algorithms like Variable Elimination, Gibbs Sampling, and Belief Propagation, Variance Inference. Also, it includes the learning methods like Maximum Likelihood Estimation, Maximum A Posteriori Estimation, and Expectation Maximization. \n\n\n\n\n\nOct 25, 2024\n\n\n1 min\n\n\n1 words\n\n\n10/25/24, 12:43:09 AM\n\n\n\n\n\n\n\n\n\n\n\n\nOverview: Optimization Algorithms\n\n\n\n\n\n\nOptmization\n\n\nOverview\n\n\n\nThis is an overview of the Optmization Algorithms. It includes the definition of the optimization algorithms, the most popular optimization algorithms like first-order optmization(e.g. SGD), higher-order optmization(e.g. Newton’s Method) algorithms. Besides, it also includes the applications of those models.\n\n\n\n\n\nOct 25, 2024\n\n\n1 min\n\n\n1 words\n\n\n10/25/24, 12:43:06 AM\n\n\n\n\n\n\n\n\n\n\n\n\nOverview: Deep Reinforcement Learning\n\n\n\n\n\n\nReinforcement Learning\n\n\nOverview\n\n\n\nThis is an overview of the Deep Reinforcement Learning. It includes the defintion of the deep reinforcement learning, some popular algorithms for example deep Q learning and variants, policy gradient methods and actor-critic methods for example A3C, DDPG, and PPO. Besides, it also includes the applications of those models.\n\n\n\n\n\nOct 25, 2024\n\n\n1 min\n\n\n1 words\n\n\n10/25/24, 12:43:03 AM\n\n\n\n\n\n\n\n\n\n\n\n\nOverview: Deep Generative Models\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nThis is an overview of the Deep Generative Models. It includes the most popular generative models like VAE, GAN, and Flow-based models. Besides, it also includes the applications of those models.\n\n\n\n\n\nOct 25, 2024\n\n\n1 min\n\n\n1 words\n\n\n10/25/24, 12:43:00 AM\n\n\n\n\n\n\n\n\n\n\n\n\nOverview: (Multimodal) Large Language Models\n\n\n\n\n\n\nLLM\n\n\nOverview\n\n\n\nThis is an overview of the Muultimodal Large Language Models. It includes the defintion of the large language models, the multimodal large language models, and the applications of those models. Besides, it also includes to fine-tune those models with different methods like LoRA.\n\n\n\n\n\nOct 25, 2024\n\n\n1 min\n\n\n7 words\n\n\n10/25/24, 12:42:57 AM\n\n\n\n\n\n\n\n\n\n\n\n\nOverview: Deep Meta Learning\n\n\n\n\n\n\nMeta Learning\n\n\nOverview\n\n\n\nThis is an overview of the Meta Learning. It includes the definition of the multi-task learning, transfer learning and meta learning. Three most common types of meta-learning algorithms, metric learning, model-based learning, and optimization-based learning are also included. Besides, it also includes the applications of those models.\n\n\n\n\n\nOct 25, 2024\n\n\n1 min\n\n\n1 words\n\n\n10/25/24, 12:42:54 AM\n\n\n\n\n\n\nNo matching items"
   }
 ]
