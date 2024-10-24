@@ -1,7 +1,8 @@
 /* css styles */
 
 strong {
-    color: #15559a
+    color: #15559a; 
+    font-weight: bold
 }
 
 em{
