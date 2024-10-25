@@ -2,13 +2,15 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Readings/DLFC/Chapter02.html",
       "/posts/Papers/Attention_is_all_you_need.html",
       "/posts/Overviews/Overview_PGM.html",
       "/posts/Overviews/Overview_Optimization.html",
       "/posts/Overviews/Overview_DeepRL.html",
       "/posts/Overviews/Overview_DeepGenerativeModel.html",
       "/posts/Overviews/Overview_(M)LLM.html",
-      "/posts/Overviews/Overview_MetaLearning.html"
+      "/posts/Overviews/Overview_MetaLearning.html",
+      "/posts/Readings/DLFC/Chapter03.html"
     ]
   }
 ]

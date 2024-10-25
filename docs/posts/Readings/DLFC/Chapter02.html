@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2024-10-25">
-<meta name="description" content="This is an overview of the Deep Reinforcement Learning. It includes the defintion of the deep reinforcement learning, some popular algorithms for example deep Q learning and variants, policy gradient methods and actor-critic methods for example A3C, DDPG, and PPO. Besides, it also includes the applications of those models.">
+<meta name="description" content="This is my understanding of the paper Attention is all you need. This paper introduces the most important model in the Deep Learning field: Transformer. The Transformer is the corner stone of current Large Language Model. This blog includes theory and implmentation of the Transformer using Pytorch from scratch.">
 
-<title>Overview: Deep Reinforcement Learning – Yuyang’s Blog</title>
+<title>Deep Learning Foundations and Concepts: Chapter 02 Summary and Exercise Solutions – Yuyang’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,10 +72,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Overview: Deep Reinforcement Learning – Yuyang’s Blog">
-<meta property="og:description" content="This is an overview of the Deep Reinforcement Learning. It includes the defintion of the deep reinforcement learning, some popular algorithms for example deep Q learning and variants, policy gradient methods and actor-critic methods for example A3C, DDPG, and PPO. Besides, it also includes the applications of those models.">
-<meta property="og:image" content="Images/Overview_DRL.png">
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Deep Learning Foundations and Concepts: Chapter 02 Summary and Exercise Solutions – Yuyang’s Blog">
+<meta property="og:description" content="This is my understanding of the paper Attention is all you need. This paper introduces the most important model in the Deep Learning field: Transformer. The Transformer is the corner stone of current Large Language Model. This blog includes theory and implmentation of the Transformer using Pytorch from scratch.">
+<meta property="og:image" content="Images/DLFC_Chapter02.png">
 <meta property="og:site_name" content="Yuyang's Blog">
 </head>
 
@@ -86,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Yuyang’s Blog</span>
     </a>
   </div>
@@ -97,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -122,15 +122,14 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Overview: Deep Reinforcement Learning</h1>
+      <h1 class="title">Deep Learning Foundations and Concepts: Chapter 02 Summary and Exercise Solutions</h1>
                   <div>
         <div class="description">
-          This is an overview of the Deep Reinforcement Learning. It includes the defintion of the deep reinforcement learning, some popular algorithms for example deep Q learning and variants, policy gradient methods and actor-critic methods for example A3C, DDPG, and PPO. Besides, it also includes the applications of those models.
+          This is my understanding of the paper Attention is all you need. This paper introduces the most important model in the Deep Learning field: Transformer. The Transformer is the corner stone of current Large Language Model. This blog includes theory and implmentation of the Transformer using Pytorch from scratch.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Reinforcement Learning</div>
-                <div class="quarto-category">Overview</div>
+                <div class="quarto-category">DLFC</div>
               </div>
                   </div>
   </div>
@@ -163,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#overview-of-the-deep-reinforcement-learning" id="toc-overview-of-the-deep-reinforcement-learning" class="nav-link active" data-scroll-target="#overview-of-the-deep-reinforcement-learning">Overview of the Deep Reinforcement Learning</a></li>
+  <li><a href="#deep-learning-foundations-and-concepts-chapter-02-summary-and-exercise-solutions" id="toc-deep-learning-foundations-and-concepts-chapter-02-summary-and-exercise-solutions" class="nav-link active" data-scroll-target="#deep-learning-foundations-and-concepts-chapter-02-summary-and-exercise-solutions">Deep Learning Foundations and Concepts Chapter 02 Summary and Exercise Solutions</a></li>
   </ul>
 </nav>
 </nav>
@@ -178,10 +177,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="overview-of-the-deep-reinforcement-learning" class="level1">
-<h1>Overview of the Deep Reinforcement Learning</h1>
-<p>asdasd</p>
-<p>sdasd</p>
+<section id="deep-learning-foundations-and-concepts-chapter-02-summary-and-exercise-solutions" class="level1">
+<h1>Deep Learning Foundations and Concepts Chapter 02 Summary and Exercise Solutions</h1>
 
 
 </section>
