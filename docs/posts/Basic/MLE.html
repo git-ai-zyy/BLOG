@@ -178,6 +178,7 @@ window.Quarto = {
 <h1 class="title">Maximum Likelihood Learning: From Basic to Advance</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Basic Techniques</div>
+    <div class="quarto-category">Learning</div>
   </div>
   </div>
 
@@ -201,7 +202,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024-10-26</p>
+      <p class="date-modified">2024-10-27</p>
     </div>
   </div>
     
@@ -213,7 +214,7 @@ window.Quarto = {
 
 
 <p><img src="Images/Maximum Likelihood Estimation(Learning).png" class="img-fluid"></p>
-<p>Maximum Likelihood Estimation is foundational across machine learning, helping estimation parameters by maximizing the likelihood of obseved data. It serves as the backbone for various algorithms, from classical linear regression to deep neural networks. This blog walks through MLE’s foundations, how it apply to the modern deep learning era and how to solve the MLE problem when it lack a closed-form solution.</p>
+<p>Maximum Likelihood Estimation is foundational across machine learning, helping estimation parameters by maximizing the likelihood of observed data. It serves as the backbone for various algorithms, from classical linear regression to deep neural networks. This blog walks through MLE’s foundations, how it apply to the modern deep learning era and how to solve the MLE problem when it lack a closed-form solution.</p>
 <section id="the-idea-of-maximum-likelihood-estimation" class="level1">
 <h1>The Idea of Maximum Likelihood Estimation</h1>
 <p>The goal of MLE is to find the parameters of a probabilistic model that maximize the likelihood of the observed data. Formally, for a dataset <span class="math inline">\(\mathcal{D} = \{x_1, x_2, \dots, x_n \}\)</span>, we assume each data point <span class="math inline">\(x_i\)</span> is independently generated from a probability distribution <span class="math inline">\(p(x | \theta)\)</span>, parameterized by <span class="math inline">\(\theta\)</span>. The MLE seeks the parameters <span class="math inline">\(\theta\)</span> that maximize the likelihood of the observed data, which is the product of the probability of each data point: <span class="math display">\[
@@ -221,8 +222,8 @@ L(\theta; \mathcal{D}) = \prod_{i=1}^{n} p(x_i | \theta)
 \]</span></p>
 <p>In practice, the logarithm of the likelihood function, known as the log-likelihood, is maximized for numerical stability: <span class="math display">\[
 \log L(\theta; \mathcal{D}) = \sum_{i=1}^{n} \log p(x_i | \theta)
-\]</span> We can use optimization techniques like Stochastic Gradient Descent (SGD) to maximize the log-likelihood when a closed-form solution is not available. Specifically, MLE aims to maximize the likelihhod of the observed data given the model parameters, which translates into minimizing the negative log-likelihood(NNL) as the loss function. And optimize the loss function using numerical optimization techniques like SGD. For example</p>
-<p>In the contex of the multi-class classification problem, the likelihood for the entire dataset of zie <span class="math inline">\(n\)</span> is given by: <span class="math display">\[
+\]</span> We can use optimization techniques like Stochastic Gradient Descent (SGD) to maximize the log-likelihood when a closed-form solution is not available. Specifically, MLE aims to maximize the likelihhod of the observed data given the model parameters, which translates into minimizing the negative log-likelihood(NNL) as the loss function. And optimize the loss function using <strong>numerical optimization techniques</strong> like SGD. For example</p>
+<p>In the context of the <strong>multi-class classification</strong> problem, the likelihood for the entire dataset of zie <span class="math inline">\(n\)</span> is given by: <span class="math display">\[
 L(\theta; \mathcal{D}) = \prod_{i=1}^{n} p(y_i | x_i, \theta)
 \]</span> where <span class="math inline">\(y_i\)</span> is the label of the <span class="math inline">\(i\)</span>-th data point <span class="math inline">\(x_i\)</span>. The log-likelihood is then: <span class="math display">\[
 \log L(\theta; \mathcal{D}) = \sum_{i=1}^{n} \log p(y_i | x_i, \theta)

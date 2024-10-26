@@ -46,6 +46,31 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<style>
+/* first-line indent styles */
+  p {
+    text-indent: 1.5em;
+    margin: 0;
+  }
+  header p {
+    text-indent: 0;
+    margin: 1em 0;
+  }
+  :is(h1, h2, h3, h4, h5, h6) + p {
+    text-indent: 0;
+  }
+  li > p, li > div p {
+    text-indent: 0;
+    margin-bottom: 1rem;
+  }
+  div.no-first-line-indent-after + p {
+    text-indent: 0;
+  }
+  div.first-line-indent-after + p {
+    text-indent: 1.5em;
+  }
+/* end of first-line indent styles */
+</style>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,6 +98,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -186,12 +212,7 @@ window.Quarto = {
   <li><a href="#parameter-learning" id="toc-parameter-learning" class="nav-link" data-scroll-target="#parameter-learning">Parameter Learning</a>
   <ul class="collapse">
   <li><a href="#maximum-likelihood-estimation" id="toc-maximum-likelihood-estimation" class="nav-link" data-scroll-target="#maximum-likelihood-estimation">Maximum Likelihood Estimation</a></li>
-  <li><a href="#maximum-a-posteriori-estimation" id="toc-maximum-a-posteriori-estimation" class="nav-link" data-scroll-target="#maximum-a-posteriori-estimation">Maximum A Posteriori Estimation</a></li>
   <li><a href="#expectation-maximization" id="toc-expectation-maximization" class="nav-link" data-scroll-target="#expectation-maximization">Expectation Maximization</a></li>
-  </ul></li>
-  <li><a href="#structure-learning" id="toc-structure-learning" class="nav-link" data-scroll-target="#structure-learning">Structure Learning</a>
-  <ul class="collapse">
-  <li><a href="#chow-liu-algorithm" id="toc-chow-liu-algorithm" class="nav-link" data-scroll-target="#chow-liu-algorithm">Chow-Liu Algorithm</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -233,7 +254,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024-10-26</p>
+      <p class="date-modified">2024-10-27</p>
     </div>
   </div>
     
@@ -244,16 +265,23 @@ window.Quarto = {
 </header>
 
 
-<p>Probabilistic Graphical Models(PGMs) are a crucial tool for reasoning under uncertainty, merging probability theory with graph theory to represent and analyze complex relationships between variables. PGMs help address problems that require modeling uncertainty in areas like machine learning, artificial iintelligence and so son. They also provide a structured framework for deciion-makeing, making them highly relevant to fields such as deep learning and reinforcement learning. For example, PGMs play a foundational role by inspiring architectures that manage uncerttainty, such as Bayesian Neural Networks and vairation inference techniques. They allow neural networks to quantify uncertainty, enhancing robustness in fields like medical diagnosis and autonomous driving. In reinforcement leaning, PGM facilitate modeling environments with partially observable Markov Decision processes, where agents make decisions under uncertainty. PGMs help RL algorithms in state eatimation and policy learning by providing a framework to manage incomplelte information about the environment.</p>
-<p>In this blog, we will go through some essential aspects of PGMs, including representation, inference, and learning methods. We will discuss the two main types of PGMs, Bayesian Networks and Markov Networks, and factor graphs which unify both. Next we will explore inference algorithms from two asepect: exact inference methods like Variable Elimination and approximate inference methods like Monte Carlo methods and Variational Inference. Finally, we will discuss learning methods like Maximum Likelihood Estimation, Maximum A Posteriori Estimation, Expectation Maximization and structure learning when we do not have the structure of the model. In the end, we will discuss some applications of PGMs and how to combine with deep nerual networks to build more robust models.</p>
+<div class="no-first-line-indent-after"></div>
+<p>Probabilistic Graphical Models(PGMs) are a crucial tool for reasoning under uncertainty, merging <a href="https://en.wikipedia.org/wiki/Probability_theory">probability theory</a> with <a href="https://en.wikipedia.org/wiki/Graph_theory">graph theory</a> to represent and analyze complex relationships between variables. <u>PGMs help address problems that require modeling uncertainty in areas</u> like machine learning, artificial iintelligence and so on. They also provide a structured framework for <a href="https://en.wikipedia.org/wiki/Decision-making">deciion-makeing</a>, making them highly relevant to fields such as deep learning and reinforcement learning.</p>
+<p>For example, PGMs play a foundational role by inspiring architectures that manage uncertainty, such as Bayesian Neural Networks and vairation inference techniques. They allow neural networks to quantify uncertainty, enhancing robustness in fields like <strong>medical diagnosis</strong> and <strong>autonomous driving</strong>. In reinforcement leaning, PGM facilitate modeling environments with <strong>partially observable Markov Decision processes</strong>, where agents make decisions under uncertainty. PGMs help RL algorithms in state eatimation and policy learning by providing a framework to manage incomplelte information about the environment.</p>
+<p>In this blog, we will go through some essential aspects of PGMs, including <strong>representation</strong>, <strong>inference</strong>, and <strong>learning</strong> methods. We will discuss the two main types of PGMs, <strong>Bayesian Networks</strong> and <strong>Markov Networks</strong>, and <strong>Factor Graphs</strong> which unify both. Next we will explore inference algorithms from two asepect: <strong>exact inference</strong> methods like <strong>Variable Elimination</strong> and approximate inference methods like <strong>Monte Carlo methods</strong> and <strong>Variational Inference</strong>. Finally, we will discuss learning methods like <strong>Maximum Likelihood Estimation</strong>, <strong>Maximum A Posteriori Estimation</strong>, <strong>Expectation Maximization</strong> and structure learning when we do not have the structure of the model. In the end, we will discuss some applications of PGMs and how to combine with deep nerual networks to build more robust models.</p>
 <section id="representation-of-probabilistic-graphical-models" class="level1">
 <h1>Representation of Probabilistic Graphical Models</h1>
-<p>Two main types of the PGMs are: * Bayesian Networks * Markov Networks</p>
-<p>The Bayesian Networks are directed acyclic graphs(DAGs) that represent the conditional dependencies between random variables. While Markov Networks are undirected graphs that represent the joint distribution of random variables. Both types of PGMs can be represented using factor graphs, which unify the two representations.</p>
+<p>Two main types of the PGMs are:</p>
+<ul>
+<li>Bayesian Networks</li>
+<li>Markov Networks</li>
+</ul>
+<div class="no-first-line-indent-after"></div>
+<p>The Bayesian Networks are <a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">directed acyclic graphs(DAGs)</a> that represent the <strong>conditional dependencies</strong> between random variables. While Markov Networks are undirected graphs that represent the joint distribution of random variables. Both types of PGMs can be represented using <strong>factor graphs</strong>, which unify the two representations.</p>
 <p>Now, let’s dive into the detials of the Bayesian Networks.</p>
 <section id="bayesian-networks" class="level2">
 <h2 class="anchored" data-anchor-id="bayesian-networks">Bayesian Networks</h2>
-<p>Bayesian Networks also known as Belief Networks or Directed Acyclic Graphs(DAGs), are a type of PGM that represent the conditional dependencies between random variables. The nodes in a BN represent random variables, and the edges represent the direct dependencies between them. The conditional dependencies are encoded using the conditional probability distribution of each node given its parents.</p>
+<p>Bayesian Networks also known as <strong>Belief Networks</strong> or <strong>Directed Acyclic Graphs(DAGs)</strong>, are a type of PGM that represent the conditional dependencies between random variables. The nodes in a BN represent random variables, and the edges represent the direct dependencies between them. The conditional dependencies are encoded using the conditional probability distribution of each node given its parents.</p>
 <p>Let us consider a simple example of a student model, where the grade of a student depends on the difficulty of the course, the student’s intelligence, and the SAT score. The Bayesian Network for this model is shown below:</p>
 <div class="cell" data-fig-width="3" data-layout-align="default">
 <div class="cell-output-display">
@@ -554,6 +582,23 @@ P(X_1, X_2, \dots, X_n) = \frac{1}{Z} \prod_{f \in \mathcal{F}} \phi_f(X_f)
 </section>
 <section id="inference" class="level1">
 <h1>Inference</h1>
+<p>There are several common tast for the the inference:</p>
+<ul>
+<li>Get the Posterior Distribution</li>
+<li>Most Probable Explanation(MPE) Posterior Distribution is the conditional probability <span class="math inline">\(P(X  |E= e)\)</span> where:</li>
+<li><span class="math inline">\(X\)</span> is a. set of variable interest</li>
+<li><span class="math inline">\(E\)</span> is the evidence(observed variable with known value <span class="math inline">\(e\)</span>) The Posterior Distribution is defined through Bayes’ Rule: <span class="math display">\[
+P(X | E = e) = \frac{P(X, E=e)}{P(E=e)}
+\]</span> We need to get two value:</li>
+<li>The joint probability of <span class="math inline">\(P(X, E=e)\)</span></li>
+<li>The marginal probability of <span class="math inline">\(P(E= e)\)</span></li>
+</ul>
+<div class="no-first-line-indent-after"></div>
+<p>The MPE problem seeks the most likely configuration of unobserved variables given evidence <span class="math inline">\(E = e\)</span> Formally: <span class="math display">\[
+\text{MPE} = \underset{X}{\operatorname{arg\max}} P(X | E=e)
+\]</span> This is equivalent to maximizing the joint probability <span class="math inline">\(P(X, E=e)\)</span>, since the evidence <span class="math inline">\(P(E=e)\)</span> is constant: <span class="math display">\[
+P(X | E =e ) = \frac{P(X, E=e)}{P(E=e)}
+\]</span></p>
 <section id="exact-inference" class="level2">
 <h2 class="anchored" data-anchor-id="exact-inference">Exact Inference</h2>
 <section id="the-elimination-algorithms" class="level3">
@@ -597,19 +642,18 @@ P(X_1, X_2, \dots, X_n) = \frac{1}{Z} \prod_{f \in \mathcal{F}} \phi_f(X_f)
 <h2 class="anchored" data-anchor-id="parameter-learning">Parameter Learning</h2>
 <section id="maximum-likelihood-estimation" class="level3">
 <h3 class="anchored" data-anchor-id="maximum-likelihood-estimation">Maximum Likelihood Estimation</h3>
-</section>
-<section id="maximum-a-posteriori-estimation" class="level3">
-<h3 class="anchored" data-anchor-id="maximum-a-posteriori-estimation">Maximum A Posteriori Estimation</h3>
+<p><span class="math display">\[
+\theta = \underset{\theta}{\operatorname{arg\max}\ } P(\mathcal{D} | \theta)
+\]</span></p>
+<p>For more details check out this blog <a href="https://jaz201107.github.io/posts/Basic/MLE.html">Maximum Likelihood Learning</a>. ### Maximum A Posteriori Estimation</p>
+<p><span class="math display">\[
+\theta = \underset{\theta}{\operatorname{arg\max}} \overbrace{ P(\mathcal{D} |\theta) }^{ \text{Likelihood} }\underbrace{ P(\theta) }_{ \text{Prior Distribution} }
+\]</span></p>
 </section>
 <section id="expectation-maximization" class="level3">
 <h3 class="anchored" data-anchor-id="expectation-maximization">Expectation Maximization</h3>
 <p>This is a general framework for learning in probabilistic models with latent variables. The EM algorithm alternates between the E-step, where the posterior distribution of the latent variables is computed, and the M-step, where the model parameters are updated to maximize the expected log-likelihood. The EM algorithm is used in models like Gaussian Mixture Models (GMMs) and Hidden Markov Models (HMMs) to estimate the parameters of the model when the latent variables are not observed.</p>
-</section>
-</section>
-<section id="structure-learning" class="level2">
-<h2 class="anchored" data-anchor-id="structure-learning">Structure Learning</h2>
-<section id="chow-liu-algorithm" class="level3">
-<h3 class="anchored" data-anchor-id="chow-liu-algorithm">Chow-Liu Algorithm</h3>
+<p>For More Details, check out this blogs <a href="https://jaz201107.github.io/posts/Basic/EM.html">Expectation Maximization</a> ## Structure Learning ### Chow-Liu Algorithm</p>
 
 
 </section>
@@ -1189,7 +1233,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
