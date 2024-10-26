@@ -43,6 +43,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,6 +74,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Overview: Probabilistic Graphical Models – Yuyang’s Blog">
@@ -82,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 <body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -119,51 +151,49 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Overview: Probabilistic Graphical Models</h1>
-                  <div>
-        <div class="description">
-          This is an overview of Probabilistic Graphical Models. It includes the definition of the Probabilistic Graphical Models, different types of PGMs like Bayesian Networks, Markov Networks, and the different inference algorithms like Variable Elimination, Gibbs Sampling, and Belief Propagation, Variance Inference. Also, it includes the learning methods like Maximum Likelihood Estimation, Maximum A Posteriori Estimation, and Expectation Maximization.
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">Probability</div>
-                <div class="quarto-category">Overview</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">2024-10-25</p>
-      </div>
-    </div>
-    
-      <div>
-      <div class="quarto-title-meta-heading">Last modified</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date-modified">2024-10-25</p>
-      </div>
-    </div>
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#overview-of-probabilistic-graphical-models" id="toc-overview-of-probabilistic-graphical-models" class="nav-link active" data-scroll-target="#overview-of-probabilistic-graphical-models">Overview of Probabilistic Graphical Models</a></li>
+  <li><a href="#representation-of-probabilistic-graphical-models" id="toc-representation-of-probabilistic-graphical-models" class="nav-link active" data-scroll-target="#representation-of-probabilistic-graphical-models">Representation of Probabilistic Graphical Models</a>
+  <ul class="collapse">
+  <li><a href="#bayesian-networks" id="toc-bayesian-networks" class="nav-link" data-scroll-target="#bayesian-networks">Bayesian Networks</a>
+  <ul class="collapse">
+  <li><a href="#applications-of-bayesian-networks" id="toc-applications-of-bayesian-networks" class="nav-link" data-scroll-target="#applications-of-bayesian-networks">Applications of Bayesian Networks</a></li>
+  </ul></li>
+  <li><a href="#markov-networks" id="toc-markov-networks" class="nav-link" data-scroll-target="#markov-networks">Markov Networks</a></li>
+  <li><a href="#factor-graph" id="toc-factor-graph" class="nav-link" data-scroll-target="#factor-graph">Factor Graph</a></li>
+  </ul></li>
+  <li><a href="#inference" id="toc-inference" class="nav-link" data-scroll-target="#inference">Inference</a>
+  <ul class="collapse">
+  <li><a href="#exact-inference" id="toc-exact-inference" class="nav-link" data-scroll-target="#exact-inference">Exact Inference</a>
+  <ul class="collapse">
+  <li><a href="#the-elimination-algorithms" id="toc-the-elimination-algorithms" class="nav-link" data-scroll-target="#the-elimination-algorithms">The Elimination Algorithms</a></li>
+  <li><a href="#message-passing-algorithms" id="toc-message-passing-algorithms" class="nav-link" data-scroll-target="#message-passing-algorithms">Message Passing Algorithms</a></li>
+  <li><a href="#the-junction-tree-algorithm" id="toc-the-junction-tree-algorithm" class="nav-link" data-scroll-target="#the-junction-tree-algorithm">The Junction Tree Algorithm</a></li>
+  </ul></li>
+  <li><a href="#approximate-inference" id="toc-approximate-inference" class="nav-link" data-scroll-target="#approximate-inference">Approximate Inference</a>
+  <ul class="collapse">
+  <li><a href="#monte-carlo-methods" id="toc-monte-carlo-methods" class="nav-link" data-scroll-target="#monte-carlo-methods">Monte Carlo Methods</a></li>
+  <li><a href="#variational-algorithms" id="toc-variational-algorithms" class="nav-link" data-scroll-target="#variational-algorithms">Variational Algorithms</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#learning" id="toc-learning" class="nav-link" data-scroll-target="#learning">Learning</a>
+  <ul class="collapse">
+  <li><a href="#parameter-learning" id="toc-parameter-learning" class="nav-link" data-scroll-target="#parameter-learning">Parameter Learning</a>
+  <ul class="collapse">
+  <li><a href="#maximum-likelihood-estimation" id="toc-maximum-likelihood-estimation" class="nav-link" data-scroll-target="#maximum-likelihood-estimation">Maximum Likelihood Estimation</a></li>
+  <li><a href="#maximum-a-posteriori-estimation" id="toc-maximum-a-posteriori-estimation" class="nav-link" data-scroll-target="#maximum-a-posteriori-estimation">Maximum A Posteriori Estimation</a></li>
+  <li><a href="#expectation-maximization" id="toc-expectation-maximization" class="nav-link" data-scroll-target="#expectation-maximization">Expectation Maximization</a></li>
+  </ul></li>
+  <li><a href="#structure-learning" id="toc-structure-learning" class="nav-link" data-scroll-target="#structure-learning">Structure Learning</a>
+  <ul class="collapse">
+  <li><a href="#chow-liu-algorithm" id="toc-chow-liu-algorithm" class="nav-link" data-scroll-target="#chow-liu-algorithm">Chow-Liu Algorithm</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -172,16 +202,418 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Overview: Probabilistic Graphical Models</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Probability</div>
+    <div class="quarto-category">Overview</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    This is an overview of Probabilistic Graphical Models. It includes the definition of the Probabilistic Graphical Models, different types of PGMs like Bayesian Networks, Markov Networks, and the different inference algorithms like Variable Elimination, Gibbs Sampling, and Belief Propagation, Variance Inference. Also, it includes the learning methods like Maximum Likelihood Estimation, Maximum A Posteriori Estimation, and Expectation Maximization.
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">2024-10-25</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Last modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">2024-10-26</p>
+    </div>
+  </div>
+    
+  </div>
+  
 
 
-
-<section id="overview-of-probabilistic-graphical-models" class="level1">
-<h1>Overview of Probabilistic Graphical Models</h1>
+</header>
 
 
+<p>Probabilistic Graphical Models(PGMs) are a crucial tool for reasoning under uncertainty, merging probability theory with graph theory to represent and analyze complex relationships between variables. PGMs help address problems that require modeling uncertainty in areas like machine learning, artificial iintelligence and so son. They also provide a structured framework for deciion-makeing, making them highly relevant to fields such as deep learning and reinforcement learning. For example, PGMs play a foundational role by inspiring architectures that manage uncerttainty, such as Bayesian Neural Networks and vairation inference techniques. They allow neural networks to quantify uncertainty, enhancing robustness in fields like medical diagnosis and autonomous driving. In reinforcement leaning, PGM facilitate modeling environments with partially observable Markov Decision processes, where agents make decisions under uncertainty. PGMs help RL algorithms in state eatimation and policy learning by providing a framework to manage incomplelte information about the environment.</p>
+<p>In this blog, we will go through some essential aspects of PGMs, including representation, inference, and learning methods. We will discuss the two main types of PGMs, Bayesian Networks and Markov Networks, and factor graphs which unify both. Next we will explore inference algorithms from two asepect: exact inference methods like Variable Elimination and approximate inference methods like Monte Carlo methods and Variational Inference. Finally, we will discuss learning methods like Maximum Likelihood Estimation, Maximum A Posteriori Estimation, Expectation Maximization and structure learning when we do not have the structure of the model. In the end, we will discuss some applications of PGMs and how to combine with deep nerual networks to build more robust models.</p>
+<section id="representation-of-probabilistic-graphical-models" class="level1">
+<h1>Representation of Probabilistic Graphical Models</h1>
+<p>Two main types of the PGMs are: * Bayesian Networks * Markov Networks</p>
+<p>The Bayesian Networks are directed acyclic graphs(DAGs) that represent the conditional dependencies between random variables. While Markov Networks are undirected graphs that represent the joint distribution of random variables. Both types of PGMs can be represented using factor graphs, which unify the two representations.</p>
+<p>Now, let’s dive into the detials of the Bayesian Networks.</p>
+<section id="bayesian-networks" class="level2">
+<h2 class="anchored" data-anchor-id="bayesian-networks">Bayesian Networks</h2>
+<p>Bayesian Networks also known as Belief Networks or Directed Acyclic Graphs(DAGs), are a type of PGM that represent the conditional dependencies between random variables. The nodes in a BN represent random variables, and the edges represent the direct dependencies between them. The conditional dependencies are encoded using the conditional probability distribution of each node given its parents.</p>
+<p>Let us consider a simple example of a student model, where the grade of a student depends on the difficulty of the course, the student’s intelligence, and the SAT score. The Bayesian Network for this model is shown below:</p>
+<div class="cell" data-fig-width="3" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-dot" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="288" height="480" viewbox="0.00 0.00 237.73 188.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-184 233.73,-184 233.73,4 -4,4"></polygon>
+<!-- Difficulty -->
+<g id="node1" class="node">
+<title>Difficulty</title>
+<ellipse fill="none" stroke="black" cx="49.12" cy="-162" rx="49.23" ry="18"></ellipse>
+<text text-anchor="middle" x="49.12" y="-157.8" font-family="Times,serif" font-size="14.00">Difficulty</text>
+</g>
+<!-- Grade -->
+<g id="node2" class="node">
+<title>Grade</title>
+<ellipse fill="none" stroke="black" cx="70.12" cy="-90" rx="34.75" ry="18"></ellipse>
+<text text-anchor="middle" x="70.12" y="-85.8" font-family="Times,serif" font-size="14.00">Grade</text>
+</g>
+<!-- Difficulty&#45;&gt;Grade -->
+<g id="edge1" class="edge">
+<title>Difficulty-&gt;Grade</title>
+<path fill="none" stroke="black" d="M54.2,-144.05C56.54,-136.26 59.37,-126.82 61.99,-118.08"></path>
+<polygon fill="black" stroke="black" points="65.41,-118.86 64.93,-108.28 58.71,-116.85 65.41,-118.86"></polygon>
+</g>
+<!-- Letter -->
+<g id="node5" class="node">
+<title>Letter</title>
+<ellipse fill="none" stroke="black" cx="70.12" cy="-18" rx="34.18" ry="18"></ellipse>
+<text text-anchor="middle" x="70.12" y="-13.8" font-family="Times,serif" font-size="14.00">Letter</text>
+</g>
+<!-- Grade&#45;&gt;Letter -->
+<g id="edge4" class="edge">
+<title>Grade-&gt;Letter</title>
+<path fill="none" stroke="black" d="M70.12,-71.7C70.12,-63.98 70.12,-54.71 70.12,-46.11"></path>
+<polygon fill="black" stroke="black" points="73.62,-46.1 70.12,-36.1 66.62,-46.1 73.62,-46.1"></polygon>
+</g>
+<!-- Intelligence -->
+<g id="node3" class="node">
+<title>Intelligence</title>
+<ellipse fill="none" stroke="black" cx="173.12" cy="-162" rx="56.73" ry="18"></ellipse>
+<text text-anchor="middle" x="173.12" y="-157.8" font-family="Times,serif" font-size="14.00">Intelligence</text>
+</g>
+<!-- Intelligence&#45;&gt;Grade -->
+<g id="edge3" class="edge">
+<title>Intelligence-&gt;Grade</title>
+<path fill="none" stroke="black" d="M150.26,-145.46C135.16,-135.2 115.24,-121.66 99.03,-110.65"></path>
+<polygon fill="black" stroke="black" points="100.71,-107.56 90.47,-104.83 96.77,-113.35 100.71,-107.56"></polygon>
+</g>
+<!-- SAT -->
+<g id="node4" class="node">
+<title>SAT</title>
+<ellipse fill="none" stroke="black" cx="173.12" cy="-90" rx="29.06" ry="18"></ellipse>
+<text text-anchor="middle" x="173.12" y="-85.8" font-family="Times,serif" font-size="14.00">SAT</text>
+</g>
+<!-- Intelligence&#45;&gt;SAT -->
+<g id="edge2" class="edge">
+<title>Intelligence-&gt;SAT</title>
+<path fill="none" stroke="black" d="M173.12,-143.7C173.12,-135.98 173.12,-126.71 173.12,-118.11"></path>
+<polygon fill="black" stroke="black" points="176.62,-118.1 173.12,-108.1 169.62,-118.1 176.62,-118.1"></polygon>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Student Model
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>In the Bayesian Network, the joint distribution can be factorized into the product of the conditional probabilities of each node given its parents. This factorization allows for efficient inference and learning in the model. The above Bayesian Network represents the following conditional dependencies: <span class="math display">\[
+P(D, I, S, G, L) = P(D)P(I)P(S|I)P(G|D, I)P(L|G)
+\]</span></p>
+<p>So, the joint probability can be factorized into conditional probabilties of each vairable given its parents. <span class="math display">\[
+P(X_1, X_2, \dots, X_n) = \prod_{i=1}^{n} P(X_i | \text{Pa}(X_i))
+\]</span> where <span class="math inline">\(\text{Pa}(X_i)\)</span> represents the parents of node <span class="math inline">\(X_i\)</span> in the Bayesian Network.</p>
+<p>On the other hand, we can view the graph as encoding a generative sampling process executed in a topological order, starting from the root nodes and samples the child nodes given their parents. For example, in the student model, we can sample the grade of the student by first sampling the difficulty, intelligence, and SAT score, and then the grade and letter.</p>
+<p>There is probabilic distirbution associalte with each node in the Bayesian Network called Conditional Probability Distribution(CPD). The CPD of a node <span class="math inline">\(X_i\)</span> is the probability distribution of <span class="math inline">\(X_i\)</span> given its parents <span class="math inline">\(\text{Pa}(X_i)\)</span>. For example, the CPD of the grade node in the student model is: <span class="math display">\[
+P(G=A | D, I) = \begin{cases}
+0.3 &amp; \text{if } D = \text{Easy}, I = \text{Low} \\
+0.7 &amp; \text{if } D = \text{Easy}, I = \text{High} \\
+0.9 &amp; \text{if } D = \text{Hard}, I = \text{Low} \\
+0.1 &amp; \text{if } D = \text{Hard}, I = \text{High} \\
+\end{cases}
+\]</span></p>
+<p>When we are given a Bayesian Network, we want to perform inference to answer queries about the model. For example, how the difficulty of the course change when we know the grade of the student.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Inference in Bayesian Networks">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Inference in Bayesian Networks
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Inference in Bayesian Networks is the process of answering queries about the model, such as computing the posterior distribution of a variable given evidence.</p>
+</div>
+</div>
+</div>
+<p>The representation of the Bayesian Network of the above inference problem is shown below:</p>
+<div class="cell" data-fig-width="3" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-dot" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="288" height="480" viewbox="0.00 0.00 237.73 188.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-184 233.73,-184 233.73,4 -4,4"></polygon>
+<!-- Difficulty -->
+<g id="node1" class="node">
+<title>Difficulty</title>
+<ellipse fill="none" stroke="black" cx="49.12" cy="-162" rx="49.23" ry="18"></ellipse>
+<text text-anchor="middle" x="49.12" y="-157.8" font-family="Times,serif" font-size="14.00">Difficulty</text>
+</g>
+<!-- Grade -->
+<g id="node2" class="node">
+<title>Grade</title>
+<ellipse fill="grey" stroke="grey" cx="70.12" cy="-90" rx="34.75" ry="18"></ellipse>
+<text text-anchor="middle" x="70.12" y="-85.8" font-family="Times,serif" font-size="14.00">Grade</text>
+</g>
+<!-- Difficulty&#45;&gt;Grade -->
+<g id="edge1" class="edge">
+<title>Difficulty-&gt;Grade</title>
+<path fill="none" stroke="black" d="M54.2,-144.05C56.54,-136.26 59.37,-126.82 61.99,-118.08"></path>
+<polygon fill="black" stroke="black" points="65.41,-118.86 64.93,-108.28 58.71,-116.85 65.41,-118.86"></polygon>
+</g>
+<!-- Letter -->
+<g id="node5" class="node">
+<title>Letter</title>
+<ellipse fill="none" stroke="black" cx="70.12" cy="-18" rx="34.18" ry="18"></ellipse>
+<text text-anchor="middle" x="70.12" y="-13.8" font-family="Times,serif" font-size="14.00">Letter</text>
+</g>
+<!-- Grade&#45;&gt;Letter -->
+<g id="edge4" class="edge">
+<title>Grade-&gt;Letter</title>
+<path fill="none" stroke="black" d="M70.12,-71.7C70.12,-63.98 70.12,-54.71 70.12,-46.11"></path>
+<polygon fill="black" stroke="black" points="73.62,-46.1 70.12,-36.1 66.62,-46.1 73.62,-46.1"></polygon>
+</g>
+<!-- Intelligence -->
+<g id="node3" class="node">
+<title>Intelligence</title>
+<ellipse fill="none" stroke="black" cx="173.12" cy="-162" rx="56.73" ry="18"></ellipse>
+<text text-anchor="middle" x="173.12" y="-157.8" font-family="Times,serif" font-size="14.00">Intelligence</text>
+</g>
+<!-- Intelligence&#45;&gt;Grade -->
+<g id="edge3" class="edge">
+<title>Intelligence-&gt;Grade</title>
+<path fill="none" stroke="black" d="M150.26,-145.46C135.16,-135.2 115.24,-121.66 99.03,-110.65"></path>
+<polygon fill="black" stroke="black" points="100.71,-107.56 90.47,-104.83 96.77,-113.35 100.71,-107.56"></polygon>
+</g>
+<!-- SAT -->
+<g id="node4" class="node">
+<title>SAT</title>
+<ellipse fill="none" stroke="black" cx="173.12" cy="-90" rx="29.06" ry="18"></ellipse>
+<text text-anchor="middle" x="173.12" y="-85.8" font-family="Times,serif" font-size="14.00">SAT</text>
+</g>
+<!-- Intelligence&#45;&gt;SAT -->
+<g id="edge2" class="edge">
+<title>Intelligence-&gt;SAT</title>
+<path fill="none" stroke="black" d="M173.12,-143.7C173.12,-135.98 173.12,-126.71 173.12,-118.11"></path>
+<polygon fill="black" stroke="black" points="176.62,-118.1 173.12,-108.1 169.62,-118.1 176.62,-118.1"></polygon>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Inference in Bayesian Networks The goal is to compute the posterior distribution of the difficulty given the grade.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>We use shadowed nodes to represent the observed variables, and the goal is to compute the posterior distribution of the difficulty <span class="math inline">\(P(D|G)\)</span> given the grade.</p>
+<p>There are two main inference algorithms for Bayesian Networks: * Exact Inference: Variable Elimination, Belief Propagation * Approximate Inference: Gibbs Sampling, Variational Inference We leave the details of the inference in the Bayesian Networks for the next section.</p>
+<p>The next question raise is the when we are given are dataset, how can we learn the structure and parameters of the Bayesian Network. This is where the learning methods come into play.</p>
+<p>Next Let introduce I-Maps. I-Maps are the independencies that are implied by the graph structure of the Bayesian Network. It establish the relationship between graph and distribution. A distribution The I-Maps are used to perform efficient inference in the model by exploiting the conditional independence relationships between the variables. For example, in the student model, the grade is independent of the SAT score given the intelligence of the student. This independence relationship can be used to simplify the computation of the posterior distribution of the grade given the SAT score and intelligence. Formally, a graph <span class="math inline">\(G\)</span> is called an I-map of probability distribution <span class="math inline">\(P\)</span> if all conditional indeoendence relationships implied by the graph <span class="math inline">\(G\)</span> aslo hold in teh distribution <span class="math inline">\(P\)</span>. This means that: <span class="math display">\[
+I(G) \subseteq I(P)
+\]</span></p>
+<p>On the definition we can see that one probability distribution can have multiple I-Maps. The I-Maps are used to perform efficient inference in the model by exploiting the conditional independence relationships between the variables. For example, in the student model, the grade is independent of the SAT score given the intelligence of the student. This independence relationship can be used to simplify the computation of the posterior distribution of the grade given the SAT score and intelligence.</p>
+<p>One Important thing about I-map is that it can not miss any independencies that are present in the distribution. If the graph <span class="math inline">\(G\)</span> is an I-map of the distribution <span class="math inline">\(P\)</span>, then the graph <span class="math inline">\(G\)</span> is called a perfect map of the distribution <span class="math inline">\(P\)</span>. This means that the graph <span class="math inline">\(G\)</span> captures all the independencies in the distribution <span class="math inline">\(P\)</span> and can be used for efficient inference and learning in the model.</p>
+<p>When we have a Bayesian Network, we determine whether two variables in the network are conditionally independent through D-separation. D-separation is a graphical criterion that determines whether two variables are conditionally independent given a set of observed variables. The D-separation criterion is based on the concept of active trails in the graph, which are paths between two variables that are not blocked by any observed variables. If there is an active trail between two variables, they are not conditionally independent given the observed variables. If all trails between two variables are blocked by the observed variables, they are conditionally independent. The D-separation criterion is used to determine the conditional independence relationships in the Bayesian Network and establish the I-maps of the model.</p>
+<p>D-Separation is used as a tool to determin whether a given graph can serve an I-map for a given distribution.</p>
+<section id="applications-of-bayesian-networks" class="level3">
+<h3 class="anchored" data-anchor-id="applications-of-bayesian-networks">Applications of Bayesian Networks</h3>
+<p>Bayesian Networks are widely used in various applications, such as: * Medical Diagnosis: Modeling the dependencies between symptoms and diseases. * Anomaly Detection: Detecting unusual patterns in network traffic or financial transactions. * Robotics: Modeling the environment for robot localization and mapping. * Natural Language Processing: Modeling the dependencies between words in a sentence.</p>
+</section>
+</section>
+<section id="markov-networks" class="level2">
+<h2 class="anchored" data-anchor-id="markov-networks">Markov Networks</h2>
+<p>Markov Networks also named as Undirted Graphical Models.</p>
+<p>Markov Networks are undirected graphs that represent the joint distribution of random variables. The nodes in a Markov Network represent random variables, and the edges represent the interactions between them. Unlike Bayesian Networks, Markov Networks do not have directed edges, and the interactions are symmetric. The joint distribution of the random variables is factorized into potential functions that capture the interactions between the variables.</p>
+<p>Unlike parent-child relationships in Markov network, we cannot assign a conditional probabilituy table to each node and apply the chain rule to compute the joint distribution as we do in Bayesian Networks. Instead, we assign a factor to each maximal clique in the graph, which is a subset of nodes that are fully connected. The joint distribution is then factorized into the product of potential functions over the cliques in the graph: <span class="math display">\[
+P(X_1, X_2, \dots, X_n) = \frac{1}{Z} \prod_{C \in \mathcal{C}} \phi_C(X_C)
+\]</span> where <span class="math inline">\(\mathcal{C}\)</span> is the set of maximal cliques in the graph, <span class="math inline">\(\phi_C(X_C)\)</span> is the potential function over the clique <span class="math inline">\(C\)</span>, and <span class="math inline">\(Z\)</span> is the normalization constant called the partition function, defined as: <span class="math display">\[
+Z = \sum_{X_1, X_2, \dots, X_n} \prod_{C \in \mathcal{C}} \phi_C(X_C)
+\]</span></p>
+<p>For example:</p>
+<p><a href="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/202410262119360.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/202410262119360.png" class="img-fluid"></a></p>
+<p>The Markov Field is defiend as the Gibbs Distribution(Blozmann Distribution) over the graph. The Gibbs Distribution is defined as: <span class="math display">\[
+P(X) = \frac{1}{Z} \exp\left(-\sum_{C \in \mathcal{C}} \phi_C(X_C)\right)
+\]</span> where <span class="math inline">\(Z\)</span> is the partition function, and <span class="math inline">\(\phi_C(X_C)\)</span> is the potential function over the clique <span class="math inline">\(C\)</span>.</p>
+<p>The Hammersley-Clifford Theorem states that any positive distribution over a set of random variables can be represented as a Markov Network. This theorem provides a theoretical foundation for the use of Markov Networks to model complex dependencies between random variables.</p>
+<p>To improve he Markove Network, notes that the distribution can not be nagetive, so we can not use the general Gibbs Distributions, because the potential function can be nagetive. To solve this problem, we can use the Exponential Form of the Gibbs distributions, which is always non-negative. We represent a clique potential <span class="math inline">\(\psi(x_c)\)</span> in an unconstrained form value “energy” function <span class="math inline">\(\psi(x_c)=\exp(-\phi_c(x_c))\)</span>. The joint probability has a nice additive form: <span class="math display">\[
+P(X) = \frac{1}{Z} \exp\left(-\sum_{C \in \mathcal{C}} \phi_C(X_C)\right) = \frac{1}{Z} \exp\left(-H(x)\right)
+\]</span> where <span class="math inline">\(H(x)\)</span> is the free energy function of the Markov Network. This is called the Bolztmann Distribution(also called log-linear model in statistics).</p>
+</section>
+<section id="factor-graph" class="level2">
+<h2 class="anchored" data-anchor-id="factor-graph">Factor Graph</h2>
+<p>Factor Graphs are a generalization of Bayesian Networks and Markov Networks that unify both representations. Factor Graphs represent the joint distribution of random variables using factors that capture the dependencies between the variables. The nodes in a Factor Graph represent random variables, and the edges represent the factors that connect the variables. Factor Graphs provide a flexible framework for modeling complex dependencies between random variables and can be used to represent both Bayesian Networks and Markov Networks. For example, the student model can be represented as a Factor Graph as shown below:</p>
+<div class="cell" data-fig-width="3" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-dot" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="288" height="480" viewbox="0.00 0.00 237.73 188.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-184 233.73,-184 233.73,4 -4,4"></polygon>
+<!-- Difficulty -->
+<g id="node1" class="node">
+<title>Difficulty</title>
+<ellipse fill="none" stroke="black" cx="49.12" cy="-162" rx="49.23" ry="18"></ellipse>
+<text text-anchor="middle" x="49.12" y="-157.8" font-family="Times,serif" font-size="14.00">Difficulty</text>
+</g>
+<!-- Grade -->
+<g id="node2" class="node">
+<title>Grade</title>
+<ellipse fill="none" stroke="black" cx="70.12" cy="-90" rx="34.75" ry="18"></ellipse>
+<text text-anchor="middle" x="70.12" y="-85.8" font-family="Times,serif" font-size="14.00">Grade</text>
+</g>
+<!-- Difficulty&#45;&#45;Grade -->
+<g id="edge1" class="edge">
+<title>Difficulty--Grade</title>
+<path fill="none" stroke="black" d="M54.2,-144.05C57.45,-133.21 61.66,-119.18 64.93,-108.28"></path>
+</g>
+<!-- Letter -->
+<g id="node5" class="node">
+<title>Letter</title>
+<ellipse fill="none" stroke="black" cx="70.12" cy="-18" rx="34.18" ry="18"></ellipse>
+<text text-anchor="middle" x="70.12" y="-13.8" font-family="Times,serif" font-size="14.00">Letter</text>
+</g>
+<!-- Grade&#45;&#45;Letter -->
+<g id="edge4" class="edge">
+<title>Grade--Letter</title>
+<path fill="none" stroke="black" d="M70.12,-71.7C70.12,-60.85 70.12,-46.92 70.12,-36.1"></path>
+</g>
+<!-- Intelligence -->
+<g id="node3" class="node">
+<title>Intelligence</title>
+<ellipse fill="none" stroke="black" cx="173.12" cy="-162" rx="56.73" ry="18"></ellipse>
+<text text-anchor="middle" x="173.12" y="-157.8" font-family="Times,serif" font-size="14.00">Intelligence</text>
+</g>
+<!-- Intelligence&#45;&#45;Grade -->
+<g id="edge2" class="edge">
+<title>Intelligence--Grade</title>
+<path fill="none" stroke="black" d="M150.26,-145.46C132.36,-133.3 107.69,-116.54 90.47,-104.83"></path>
+</g>
+<!-- SAT -->
+<g id="node4" class="node">
+<title>SAT</title>
+<ellipse fill="none" stroke="black" cx="173.12" cy="-90" rx="29.06" ry="18"></ellipse>
+<text text-anchor="middle" x="173.12" y="-85.8" font-family="Times,serif" font-size="14.00">SAT</text>
+</g>
+<!-- Intelligence&#45;&#45;SAT -->
+<g id="edge3" class="edge">
+<title>Intelligence--SAT</title>
+<path fill="none" stroke="black" d="M173.12,-143.7C173.12,-132.85 173.12,-118.92 173.12,-108.1"></path>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Factor Graph of Student Model
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>In the Factor Graph, the nodes represent random variables, and the edges represent the factors that connect the variables. The joint distribution of the random variables is factorized into the product of factors over the cliques in the graph: <span class="math display">\[
+P(X_1, X_2, \dots, X_n) = \frac{1}{Z} \prod_{f \in \mathcal{F}} \phi_f(X_f)
+\]</span> where <span class="math inline">\(\mathcal{F}\)</span> is the set of factors in the graph, <span class="math inline">\(\phi_f(X_f)\)</span> is the factor over the variables <span class="math inline">\(X_f\)</span>, and <span class="math inline">\(Z\)</span> is the normalization constant called the partition function.</p>
+<p>Factor Graphs provide a unified representation of Bayesian Networks and Markov Networks and can be used to model complex dependencies between random variables. They are widely used in various applications, such as: * Error-Correcting Codes: Modeling the dependencies between bits in a code. * Sensor Networks: Modeling the dependencies between sensors in a network. * Image Processing: Modeling the dependencies between pixels in an image. * Social Networks: Modeling the dependencies between users in a network. * Robotics: Modeling the dependencies between sensors and actuators in a robot. * Natural Language Processing: Modeling the dependencies between words in a sentence.</p>
+</section>
+</section>
+<section id="inference" class="level1">
+<h1>Inference</h1>
+<section id="exact-inference" class="level2">
+<h2 class="anchored" data-anchor-id="exact-inference">Exact Inference</h2>
+<section id="the-elimination-algorithms" class="level3">
+<h3 class="anchored" data-anchor-id="the-elimination-algorithms">The Elimination Algorithms</h3>
+<section id="variable-elimination" class="level4">
+<h4 class="anchored" data-anchor-id="variable-elimination">Variable Elimination</h4>
+</section>
+<section id="bucket-elimination" class="level4">
+<h4 class="anchored" data-anchor-id="bucket-elimination">Bucket Elimination</h4>
+</section>
+</section>
+<section id="message-passing-algorithms" class="level3">
+<h3 class="anchored" data-anchor-id="message-passing-algorithms">Message Passing Algorithms</h3>
+<section id="belief-propagation" class="level4">
+<h4 class="anchored" data-anchor-id="belief-propagation">Belief Propagation</h4>
+</section>
+<section id="sum-product-algorithm" class="level4">
+<h4 class="anchored" data-anchor-id="sum-product-algorithm">Sum Product Algorithm</h4>
+</section>
+</section>
+<section id="the-junction-tree-algorithm" class="level3">
+<h3 class="anchored" data-anchor-id="the-junction-tree-algorithm">The Junction Tree Algorithm</h3>
+</section>
+</section>
+<section id="approximate-inference" class="level2">
+<h2 class="anchored" data-anchor-id="approximate-inference">Approximate Inference</h2>
+<section id="monte-carlo-methods" class="level3">
+<h3 class="anchored" data-anchor-id="monte-carlo-methods">Monte Carlo Methods</h3>
+<section id="markov-chain-monte-carlo-mcmc" class="level4">
+<h4 class="anchored" data-anchor-id="markov-chain-monte-carlo-mcmc">Markov Chain Monte Carlo (MCMC)</h4>
+</section>
+</section>
+<section id="variational-algorithms" class="level3">
+<h3 class="anchored" data-anchor-id="variational-algorithms">Variational Algorithms</h3>
+</section>
+</section>
+</section>
+<section id="learning" class="level1">
+<h1>Learning</h1>
+<section id="parameter-learning" class="level2">
+<h2 class="anchored" data-anchor-id="parameter-learning">Parameter Learning</h2>
+<section id="maximum-likelihood-estimation" class="level3">
+<h3 class="anchored" data-anchor-id="maximum-likelihood-estimation">Maximum Likelihood Estimation</h3>
+</section>
+<section id="maximum-a-posteriori-estimation" class="level3">
+<h3 class="anchored" data-anchor-id="maximum-a-posteriori-estimation">Maximum A Posteriori Estimation</h3>
+</section>
+<section id="expectation-maximization" class="level3">
+<h3 class="anchored" data-anchor-id="expectation-maximization">Expectation Maximization</h3>
+<p>This is a general framework for learning in probabilistic models with latent variables. The EM algorithm alternates between the E-step, where the posterior distribution of the latent variables is computed, and the M-step, where the model parameters are updated to maximize the expected log-likelihood. The EM algorithm is used in models like Gaussian Mixture Models (GMMs) and Hidden Markov Models (HMMs) to estimate the parameters of the model when the latent variables are not observed.</p>
+</section>
+</section>
+<section id="structure-learning" class="level2">
+<h2 class="anchored" data-anchor-id="structure-learning">Structure Learning</h2>
+<section id="chow-liu-algorithm" class="level3">
+<h3 class="anchored" data-anchor-id="chow-liu-algorithm">Chow-Liu Algorithm</h3>
+
+
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -757,6 +1189,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
