@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Overview: Deep Reinforcement Learning – Yuyang’s Blog">
@@ -126,7 +155,34 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#overview-of-the-deep-reinforcement-learning" id="toc-overview-of-the-deep-reinforcement-learning" class="nav-link active" data-scroll-target="#overview-of-the-deep-reinforcement-learning">Overview of the Deep Reinforcement Learning</a></li>
+  <li><a href="#key-concepts-and-notations" id="toc-key-concepts-and-notations" class="nav-link active" data-scroll-target="#key-concepts-and-notations">Key Concepts and Notations</a></li>
+  <li><a href="#q-learning-and-variants" id="toc-q-learning-and-variants" class="nav-link" data-scroll-target="#q-learning-and-variants">Q-Learning and Variants</a>
+  <ul class="collapse">
+  <li><a href="#classical-deepq-learning" id="toc-classical-deepq-learning" class="nav-link" data-scroll-target="#classical-deepq-learning">Classical (Deep)Q-Learning</a></li>
+  <li><a href="#double-deep-q-learning" id="toc-double-deep-q-learning" class="nav-link" data-scroll-target="#double-deep-q-learning">Double (Deep) Q-Learning</a></li>
+  <li><a href="#dueling-dqn" id="toc-dueling-dqn" class="nav-link" data-scroll-target="#dueling-dqn">Dueling DQN</a></li>
+  <li><a href="#noisy-q-learning" id="toc-noisy-q-learning" class="nav-link" data-scroll-target="#noisy-q-learning">Noisy Q-Learning</a></li>
+  <li><a href="#soft-q-learning" id="toc-soft-q-learning" class="nav-link" data-scroll-target="#soft-q-learning">Soft Q-Learning</a></li>
+  <li><a href="#experience-replay-buffer" id="toc-experience-replay-buffer" class="nav-link" data-scroll-target="#experience-replay-buffer">Experience Replay Buffer</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul></li>
+  <li><a href="#policy-based-algorithm" id="toc-policy-based-algorithm" class="nav-link" data-scroll-target="#policy-based-algorithm">Policy Based Algorithm</a>
+  <ul class="collapse">
+  <li><a href="#reinforce" id="toc-reinforce" class="nav-link" data-scroll-target="#reinforce">REINFORCE</a></li>
+  <li><a href="#actor-critic-methods" id="toc-actor-critic-methods" class="nav-link" data-scroll-target="#actor-critic-methods">Actor-Critic Methods</a>
+  <ul class="collapse">
+  <li><a href="#basic-actor-critic-algorithm" id="toc-basic-actor-critic-algorithm" class="nav-link" data-scroll-target="#basic-actor-critic-algorithm">Basic Actor-Critic Algorithm</a></li>
+  <li><a href="#advantage-actor-critic-algorithm" id="toc-advantage-actor-critic-algorithm" class="nav-link" data-scroll-target="#advantage-actor-critic-algorithm">Advantage Actor-Critic Algorithm</a></li>
+  <li><a href="#asyn-advantage-actor-critic-algorithm-a3d" id="toc-asyn-advantage-actor-critic-algorithm-a3d" class="nav-link" data-scroll-target="#asyn-advantage-actor-critic-algorithm-a3d">Asyn Advantage Actor-Critic Algorithm (A3D)</a></li>
+  </ul></li>
+  <li><a href="#trust-region-policy-optimization" id="toc-trust-region-policy-optimization" class="nav-link" data-scroll-target="#trust-region-policy-optimization">Trust Region Policy Optimization</a></li>
+  <li><a href="#proximal-policy-optimization" id="toc-proximal-policy-optimization" class="nav-link" data-scroll-target="#proximal-policy-optimization">Proximal Policy Optimization</a></li>
+  </ul></li>
+  <li><a href="#inverse-reinforcement-learning" id="toc-inverse-reinforcement-learning" class="nav-link" data-scroll-target="#inverse-reinforcement-learning">Inverse Reinforcement Learning</a></li>
+  <li><a href="#meta-reinforcement-learning" id="toc-meta-reinforcement-learning" class="nav-link" data-scroll-target="#meta-reinforcement-learning">Meta Reinforcement Learning</a></li>
+  <li><a href="#reinforcement-learning-and-inference" id="toc-reinforcement-learning-and-inference" class="nav-link" data-scroll-target="#reinforcement-learning-and-inference">Reinforcement Learning and Inference</a></li>
+  <li><a href="#reinforcement-learning-with-sequence-models" id="toc-reinforcement-learning-with-sequence-models" class="nav-link" data-scroll-target="#reinforcement-learning-with-sequence-models">Reinforcement Learning with Sequence Models</a></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
   </ul>
 </nav>
 </nav>
@@ -166,7 +222,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024-10-25</p>
+      <p class="date-modified">2024-10-28</p>
     </div>
   </div>
     
@@ -177,10 +233,118 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview-of-the-deep-reinforcement-learning" class="level1">
-<h1>Overview of the Deep Reinforcement Learning</h1>
-<p>asdasd</p>
-<p>sdasd</p>
+<p>In recent years, Deep Reinforcement Learning has emerged as one of the most promising areas within the broader field of Artificial Intelligence(AI). It combines two powerful tools: reinforcement learning(RL), where agents learn by interacting with their environment, and deep learning, where neural networks identify patterns from large amounts of data.</p>
+<p>The Markov Decision Process provide the mathematical foundation for DRL, enabling agents to make intelligent decision in complex environment. Let defines some key concepts first, for more details of the MDP, please check the following <a href="https://jaz201107.github.io/posts/Basic/MDP.html">blog</a></p>
+<section id="key-concepts-and-notations" class="level1">
+<h1>Key Concepts and Notations</h1>
+<ul>
+<li><span class="math inline">\(S\)</span>: The set of all possible stats in the environment</li>
+<li><span class="math inline">\(A\)</span>: The set of actions that agent can take</li>
+<li><span class="math inline">\(R(s, a)\)</span>: The reward function, which gives the immediate reward received after taking action <span class="math inline">\(a\)</span> in state <span class="math inline">\(s\)</span></li>
+<li><span class="math inline">\(v(s)\)</span>: The State-Value function of the state, while <span class="math inline">\(V(s)\)</span> is an estimator of the true state value function <span class="math inline">\(v(s)\)</span></li>
+</ul>
+<p><span class="math display">\[
+V^{\pi}(s) = \mathbb{E}_{\pi}\left[ \sum_{t=0}^{\infty}\gamma^{t}R_{t+1} | S_{0} = s \right]
+\]</span></p>
+<ul>
+<li><span class="math inline">\(q(s, a)\)</span>: The State-Action function of the state-action pairs, while <span class="math inline">\(Q(s, a)\)</span> is an estimator of the true state-action function(<span class="math inline">\(q(s, a)\)</span>) <span class="math display">\[
+Q^{\pi}(s, a) = \mathbb{E}_{\pi}\left[ \sum_{t=0}^{\infty}\gamma^{t}R_{t+1} | S_{0} = s, A_{0}=a \right]
+\]</span> The state value function and state action value function are related through the following euqation: <span class="math display">\[
+V^{\pi}(s) = \mathbb{E}_{a\sim \pi}[Q^{\pi}(s.)]
+\]</span></li>
+<li><span class="math inline">\(\gamma\)</span>: The discount factor <span class="math inline">\((0 \leq \gamma \leq 1)\)</span>, which determines how much the agent values future reward compared to immediate ones.</li>
+<li><span class="math inline">\(G_{t}\)</span>: The return, is the cumulative reward, defined as <span class="math display">\[
+G_{t} = \sum_{k=0}^{\infty}\gamma^{k}R_{t + k + 1}
+\]</span></li>
+<li><span class="math inline">\(A(s, a)\)</span>: The advantage function of the state-action pairs, which tells use how much better or worse a specific action <span class="math inline">\(a\)</span> is coompared to the average acction the policy would take in state <span class="math inline">\(s\)</span>.</li>
+</ul>
+</section>
+<section id="q-learning-and-variants" class="level1">
+<h1>Q-Learning and Variants</h1>
+<section id="classical-deepq-learning" class="level2">
+<h2 class="anchored" data-anchor-id="classical-deepq-learning">Classical (Deep)Q-Learning</h2>
+<p>The classic Q-learning finds the optimal state-action value function <span class="math inline">\(Q(s, a)\)</span> through the Bellman Equation. The Q-value update rule is: <span class="math display">\[
+Q(s_{t}, a_{t}) \leftarrow  Q(s_{t}, a_{t}) + \alpha(R_{t + 1} + \gamma \underset{a'}{\max \ }Q(s_{t+1}, a') - Q(s_{t}, a_{t}))
+\]</span> When we use the neural network as function approximator, we need define an loss function to update the parameters. The Loss function is: <span class="math display">\[
+\mathcal{L}(\theta) = \mathbb{E}[(R_{t+1} + \gamma \underset{a'}{\max \ }Q(s_{t+1}, a'; \theta^{-}) - Q(s_{t}, a_{t}; \theta) )^{2}]
+\]</span></p>
+<p>The problem of classical Q-Learning is that it suffer from overestimation bias, where the <code>max</code> operator selects actions that appear optimal due to noisy or high Q-value. To release this problem, we can use Double Q-Learning, it defined as</p>
+</section>
+<section id="double-deep-q-learning" class="level2">
+<h2 class="anchored" data-anchor-id="double-deep-q-learning">Double (Deep) Q-Learning</h2>
+<p>Double Q-Learning reduces overestimation bias by maintaining two Q-tables(or two networks in deep learning settings). Each table is updated independently to decouple the action selection and value estimation processes. The update rule is: <span class="math display">\[
+Q_{1}(s_{t}, a_{t}) \leftarrow Q_{1}(s_{t}, a_{t}) + \alpha(R_{t+1} + \gamma Q_{2}(s_{t + 1}, \underset{a'}{\operatorname{arg\max}\ }Q_{1}(s_{t+1}, a') ) - Q_{1}(s_{t}, a_{t}))
+\]</span></p>
+<p>The Loss Function for the Double Deep Q_Learning is that: <span class="math display">\[
+\mathcal{L}(\theta)=\mathbb{E}[(R_{t+1} + \gamma Q(s_{t+1}, \underset{a'}{\operatorname{arg\max}\ }Q(s_{t+1}, a'; \theta);\theta^{-} )-Q(s_{t}, a_{t}; \theta))^{2}]
+\]</span></p>
+</section>
+<section id="dueling-dqn" class="level2">
+<h2 class="anchored" data-anchor-id="dueling-dqn">Dueling DQN</h2>
+<p>The problem of the Basic DQN is that not all actions are equally relevant in every state, but DQN treats all state-action equally, to solve this problem, we can use Dueling DQN, which separates the Q-value into two components: * State-Value function <span class="math inline">\(V(s)\)</span>: measures the value of being in state <span class="math inline">\(s\)</span> * Advantage function <span class="math inline">\(A(s, a)\)</span>, which measures the relative importance of taking action <span class="math inline">\(a\)</span> in state <span class="math inline">\(s\)</span>.</p>
+<p>The Q-value is them computed as: <span class="math display">\[
+Q(s, a) = V(s) + A(s, a) - \underset{a'}{\max \ } A(s, a')
+\]</span></p>
+</section>
+<section id="noisy-q-learning" class="level2">
+<h2 class="anchored" data-anchor-id="noisy-q-learning">Noisy Q-Learning</h2>
+<p>In som environments, the agents needs better exploration strategies to avoid getting suck in local optima. The Noisy-Q-Learning introduces parametric noise into the neural network’s parameters, allowing the agent to explore more efficitively</p>
+</section>
+<section id="soft-q-learning" class="level2">
+<h2 class="anchored" data-anchor-id="soft-q-learning">Soft Q-Learning</h2>
+<p>Soft Q-learning introduces an entropy term into the objective to encourage exploration. The agent seeks to maximize both the cumulative reawrd and the policy entropy, learning yo better exploration in uncertain environemnts</p>
+<p>The Objective Function become: <span class="math display">\[
+J(\pi) =\mathbb{E}\left[ \sum_{t}(R_{t} + \alpha \mathcal{H}(\pi(\cdot | s_{t}))) \right]
+\]</span></p>
+</section>
+<section id="experience-replay-buffer" class="level2">
+<h2 class="anchored" data-anchor-id="experience-replay-buffer">Experience Replay Buffer</h2>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+</section>
+</section>
+<section id="policy-based-algorithm" class="level1">
+<h1>Policy Based Algorithm</h1>
+<section id="reinforce" class="level2">
+<h2 class="anchored" data-anchor-id="reinforce">REINFORCE</h2>
+<p>REINFORCE is the most basic algorithm used in the reinforcement learning algorithms.</p>
+</section>
+<section id="actor-critic-methods" class="level2">
+<h2 class="anchored" data-anchor-id="actor-critic-methods">Actor-Critic Methods</h2>
+<section id="basic-actor-critic-algorithm" class="level3">
+<h3 class="anchored" data-anchor-id="basic-actor-critic-algorithm">Basic Actor-Critic Algorithm</h3>
+</section>
+<section id="advantage-actor-critic-algorithm" class="level3">
+<h3 class="anchored" data-anchor-id="advantage-actor-critic-algorithm">Advantage Actor-Critic Algorithm</h3>
+</section>
+<section id="asyn-advantage-actor-critic-algorithm-a3d" class="level3">
+<h3 class="anchored" data-anchor-id="asyn-advantage-actor-critic-algorithm-a3d">Asyn Advantage Actor-Critic Algorithm (A3D)</h3>
+</section>
+</section>
+<section id="trust-region-policy-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="trust-region-policy-optimization">Trust Region Policy Optimization</h2>
+</section>
+<section id="proximal-policy-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="proximal-policy-optimization">Proximal Policy Optimization</h2>
+<p>This is an simpller alternative to TRPO</p>
+</section>
+</section>
+<section id="inverse-reinforcement-learning" class="level1">
+<h1>Inverse Reinforcement Learning</h1>
+</section>
+<section id="meta-reinforcement-learning" class="level1">
+<h1>Meta Reinforcement Learning</h1>
+</section>
+<section id="reinforcement-learning-and-inference" class="level1">
+<h1>Reinforcement Learning and Inference</h1>
+</section>
+<section id="reinforcement-learning-with-sequence-models" class="level1">
+<h1>Reinforcement Learning with Sequence Models</h1>
+</section>
+<section id="reference" class="level1">
+<h1>Reference</h1>
+<p>[1] <a href="https://spinningup.openai.com/en/latest/">OpenAI Spinning Up</a> [2] <a href="https://lilianweng.github.io/posts/2018-04-08-policy-gradient/">Lil’ Log Policy Gradient Algorithms</a> [3] <a href="https://rail.eecs.berkeley.edu/deeprlcourse/">UCB CS 285 Deep Reinforcement Learning 2023</a> [4] <a href="https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf">Andrew Barto and Richard S. Sutto: Reinforcement Learning an Introducntion</a></p>
 
 
 </section>

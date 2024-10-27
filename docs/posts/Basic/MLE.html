@@ -270,10 +270,24 @@ p(y_i | x_i, \theta) = \frac{e^{f_{y_i}}}{\sum_{j}^{C} e^{f_j}}
 <section id="advanced-mle-exmples-mle-in-generative-model" class="level1">
 <h1>Advanced MLE Exmples: MLE in Generative Model</h1>
 <p>MLE is also used in generative models like Gaussian Mixture Models (GMM) and Variational Autoencoders (VAEs). In GMM, the likelihood of the data under the model is a mixture of Gaussian distributions. The MLE estimates the parameters of the Gaussian components to maximize the likelihood of the observed data. In VAEs, the MLE is used to train the encoder and decoder networks to maximize the likelihood of the data under the generative model.</p>
+<p>In the generative model case, we want to learn a probability distribution <span class="math inline">\(P(x)\)</span> over image to do: * Generation: If we sample <span class="math inline">\(x_{\text{new}} \sim P(X)\)</span>, <span class="math inline">\(x_{\text{new}}\)</span> should look like the real image (sampling) * Density Estimation: <span class="math inline">\(P(x)\)</span> should be high if <span class="math inline">\(x\)</span> looks like a real image (Anomaly Detecion) * Unsupervised Representation: We should be able to learn what these images have in common. But the question raise: 1. How to represent <span class="math inline">\(P_{\theta}(x)\)</span>: the <span class="math inline">\(x\)</span> is high-dimentional, Normal Distribution cannot be used here 2. How to learn the parameter of the <span class="math inline">\(P_{\theta}(x)\)</span></p>
+<p>The goal of learning is to return a model <span class="math inline">\(P_{\theta}(x)\)</span> that precisely captures the distributions <span class="math inline">\(P_{\text{data}}(x)\)</span> from which out data was sampled.</p>
+<p>Here we use KL-divergence to measure how two distribution are close to each other. <span class="math display">\[
+\begin{split}
+D(p \| q) &amp; =  \sum_{x}p(x)\log \frac{p(x)}{q(x)} \\
+&amp; = \mathbb{E}_{x \sim p_{data}}\left[ \log \left( \frac{P_{\text{data}}(x)}{P_{\theta}(x)} \right) \right] \\
+&amp; = \mathbb{E}_{x \sim p_{data}}[\log P_{\text{data}}(x)] - \mathbb{E}_{x \sim p_{data}}[\log P_{\theta}(x)]
+\end{split}
+\]</span> Since the first term is the does not depend on <span class="math inline">\(P_{\theta}\)</span>, so, we just need the maximize the second term to minimize the KL-divergence. That mean we need to maximizing the expected log-likelihood: <span class="math display">\[
+\underset{P_{\theta}}{\operatorname{arg\min}\ } D(P_{data} \| P_{\theta}) = \underset{P_{\theta}}{\operatorname{arg\max}\ } \mathbb{E}_{x \sim p_{data}}[\log P_{\theta}(x)]
+\]</span></p>
+<p>Since we can not get the exact value of the <span class="math inline">\(\mathbb{E}_{x \sim p_{data}}[\log P_{\theta}(x)]\)</span>, we can use empirical log-likelihood: <span class="math display">\[
+\mathbb{E}_{x \sim p_{data}}[\log P_{\theta}(x)] \approx \frac{1}{|\mathcal{D}|}\sum_{x \in \mathcal{D}}\log P_{\theta}(x)
+\]</span></p>
 </section>
 <section id="challenges-and-limitations-of-mle" class="level1">
 <h1>Challenges and Limitations of MLE</h1>
-<p>Finally, we disscuss some of the challenges and limitations of MLE. One of the main challenges of MLE is that it requires a closed-form solution for the likelihood function, which is not always available, especially in complex models like deep neural networks. In such cases, numerical optimization techniques like SGD are used to maximize the log-likelihood. Another limitation of MLE is that it assumes the data is generated from a specific parametric model, which may not always be the case in practice. In such cases, more flexible models like non-parametric methods or Bayesian approaches may be more appropriate. There are some other limitations of MLE, such as overfitting, local optima, and sensitivity to outliers, which can be addressed by regularization techniques, initialization strategies, and robust loss functions.</p>
+<p>Finally, we disscuss some of the challenges and limitations of MLE. One of the main challenges of MLE is that it requires a closed-form solution for the likelihood function, which is not always available, especially in complex models like deep neural networks. In such cases, numerical optimization techniques like SGD are used to maximize the log-likelihood. Another limitation of MLE is that it assumes the data is generated from a specific parametric model, which may not always be the case in practice. In such cases, more flexible models like non-parametric methods or Bayesian approaches may be more appropriate. There are some other limitations of MLE, such as <strong>overfitting</strong>, local optima, and sensitivity to outliers, which can be addressed by regularization techniques, initialization strategies, and robust loss functions.</p>
 </section>
 <section id="alternative-to-mle" class="level1">
 <h1>Alternative to MLE</h1>
