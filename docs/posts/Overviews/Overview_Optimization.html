@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Overview: Optimization Algorithms – Yuyang’s Blog">
@@ -126,7 +155,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#overview-of-optimization-algorithms" id="toc-overview-of-optimization-algorithms" class="nav-link active" data-scroll-target="#overview-of-optimization-algorithms">Overview of Optimization Algorithms</a></li>
+  <li><a href="#first-order-optimization-methods" id="toc-first-order-optimization-methods" class="nav-link active" data-scroll-target="#first-order-optimization-methods">First Order Optimization methods</a></li>
+  <li><a href="#higher-order-optimization-methods" id="toc-higher-order-optimization-methods" class="nav-link" data-scroll-target="#higher-order-optimization-methods">Higher Order Optimization methods</a>
+  <ul class="collapse">
+  <li><a href="#conjugate-gradientcg" id="toc-conjugate-gradientcg" class="nav-link" data-scroll-target="#conjugate-gradientcg">Conjugate Gradient(CG)</a></li>
+  </ul></li>
+  <li><a href="#heuristic-derivate-free-optimization-methods" id="toc-heuristic-derivate-free-optimization-methods" class="nav-link" data-scroll-target="#heuristic-derivate-free-optimization-methods">Heuristic Derivate Free Optimization methods</a></li>
+  <li><a href="#preconditions" id="toc-preconditions" class="nav-link" data-scroll-target="#preconditions">Preconditions</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a>
+  <ul class="collapse">
+  <li><a href="#optimization-in-machine-learning" id="toc-optimization-in-machine-learning" class="nav-link" data-scroll-target="#optimization-in-machine-learning">Optimization in Machine Learning</a></li>
+  <li><a href="#optimization-in-deep-learning" id="toc-optimization-in-deep-learning" class="nav-link" data-scroll-target="#optimization-in-deep-learning">Optimization in Deep Learning</a></li>
+  <li><a href="#optimization-in-reinforcement-learning" id="toc-optimization-in-reinforcement-learning" class="nav-link" data-scroll-target="#optimization-in-reinforcement-learning">Optimization in Reinforcement Learning</a></li>
+  <li><a href="#optimization-in-meta-learning" id="toc-optimization-in-meta-learning" class="nav-link" data-scroll-target="#optimization-in-meta-learning">Optimization in Meta Learning</a></li>
+  <li><a href="#optimization-in-variation-inference" id="toc-optimization-in-variation-inference" class="nav-link" data-scroll-target="#optimization-in-variation-inference">Optimization in Variation Inference</a></li>
+  <li><a href="#optimization-in-generative-model" id="toc-optimization-in-generative-model" class="nav-link" data-scroll-target="#optimization-in-generative-model">Optimization in Generative Model</a></li>
+  <li><a href="#optimization-in-markov-chain-monte-carlo" id="toc-optimization-in-markov-chain-monte-carlo" class="nav-link" data-scroll-target="#optimization-in-markov-chain-monte-carlo">Optimization in Markov Chain Monte Carlo</a></li>
+  </ul></li>
+  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">Conclusions</a></li>
   </ul>
 </nav>
 </nav>
@@ -166,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024-10-25</p>
+      <p class="date-modified">2024-10-29</p>
     </div>
   </div>
     
@@ -177,8 +223,89 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview-of-optimization-algorithms" class="level1">
-<h1>Overview of Optimization Algorithms</h1>
+<p>Optimization is one of the core components of machine learning and deep learning. The most part of the machine learning algorithm is to optimize the parameters in the objective function from given dataset <span class="math inline">\(\mathcal{D}\)</span>. In the era of the immense data, the effectiveness and efficiency of the <strong>numerical optimization algorithms</strong> dramatically influence the popularization and application of the machine learning.</p>
+<p>Most of the optimization algorithms involve update the parameters according to the gradient information. From the perspective of the gradient information, popular optimization methods can be divided into three categories:</p>
+<ul>
+<li>First-Order Optimization Methods: such as stochastic gradient methods</li>
+<li>Higher-Order Optimization methods: such as Newton’s method</li>
+<li>Heuristic Derivative Free Optimization: such as coordinate descent method</li>
+</ul>
+<p>First Order Optimization methods are the most common methods used in the deep learning field, because it is easier to implement, while higher order methods converge at a faster speed with the <strong>curvature information</strong> ::: {.column-margin} <strong>curvature information</strong>: refers to the second-order properties of the objective landspace. Curvature describes how quickly the gradient of a function changes with respect to the model parameters. ::: makes the search direction more effective, is more computing demanding due to the operation and storage of the inverse matrix of the <strong>Hessian matrix</strong>. To solve this problem, many variants based on <strong>Newton’s method</strong> has been developed most of which try to <em>approximate</em> the Hessian matrix through some techniques.</p>
+<p>Derivative free optimization methods are mainly used in the case that the derivative of the objective function may not exits or be difficult to calculate, the two main ideas are that:</p>
+<ul>
+<li>Adopting a heuristic search based on empirical rules</li>
+<li>Fitting the objective function with samples Notes that derivative free optimization methods can work with gradient-based methods</li>
+</ul>
+<section id="first-order-optimization-methods" class="level1">
+<h1>First Order Optimization methods</h1>
+</section>
+<section id="higher-order-optimization-methods" class="level1">
+<h1>Higher Order Optimization methods</h1>
+<p>The second order methods can be used for addressing the problem where an objective function is highly non-linear and ill-conditioned.</p>
+<section id="conjugate-gradientcg" class="level2">
+<h2 class="anchored" data-anchor-id="conjugate-gradientcg">Conjugate Gradient(CG)</h2>
+<p>The conjugate gradient method is a method that only needs first-order derivative information for well-defined <strong>quadratic programming</strong>, but overcomes the shortcoming of <strong>steepest descent method</strong>, and avoids the disadvantages of Newton’s method of storing and calculating the inverse Hessian matrix.</p>
+<p>It is one of the most effective methods for solving large-scale <strong>linear systems of equations</strong>. It can also be used for solving non-linear optimization equations. In the 1960s, CG method is proposed as an alternative to Gaussian elimination.</p>
+<p>For a linear system: <span class="math display">\[
+A\theta = b
+\]</span> where <span class="math inline">\(A \in \mathbb{S}^{n \times n}_{++}\)</span> is symmetric, positive-definite matrix. The matrix <span class="math inline">\(A\)</span> and vector <span class="math inline">\(b\)</span> are known, and we want to solve the value of <span class="math inline">\(\theta\)</span>. The problem of minimize the quadratic positive definite function: <span class="math display">\[
+\underset{\theta}{\min \ } F(\theta) = \frac{1}{2}\theta^{T}A\theta - b\theta + c
+\]</span> can be seen as a linear system when we set the gradient of <span class="math inline">\(F(\theta^{*}) = 0\)</span>: <span class="math display">\[
+\frac{d F(\theta)}{d\theta} = A\theta - b
+\]</span> If <span class="math inline">\(A\)</span> is symmetric matrix.</p>
+<p>The gradient of <span class="math inline">\(F(\theta)\)</span> can be obtained by simple calculation which is equals to the residual of the linear system: <span class="math display">\[
+\nabla F(\theta) = r(\theta) = A\theta - b
+\]</span></p>
+<p>The conjugate is defined as: Given an matrix <span class="math inline">\(A \in \mathbb{S}^{n\times n}_{++}\)</span>, two non-zero vector <span class="math inline">\(d_{i}, d_{j}\)</span> are conjugate with respect to <span class="math inline">\(A\)</span> if: <span class="math display">\[
+d_{i}^{T}Ad_{j} = 0
+\]</span> This is also called as <span class="math inline">\(A\)</span>-orthogonality.</p>
+<p>A set of non-zero vector <span class="math inline">\(\{ d_{1}, d_{2}, \dots, d_{n}\}\)</span> is said to be conjugate with respect to A if any unequal vectors are conjugate with respect to <span class="math inline">\(A\)</span>.</p>
+<p>To derive the conjugate gradient method, we first initialize some random start point <span class="math inline">\(\theta_{0}\)</span> as starting point. And update the <span class="math inline">\(\theta\)</span> according to: <span class="math display">\[
+\theta_{t + 1} = \theta_{t} + \eta_{t}d_{t}
+\]</span> The step size <span class="math inline">\(\eta_{t}\)</span> can be obtained by a <strong>linear search</strong>, which means choose <span class="math inline">\(\eta_{t}\)</span> to minimize the objective function <span class="math inline">\(f(\cdot)\)</span> along <span class="math inline">\(\theta_{t} + \eta_{t}d_{t}\)</span>. The formula of <span class="math inline">\(\eta_{t}\)</span> is: <span class="math display">\[
+\eta_{t} = \frac{r_{t}^{\intercal}r_{t}}{d^{\intercal}Ad_{t}}
+\]</span></p>
+<p>The search direction <span class="math inline">\(d_{t}\)</span> is obtained by a linear combination of negative residual and the previous search direction: <span class="math display">\[
+d_{t} = - r_{t} +\beta_{t}d_{t-1}
+\]</span> Where the <span class="math inline">\(\beta_{t}\)</span> is the update parameter, determined by: <span class="math display">\[
+\beta_{t} = \frac{r_{t}^{\intercal}r_{t}}{r^{\intercal}_{t-1}r_{t-1}}
+\]</span></p>
+<p>One of the add property of the CG method is that to generating a new vector <span class="math inline">\(d_{t}\)</span>, we know need previous vector <span class="math inline">\(d_{t-1}\)</span></p>
+<p>Check this for further illustrate : <a href="https://www.ncts.ncku.edu.tw/phys/cmr/071123/cg.pdf">An Introduction to the Conjugate Gradient Method Without the Agonizing Pain</a></p>
+</section>
+</section>
+<section id="heuristic-derivate-free-optimization-methods" class="level1">
+<h1>Heuristic Derivate Free Optimization methods</h1>
+</section>
+<section id="preconditions" class="level1">
+<h1>Preconditions</h1>
+</section>
+<section id="applications" class="level1">
+<h1>Applications</h1>
+<section id="optimization-in-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="optimization-in-machine-learning">Optimization in Machine Learning</h2>
+</section>
+<section id="optimization-in-deep-learning" class="level2">
+<h2 class="anchored" data-anchor-id="optimization-in-deep-learning">Optimization in Deep Learning</h2>
+</section>
+<section id="optimization-in-reinforcement-learning" class="level2">
+<h2 class="anchored" data-anchor-id="optimization-in-reinforcement-learning">Optimization in Reinforcement Learning</h2>
+</section>
+<section id="optimization-in-meta-learning" class="level2">
+<h2 class="anchored" data-anchor-id="optimization-in-meta-learning">Optimization in Meta Learning</h2>
+</section>
+<section id="optimization-in-variation-inference" class="level2">
+<h2 class="anchored" data-anchor-id="optimization-in-variation-inference">Optimization in Variation Inference</h2>
+</section>
+<section id="optimization-in-generative-model" class="level2">
+<h2 class="anchored" data-anchor-id="optimization-in-generative-model">Optimization in Generative Model</h2>
+</section>
+<section id="optimization-in-markov-chain-monte-carlo" class="level2">
+<h2 class="anchored" data-anchor-id="optimization-in-markov-chain-monte-carlo">Optimization in Markov Chain Monte Carlo</h2>
+</section>
+</section>
+<section id="conclusions" class="level1">
+<h1>Conclusions</h1>
 
 
 </section>
