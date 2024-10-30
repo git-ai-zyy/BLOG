@@ -122,7 +122,18 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#llm-architecture" id="toc-llm-architecture" class="nav-link active" data-scroll-target="#llm-architecture">LLM Architecture</a>
+  <ul class="collapse">
+  <li><a href="#causal-decoder-architecture" id="toc-causal-decoder-architecture" class="nav-link" data-scroll-target="#causal-decoder-architecture">Causal Decoder Architecture</a></li>
+  <li><a href="#prefix-decoder-architecture" id="toc-prefix-decoder-architecture" class="nav-link" data-scroll-target="#prefix-decoder-architecture">Prefix Decoder Architecture</a></li>
+  <li><a href="#mixture-of-experts" id="toc-mixture-of-experts" class="nav-link" data-scroll-target="#mixture-of-experts">Mixture of Experts</a></li>
+  </ul></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -160,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024-10-27</p>
+      <p class="date-modified">2024-10-30</p>
     </div>
   </div>
     
@@ -171,8 +182,30 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="llm-architecture" class="level1">
+<h1>LLM Architecture</h1>
+<p>The mainstream architecture of existing LLM can be categorized into three major types:</p>
+<ul>
+<li>Encoder-Decoder</li>
+<li>Causal Decoder</li>
+<li>Prefix Decoder <img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030135524.png" class="img-fluid" alt="image.png"> ## Encoder Decoder Architecture The vanilla Transformer model is based on that architecture. The encoder adopts stacked muli-head self-attention layers to encoder the input sequence for gengerrating its latent representation, the decopder perform cross-attention on these representations, while decoder performs cross-attention on theses representation and auto-regressively generates the target sequence.</li>
+</ul>
+<section id="causal-decoder-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="causal-decoder-architecture">Causal Decoder Architecture</h2>
+<p>The causal decoder architecture incorporates the unidirectional attention mask, to guarantee that each input token can only attend to the past tokens and itself.</p>
+<p>The GPT-series models are developed based on the causal-decoder architecture. It show amazing ability in in-context learning capability of LLMs.</p>
+</section>
+<section id="prefix-decoder-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="prefix-decoder-architecture">Prefix Decoder Architecture</h2>
+<p>Non like Causal Decoder Architecture, the prefix decoder architecture enable performing bi-directional attention over the prefix tokens and unidirectional attention only on generated tokens.</p>
+</section>
+<section id="mixture-of-experts" class="level2">
+<h2 class="anchored" data-anchor-id="mixture-of-experts">Mixture of Experts</h2>
+<p>We can further extend the above architecture via the <strong>mixture of experts</strong> (MOE ) scaling. In which a subset of neural network weights for each input are sparely activated, the example of <strong>Switch Transformer</strong>. The major merit is that MoE is a flexible way to scale up the model parameter while maintaining a constant computational cost</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

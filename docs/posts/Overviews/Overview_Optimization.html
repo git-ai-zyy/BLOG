@@ -108,7 +108,7 @@ window.Quarto = {
 <meta property="og:site_name" content="Yuyang's Blog">
 </head>
 
-<body class="floating nav-fixed">
+<body class="floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -155,10 +155,25 @@ window.Quarto = {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#first-order-optimization-methods" id="toc-first-order-optimization-methods" class="nav-link active" data-scroll-target="#first-order-optimization-methods">First Order Optimization methods</a></li>
+  <li><a href="#problem-formalization" id="toc-problem-formalization" class="nav-link active" data-scroll-target="#problem-formalization">Problem Formalization</a>
+  <ul class="collapse">
+  <li><a href="#linear-programming" id="toc-linear-programming" class="nav-link" data-scroll-target="#linear-programming">Linear Programming</a></li>
+  <li><a href="#quadratic-programming" id="toc-quadratic-programming" class="nav-link" data-scroll-target="#quadratic-programming">Quadratic Programming</a></li>
+  <li><a href="#semi-definition-programming" id="toc-semi-definition-programming" class="nav-link" data-scroll-target="#semi-definition-programming">Semi-Definition Programming</a></li>
+  </ul></li>
+  <li><a href="#first-order-optimization-methods" id="toc-first-order-optimization-methods" class="nav-link" data-scroll-target="#first-order-optimization-methods">First Order Optimization methods</a></li>
   <li><a href="#higher-order-optimization-methods" id="toc-higher-order-optimization-methods" class="nav-link" data-scroll-target="#higher-order-optimization-methods">Higher Order Optimization methods</a>
   <ul class="collapse">
   <li><a href="#conjugate-gradientcg" id="toc-conjugate-gradientcg" class="nav-link" data-scroll-target="#conjugate-gradientcg">Conjugate Gradient(CG)</a></li>
+  <li><a href="#quasi-newton-methods" id="toc-quasi-newton-methods" class="nav-link" data-scroll-target="#quasi-newton-methods">Quasi-Newton Methods</a>
+  <ul class="collapse">
+  <li><a href="#dfp" id="toc-dfp" class="nav-link" data-scroll-target="#dfp">DFP</a></li>
+  <li><a href="#bfgs" id="toc-bfgs" class="nav-link" data-scroll-target="#bfgs">BFGS</a></li>
+  <li><a href="#l-bfgs" id="toc-l-bfgs" class="nav-link" data-scroll-target="#l-bfgs">L-BFGS</a></li>
+  </ul></li>
+  <li><a href="#hessian-free-optimization-methods" id="toc-hessian-free-optimization-methods" class="nav-link" data-scroll-target="#hessian-free-optimization-methods">Hessian-Free Optimization Methods</a></li>
+  <li><a href="#natural-gradient" id="toc-natural-gradient" class="nav-link" data-scroll-target="#natural-gradient">Natural Gradient</a></li>
+  <li><a href="#trust-region-method" id="toc-trust-region-method" class="nav-link" data-scroll-target="#trust-region-method">Trust Region Method</a></li>
   </ul></li>
   <li><a href="#heuristic-derivate-free-optimization-methods" id="toc-heuristic-derivate-free-optimization-methods" class="nav-link" data-scroll-target="#heuristic-derivate-free-optimization-methods">Heuristic Derivate Free Optimization methods</a></li>
   <li><a href="#preconditions" id="toc-preconditions" class="nav-link" data-scroll-target="#preconditions">Preconditions</a></li>
@@ -181,7 +196,7 @@ window.Quarto = {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -230,16 +245,31 @@ window.Quarto = {
 <li>Higher-Order Optimization methods: such as Newton’s method</li>
 <li>Heuristic Derivative Free Optimization: such as coordinate descent method</li>
 </ul>
-<p>First Order Optimization methods are the most common methods used in the deep learning field, because it is easier to implement, while higher order methods converge at a faster speed with the <strong>curvature information</strong> ::: {.column-margin} <strong>curvature information</strong>: refers to the second-order properties of the objective landspace. Curvature describes how quickly the gradient of a function changes with respect to the model parameters. ::: makes the search direction more effective, is more computing demanding due to the operation and storage of the inverse matrix of the <strong>Hessian matrix</strong>. To solve this problem, many variants based on <strong>Newton’s method</strong> has been developed most of which try to <em>approximate</em> the Hessian matrix through some techniques.</p>
-<p>Derivative free optimization methods are mainly used in the case that the derivative of the objective function may not exits or be difficult to calculate, the two main ideas are that:</p>
+<p>First Order Optimization methods are the most common methods used in the deep learning field, because it is easier to implement, while higher order methods converge at a faster speed with the <strong>curvature information</strong> makes the search direction more effective, is more computing demanding due to the operation and storage of the inverse matrix of the <strong>Hessian matrix</strong>. To solve this problem, many variants based on <strong>Newton’s method</strong> has been developed most of which try to <em>approximate</em> the Hessian matrix through some techniques.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>curvature information</strong>: refers to the second-order properties of the objective landspace. Curvature describes how quickly the gradient of a function changes with respect to the model parameters.</p>
+</div></div><p>Derivative free optimization methods are mainly used in the case that the derivative of the objective function may not exits or be difficult to calculate, the two main ideas are that:</p>
 <ul>
 <li>Adopting a heuristic search based on empirical rules</li>
 <li>Fitting the objective function with samples Notes that derivative free optimization methods can work with gradient-based methods</li>
 </ul>
+<section id="problem-formalization" class="level1">
+<h1>Problem Formalization</h1>
+<section id="linear-programming" class="level2">
+<h2 class="anchored" data-anchor-id="linear-programming">Linear Programming</h2>
+</section>
+<section id="quadratic-programming" class="level2">
+<h2 class="anchored" data-anchor-id="quadratic-programming">Quadratic Programming</h2>
+</section>
+<section id="semi-definition-programming" class="level2">
+<h2 class="anchored" data-anchor-id="semi-definition-programming">Semi-Definition Programming</h2>
+</section>
+</section>
 <section id="first-order-optimization-methods" class="level1">
 <h1>First Order Optimization methods</h1>
 </section>
-<section id="higher-order-optimization-methods" class="level1">
+<section id="higher-order-optimization-methods" class="level1 page-columns page-full">
 <h1>Higher Order Optimization methods</h1>
 <p>The second order methods can be used for addressing the problem where an objective function is highly non-linear and ill-conditioned.</p>
 <section id="conjugate-gradientcg" class="level2">
@@ -272,6 +302,65 @@ d_{t} = - r_{t} +\beta_{t}d_{t-1}
 \]</span></p>
 <p>One of the add property of the CG method is that to generating a new vector <span class="math inline">\(d_{t}\)</span>, we know need previous vector <span class="math inline">\(d_{t-1}\)</span></p>
 <p>Check this for further illustrate : <a href="https://www.ncts.ncku.edu.tw/phys/cmr/071123/cg.pdf">An Introduction to the Conjugate Gradient Method Without the Agonizing Pain</a></p>
+</section>
+<section id="quasi-newton-methods" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="quasi-newton-methods">Quasi-Newton Methods</h2>
+<p>The basic idea of Newton’s method is to use both the first-order derivative and second order derivative to approximate the objective function with a quadratic function, and then solve the minimum optimization of the quadratic function. The one-dimensional Newton’s iteration formula is shown as: <span class="math display">\[
+\theta_{t+1}= \theta_{t} - \frac{f'(\theta_{t})}{f''(\theta_{t})}
+\]</span> The high dimensional Newton’s iteration formula is: <span class="math display">\[
+\theta_{t+1} = \theta_{t} - \nabla^{2}f(\theta_{t})^{-1}\nabla f(\theta_{t})
+\]</span>where <span class="math inline">\(\nabla^{2} f\)</span> is <strong>Hessian</strong> matrix. The above method is called <strong>damping Newton’s method</strong>.</p>
+<p>The problem of this method is computing inverse of the Hessian matrix at every iterations, which makes the storage and computation very expensive. To solve the problem we can approximate the inverse of the Hessian matrix, which is called <strong>quasi-Newton method</strong>.</p>
+<p>It use positive definite matrix to approximate the inverse of the Hessian matrix. More specifically, the second-order gradient is not directly needed in this method. There are several methods to approximate the Hessian matrix and inverse matrix: ### Quasi-Newton Condition Assume the objective function <span class="math inline">\(f\)</span> can be approximated by a quadratic function, we can extend <span class="math inline">\(f(\theta)\)</span> to Taylor series at <span class="math inline">\(\theta =\theta_{t+1}\)</span>: <span class="math display">\[
+f(\theta) \approx f(\theta_{t+1}) + \nabla f(\theta_{t+1})^{\intercal}(\theta - \theta_{t+1}) + \frac{1}{2}(\theta - \theta_{t+1})^{\intercal}\nabla^{2}f(\theta_{t+1})(\theta - \theta_{t+1})
+\]</span></p>
+<p>We can compute the gradient on both sides of the above equation and obtain: <span class="math display">\[
+\nabla f(\theta) \approx \nabla f(\theta_{t+1}) + \nabla^{2}f(\theta_{t+1})(\theta - \theta_{t+!})
+\]</span> Let set <span class="math inline">\(\theta = \theta_{t}\)</span>, we have: <span class="math display">\[
+\nabla f(\theta_{t}) \approx \nabla f(\theta_{t+1}) + \nabla^{2}f(\theta_{t+1})(\theta_{t} - \theta_{t+1})
+\]</span> We use <span class="math inline">\(B\)</span> to represent the approximate matrix of the Hessian matrix. Set <span class="math inline">\(s_{t} = \theta_{t+1} - \theta_{t}\)</span> and <span class="math inline">\(u_{t} = \nabla f(\theta_{t+1}) - \nabla f(\theta_{t})\)</span></p>
+<p>The matrix <span class="math inline">\(B_{t+1}\)</span> is satisfied that: <span class="math display">\[
+u_{t} = B_{t+1} s_{t}
+\]</span> The above equation is called the <strong>quasi-Newton condition</strong>, or secant equation. The search direction of quasi-Newton method is: <span class="math display">\[
+d_{t} = -B_{t}^{-1}g_{t}
+\]</span> where <span class="math inline">\(g_{t}\)</span> is the gradient of <span class="math inline">\(f\)</span>, and the update of quasi-Newton is: <span class="math display">\[
+\theta_{t+1} = \theta_{t} + \eta_{t}d_{t}
+\]</span> The step size <span class="math inline">\(\eta_{t}\)</span> is chose to satisfy the <strong>Wolfe conditions.</strong></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Wolfe conditions</strong>: a set of inequalities for inexact line searches <span class="math inline">\(\underset{\eta_{t}}{\min \ }f(\theta_{t} + \eta_{t} d_{t})\)</span></p>
+</div></div><section id="dfp" class="level3">
+<h3 class="anchored" data-anchor-id="dfp">DFP</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241029005332.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+</section>
+<section id="bfgs" class="level3">
+<h3 class="anchored" data-anchor-id="bfgs">BFGS</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241029005405.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+</section>
+<section id="l-bfgs" class="level3">
+<h3 class="anchored" data-anchor-id="l-bfgs">L-BFGS</h3>
+<p>Limited memory quasi-Newton methods, named L-BFGS is an improvement based on the quasiNewton method. which is feasible in dealing with the highdimensional situation.</p>
+<p>https://towardsdatascience.com/bfgs-in-a-nutshell-an-introduction-to-quasi-newton-methods-21b0e13ee504 ## Stochastic Quasi-Newton Method</p>
+</section>
+</section>
+<section id="hessian-free-optimization-methods" class="level2">
+<h2 class="anchored" data-anchor-id="hessian-free-optimization-methods">Hessian-Free Optimization Methods</h2>
+</section>
+<section id="natural-gradient" class="level2">
+<h2 class="anchored" data-anchor-id="natural-gradient">Natural Gradient</h2>
+</section>
+<section id="trust-region-method" class="level2">
+<h2 class="anchored" data-anchor-id="trust-region-method">Trust Region Method</h2>
 </section>
 </section>
 <section id="heuristic-derivate-free-optimization-methods" class="level1">

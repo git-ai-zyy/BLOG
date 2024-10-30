@@ -156,6 +156,10 @@ window.Quarto = {
    
   <ul>
   <li><a href="#key-concepts-and-notations" id="toc-key-concepts-and-notations" class="nav-link active" data-scroll-target="#key-concepts-and-notations">Key Concepts and Notations</a></li>
+  <li><a href="#the-objective-function" id="toc-the-objective-function" class="nav-link" data-scroll-target="#the-objective-function">The Objective Function</a>
+  <ul class="collapse">
+  <li><a href="#algorithms" id="toc-algorithms" class="nav-link" data-scroll-target="#algorithms">Algorithms</a></li>
+  </ul></li>
   <li><a href="#q-learning-and-variants" id="toc-q-learning-and-variants" class="nav-link" data-scroll-target="#q-learning-and-variants">Q-Learning and Variants</a>
   <ul class="collapse">
   <li><a href="#classical-deepq-learning" id="toc-classical-deepq-learning" class="nav-link" data-scroll-target="#classical-deepq-learning">Classical (Deep)Q-Learning</a></li>
@@ -168,12 +172,17 @@ window.Quarto = {
   </ul></li>
   <li><a href="#policy-based-algorithm" id="toc-policy-based-algorithm" class="nav-link" data-scroll-target="#policy-based-algorithm">Policy Based Algorithm</a>
   <ul class="collapse">
-  <li><a href="#reinforce" id="toc-reinforce" class="nav-link" data-scroll-target="#reinforce">REINFORCE</a></li>
+  <li><a href="#reinforce" id="toc-reinforce" class="nav-link" data-scroll-target="#reinforce">REINFORCE</a>
+  <ul class="collapse">
+  <li><a href="#reinforce-with-baseline" id="toc-reinforce-with-baseline" class="nav-link" data-scroll-target="#reinforce-with-baseline">REINFORCE with Baseline</a></li>
+  <li><a href="#off-policy-reinforce" id="toc-off-policy-reinforce" class="nav-link" data-scroll-target="#off-policy-reinforce">Off-Policy REINFORCE</a></li>
+  <li><a href="#natural-gradient" id="toc-natural-gradient" class="nav-link" data-scroll-target="#natural-gradient">Natural Gradient</a></li>
+  </ul></li>
   <li><a href="#actor-critic-methods" id="toc-actor-critic-methods" class="nav-link" data-scroll-target="#actor-critic-methods">Actor-Critic Methods</a>
   <ul class="collapse">
   <li><a href="#basic-actor-critic-algorithm" id="toc-basic-actor-critic-algorithm" class="nav-link" data-scroll-target="#basic-actor-critic-algorithm">Basic Actor-Critic Algorithm</a></li>
   <li><a href="#advantage-actor-critic-algorithm" id="toc-advantage-actor-critic-algorithm" class="nav-link" data-scroll-target="#advantage-actor-critic-algorithm">Advantage Actor-Critic Algorithm</a></li>
-  <li><a href="#asyn-advantage-actor-critic-algorithm-a3d" id="toc-asyn-advantage-actor-critic-algorithm-a3d" class="nav-link" data-scroll-target="#asyn-advantage-actor-critic-algorithm-a3d">Asyn Advantage Actor-Critic Algorithm (A3D)</a></li>
+  <li><a href="#asyn-advantage-actor-critic-algorithm-a3c" id="toc-asyn-advantage-actor-critic-algorithm-a3c" class="nav-link" data-scroll-target="#asyn-advantage-actor-critic-algorithm-a3c">Asyn Advantage Actor-Critic Algorithm (A3C)</a></li>
   </ul></li>
   <li><a href="#trust-region-policy-optimization" id="toc-trust-region-policy-optimization" class="nav-link" data-scroll-target="#trust-region-policy-optimization">Trust Region Policy Optimization</a></li>
   <li><a href="#proximal-policy-optimization" id="toc-proximal-policy-optimization" class="nav-link" data-scroll-target="#proximal-policy-optimization">Proximal Policy Optimization</a></li>
@@ -182,6 +191,7 @@ window.Quarto = {
   <li><a href="#meta-reinforcement-learning" id="toc-meta-reinforcement-learning" class="nav-link" data-scroll-target="#meta-reinforcement-learning">Meta Reinforcement Learning</a></li>
   <li><a href="#reinforcement-learning-and-inference" id="toc-reinforcement-learning-and-inference" class="nav-link" data-scroll-target="#reinforcement-learning-and-inference">Reinforcement Learning and Inference</a></li>
   <li><a href="#reinforcement-learning-with-sequence-models" id="toc-reinforcement-learning-with-sequence-models" class="nav-link" data-scroll-target="#reinforcement-learning-with-sequence-models">Reinforcement Learning with Sequence Models</a></li>
+  <li><a href="#reinforcement-learning-with-llm" id="toc-reinforcement-learning-with-llm" class="nav-link" data-scroll-target="#reinforcement-learning-with-llm">Reinforcement Learning with LLM</a></li>
   <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
   </ul>
 </nav>
@@ -222,7 +232,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024-10-28</p>
+      <p class="date-modified">2024-10-30</p>
     </div>
   </div>
     
@@ -259,6 +269,95 @@ G_{t} = \sum_{k=0}^{\infty}\gamma^{k}R_{t + k + 1}
 <li><span class="math inline">\(A(s, a)\)</span>: The advantage function of the state-action pairs, which tells use how much better or worse a specific action <span class="math inline">\(a\)</span> is coompared to the average acction the policy would take in state <span class="math inline">\(s\)</span>.</li>
 </ul>
 </section>
+<section id="the-objective-function" class="level1">
+<h1>The Objective Function</h1>
+<p>First, Let derive out objective function, the MDP can be categories according to whether the <span class="math inline">\(T\)</span> is finite and in-finite. Let discuss the finite case first: The finite MDP can be form as: <img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030150223.png" class="img-fluid" alt="image.png"></p>
+<p>The Probability Graph Model of above can be seed as: <span class="math display">\[
+p_{\theta}(\underbrace{ s_{1}, a_{1}, \dots, s_{T}, a_{T} }_{ \tau }) = p(s_{1}) \prod_{t=1}^{T}\pi_{\theta}(a_{t} | s_{t})p(s_{t+1} | s_{t}, a_{t})
+\]</span> The cumulative rewards of one trajectory is: <span class="math display">\[
+p_{\theta}(\tau) \sum_{t}r(s_{t}, a_{t})
+\]</span> And the goal of the RL is to learn a optimal policy <span class="math inline">\(\pi_{\theta^{*}}\)</span> that maximize the expected cumulative rewards along the trajectory <span class="math display">\[
+\theta^{*} = \underset{\theta}{\operatorname{arg\max}\ } \mathbb{E}_{\tau \sim p_{\theta}(\tau)}\left[ \sum_{t} r(s_{t}, a_{t}) \right]
+\]</span></p>
+<p>On the other view, as we can see from the graph, the state and action can be paired together to get the Markov Chain: <img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030150759.png" class="img-fluid" alt="image.png"></p>
+<p>where: <span class="math display">\[
+p_{\theta}((s_{t+1}, a_{t+1}) | (s_{t}, a_{t})) = p(s_{t+1} | s_{t}, a_{t})\pi_{\theta}(a_{t+1} | s_{t+1})
+\]</span> The cumulative rewards of one trajectory is: <span class="math display">\[
+\sum_{t}(p_{\theta}(s_{t}, a_{t})\times r(s_{t}, a_{t}))
+\]</span></p>
+<p>so, the optimal policy <span class="math inline">\(\pi_{\theta^{*}}\)</span> is defined as: <span class="math display">\[
+\theta^{*} = \underset{\theta}{\operatorname{arg\max}\ } \sum_{t=1}^{T}\mathbb{E}_{(s_{t}, a_{t}) \sim p_{\theta}(s_{t}, a_{t})}[r(s_{t}, a_{t})]
+\]</span></p>
+<p>Now, let’s discuss the Infinite horizon case, according to the Markov Chain, the state action pair can be express as: <span class="math display">\[
+\left(\begin{array}{}
+s_{t+1} \\
+a_{t+1}
+\end{array} \right)
+= \mathcal{T} \left(\begin{array}{}
+s_{t} \\
+a_{t}
+\end{array} \right)
+\]</span> where <span class="math inline">\(\mathcal{T}\)</span> is the state action transition operator. So, the state-action pair after <span class="math inline">\(k\)</span> steps can be express as: <span class="math display">\[
+\left(\begin{array}{}
+s_{t+k} \\
+a_{t+k}
+\end{array} \right)
+= \mathcal{T}^{k} \left(\begin{array}{}
+s_{t} \\
+a_{t}
+\end{array} \right)
+\]</span> We want to check whether <span class="math inline">\(\mu = p(s_{t}, a_{t})\)</span> converge to a stationary distribution, that means: <span class="math display">\[
+\mu = \mathcal{T}\mu
+\]</span> As we can see, <span class="math inline">\(\mu\)</span> is the eigenvector of <span class="math inline">\(\mathcal{T}\)</span> with eigenvalue 1. It can be solved as: <span class="math display">\[
+(\mathcal{T} -\mathbf{I}) \mu = 0
+\]</span> :::{.callout-question} How to get <span class="math inline">\(\mathcal{T}\)</span>? :::</p>
+<p>This is always exits under the some regularity conditions. And the <span class="math inline">\(\mu\)</span> is that stationary probability of this Markov Chain, so, the objective become: <span class="math display">\[
+\begin{split}
+\theta^{*}
+&amp;= \underset{\theta}{\operatorname{arg\max}\ }  \frac{1}{T} \sum_{t}^{T} \mathbb{E}_{(s_{t}, a_{t}) \sim p_{\theta}(s_{t}, a_{t})}[r(s_{t}, a_{t})] \\
+&amp;=  \mathbb{E}_{(\mathbf{s,a}) \sim p_{\theta}(\mathbf{s, a})} [r(\mathbf{s}, \mathbf{a})]
+\end{split}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In RL, we always care about the expectation, because the expectation is always smooth with respect to the parameters, which means this is the surrogate function of the objective we want. There are other surrogate function, in which re-parameter trick is the one for continuous output.</p>
+</div>
+</div>
+<section id="algorithms" class="level2">
+<h2 class="anchored" data-anchor-id="algorithms">Algorithms</h2>
+<p>Most algorithm can be separated into three parts: <img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030154749.png" class="img-fluid" alt="image.png"></p>
+<ul>
+<li>Generated samples: samples scan be generated from same or different policy. this is through trial-and-error</li>
+<li>Fit and a model / estimate the return:
+<ul>
+<li>Can be fit as the evauated as the cumulative rewards</li>
+<li>Can fit the model of the environment(model base): <span class="math display">\[
+s_{t+1} \approx f_{\phi}(s_{t}, a_{t})
+\]</span></li>
+</ul></li>
+<li>Improve the policy: use some optimization algorithm to optimize the parameters</li>
+</ul>
+<p>Samples can be expensive: * In real world * In simulator</p>
+<p>The green steps can also be expensive or cheap: * Just sum over the whole reward is cheap * Try to get the model of the environment will be expensive.</p>
+<p>Blue: - Just update the parameters will be cheap. - Update the parameters according to the model and policy will be expensive.</p>
+<p>There are different types of algorithms: * Policy Gradient - Value-Based - Actor-Critic - Model-Based: - For Planning - For improve policy</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030160220.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Assumptions: 1. Full observability 1. Can be mitigated by adding recurrence 2. Episodic Learning 1. Often assumed by policy graident method 3. Continuity or smoothinges 1. Assumed by some continuous value function learning methods 2. Often assumed by some model-based RL methods<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</section>
+</section>
 <section id="q-learning-and-variants" class="level1">
 <h1>Q-Learning and Variants</h1>
 <section id="classical-deepq-learning" class="level2">
@@ -272,7 +371,7 @@ Q(s_{t}, a_{t}) \leftarrow  Q(s_{t}, a_{t}) + \alpha(R_{t + 1} + \gamma \underse
 </section>
 <section id="double-deep-q-learning" class="level2">
 <h2 class="anchored" data-anchor-id="double-deep-q-learning">Double (Deep) Q-Learning</h2>
-<p>Double Q-Learning reduces overestimation bias by maintaining two Q-tables(or two networks in deep learning settings). Each table is updated independently to decouple the action selection and value estimation processes. The update rule is: <span class="math display">\[
+<p>Double Q-Learning reduces <strong>overestimation bias</strong> by maintaining two Q-tables(or two networks in deep learning settings). Each table is updated independently to decouple the action selection and value estimation processes. The update rule is: <span class="math display">\[
 Q_{1}(s_{t}, a_{t}) \leftarrow Q_{1}(s_{t}, a_{t}) + \alpha(R_{t+1} + \gamma Q_{2}(s_{t + 1}, \underset{a'}{\operatorname{arg\max}\ }Q_{1}(s_{t+1}, a') ) - Q_{1}(s_{t}, a_{t}))
 \]</span></p>
 <p>The Loss Function for the Double Deep Q_Learning is that: <span class="math display">\[
@@ -306,9 +405,69 @@ J(\pi) =\mathbb{E}\left[ \sum_{t}(R_{t} + \alpha \mathcal{H}(\pi(\cdot | s_{t}))
 </section>
 <section id="policy-based-algorithm" class="level1">
 <h1>Policy Based Algorithm</h1>
+<p>First, let derive the object we need to optimize with in policy gradient, we define the objective as <span class="math inline">\(J(\theta)\)</span>, where <span class="math inline">\(J(\theta)\)</span> is defined as: <span class="math display">\[
+\begin{split}
+J(\theta)
+&amp; =\mathbb{E}_{\tau \sim p_{\theta}(\tau)}[r(\tau)] \quad \text{ where }r(\tau) = \sum_{t}r(s_{t}, a_{t}) \\
+&amp; = \int p_{\theta}(\tau)r(\tau) \, d\tau
+\end{split}
+\]</span> The gradient of the objective function is: <span class="math display">\[
+\begin{split}
+\nabla J(\theta)
+&amp;= \int \nabla p_{\theta}(\tau)r(\tau) \, d\tau \\
+&amp;=  \int p_{\theta}(\tau)\nabla \log p_{\theta}(\tau)r(\tau) \, d\tau \quad \left( \nabla \log x = \nabla x \frac{1}{\log x} \right) \\
+&amp;=  \mathbb{E}_{\tau \sim p_{\theta}(\tau)}[\nabla \log p_{\theta}(\tau)r(\tau)] \\
+\end{split}
+\]</span> Because the <span class="math inline">\(\log p_{\theta}(\tau)\)</span> is equal to: <span class="math display">\[
+\begin{split}
+\log p_{\theta}(\tau) &amp;=  \log p(s_{1}) \prod_{t=1}^{T}\pi_{\theta}(a_{t} | s_{t})p(s_{t+1} | s_{t}, a_{t}) \\
+&amp; = \log p(s_{1}) + \sum_{t=1}^{T}\log \pi_{\theta}(a_{t} | s_{t}) + \log p(s_{t+1} | s_{t}, a_{t})
+\end{split}
+\]</span> The gradient with respect to the parameter of <span class="math inline">\(\pi\)</span> is only related to the second term, so: <span class="math display">\[
+\begin{split}
+\nabla J(\theta)
+&amp;= \mathbb{E}_{\tau \sim p_{\theta}(\tau)}\left[ \bigg(\sum_{t=1}^{T}\nabla \log \pi_{\theta}(a_{t} | s_{t})\bigg)\left( \sum_{t}^{T}r(s_{t}, a_{t})  \right) \right]  \\
+&amp; \approx  \frac{1}{N} \sum_{i=1}^{N}\bigg(\sum_{t=1}^{T}\nabla \log \pi_{\theta}(a_{i, t} | s_{i, t})\bigg)\left( \sum_{t = 1}^{T}r(s_{i,t}, a_{i,t})  \right)
+\end{split}
+\]</span></p>
+<p>When add causaliy it can used to reduce the variance. Causality: policy at time <span class="math inline">\(t'\)</span> cannot affect reward at time <span class="math inline">\(t\)</span> when <span class="math inline">\(t &lt; t'\)</span></p>
+we can get that: $$
+<span class="math display">\[\begin{split}
+\nabla J(\theta)
+
+&amp; \approx  \frac{1}{N} \sum_{i=1}^{N} \left(\sum_{t=1}^{T}\nabla \log \pi_{\theta}(a_{i, t} | s_{i, t})\underbrace{ \sum_{\textcolor{red}{t' = t}}^{T}r(s_{i,\textcolor{red}{t'}}, a_{i,\textcolor{red}{t'}})}_{ G: \text{Reward to Go} }\right) \\
+&amp;= \sum_{i=1}^{N} \left(\sum_{t=1}^{T}\nabla \log \pi_{\theta}(a_{i, t} | s_{i, t}) G_{t} \right)  \\
+\end{split}\]</span>
+<p>$$</p>
 <section id="reinforce" class="level2">
 <h2 class="anchored" data-anchor-id="reinforce">REINFORCE</h2>
-<p>REINFORCE is the most basic algorithm used in the reinforcement learning algorithms.</p>
+<p>REINFORCE is the most basic algorithm used in the reinforcement learning algorithms. The basic process is: 1. sample trajectory <span class="math inline">\(\{ \tau^{i}\}\)</span> according to policy <span class="math inline">\(\pi_{\theta}\)</span> 2. Calculate the gradient of the <span class="math inline">\(J(\theta^{-})\)</span> 3. Update the parameters: <span class="math display">\[
+\theta \leftarrow  \theta^{-} + \alpha \nabla_{\theta^{-}}J(\theta^{-})
+\]</span></p>
+<section id="reinforce-with-baseline" class="level3">
+<h3 class="anchored" data-anchor-id="reinforce-with-baseline">REINFORCE with Baseline</h3>
+<p>The baseline, we can make that the positive reward increase when the bad reward decrease, the basic baseline is: <span class="math display">\[
+b = \frac{1}{N}\sum_{i=1}^{N}r(\tau)
+\]</span> So, the objective function become: <span class="math display">\[
+\nabla_{\theta}J(\theta) \approx \frac{1}{N}\sum_{i=1}^{N}\nabla _{\theta}\log p_{\theta}(\tau)[r(\tau) - b]
+\]</span></p>
+<p>Are we allow: <img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030170108.png" class="img-fluid" alt="image.png"></p>
+<p>Subtracting a baseline is unbiased in expectation.</p>
+</section>
+<section id="off-policy-reinforce" class="level3">
+<h3 class="anchored" data-anchor-id="off-policy-reinforce">Off-Policy REINFORCE</h3>
+<p><span class="math display">\[
+\nabla_{\theta}J(\theta) = \mathbb{E}_{\tau \sim p_{\theta}(\tau)}[\nabla \log p_{\theta}(\tau)r(\tau)]
+\]</span> The way we calculate the objective function is by sampling trajectories using the latest policy, so need throw out the samples each time we change <span class="math inline">\(\theta\)</span>. We cannot retain samples from previous policy.</p>
+<p>NN change only a little bit with each gradient step, so this might be sample expensive. So, we can transfer this into off-policy learning through important sampling.</p>
+</section>
+<section id="natural-gradient" class="level3">
+<h3 class="anchored" data-anchor-id="natural-gradient">Natural Gradient</h3>
+<p>Some parameters change probabilities a lot more than others, what we want to by changing the learning rate for different parameters, that have larger learning rate for those parameters that don’t change policy very much, in order to all the parameters to reach optimal value. Look constraints optmization view of first order graident descent,.</p>
+<p>From <strong>mirror descent</strong> or <strong>projected gradient descent</strong>. <img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030172937.png" class="img-fluid" alt="image.png"> Usually just take <span class="math inline">\(\alpha\)</span> rather then <span class="math inline">\(\epsilon\)</span> where <span class="math inline">\(\alpha\)</span> is just the lagrange multiplier that corresponds to epsilon.</p>
+<p>The step size are equal size in policy space rather than rather than parameter space. which means rescale the gradients</p>
+<p>Conjugate gradient works well for this.</p>
+</section>
 </section>
 <section id="actor-critic-methods" class="level2">
 <h2 class="anchored" data-anchor-id="actor-critic-methods">Actor-Critic Methods</h2>
@@ -318,16 +477,17 @@ J(\pi) =\mathbb{E}\left[ \sum_{t}(R_{t} + \alpha \mathcal{H}(\pi(\cdot | s_{t}))
 <section id="advantage-actor-critic-algorithm" class="level3">
 <h3 class="anchored" data-anchor-id="advantage-actor-critic-algorithm">Advantage Actor-Critic Algorithm</h3>
 </section>
-<section id="asyn-advantage-actor-critic-algorithm-a3d" class="level3">
-<h3 class="anchored" data-anchor-id="asyn-advantage-actor-critic-algorithm-a3d">Asyn Advantage Actor-Critic Algorithm (A3D)</h3>
+<section id="asyn-advantage-actor-critic-algorithm-a3c" class="level3">
+<h3 class="anchored" data-anchor-id="asyn-advantage-actor-critic-algorithm-a3c">Asyn Advantage Actor-Critic Algorithm (A3C)</h3>
 </section>
 </section>
 <section id="trust-region-policy-optimization" class="level2">
 <h2 class="anchored" data-anchor-id="trust-region-policy-optimization">Trust Region Policy Optimization</h2>
+<p>motivated by the natural gradient but includees additional constraints for robustness</p>
 </section>
 <section id="proximal-policy-optimization" class="level2">
 <h2 class="anchored" data-anchor-id="proximal-policy-optimization">Proximal Policy Optimization</h2>
-<p>This is an simpller alternative to TRPO</p>
+<p>This is an simpller alternative to TRPO which approximates the natural gradient updates through a simpler, more efficient objective function.</p>
 </section>
 </section>
 <section id="inverse-reinforcement-learning" class="level1">
@@ -342,6 +502,9 @@ J(\pi) =\mathbb{E}\left[ \sum_{t}(R_{t} + \alpha \mathcal{H}(\pi(\cdot | s_{t}))
 <section id="reinforcement-learning-with-sequence-models" class="level1">
 <h1>Reinforcement Learning with Sequence Models</h1>
 </section>
+<section id="reinforcement-learning-with-llm" class="level1">
+<h1>Reinforcement Learning with LLM</h1>
+</section>
 <section id="reference" class="level1">
 <h1>Reference</h1>
 <p>[1] <a href="https://spinningup.openai.com/en/latest/">OpenAI Spinning Up</a> [2] <a href="https://lilianweng.github.io/posts/2018-04-08-policy-gradient/">Lil’ Log Policy Gradient Algorithms</a> [3] <a href="https://rail.eecs.berkeley.edu/deeprlcourse/">UCB CS 285 Deep Reinforcement Learning 2023</a> [4] <a href="https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf">Andrew Barto and Richard S. Sutto: Reinforcement Learning an Introducntion</a></p>
@@ -349,7 +512,13 @@ J(\pi) =\mathbb{E}\left[ \sum_{t}(R_{t} + \alpha \mathcal{H}(\pi(\cdot | s_{t}))
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>1<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
