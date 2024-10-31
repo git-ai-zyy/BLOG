@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -167,8 +187,15 @@ window.Quarto = {
   <li><a href="#dueling-dqn" id="toc-dueling-dqn" class="nav-link" data-scroll-target="#dueling-dqn">Dueling DQN</a></li>
   <li><a href="#noisy-q-learning" id="toc-noisy-q-learning" class="nav-link" data-scroll-target="#noisy-q-learning">Noisy Q-Learning</a></li>
   <li><a href="#soft-q-learning" id="toc-soft-q-learning" class="nav-link" data-scroll-target="#soft-q-learning">Soft Q-Learning</a></li>
-  <li><a href="#experience-replay-buffer" id="toc-experience-replay-buffer" class="nav-link" data-scroll-target="#experience-replay-buffer">Experience Replay Buffer</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#experience-replay-buffer" id="toc-experience-replay-buffer" class="nav-link" data-scroll-target="#experience-replay-buffer">Experience Replay Buffer</a>
+  <ul class="collapse">
+  <li><a href="#basic-experienc-replay-buffer" id="toc-basic-experienc-replay-buffer" class="nav-link" data-scroll-target="#basic-experienc-replay-buffer">Basic Experienc Replay Buffer</a></li>
+  <li><a href="#prioritized-experience-replayper" id="toc-prioritized-experience-replayper" class="nav-link" data-scroll-target="#prioritized-experience-replayper">Prioritized Experience Replay(PER)</a></li>
+  </ul></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a>
+  <ul class="collapse">
+  <li><a href="#hindsight-experience-replay-her" id="toc-hindsight-experience-replay-her" class="nav-link" data-scroll-target="#hindsight-experience-replay-her">Hindsight Experience Replay (HER)</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#policy-based-algorithm" id="toc-policy-based-algorithm" class="nav-link" data-scroll-target="#policy-based-algorithm">Policy Based Algorithm</a>
   <ul class="collapse">
@@ -232,7 +259,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024-10-30</p>
+      <p class="date-modified">2024-10-31</p>
     </div>
   </div>
     
@@ -244,51 +271,55 @@ window.Quarto = {
 
 
 <p>In recent years, Deep Reinforcement Learning has emerged as one of the most promising areas within the broader field of Artificial Intelligence(AI). It combines two powerful tools: reinforcement learning(RL), where agents learn by interacting with their environment, and deep learning, where neural networks identify patterns from large amounts of data.</p>
-<p>The Markov Decision Process provide the mathematical foundation for DRL, enabling agents to make intelligent decision in complex environment. Let defines some key concepts first, for more details of the MDP, please check the following <a href="https://jaz201107.github.io/posts/Basic/MDP.html">blog</a></p>
+<p>The <strong>Markov Decision Process</strong> provide the mathematical foundation for DRL, enabling agents to make intelligent decision in complex environment. Let defines some key concepts first, but for more details of the MDP, please check this <a href="https://jaz201107.github.io/posts/Basic/MDP.html">blog</a></p>
 <section id="key-concepts-and-notations" class="level1">
 <h1>Key Concepts and Notations</h1>
 <ul>
-<li><span class="math inline">\(S\)</span>: The set of all possible stats in the environment</li>
-<li><span class="math inline">\(A\)</span>: The set of actions that agent can take</li>
-<li><span class="math inline">\(R(s, a)\)</span>: The reward function, which gives the immediate reward received after taking action <span class="math inline">\(a\)</span> in state <span class="math inline">\(s\)</span></li>
-<li><span class="math inline">\(v(s)\)</span>: The State-Value function of the state, while <span class="math inline">\(V(s)\)</span> is an estimator of the true state value function <span class="math inline">\(v(s)\)</span></li>
+<li><span class="math inline">\(\mathcal{S}\)</span>: The set of all possible stats in the environment</li>
+<li><span class="math inline">\(\mathcal{A}\)</span>: The set of actions that agent can take</li>
+<li><span class="math inline">\(r(s, a)\)</span>: The <strong>reward function</strong>, which gives the immediate reward received after taking action <span class="math inline">\(a\)</span> in state <span class="math inline">\(s\)</span>, while <span class="math inline">\(R_t\)</span> is the reward at time <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(v(s)\)</span>: The State-Value function of the state, while <span class="math inline">\(V(s)\)</span> is an <em>estimator</em> of the true state value function <span class="math inline">\(v(s)\)</span></li>
 </ul>
-<p><span class="math display">\[
+<p><span id="eq-valuefunction"><span class="math display">\[
 V^{\pi}(s) = \mathbb{E}_{\pi}\left[ \sum_{t=0}^{\infty}\gamma^{t}R_{t+1} | S_{0} = s \right]
-\]</span></p>
+\tag{1}\]</span></span></p>
 <ul>
-<li><span class="math inline">\(q(s, a)\)</span>: The State-Action function of the state-action pairs, while <span class="math inline">\(Q(s, a)\)</span> is an estimator of the true state-action function(<span class="math inline">\(q(s, a)\)</span>) <span class="math display">\[
+<li><p><span class="math inline">\(q(s, a)\)</span>: The State-Action function of the state-action pairs, while <span class="math inline">\(Q(s, a)\)</span> is an <em>estimator</em> of the true state-action function<span class="math inline">\(q(s, a)\)</span> <span id="eq-qfunction"><span class="math display">\[
 Q^{\pi}(s, a) = \mathbb{E}_{\pi}\left[ \sum_{t=0}^{\infty}\gamma^{t}R_{t+1} | S_{0} = s, A_{0}=a \right]
-\]</span> The state value function and state action value function are related through the following euqation: <span class="math display">\[
-V^{\pi}(s) = \mathbb{E}_{a\sim \pi}[Q^{\pi}(s.)]
-\]</span></li>
-<li><span class="math inline">\(\gamma\)</span>: The discount factor <span class="math inline">\((0 \leq \gamma \leq 1)\)</span>, which determines how much the agent values future reward compared to immediate ones.</li>
-<li><span class="math inline">\(G_{t}\)</span>: The return, is the cumulative reward, defined as <span class="math display">\[
+\tag{2}\]</span></span> The state value function and state action value function are related through the following equation: <span class="math display">\[
+V^{\pi}(s) = \mathbb{E}_{a\sim \pi}[Q^{\pi}(s)]
+\]</span></p></li>
+<li><p><span class="math inline">\(\gamma\)</span>: The <strong>discount factor</strong> <span class="math inline">\((0 \leq \gamma \leq 1)\)</span>, which determines how much the agent values future reward compared to immediate ones. It is also a way to deal with infinite situation.</p></li>
+<li><p><span class="math inline">\(G_{t}\)</span>: The return, is the <strong>cumulative reward</strong>, defined as <span id="eq-cumulate_return"><span class="math display">\[
 G_{t} = \sum_{k=0}^{\infty}\gamma^{k}R_{t + k + 1}
-\]</span></li>
-<li><span class="math inline">\(A(s, a)\)</span>: The advantage function of the state-action pairs, which tells use how much better or worse a specific action <span class="math inline">\(a\)</span> is coompared to the average acction the policy would take in state <span class="math inline">\(s\)</span>.</li>
+\tag{3}\]</span></span></p></li>
+<li><p><span class="math inline">\(A(s, a)\)</span>: The <strong>advantage function</strong> of the state-action pairs, which tells use how much better or worse a specific action <span class="math inline">\(a\)</span> is compared to the average action the policy would take in state <span class="math inline">\(s\)</span>, defined as</p></li>
 </ul>
+<p><span id="eq-adv-function"><span class="math display">\[
+A(s, a) = Q(s, a) - V(s)
+\tag{4}\]</span></span></p>
 </section>
 <section id="the-objective-function" class="level1">
 <h1>The Objective Function</h1>
-<p>First, Let derive out objective function, the MDP can be categories according to whether the <span class="math inline">\(T\)</span> is finite and in-finite. Let discuss the finite case first: The finite MDP can be form as: <img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030150223.png" class="img-fluid" alt="image.png"></p>
-<p>The Probability Graph Model of above can be seed as: <span class="math display">\[
+<p>First, Let derive out <strong>objective function</strong>. the MDP can be categorized according to whether the <span class="math inline">\(T\)</span> is <em>finite</em> and <em>in-finite</em>.</p>
+<p>Let discuss the finite case firs. The finite MDP can be form as: <img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030150223.png" class="img-fluid" alt="Markov Decision Process for RL"></p>
+<p>The Probability Graphic Model of above can be seed as <span class="math display">\[
 p_{\theta}(\underbrace{ s_{1}, a_{1}, \dots, s_{T}, a_{T} }_{ \tau }) = p(s_{1}) \prod_{t=1}^{T}\pi_{\theta}(a_{t} | s_{t})p(s_{t+1} | s_{t}, a_{t})
-\]</span> The cumulative rewards of one trajectory is: <span class="math display">\[
+\]</span> The <strong>cumulative rewards</strong> of one trajectory is: <span class="math display">\[
 p_{\theta}(\tau) \sum_{t}r(s_{t}, a_{t})
-\]</span> And the goal of the RL is to learn a optimal policy <span class="math inline">\(\pi_{\theta^{*}}\)</span> that maximize the expected cumulative rewards along the trajectory <span class="math display">\[
+\]</span> And the goal of the RL is to learn a optimal policy <span class="math inline">\(\pi_{\theta^{*}}\)</span> that <u>maximize the expected cumulative rewards along the trajectory</u> <span class="math display">\[
 \theta^{*} = \underset{\theta}{\operatorname{arg\max}\ } \mathbb{E}_{\tau \sim p_{\theta}(\tau)}\left[ \sum_{t} r(s_{t}, a_{t}) \right]
 \]</span></p>
-<p>On the other view, as we can see from the graph, the state and action can be paired together to get the Markov Chain: <img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030150759.png" class="img-fluid" alt="image.png"></p>
+<p>On the other view, as we can see from the graph, the state and action can be paired together to get the <strong>Markov Chain</strong>: <img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030150759.png" class="img-fluid" alt="image.png"></p>
 <p>where: <span class="math display">\[
 p_{\theta}((s_{t+1}, a_{t+1}) | (s_{t}, a_{t})) = p(s_{t+1} | s_{t}, a_{t})\pi_{\theta}(a_{t+1} | s_{t+1})
 \]</span> The cumulative rewards of one trajectory is: <span class="math display">\[
-\sum_{t}(p_{\theta}(s_{t}, a_{t})\times r(s_{t}, a_{t}))
+\sum_{t}p_{\theta}(s_{t}, a_{t})\times r(s_{t}, a_{t})
 \]</span></p>
 <p>so, the optimal policy <span class="math inline">\(\pi_{\theta^{*}}\)</span> is defined as: <span class="math display">\[
 \theta^{*} = \underset{\theta}{\operatorname{arg\max}\ } \sum_{t=1}^{T}\mathbb{E}_{(s_{t}, a_{t}) \sim p_{\theta}(s_{t}, a_{t})}[r(s_{t}, a_{t})]
 \]</span></p>
-<p>Now, let’s discuss the Infinite horizon case, according to the Markov Chain, the state action pair can be express as: <span class="math display">\[
+<p>Now, let’s discuss the <strong>Infinite horizon case</strong>, according to the Markov Chain, the state action pair can be express as: <span class="math display">\[
 \left(\begin{array}{}
 s_{t+1} \\
 a_{t+1}
@@ -297,7 +328,7 @@ a_{t+1}
 s_{t} \\
 a_{t}
 \end{array} \right)
-\]</span> where <span class="math inline">\(\mathcal{T}\)</span> is the state action transition operator. So, the state-action pair after <span class="math inline">\(k\)</span> steps can be express as: <span class="math display">\[
+\]</span> where <span class="math inline">\(\mathcal{T}\)</span> is the <strong>state action transition operator</strong>. So, the state-action pair after <span class="math inline">\(k\)</span> steps can be express as: <span class="math display">\[
 \left(\begin{array}{}
 s_{t+k} \\
 a_{t+k}
@@ -310,12 +341,25 @@ a_{t}
 \mu = \mathcal{T}\mu
 \]</span> As we can see, <span class="math inline">\(\mu\)</span> is the eigenvector of <span class="math inline">\(\mathcal{T}\)</span> with eigenvalue 1. It can be solved as: <span class="math display">\[
 (\mathcal{T} -\mathbf{I}) \mu = 0
-\]</span> :::{.callout-question} How to get <span class="math inline">\(\mathcal{T}\)</span>? :::</p>
-<p>This is always exits under the some regularity conditions. And the <span class="math inline">\(\mu\)</span> is that stationary probability of this Markov Chain, so, the objective become: <span class="math display">\[
+\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How to get $\mathcal{T}$
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p>This is always exits under the some regularity conditions. And the <span class="math inline">\(\mu\)</span> is that <strong>stationary probability</strong> of this Markov Chain, so, the objective become: <span class="math display">\[
 \begin{split}
 \theta^{*}
 &amp;= \underset{\theta}{\operatorname{arg\max}\ }  \frac{1}{T} \sum_{t}^{T} \mathbb{E}_{(s_{t}, a_{t}) \sim p_{\theta}(s_{t}, a_{t})}[r(s_{t}, a_{t})] \\
-&amp;=  \mathbb{E}_{(\mathbf{s,a}) \sim p_{\theta}(\mathbf{s, a})} [r(\mathbf{s}, \mathbf{a})]
+&amp;= \underset{\theta}{\operatorname{arg\max}\ } \mathbb{E}_{(\mathbf{s,a}) \sim p_{\theta}(\mathbf{s, a})} [r(\mathbf{s}, \mathbf{a})]
 \end{split}
 \]</span></p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -333,45 +377,62 @@ Note
 </div>
 <section id="algorithms" class="level2">
 <h2 class="anchored" data-anchor-id="algorithms">Algorithms</h2>
-<p>Most algorithm can be separated into three parts: <img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030154749.png" class="img-fluid" alt="image.png"></p>
+<p>Most algorithm can be separated into three parts: <img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030154749.png" class="img-fluid" width="728" alt="RL Algorithms Anatomy"></p>
 <ul>
-<li>Generated samples: samples scan be generated from same or different policy. this is through trial-and-error</li>
-<li>Fit and a model / estimate the return:
+<li><strong>Generated samples</strong>: samples scan be generated from <em>same</em> or <em>different</em> policy, this is through trial-and-error</li>
+<li><strong>Fit and a model / estimate the return</strong>:
 <ul>
-<li>Can be fit as the evauated as the cumulative rewards</li>
+<li>Can be fit as the evauated as the cumulative rewards(model free)</li>
 <li>Can fit the model of the environment(model base): <span class="math display">\[
 s_{t+1} \approx f_{\phi}(s_{t}, a_{t})
 \]</span></li>
 </ul></li>
-<li>Improve the policy: use some optimization algorithm to optimize the parameters</li>
+<li><strong>Improve the policy</strong>: use some optimization algorithms(e.g.&nbsp;<strong>gradient ascent</strong>) to optimize the parameters</li>
 </ul>
-<p>Samples can be expensive: * In real world * In simulator</p>
-<p>The green steps can also be expensive or cheap: * Just sum over the whole reward is cheap * Try to get the model of the environment will be expensive.</p>
-<p>Blue: - Just update the parameters will be cheap. - Update the parameters according to the model and policy will be expensive.</p>
-<p>There are different types of algorithms: * Policy Gradient - Value-Based - Actor-Critic - Model-Based: - For Planning - For improve policy</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030160220.png" class="img-fluid figure-img"></p>
-<figcaption>image.png</figcaption>
-</figure>
-</div>
-<p>Assumptions: 1. Full observability 1. Can be mitigated by adding recurrence 2. Episodic Learning 1. Often assumed by policy graident method 3. Continuity or smoothinges 1. Assumed by some continuous value function learning methods 2. Often assumed by some model-based RL methods<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>The orange can be expensive:</p>
+<ul>
+<li>In real world: this is expensive because we can not speed up the sampling process</li>
+<li>In simulator: this is much cheap.</li>
+</ul>
+<p>The green steps can also be expensive or cheap:</p>
+<ul>
+<li>Just sum over the whole reward is cheap</li>
+<li>Try to get the model of the environment will be expensive.</li>
+</ul>
+<p>The Blue also has different cost:</p>
+<ul>
+<li>Just update the parameters will be cheap.</li>
+<li>Update the parameters according to the model and policy will be expensive.</li>
+</ul>
+<p>There are different types of algorithms:</p>
+<ul>
+<li>Policy Gradient</li>
+<li>Value-Based</li>
+<li>Actor-Critic</li>
+<li>Model-Based:
+<ul>
+<li>For Planning</li>
+<li>For improve policy</li>
+</ul></li>
+</ul>
+<p>Now, let’s introduce some specific algorithms, we first start with Deep Q Network, which was first introduced by <span class="citation" data-cites="playingatarideepreinforcementlearning2013">Mnih et al. (<a href="#ref-playingatarideepreinforcementlearning2013" role="doc-biblioref">2013</a>)</span></p>
 </section>
 </section>
 <section id="q-learning-and-variants" class="level1">
 <h1>Q-Learning and Variants</h1>
 <section id="classical-deepq-learning" class="level2">
 <h2 class="anchored" data-anchor-id="classical-deepq-learning">Classical (Deep)Q-Learning</h2>
-<p>The classic Q-learning finds the optimal state-action value function <span class="math inline">\(Q(s, a)\)</span> through the Bellman Equation. The Q-value update rule is: <span class="math display">\[
+<p>The classic Q-learning finds the optimal state-action value function <span class="math inline">\(Q^*(s, a)\)</span> through the Bellman Equation. The Q-value update rule is: <span class="math display">\[
 Q(s_{t}, a_{t}) \leftarrow  Q(s_{t}, a_{t}) + \alpha(R_{t + 1} + \gamma \underset{a'}{\max \ }Q(s_{t+1}, a') - Q(s_{t}, a_{t}))
-\]</span> When we use the neural network as function approximator, we need define an loss function to update the parameters. The Loss function is: <span class="math display">\[
+\]</span></p>
+<p>When we use the neural network as <strong>function approximator</strong>, we need define an <strong>loss function</strong> to update the parameters. The Loss function is: <span class="math display">\[
 \mathcal{L}(\theta) = \mathbb{E}[(R_{t+1} + \gamma \underset{a'}{\max \ }Q(s_{t+1}, a'; \theta^{-}) - Q(s_{t}, a_{t}; \theta) )^{2}]
 \]</span></p>
-<p>The problem of classical Q-Learning is that it suffer from overestimation bias, where the <code>max</code> operator selects actions that appear optimal due to noisy or high Q-value. To release this problem, we can use Double Q-Learning, it defined as</p>
+<p>The problem of classical Q-Learning is that it suffer from <strong>overestimation bias</strong>, where the <code>max</code> operator selects actions that appear optimal due to noisy or high Q-value. To release this problem, we can use Double Q-Learning, it defined as</p>
 </section>
 <section id="double-deep-q-learning" class="level2">
 <h2 class="anchored" data-anchor-id="double-deep-q-learning">Double (Deep) Q-Learning</h2>
-<p>Double Q-Learning reduces <strong>overestimation bias</strong> by maintaining two Q-tables(or two networks in deep learning settings). Each table is updated independently to decouple the action selection and value estimation processes. The update rule is: <span class="math display">\[
+<p>Double Q-Learning<span class="citation" data-cites="deepreinforcementlearningdoubleqlearning2015">(<a href="#ref-deepreinforcementlearningdoubleqlearning2015" role="doc-biblioref">Hasselt, Guez, and Silver 2015</a>)</span> reduces <strong>overestimation bias</strong> by maintaining two Q-tables(or two networks in deep learning settings). Each table is updated independently to decouple the action selection and value estimation processes. The update rule is: <span class="math display">\[
 Q_{1}(s_{t}, a_{t}) \leftarrow Q_{1}(s_{t}, a_{t}) + \alpha(R_{t+1} + \gamma Q_{2}(s_{t + 1}, \underset{a'}{\operatorname{arg\max}\ }Q_{1}(s_{t+1}, a') ) - Q_{1}(s_{t}, a_{t}))
 \]</span></p>
 <p>The Loss Function for the Double Deep Q_Learning is that: <span class="math display">\[
@@ -380,27 +441,50 @@ Q_{1}(s_{t}, a_{t}) \leftarrow Q_{1}(s_{t}, a_{t}) + \alpha(R_{t+1} + \gamma Q_{
 </section>
 <section id="dueling-dqn" class="level2">
 <h2 class="anchored" data-anchor-id="dueling-dqn">Dueling DQN</h2>
-<p>The problem of the Basic DQN is that not all actions are equally relevant in every state, but DQN treats all state-action equally, to solve this problem, we can use Dueling DQN, which separates the Q-value into two components: * State-Value function <span class="math inline">\(V(s)\)</span>: measures the value of being in state <span class="math inline">\(s\)</span> * Advantage function <span class="math inline">\(A(s, a)\)</span>, which measures the relative importance of taking action <span class="math inline">\(a\)</span> in state <span class="math inline">\(s\)</span>.</p>
+<p>The problem of the Basic DQN is that not all actions are equally relevant in every state, but DQN treats all state-action equally, to solve this problem, we can use Dueling DQN <span class="citation" data-cites="duelingnetworkarchitecturesdeepreinforcementlearning2016">(<a href="#ref-duelingnetworkarchitecturesdeepreinforcementlearning2016" role="doc-biblioref">Wang et al. 2016</a>)</span>, which separates the Q-value into two components:</p>
+<ul>
+<li><strong>State-Value function</strong> <span class="math inline">\(V(s)\)</span>: measures the value of being in state <span class="math inline">\(s\)</span></li>
+<li><strong>Advantage function</strong> <span class="math inline">\(A(s, a)\)</span>, which measures the <em>relative importance</em> of taking action <span class="math inline">\(a\)</span> in state <span class="math inline">\(s\)</span>.</li>
+</ul>
 <p>The Q-value is them computed as: <span class="math display">\[
 Q(s, a) = V(s) + A(s, a) - \underset{a'}{\max \ } A(s, a')
 \]</span></p>
 </section>
 <section id="noisy-q-learning" class="level2">
 <h2 class="anchored" data-anchor-id="noisy-q-learning">Noisy Q-Learning</h2>
-<p>In som environments, the agents needs better exploration strategies to avoid getting suck in local optima. The Noisy-Q-Learning introduces parametric noise into the neural network’s parameters, allowing the agent to explore more efficitively</p>
+<p>In some environments, the agents needs better exploration strategies to avoid getting suck in local optima. The Noisy-Q-Network <span class="citation" data-cites="noisynetworksexploration2019">(<a href="#ref-noisynetworksexploration2019" role="doc-biblioref">Fortunato et al. 2019</a>)</span> introduces <strong>parametric noise</strong> into the neural network’s parameters, allowing the agent to explore more effectively</p>
 </section>
 <section id="soft-q-learning" class="level2">
 <h2 class="anchored" data-anchor-id="soft-q-learning">Soft Q-Learning</h2>
-<p>Soft Q-learning introduces an entropy term into the objective to encourage exploration. The agent seeks to maximize both the cumulative reawrd and the policy entropy, learning yo better exploration in uncertain environemnts</p>
+<p>Soft Q-learning<span class="citation" data-cites="haarnojaReinforcementLearningDeep2017">(<a href="#ref-haarnojaReinforcementLearningDeep2017" role="doc-biblioref">Haarnoja et al. 2017</a>)</span> introduces an <strong>entropy</strong> term into the objective to encourage exploration. The agent seeks to maximize both <u>the cumulative reward</u> and the <u>policy entropy</u>, learning yo better exploration in uncertain environments</p>
 <p>The Objective Function become: <span class="math display">\[
 J(\pi) =\mathbb{E}\left[ \sum_{t}(R_{t} + \alpha \mathcal{H}(\pi(\cdot | s_{t}))) \right]
 \]</span></p>
 </section>
 <section id="experience-replay-buffer" class="level2">
 <h2 class="anchored" data-anchor-id="experience-replay-buffer">Experience Replay Buffer</h2>
+<p>One of the vital component in the RL toolkit that boosts learning and stable is the training is the Experience Replay Buffer. There are several reason to use the Experience Replay Buffer:</p>
+<ul>
+<li>Improved Sample Efficiency: Collecting new experience constantly is costly and inefficient. By storing past experiences, the agent can use each iteration multiple times</li>
+<li>Breaking Temporal Correlations: Learning sequentially from consecutive experiences introduces high correlations, which destabilize the neural network’s updates.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+<li>Stabilizing Learning: Replay buffers ensure that the training data is diverse, including experiences from various states and actions. This helps prevent overfitting to recent experiences and ensures that rare but valuable experiences (like achieving a goal or encountering a penalty) are reused and learned from.</li>
+<li>Handling Sparse Rewards: In some environments, rewards are sparse or rare.</li>
+</ul>
+<section id="basic-experienc-replay-buffer" class="level3">
+<h3 class="anchored" data-anchor-id="basic-experienc-replay-buffer">Basic Experienc Replay Buffer</h3>
+<p>The basic replay buffer is a list contain a tuple of <span class="math inline">\((s, a, r, s', d)\)</span>, which captures one interaction in the environment.</p>
+</section>
+<section id="prioritized-experience-replayper" class="level3">
+<h3 class="anchored" data-anchor-id="prioritized-experience-replayper">Prioritized Experience Replay(PER)</h3>
+<p><strong>Prioritized Experience Replay</strong> enhances the standard buffer by focusing on experiences that are more informative. Experiences that yield higher learning signals (or TD errors) are prioritized because they represent areas where the agent has the most to learn.</p>
+</section>
 </section>
 <section id="section" class="level2">
 <h2 class="anchored" data-anchor-id="section"></h2>
+<section id="hindsight-experience-replay-her" class="level3">
+<h3 class="anchored" data-anchor-id="hindsight-experience-replay-her">Hindsight Experience Replay (HER)</h3>
+<p><strong>Hindsight Experience Replay</strong> is designed for environments where rewards are sparse, such as goal-directed tasks. In HER, the agent reinterprets experiences as if the achieved outcome was intended, enabling it to learn even from unsuccessful episodes by using alternate goals.</p>
+</section>
 </section>
 </section>
 <section id="policy-based-algorithm" class="level1">
@@ -408,14 +492,14 @@ J(\pi) =\mathbb{E}\left[ \sum_{t}(R_{t} + \alpha \mathcal{H}(\pi(\cdot | s_{t}))
 <p>First, let derive the object we need to optimize with in policy gradient, we define the objective as <span class="math inline">\(J(\theta)\)</span>, where <span class="math inline">\(J(\theta)\)</span> is defined as: <span class="math display">\[
 \begin{split}
 J(\theta)
-&amp; =\mathbb{E}_{\tau \sim p_{\theta}(\tau)}[r(\tau)] \quad \text{ where }r(\tau) = \sum_{t}r(s_{t}, a_{t}) \\
+&amp; =\mathbb{E}_{\tau \sim p_{\theta}(\tau)}[r(\tau)] \quad \text{ where }r(\tau) = \sum_{t=1}\gamma^{t-1} r(s_{t}, a_{t}) \\
 &amp; = \int p_{\theta}(\tau)r(\tau) \, d\tau
 \end{split}
-\]</span> The gradient of the objective function is: <span class="math display">\[
+\]</span> The <strong>gradient</strong> of the objective function is: <span class="math display">\[
 \begin{split}
 \nabla J(\theta)
 &amp;= \int \nabla p_{\theta}(\tau)r(\tau) \, d\tau \\
-&amp;=  \int p_{\theta}(\tau)\nabla \log p_{\theta}(\tau)r(\tau) \, d\tau \quad \left( \nabla \log x = \nabla x \frac{1}{\log x} \right) \\
+&amp;=  \int p_{\theta}(\tau)\nabla \log p_{\theta}(\tau)r(\tau) \, d\tau \quad \left( \nabla \log x = \nabla x \frac{1}{x} \implies \nabla x  = x \nabla \log x \right) \\
 &amp;=  \mathbb{E}_{\tau \sim p_{\theta}(\tau)}[\nabla \log p_{\theta}(\tau)r(\tau)] \\
 \end{split}
 \]</span> Because the <span class="math inline">\(\log p_{\theta}(\tau)\)</span> is equal to: <span class="math display">\[
@@ -423,27 +507,28 @@ J(\theta)
 \log p_{\theta}(\tau) &amp;=  \log p(s_{1}) \prod_{t=1}^{T}\pi_{\theta}(a_{t} | s_{t})p(s_{t+1} | s_{t}, a_{t}) \\
 &amp; = \log p(s_{1}) + \sum_{t=1}^{T}\log \pi_{\theta}(a_{t} | s_{t}) + \log p(s_{t+1} | s_{t}, a_{t})
 \end{split}
-\]</span> The gradient with respect to the parameter of <span class="math inline">\(\pi\)</span> is only related to the second term, so: <span class="math display">\[
+\]</span> The gradient with respect to the parameter of <span class="math inline">\(\pi\)</span> is only related to the <em>second term</em>, so: <span class="math display">\[
 \begin{split}
 \nabla J(\theta)
-&amp;= \mathbb{E}_{\tau \sim p_{\theta}(\tau)}\left[ \bigg(\sum_{t=1}^{T}\nabla \log \pi_{\theta}(a_{t} | s_{t})\bigg)\left( \sum_{t}^{T}r(s_{t}, a_{t})  \right) \right]  \\
-&amp; \approx  \frac{1}{N} \sum_{i=1}^{N}\bigg(\sum_{t=1}^{T}\nabla \log \pi_{\theta}(a_{i, t} | s_{i, t})\bigg)\left( \sum_{t = 1}^{T}r(s_{i,t}, a_{i,t})  \right)
+&amp;= \mathbb{E}_{\tau \sim p_{\theta}(\tau)}\left[ \bigg(\sum_{t=1}^{T}\nabla \log \pi_{\theta}(a_{t} | s_{t})\bigg)\left( \sum_{t=1}^{T}\gamma^{t-1} r(s_{t}, a_{t})  \right) \right]  \\
+&amp; \approx  \frac{1}{N} \sum_{i=1}^{N}\bigg(\sum_{t=1}^{T}\nabla \log \pi_{\theta}(a_{i, t} | s_{i, t})\bigg)\left( \sum_{t = 1}^{T}\gamma^{t-1} r(s_{i,t}, a_{i,t})  \right)
 \end{split}
 \]</span></p>
-<p>When add causaliy it can used to reduce the variance. Causality: policy at time <span class="math inline">\(t'\)</span> cannot affect reward at time <span class="math inline">\(t\)</span> when <span class="math inline">\(t &lt; t'\)</span></p>
-we can get that: $$
-<span class="math display">\[\begin{split}
-\nabla J(\theta)
-
-&amp; \approx  \frac{1}{N} \sum_{i=1}^{N} \left(\sum_{t=1}^{T}\nabla \log \pi_{\theta}(a_{i, t} | s_{i, t})\underbrace{ \sum_{\textcolor{red}{t' = t}}^{T}r(s_{i,\textcolor{red}{t'}}, a_{i,\textcolor{red}{t'}})}_{ G: \text{Reward to Go} }\right) \\
-&amp;= \sum_{i=1}^{N} \left(\sum_{t=1}^{T}\nabla \log \pi_{\theta}(a_{i, t} | s_{i, t}) G_{t} \right)  \\
-\end{split}\]</span>
-<p>$$</p>
+<p>When add <strong>causality</strong><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> it can used to reduce the variance, we can get that:</p>
+<p><span class="math display">\[
+\begin{split}\nabla J(\theta) &amp; \approx  \frac{1}{N} \sum_{i=1}^{N} \left(\sum_{t=1}^{T}\nabla \log \pi_{\theta}(a_{i, t} | s_{i, t})\underbrace{ \sum_{\textcolor{red}{t' = t}}^{T} \gamma^{t'-t}r(s_{i,\textcolor{red}{t'}}, a_{i,\textcolor{red}{t'}})}_{ G: \text{Reward to Go} }\right) \\
+&amp;= \sum_{i=1}^{N} \left(\sum_{t=1}^{T}\nabla \log \pi_{\theta}(a_{i, t} | s_{i, t}) G_{t} \right)  \\\end{split}
+\]</span></p>
 <section id="reinforce" class="level2">
 <h2 class="anchored" data-anchor-id="reinforce">REINFORCE</h2>
-<p>REINFORCE is the most basic algorithm used in the reinforcement learning algorithms. The basic process is: 1. sample trajectory <span class="math inline">\(\{ \tau^{i}\}\)</span> according to policy <span class="math inline">\(\pi_{\theta}\)</span> 2. Calculate the gradient of the <span class="math inline">\(J(\theta^{-})\)</span> 3. Update the parameters: <span class="math display">\[
+<p>REINFORCE is the most basic algorithm used in the reinforcement learning algorithms. The basic process is:</p>
+<ol type="1">
+<li>Sample trajectory <span class="math inline">\(\{ \tau^{i}\}\)</span> according to policy <span class="math inline">\(\pi_{\theta}\)</span></li>
+<li>Calculate the gradient of the <span class="math inline">\(J(\theta^{-})\)</span></li>
+<li>Update the parameters: <span class="math display">\[
 \theta \leftarrow  \theta^{-} + \alpha \nabla_{\theta^{-}}J(\theta^{-})
-\]</span></p>
+\]</span></li>
+</ol>
 <section id="reinforce-with-baseline" class="level3">
 <h3 class="anchored" data-anchor-id="reinforce-with-baseline">REINFORCE with Baseline</h3>
 <p>The baseline, we can make that the positive reward increase when the bad reward decrease, the basic baseline is: <span class="math display">\[
@@ -451,19 +536,35 @@ b = \frac{1}{N}\sum_{i=1}^{N}r(\tau)
 \]</span> So, the objective function become: <span class="math display">\[
 \nabla_{\theta}J(\theta) \approx \frac{1}{N}\sum_{i=1}^{N}\nabla _{\theta}\log p_{\theta}(\tau)[r(\tau) - b]
 \]</span></p>
-<p>Are we allow: <img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030170108.png" class="img-fluid" alt="image.png"></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Why can we add baseline
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We can adding a baseline <span class="math inline">\(b\)</span> to the gradient because it does not affect the expected value of the policy gradient:</p>
+<p><span class="math display">\[
+\mathbb{E}[\nabla_\theta \log p_\theta (\tau) b] = \int p_\theta (\tau) \nabla_\theta \log p_\theta (\tau) b \, d\tau = \int \nabla_\theta p_\theta (\tau) b \, d\tau = b \nabla_\theta \int p_\theta (\tau) \, d\tau = b \nabla_\theta 1 = 0
+\]</span></p>
 <p>Subtracting a baseline is unbiased in expectation.</p>
+</div>
+</div>
+<p>A common choice for the baseline is the value function <span class="math inline">\(V(s)\)</span>.</p>
 </section>
 <section id="off-policy-reinforce" class="level3">
 <h3 class="anchored" data-anchor-id="off-policy-reinforce">Off-Policy REINFORCE</h3>
 <p><span class="math display">\[
 \nabla_{\theta}J(\theta) = \mathbb{E}_{\tau \sim p_{\theta}(\tau)}[\nabla \log p_{\theta}(\tau)r(\tau)]
 \]</span> The way we calculate the objective function is by sampling trajectories using the latest policy, so need throw out the samples each time we change <span class="math inline">\(\theta\)</span>. We cannot retain samples from previous policy.</p>
-<p>NN change only a little bit with each gradient step, so this might be sample expensive. So, we can transfer this into off-policy learning through important sampling.</p>
+<p>However neural network change only a little bit with each gradient step, so this might be sample expensive. So, we can transfer this into off-policy learning through <strong>important sampling</strong>.</p>
 </section>
 <section id="natural-gradient" class="level3">
 <h3 class="anchored" data-anchor-id="natural-gradient">Natural Gradient</h3>
-<p>Some parameters change probabilities a lot more than others, what we want to by changing the learning rate for different parameters, that have larger learning rate for those parameters that don’t change policy very much, in order to all the parameters to reach optimal value. Look constraints optmization view of first order graident descent,.</p>
+<p>Some parameters change probabilities a lot more than others, what we want to by changing the learning rate for different parameters, that have larger learning rate for those parameters that don’t change policy very much, in order to all the parameters to reach optimal value. Look constraints optimization view of first order graident descent,.</p>
 <p>From <strong>mirror descent</strong> or <strong>projected gradient descent</strong>. <img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030172937.png" class="img-fluid" alt="image.png"> Usually just take <span class="math inline">\(\alpha\)</span> rather then <span class="math inline">\(\epsilon\)</span> where <span class="math inline">\(\alpha\)</span> is just the lagrange multiplier that corresponds to epsilon.</p>
 <p>The step size are equal size in policy space rather than rather than parameter space. which means rescale the gradients</p>
 <p>Conjugate gradient works well for this.</p>
@@ -483,11 +584,11 @@ b = \frac{1}{N}\sum_{i=1}^{N}r(\tau)
 </section>
 <section id="trust-region-policy-optimization" class="level2">
 <h2 class="anchored" data-anchor-id="trust-region-policy-optimization">Trust Region Policy Optimization</h2>
-<p>motivated by the natural gradient but includees additional constraints for robustness</p>
+<p>motivated by the natural gradient but includes additional constraints for robustness</p>
 </section>
 <section id="proximal-policy-optimization" class="level2">
 <h2 class="anchored" data-anchor-id="proximal-policy-optimization">Proximal Policy Optimization</h2>
-<p>This is an simpller alternative to TRPO which approximates the natural gradient updates through a simpler, more efficient objective function.</p>
+<p>This is an simpler alternative to TRPO which approximates the natural gradient updates through a simpler, more efficient objective function.</p>
 </section>
 </section>
 <section id="inverse-reinforcement-learning" class="level1">
@@ -506,17 +607,34 @@ b = \frac{1}{N}\sum_{i=1}^{N}r(\tau)
 <h1>Reinforcement Learning with LLM</h1>
 </section>
 <section id="reference" class="level1">
-<h1>Reference</h1>
-<p>[1] <a href="https://spinningup.openai.com/en/latest/">OpenAI Spinning Up</a> [2] <a href="https://lilianweng.github.io/posts/2018-04-08-policy-gradient/">Lil’ Log Policy Gradient Algorithms</a> [3] <a href="https://rail.eecs.berkeley.edu/deeprlcourse/">UCB CS 285 Deep Reinforcement Learning 2023</a> [4] <a href="https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf">Andrew Barto and Richard S. Sutto: Reinforcement Learning an Introducntion</a></p>
+
+
 
 
 </section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Reference</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-noisynetworksexploration2019" class="csl-entry" role="listitem">
+Fortunato, Meire, Mohammad Gheshlaghi Azar, Bilal Piot, Jacob Menick, Ian Osband, Alex Graves, Vlad Mnih, et al. 2019. <span>“Noisy <span>Networks</span> for <span>Exploration</span>.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.1706.10295">https://doi.org/10.48550/arXiv.1706.10295</a>.
+</div>
+<div id="ref-haarnojaReinforcementLearningDeep2017" class="csl-entry" role="listitem">
+Haarnoja, Tuomas, Haoran Tang, Pieter Abbeel, and Sergey Levine. 2017. <span>“Reinforcement <span>Learning</span> with <span>Deep Energy-Based Policies</span>.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.1702.08165">https://doi.org/10.48550/arXiv.1702.08165</a>.
+</div>
+<div id="ref-deepreinforcementlearningdoubleqlearning2015" class="csl-entry" role="listitem">
+Hasselt, Hado van, Arthur Guez, and David Silver. 2015. <span>“Deep <span>Reinforcement Learning</span> with <span class="nocase">Double Q-learning</span>.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.1509.06461">https://doi.org/10.48550/arXiv.1509.06461</a>.
+</div>
+<div id="ref-playingatarideepreinforcementlearning2013" class="csl-entry" role="listitem">
+Mnih, Volodymyr, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, and Martin Riedmiller. 2013. <span>“Playing <span>Atari</span> with <span>Deep Reinforcement Learning</span>.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.1312.5602">https://doi.org/10.48550/arXiv.1312.5602</a>.
+</div>
+<div id="ref-duelingnetworkarchitecturesdeepreinforcementlearning2016" class="csl-entry" role="listitem">
+Wang, Ziyu, Tom Schaul, Matteo Hessel, Hado van Hasselt, Marc Lanctot, and Nando de Freitas. 2016. <span>“Dueling <span>Network Architectures</span> for <span>Deep Reinforcement Learning</span>.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.1511.06581">https://doi.org/10.48550/arXiv.1511.06581</a>.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>1<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>This is because the model may “overfitting” on recent patterns or states, making it difficult to generalize across states<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><strong>Causality</strong>: policy at time <span class="math inline">\(t'\)</span> cannot affect reward at time <span class="math inline">\(t\)</span> when <span class="math inline">\(t &lt; t'\)</span><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

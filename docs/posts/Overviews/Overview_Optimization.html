@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -227,7 +261,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024-10-29</p>
+      <p class="date-modified">2024-10-31</p>
     </div>
   </div>
     
@@ -245,6 +279,7 @@ window.Quarto = {
 <li>Higher-Order Optimization methods: such as Newton’s method</li>
 <li>Heuristic Derivative Free Optimization: such as coordinate descent method</li>
 </ul>
+<p>Mkae decision change what is the</p>
 <p>First Order Optimization methods are the most common methods used in the deep learning field, because it is easier to implement, while higher order methods converge at a faster speed with the <strong>curvature information</strong> makes the search direction more effective, is more computing demanding due to the operation and storage of the inverse matrix of the <strong>Hessian matrix</strong>. To solve this problem, many variants based on <strong>Newton’s method</strong> has been developed most of which try to <em>approximate</em> the Hessian matrix through some techniques.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -276,13 +311,14 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="conjugate-gradientcg">Conjugate Gradient(CG)</h2>
 <p>The conjugate gradient method is a method that only needs first-order derivative information for well-defined <strong>quadratic programming</strong>, but overcomes the shortcoming of <strong>steepest descent method</strong>, and avoids the disadvantages of Newton’s method of storing and calculating the inverse Hessian matrix.</p>
 <p>It is one of the most effective methods for solving large-scale <strong>linear systems of equations</strong>. It can also be used for solving non-linear optimization equations. In the 1960s, CG method is proposed as an alternative to Gaussian elimination.</p>
-<p>For a linear system: <span class="math display">\[
+<p>For a linear system: <span id="eq-linear-system"><span class="math display">\[
 A\theta = b
-\]</span> where <span class="math inline">\(A \in \mathbb{S}^{n \times n}_{++}\)</span> is symmetric, positive-definite matrix. The matrix <span class="math inline">\(A\)</span> and vector <span class="math inline">\(b\)</span> are known, and we want to solve the value of <span class="math inline">\(\theta\)</span>. The problem of minimize the quadratic positive definite function: <span class="math display">\[
+\tag{1}\]</span></span> where <span class="math inline">\(A \in \mathbb{S}^{n \times n}_{++}\)</span> is symmetric, positive-definite matrix. The matrix <span class="math inline">\(A\)</span> and vector <span class="math inline">\(b\)</span> are known, and we want to solve the value of <span class="math inline">\(\theta\)</span>. The problem of minimize the quadratic positive definite function:</p>
+<p><span class="math display">\[
 \underset{\theta}{\min \ } F(\theta) = \frac{1}{2}\theta^{T}A\theta - b\theta + c
 \]</span> can be seen as a linear system when we set the gradient of <span class="math inline">\(F(\theta^{*}) = 0\)</span>: <span class="math display">\[
 \frac{d F(\theta)}{d\theta} = A\theta - b
-\]</span> If <span class="math inline">\(A\)</span> is symmetric matrix.</p>
+\]</span> {#1} If <span class="math inline">\(A\)</span> is symmetric matrix.</p>
 <p>The gradient of <span class="math inline">\(F(\theta)\)</span> can be obtained by simple calculation which is equals to the residual of the linear system: <span class="math display">\[
 \nabla F(\theta) = r(\theta) = A\theta - b
 \]</span></p>
@@ -309,7 +345,8 @@ d_{t} = - r_{t} +\beta_{t}d_{t-1}
 \theta_{t+1}= \theta_{t} - \frac{f'(\theta_{t})}{f''(\theta_{t})}
 \]</span> The high dimensional Newton’s iteration formula is: <span class="math display">\[
 \theta_{t+1} = \theta_{t} - \nabla^{2}f(\theta_{t})^{-1}\nabla f(\theta_{t})
-\]</span>where <span class="math inline">\(\nabla^{2} f\)</span> is <strong>Hessian</strong> matrix. The above method is called <strong>damping Newton’s method</strong>.</p>
+\]</span> {#1}</p>
+<p>where <span class="math inline">\(\nabla^{2} f\)</span> is <strong>Hessian</strong> matrix. The above method is called <strong>damping Newton’s method</strong>.</p>
 <p>The problem of this method is computing inverse of the Hessian matrix at every iterations, which makes the storage and computation very expensive. To solve the problem we can approximate the inverse of the Hessian matrix, which is called <strong>quasi-Newton method</strong>.</p>
 <p>It use positive definite matrix to approximate the inverse of the Hessian matrix. More specifically, the second-order gradient is not directly needed in this method. There are several methods to approximate the Hessian matrix and inverse matrix: ### Quasi-Newton Condition Assume the objective function <span class="math inline">\(f\)</span> can be approximated by a quadratic function, we can extend <span class="math inline">\(f(\theta)\)</span> to Taylor series at <span class="math inline">\(\theta =\theta_{t+1}\)</span>: <span class="math display">\[
 f(\theta) \approx f(\theta_{t+1}) + \nabla f(\theta_{t+1})^{\intercal}(\theta - \theta_{t+1}) + \frac{1}{2}(\theta - \theta_{t+1})^{\intercal}\nabla^{2}f(\theta_{t+1})(\theta - \theta_{t+1})
@@ -321,9 +358,9 @@ f(\theta) \approx f(\theta_{t+1}) + \nabla f(\theta_{t+1})^{\intercal}(\theta - 
 \]</span> We use <span class="math inline">\(B\)</span> to represent the approximate matrix of the Hessian matrix. Set <span class="math inline">\(s_{t} = \theta_{t+1} - \theta_{t}\)</span> and <span class="math inline">\(u_{t} = \nabla f(\theta_{t+1}) - \nabla f(\theta_{t})\)</span></p>
 <p>The matrix <span class="math inline">\(B_{t+1}\)</span> is satisfied that: <span class="math display">\[
 u_{t} = B_{t+1} s_{t}
-\]</span> The above equation is called the <strong>quasi-Newton condition</strong>, or secant equation. The search direction of quasi-Newton method is: <span class="math display">\[
+\]</span> The above equation is called the <strong>quasi-Newton condition</strong>, or secant equation. The search direction of quasi-Newton method is: <span id="eq-qn-condition"><span class="math display">\[
 d_{t} = -B_{t}^{-1}g_{t}
-\]</span> where <span class="math inline">\(g_{t}\)</span> is the gradient of <span class="math inline">\(f\)</span>, and the update of quasi-Newton is: <span class="math display">\[
+\tag{2}\]</span></span> where <span class="math inline">\(g_{t}\)</span> is the gradient of <span class="math inline">\(f\)</span>, and the update of quasi-Newton is: <span class="math display">\[
 \theta_{t+1} = \theta_{t} + \eta_{t}d_{t}
 \]</span> The step size <span class="math inline">\(\eta_{t}\)</span> is chose to satisfy the <strong>Wolfe conditions.</strong></p>
 
@@ -350,6 +387,14 @@ d_{t} = -B_{t}^{-1}g_{t}
 <section id="l-bfgs" class="level3">
 <h3 class="anchored" data-anchor-id="l-bfgs">L-BFGS</h3>
 <p>Limited memory quasi-Newton methods, named L-BFGS is an improvement based on the quasiNewton method. which is feasible in dealing with the highdimensional situation.</p>
+<ul>
+<li>das</li>
+<li>dasd
+<ul>
+<li>das</li>
+</ul></li>
+<li>das d</li>
+</ul>
 <p>https://towardsdatascience.com/bfgs-in-a-nutshell-an-introduction-to-quasi-newton-methods-21b0e13ee504 ## Stochastic Quasi-Newton Method</p>
 </section>
 </section>
@@ -361,16 +406,37 @@ d_{t} = -B_{t}^{-1}g_{t}
 </section>
 <section id="trust-region-method" class="level2">
 <h2 class="anchored" data-anchor-id="trust-region-method">Trust Region Method</h2>
+<p><img src="images/paste-1.png" class="img-fluid" width="834"></p>
 </section>
 </section>
 <section id="heuristic-derivate-free-optimization-methods" class="level1">
 <h1>Heuristic Derivate Free Optimization methods</h1>
+<div id="bca6810a" class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello World"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div id="nte-attention" class="callout callout-style-default callout-note callout-titled" style="color: red">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note&nbsp;1: This is the captions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>TRs</p>
+</div>
+</div>
 </section>
 <section id="preconditions" class="level1">
 <h1>Preconditions</h1>
 </section>
 <section id="applications" class="level1">
 <h1>Applications</h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello World"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="optimization-in-machine-learning" class="level2">
 <h2 class="anchored" data-anchor-id="optimization-in-machine-learning">Optimization in Machine Learning</h2>
 </section>
@@ -391,10 +457,18 @@ d_{t} = -B_{t}^{-1}g_{t}
 </section>
 <section id="optimization-in-markov-chain-monte-carlo" class="level2">
 <h2 class="anchored" data-anchor-id="optimization-in-markov-chain-monte-carlo">Optimization in Markov Chain Monte Carlo</h2>
+<p>This is the list</p>
+<ul>
+<li>List</li>
+<li>next</li>
+</ul>
 </section>
 </section>
 <section id="conclusions" class="level1">
 <h1>Conclusions</h1>
+<p>This is the re</p>
+<p>See <a href="#eq-linear-system" class="quarto-xref">Equation&nbsp;1</a> for more detials, and <a href="#eq-qn-condition" class="quarto-xref">Equation&nbsp;2</a></p>
+<p>This is </p>
 
 
 </section>

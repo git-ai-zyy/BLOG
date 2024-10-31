@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -171,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024-10-30</p>
+      <p class="date-modified">2024-11-01</p>
     </div>
   </div>
     
@@ -182,14 +202,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/OverviewOfMLLM.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
 <section id="llm-architecture" class="level1">
 <h1>LLM Architecture</h1>
 <p>The mainstream architecture of existing LLM can be categorized into three major types:</p>
 <ul>
 <li>Encoder-Decoder</li>
 <li>Causal Decoder</li>
-<li>Prefix Decoder <img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030135524.png" class="img-fluid" alt="image.png"> ## Encoder Decoder Architecture The vanilla Transformer model is based on that architecture. The encoder adopts stacked muli-head self-attention layers to encoder the input sequence for gengerrating its latent representation, the decopder perform cross-attention on these representations, while decoder performs cross-attention on theses representation and auto-regressively generates the target sequence.</li>
+<li>Prefix Decoder</li>
 </ul>
+<p><img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030135524.png" class="img-fluid" alt="image.png"> ## Encoder Decoder Architecture The vanilla Transformer model is based on that architecture. The encoder adopts stacked muli-head self-attention layers to encoder the input sequence for gengerrating its latent representation, the decopder perform cross-attention on these representations, while decoder performs cross-attention on theses representation and auto-regressively generates the target sequence.</p>
 <section id="causal-decoder-architecture" class="level2">
 <h2 class="anchored" data-anchor-id="causal-decoder-architecture">Causal Decoder Architecture</h2>
 <p>The causal decoder architecture incorporates the unidirectional attention mask, to guarantee that each input token can only attend to the past tokens and itself.</p>
@@ -202,12 +228,18 @@ ul.task-list li input[type="checkbox"] {
 <section id="mixture-of-experts" class="level2">
 <h2 class="anchored" data-anchor-id="mixture-of-experts">Mixture of Experts</h2>
 <p>We can further extend the above architecture via the <strong>mixture of experts</strong> (MOE ) scaling. In which a subset of neural network weights for each input are sparely activated, the example of <strong>Switch Transformer</strong>. The major merit is that MoE is a flexible way to scale up the model parameter while maintaining a constant computational cost</p>
+<p><span class="citation" data-cites="weng2024hallucination">Weng (<a href="#ref-weng2024hallucination" role="doc-biblioref">2024</a>)</span></p>
+
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-weng2024hallucination" class="csl-entry" role="listitem">
+Weng, Lilian. 2024. <span>“Extrinsic Hallucinations in LLMs.”</span> <em>Lilianweng.github.io</em>, July. <a href="https://lilianweng.github.io/posts/2024-07-07-hallucination/">https://lilianweng.github.io/posts/2024-07-07-hallucination/</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
