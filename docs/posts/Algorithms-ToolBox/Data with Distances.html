@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-10-25">
-<meta name="description" content="This is an overview of the Muultimodal Large Language Models. It includes the defintion of the large language models, the multimodal large language models, and the applications of those models. Besides, it also includes to fine-tune those models with different methods like LoRA.">
+<meta name="dcterms.date" content="2024-10-26">
+<meta name="description" content="This blog explores Maximum Likelihhood Estimation(MLE) and its applications across machine learning, from basic densitty estimation to deep learning. It also discuess optmization techniques like SGD, when MLE lacks a closed-from soluition, which is most common in deep learning.">
 
-<title>Overview: (Multimodal) Large Language Models – Yuyang’s Blog</title>
+<title>Maximum Likelihood Learning: From Basic to Advance – Yuyang’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,27 +22,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -93,9 +73,9 @@ div.csl-indent {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Overview: (Multimodal) Large Language Models – Yuyang’s Blog">
-<meta property="og:description" content="This is an overview of the Muultimodal Large Language Models. It includes the defintion of the large language models, the multimodal large language models, and the applications of those models. Besides, it also includes to fine-tune those models with different methods like LoRA.">
-<meta property="og:image" content="Images/OverviewOfMLLM.png">
+<meta property="og:title" content="Maximum Likelihood Learning: From Basic to Advance – Yuyang’s Blog">
+<meta property="og:description" content="This blog explores Maximum Likelihhood Estimation(MLE) and its applications across machine learning, from basic densitty estimation to deep learning. It also discuess optmization techniques like SGD, when MLE lacks a closed-from soluition, which is most common in deep learning.">
+<meta property="og:image" content="Images/Maximum Likelihood Estimation(Learning).png">
 <meta property="og:site_name" content="Yuyang's Blog">
 </head>
 
@@ -142,19 +122,7 @@ div.csl-indent {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
-    <h2 id="toc-title">Contents</h2>
-   
-  <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
-  <li><a href="#llm-architecture" id="toc-llm-architecture" class="nav-link" data-scroll-target="#llm-architecture">LLM Architecture</a>
-  <ul class="collapse">
-  <li><a href="#causal-decoder-architecture" id="toc-causal-decoder-architecture" class="nav-link" data-scroll-target="#causal-decoder-architecture">Causal Decoder Architecture</a></li>
-  <li><a href="#prefix-decoder-architecture" id="toc-prefix-decoder-architecture" class="nav-link" data-scroll-target="#prefix-decoder-architecture">Prefix Decoder Architecture</a></li>
-  <li><a href="#mixture-of-experts" id="toc-mixture-of-experts" class="nav-link" data-scroll-target="#mixture-of-experts">Mixture of Experts</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -165,16 +133,15 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Overview: (Multimodal) Large Language Models</h1>
+<h1 class="title">Maximum Likelihood Learning: From Basic to Advance</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">LLM</div>
-    <div class="quarto-category">Overview</div>
+    <div class="quarto-category">ToolBox</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    This is an overview of the Muultimodal Large Language Models. It includes the defintion of the large language models, the multimodal large language models, and the applications of those models. Besides, it also includes to fine-tune those models with different methods like LoRA.
+    This blog explores Maximum Likelihhood Estimation(MLE) and its applications across machine learning, from basic densitty estimation to deep learning. It also discuess optmization techniques like SGD, when MLE lacks a closed-from soluition, which is most common in deep learning.
   </div>
 </div>
 
@@ -185,14 +152,14 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2024-10-25</p>
+      <p class="date">2024-10-26</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024-11-01</p>
+      <p class="date-modified">2024-11-03</p>
     </div>
   </div>
     
@@ -203,44 +170,10 @@ div.csl-indent {
 </header>
 
 
-<section id="section" class="level1">
-<h1></h1>
-<p><img src="images/Multimodel Large Language Model.png" class="img-fluid"></p>
-<p>New content</p>
-</section>
-<section id="llm-architecture" class="level1">
-<h1>LLM Architecture</h1>
-<p>The mainstream architecture of existing LLM can be categorized into three major types:</p>
-<ul>
-<li>Encoder-Decoder</li>
-<li>Causal Decoder</li>
-<li>Prefix Decoder</li>
-</ul>
-<p><img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030135524.png" class="img-fluid" alt="image.png"> ## Encoder Decoder Architecture The vanilla Transformer model is based on that architecture. The encoder adopts stacked muli-head self-attention layers to encoder the input sequence for gengerrating its latent representation, the decopder perform cross-attention on these representations, while decoder performs cross-attention on theses representation and auto-regressively generates the target sequence.</p>
-<section id="causal-decoder-architecture" class="level2">
-<h2 class="anchored" data-anchor-id="causal-decoder-architecture">Causal Decoder Architecture</h2>
-<p>The causal decoder architecture incorporates the unidirectional attention mask, to guarantee that each input token can only attend to the past tokens and itself.</p>
-<p>The GPT-series models are developed based on the causal-decoder architecture. It show amazing ability in in-context learning capability of LLMs.</p>
-</section>
-<section id="prefix-decoder-architecture" class="level2">
-<h2 class="anchored" data-anchor-id="prefix-decoder-architecture">Prefix Decoder Architecture</h2>
-<p>Non like Causal Decoder Architecture, the prefix decoder architecture enable performing bi-directional attention over the prefix tokens and unidirectional attention only on generated tokens.</p>
-</section>
-<section id="mixture-of-experts" class="level2">
-<h2 class="anchored" data-anchor-id="mixture-of-experts">Mixture of Experts</h2>
-<p>We can further extend the above architecture via the <strong>mixture of experts</strong> (MOE ) scaling. In which a subset of neural network weights for each input are sparely activated, the example of <strong>Switch Transformer</strong>. The major merit is that MoE is a flexible way to scale up the model parameter while maintaining a constant computational cost</p>
-<p><span class="citation" data-cites="weng2024hallucination">Weng (<a href="#ref-weng2024hallucination" role="doc-biblioref">2024</a>)</span></p>
 
 
 
-</section>
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-weng2024hallucination" class="csl-entry" role="listitem">
-Weng, Lilian. 2024. <span>“Extrinsic Hallucinations in LLMs.”</span> <em>Lilianweng.github.io</em>, July. <a href="https://lilianweng.github.io/posts/2024-07-07-hallucination/">https://lilianweng.github.io/posts/2024-07-07-hallucination/</a>.
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
