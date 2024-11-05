@@ -99,7 +99,7 @@ div.csl-indent {
 <meta property="og:site_name" content="Yuyang's Blog">
 </head>
 
-<body class="floating nav-fixed">
+<body class="floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -149,9 +149,11 @@ div.csl-indent {
   <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
   <li><a href="#llm-architecture" id="toc-llm-architecture" class="nav-link" data-scroll-target="#llm-architecture">LLM Architecture</a>
   <ul class="collapse">
+  <li><a href="#encoder-decoder-architecture" id="toc-encoder-decoder-architecture" class="nav-link" data-scroll-target="#encoder-decoder-architecture">Encoder Decoder Architecture</a></li>
   <li><a href="#causal-decoder-architecture" id="toc-causal-decoder-architecture" class="nav-link" data-scroll-target="#causal-decoder-architecture">Causal Decoder Architecture</a></li>
   <li><a href="#prefix-decoder-architecture" id="toc-prefix-decoder-architecture" class="nav-link" data-scroll-target="#prefix-decoder-architecture">Prefix Decoder Architecture</a></li>
   <li><a href="#mixture-of-experts" id="toc-mixture-of-experts" class="nav-link" data-scroll-target="#mixture-of-experts">Mixture of Experts</a></li>
+  <li><a href="#emergent-architectures" id="toc-emergent-architectures" class="nav-link" data-scroll-target="#emergent-architectures">Emergent Architectures</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -161,7 +163,7 @@ div.csl-indent {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -192,7 +194,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024-11-01</p>
+      <p class="date-modified">2024-11-05</p>
     </div>
   </div>
     
@@ -208,7 +210,7 @@ div.csl-indent {
 <p><img src="images/Multimodel Large Language Model.png" class="img-fluid"></p>
 <p>New content</p>
 </section>
-<section id="llm-architecture" class="level1">
+<section id="llm-architecture" class="level1 page-columns page-full">
 <h1>LLM Architecture</h1>
 <p>The mainstream architecture of existing LLM can be categorized into three major types:</p>
 <ul>
@@ -216,29 +218,57 @@ div.csl-indent {
 <li>Causal Decoder</li>
 <li>Prefix Decoder</li>
 </ul>
-<p><img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030135524.png" class="img-fluid" alt="image.png"> ## Encoder Decoder Architecture The vanilla Transformer model is based on that architecture. The encoder adopts stacked muli-head self-attention layers to encoder the input sequence for gengerrating its latent representation, the decopder perform cross-attention on these representations, while decoder performs cross-attention on theses representation and auto-regressively generates the target sequence.</p>
-<section id="causal-decoder-architecture" class="level2">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241030135524.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<section id="encoder-decoder-architecture" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="encoder-decoder-architecture">Encoder Decoder Architecture</h2>
+<p>The vanilla Transformer(<span class="citation" data-cites="attentionallyouneed2023">Vaswani et al. (<a href="#ref-attentionallyouneed2023" role="doc-biblioref">2023</a>)</span>) model is based on that architecture.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>See my implementation of transformer as <a href="https://github.com/JAZ201107/MustDoModels/tree/main/Transformer-Machine-Translation">this link</a> .</p>
+</div></div><p>The encoder adopts stacked multi-head self-attention layers to encoder the input sequence for generating its latent representation, the decoder perform cross-attention on these representations, while decoder performs cross-attention on theses representation and auto-regressively generates the target sequence.</p>
+<p>So far, there are only a small number of LLMs that are built based on the encoder-decoder architecture.</p>
+</section>
+<section id="causal-decoder-architecture" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="causal-decoder-architecture">Causal Decoder Architecture</h2>
 <p>The causal decoder architecture incorporates the unidirectional attention mask, to guarantee that each input token can only attend to the past tokens and itself.</p>
-<p>The GPT-series models are developed based on the causal-decoder architecture. It show amazing ability in in-context learning capability of LLMs.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>See my implementation of GPT2 as <a href="https://github.com/JAZ201107/MustDoModels/tree/main/GPT2">this link</a>.</p>
+<p>And my implementation of LLaMa as <a href="https://github.com/JAZ201107/MustDoModels/tree/main/LLaMa">this link</a>.</p>
+</div></div><p>The GPT-series models are developed based on the causal-decoder architecture. It show amazing ability in in-context learning capability of LLMs.</p>
 </section>
 <section id="prefix-decoder-architecture" class="level2">
 <h2 class="anchored" data-anchor-id="prefix-decoder-architecture">Prefix Decoder Architecture</h2>
-<p>Non like Causal Decoder Architecture, the prefix decoder architecture enable performing bi-directional attention over the prefix tokens and unidirectional attention only on generated tokens.</p>
+<p>Non like Causal Decoder Architecture, the prefix decoder architecture enable performing bi-directional attention over the prefix tokens and unidirectional attention only on generated tokens. In this way, like the encoder-decoder architecture, the prefix decoders can bidirectionally encode the prefix sequence and auto-regressively predict the output tokens one by one. Usually, a practical suggestion is to continually train causal decoders and then convert them into prefix decoder for accelerating convergence.</p>
 </section>
-<section id="mixture-of-experts" class="level2">
+<section id="mixture-of-experts" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="mixture-of-experts">Mixture of Experts</h2>
-<p>We can further extend the above architecture via the <strong>mixture of experts</strong> (MOE ) scaling. In which a subset of neural network weights for each input are sparely activated, the example of <strong>Switch Transformer</strong>. The major merit is that MoE is a flexible way to scale up the model parameter while maintaining a constant computational cost</p>
-<p><span class="citation" data-cites="weng2024hallucination">Weng (<a href="#ref-weng2024hallucination" role="doc-biblioref">2024</a>)</span></p>
+<p>We can further extend the above architecture via the <strong>mixture of experts</strong> (MOE ) scaling. In which a subset of neural network weights for each input are sparely activated, the example of <strong>Switch Transformer</strong>.</p>
 
-
-
+<div class="no-row-height column-margin column-container"><div class="">
+<p>See my implementation of Switch Transformer as <a href="https://github.com/JAZ201107/MustDoModels/tree/main/SwitchTransformer">this link</a>.</p>
+</div></div><p>The major merit is that MoE is a flexible way to scale up the model parameter while maintaining a constant computational cost. Is has been shown that substantial performance improvement can be observed by increasing either the number of experts. or the total parameter size. It is widespread speculation that GPT-4 has been developed based on the MoE architecture.</p>
 </section>
+<section id="emergent-architectures" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="emergent-architectures">Emergent Architectures</h2>
+<p>To improve the efficiency, there is new architectures have been proposed based on the <strong>parameterized state space models</strong>, which can be viewed as a combination of RNN and CNN. However, there performance still lags behind Transformer. Thus several variants of SSM have been proposed, such as Mamba</p>
+
+
+
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>See my implementation of Mamba as <a href="https://github.com/JAZ201107/MustDoModels/tree/main/Mamba">this link</a>.</p>
+</div></div></section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-weng2024hallucination" class="csl-entry" role="listitem">
-Weng, Lilian. 2024. <span>“Extrinsic Hallucinations in LLMs.”</span> <em>Lilianweng.github.io</em>, July. <a href="https://lilianweng.github.io/posts/2024-07-07-hallucination/">https://lilianweng.github.io/posts/2024-07-07-hallucination/</a>.
+<div id="ref-attentionallyouneed2023" class="csl-entry" role="listitem">
+Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. 2023. <span>“Attention <span>Is All You Need</span>.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.1706.03762">https://doi.org/10.48550/arXiv.1706.03762</a>.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

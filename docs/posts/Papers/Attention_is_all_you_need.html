@@ -240,7 +240,8 @@ div.csl-indent {
 <section id="encoderdeocder" class="level1">
 <h1>EncoderDeocder</h1>
 <p>The main framework of the Transformer model is the Encoder-Decoder architecture. The Encoder takes the input sequence and converts it into a sequence of hidden states. The Decoder takes the hidden states and generates the output sequence. The Encoder and Decoder are made up of multiple layers. Now, let’s define the encoder and decoder first.</p>
-<div id="18bdffea" class="cell">
+<p><img src="images/paste-1.png" class="img-fluid"></p>
+<div id="9ade0956" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">class</span> EncoderDecoder(nn.Module):</span>
@@ -254,7 +255,7 @@ div.csl-indent {
 <span id="cb1-9"><a href="#cb1-9"></a>    ):</span>
 <span id="cb1-10"><a href="#cb1-10"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>()</span>
 <span id="cb1-11"><a href="#cb1-11"></a>        <span class="va">self</span>.encoder <span class="op">=</span> encoder</span>
-<span id="cb1-12"><a href="#cb1-12"></a>        <span class="va">self</span>.decoder <span class="op">=</span> decoder</span>
+<span id="cb1-12"><a href="#cb1-12"></a>        <span class="va">self</span>.[decoder](https:<span class="op">//</span>quarto.org<span class="op">/</span>docs<span class="op">/</span>output<span class="op">-</span>formats<span class="op">/</span>html<span class="op">-</span>code.html<span class="co">#code-linking) = decoder</span></span>
 <span id="cb1-13"><a href="#cb1-13"></a>        <span class="va">self</span>.src_embed <span class="op">=</span> src_embed</span>
 <span id="cb1-14"><a href="#cb1-14"></a>        <span class="va">self</span>.tgt_embed <span class="op">=</span> tgt_embed</span>
 <span id="cb1-15"><a href="#cb1-15"></a></span>
@@ -270,7 +271,8 @@ div.csl-indent {
 <span id="cb1-25"><a href="#cb1-25"></a>        <span class="cf">return</span> <span class="va">self</span>.decoder(<span class="va">self</span>.tgt_embed(tgt), memory, src_mask, tgt_mask)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>Where <code>encoder()</code> dsa</p>
+<p>Where <code>encoder()</code> take the source language in, embed the language and output the memory for decode.</p>
+<p><a href="https://quarto.org/docs/output-formats/html-code.html#code-linking">dsa</a></p>
 
 
 
