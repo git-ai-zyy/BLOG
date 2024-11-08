@@ -259,7 +259,7 @@ div.csl-indent {
 <h1>EncoderDeocder</h1>
 <p>The main framework of the Transformer model is the Encoder-Decoder architecture. The Encoder takes the input sequence and converts it into a sequence of hidden states. The Decoder takes the hidden states and generates the output sequence. The Encoder and Decoder are made up of multiple layers. Now, let’s define the encoder and decoder first.</p>
 <p><img src="images/paste-1.png" class="img-fluid"></p>
-<div id="620df5c5" class="cell">
+<div id="78fa2c4e" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">class</span> EncoderDecoder(nn.Module):</span>
@@ -290,7 +290,6 @@ div.csl-indent {
 </details>
 </div>
 <p>Where <code>encoder()</code> take the source language in, embed the language and output the memory for decode.</p>
-<p><a href="https://quarto.org/docs/output-formats/html-code.html#code-linking">dsa</a></p>
 <section id="encoder" class="level2">
 <h2 class="anchored" data-anchor-id="encoder">Encoder</h2>
 </section>
@@ -309,7 +308,10 @@ div.csl-indent {
 </section>
 <section id="position-encoder" class="level1">
 <h1>Position Encoder</h1>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python Python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> torch </span>
+<div id="fab6b012" class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> torch </span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="im">import</span> torch.nn <span class="im">as</span> nn </span>
 <span id="cb2-3"><a href="#cb2-3"></a></span>
 <span id="cb2-4"><a href="#cb2-4"></a></span>
@@ -333,6 +335,8 @@ div.csl-indent {
 <span id="cb2-22"><a href="#cb2-22"></a>        x <span class="op">=</span> torch.matmul(x, <span class="va">self</span>.rotation_matrix)</span>
 <span id="cb2-23"><a href="#cb2-23"></a></span>
 <span id="cb2-24"><a href="#cb2-24"></a>        <span class="cf">return</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="training" class="level1">
 <h1>Training</h1>
