@@ -240,7 +240,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024-11-08</p>
+      <p class="date-modified">2024-11-26</p>
     </div>
   </div>
     
@@ -253,13 +253,17 @@ div.csl-indent {
 
 <section id="paper-reading-attention-is-all-you-need" class="level1">
 <h1>Paper Reading: Attention is all you need</h1>
-<p>Transofmr (<span class="citation" data-cites="attentionallyouneed2023">Vaswani et al. (<a href="#ref-attentionallyouneed2023" role="doc-biblioref">2023</a>)</span>) This is article, I am going to implemet the Transformer model from the paper Attention is all you need. This paper is the corner stone of the current state of the art in NLP. The Transformer model is the first model that uses only attention mechanism to model the relationship between words in a sentence. This model is the base of the current state of the art models like BERT, GPT-2, etc.(Most code is referenced from (<span class="citation" data-cites="opennmt">Klein et al. (<a href="#ref-opennmt" role="doc-biblioref">2017</a>)</span>))</p>
+<p>This is article, I am going to implement the <strong>Transformer model</strong> from the paper <em>Attention is all you need</em>(<span class="citation" data-cites="attentionallyouneed2023">Vaswani et al. (<a href="#ref-attentionallyouneed2023" role="doc-biblioref">2023</a>)</span> ) This paper is the corner stone of the current state of the art in NLP and LLM. The Transformer model is the first model that uses only attention mechanism to model the relationship between words in a sentence. This model is the base of the current state of the art models like , GPT-2, etc.(Most code is referenced from (<span class="citation" data-cites="opennmt">Klein et al. (<a href="#ref-opennmt" role="doc-biblioref">2017</a>)</span>) )</p>
 </section>
 <section id="encoderdeocder" class="level1">
 <h1>EncoderDeocder</h1>
-<p>The main framework of the Transformer model is the Encoder-Decoder architecture. The Encoder takes the input sequence and converts it into a sequence of hidden states. The Decoder takes the hidden states and generates the output sequence. The Encoder and Decoder are made up of multiple layers. Now, let’s define the encoder and decoder first.</p>
+<p>The main framework of the Transformer model is the <strong>Encoder-Decoder architecture</strong>.</p>
+<ul>
+<li>The Encoder takes the input sequence and converts it into a sequence of hidden states.</li>
+<li>The Decoder takes the hidden states and generates the output sequence. The Encoder and Decoder are made up of multiple layers. Now, let’s define the encoder and decoder first.</li>
+</ul>
 <p><img src="images/paste-1.png" class="img-fluid"></p>
-<div id="78fa2c4e" class="cell">
+<div id="3affd945" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">class</span> EncoderDecoder(nn.Module):</span>
@@ -308,7 +312,7 @@ div.csl-indent {
 </section>
 <section id="position-encoder" class="level1">
 <h1>Position Encoder</h1>
-<div id="fab6b012" class="cell">
+<div id="dbf153ac" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> torch </span>
