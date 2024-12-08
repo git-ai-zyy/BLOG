@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,12 +37,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0626ff4d7a71b55c8707dcae1d04a9b6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-e25cc82807363e79c52e96bc8b7855f1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-28b3e42692288cc91608886303162469.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-dc38f20666d21429b5795c65c69ef08f.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -158,6 +158,7 @@ window.Quarto = {
   <li><a href="#what-is-the-large-language-model" id="toc-what-is-the-large-language-model" class="nav-link active" data-scroll-target="#what-is-the-large-language-model">What is the Large Language Model</a></li>
   <li><a href="#pre-training" id="toc-pre-training" class="nav-link" data-scroll-target="#pre-training">Pre-Training</a>
   <ul class="collapse">
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">DataSet</a></li>
   <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a>
   <ul class="collapse">
   <li><a href="#architecture" id="toc-architecture" class="nav-link" data-scroll-target="#architecture">Architecture</a></li>
@@ -237,7 +238,7 @@ window.Quarto = {
 </header>
 
 
-<p><img src="images/Multimodel Large Language Model.png" class="img-fluid"></p>
+<p><img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/Multimodel%20Large%20Language%20Model.png"></p>
 <section id="what-is-the-large-language-model" class="level1">
 <h1>What is the Large Language Model</h1>
 <p>Large Language Model, as the name, is the Language Model that with Large Training Dataset, Large number of parameters. When the research scale the language model, there are some abilities that are not present in small models emerge in the Large Language Model. Below are three typical emergent abilities for LLMs: 1. <strong>In-Context Learning</strong>: When the LLM is provided with - Natural Language instruction - Several Task Demonstrations It can generate the expected output of input text without requiring additional training or weight update. 2. <strong>Instruction Following</strong>: With the instruction tuning, the model can respond accurately based on the user’s instructions or prompt. The model tries to understand what the user wants and generates an appropriate answer. 3. <strong>Step-By-Step reasoning</strong>: With chain-of-thought(CoT) prompting strategy, LLM can solve the complex task, (e.g.&nbsp;mathematical problem) by utilizing the prompting mechanism that involves intermediate reasoning steps.</p>
@@ -246,7 +247,17 @@ window.Quarto = {
 </section>
 <section id="pre-training" class="level1">
 <h1>Pre-Training</h1>
-<p>To train a neural network, we four essential components - Dataset - Model - Loss Function - Optimizer Same as the training of the LLM. Now I break those parts: ## Dataset The LLMs have a strong demand for high-quality data for model training. There are many text on the Internet, which can be broadly categorized into two types: - General data: The General data are crawled from the Internet, it includes such as webpages, books, and conversational text, which provide a variety of topics and context - Specialized Data: Those datasets are useful to improve the specific capabilities of LLMs on downstream tasks. For example, Multi-lingual text, Code</p>
+<p>To train a neural network, we four essential components</p>
+<ul>
+<li>Dataset</li>
+<li>Model</li>
+<li>Loss Function</li>
+<li>Optimizer</li>
+</ul>
+<p>Same as the training of the LLM. Now I break those parts:</p>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">DataSet</h2>
+<p>The LLMs have a strong demand for high-quality data for model training. There are many text on the Internet, which can be broadly categorized into two types: - General data: The General data are crawled from the Internet, it includes such as webpages, books, and conversational text, which provide a variety of topics and context - Specialized Data: Those datasets are useful to improve the specific capabilities of LLMs on downstream tasks. For example, Multi-lingual text, Code</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/20241202163003.png" class="img-fluid figure-img"></p>
@@ -255,6 +266,7 @@ window.Quarto = {
 </div>
 <p>After we have the “raw” dataset, we need to filter the dataset to constructing the pre-training corpus and removing noisy, redundant, irrelevant and toxic data. The basic steps are: - Filtering and Selection. Using the classifier-based and heuristic-based approach to remove the low-quality data from the collected corpus. The classifier-based methods is to train an selection classifier based on the high quality text and leverages it to identify and filter out low-quality data. The heuristic-based approach can be filter the text through a set of well-designed rules, for example - Language based filtering: only keep the English words and filter other languages - Metric based filtering: Evaluating metrics(e.g.&nbsp;perplexity) can be employed to detect and remove unnatural sentences - Keyword based filtering: Based on the specific keyword, some noisy or un-useful element in the text can be moved. - De-duplication: the duplicate data in a corpus would reduce the diversity of language models. The de-duplication can be performed at different granularities: - Sentence-level - Document-Level - Dataset-Level - Privacy Reduction: Because the LLMs will be deploy in practice, it is necessary to remove the personally identifiable information(PII) from the pre-training corpus. It can achieve by rule-based methods - Tokenization: The final step is to convert the pure text into some model can understand. Tokenization is a method map word or sub-word to a number - Byte-Pair Encoding(BPE) tokenization. - WordPiece Tokenization - Unigram Tokenization</p>
 <p>After data pre-processing, we got the clean dataset, the next step it to design strategies to schedule the multi-source data. Two important aspects should be paid attention:] - Data Mixture: the proportion of each data source - Data Curriculum: The order in which each data source is scheduled for training</p>
+</section>
 <section id="model" class="level2">
 <h2 class="anchored" data-anchor-id="model">Model</h2>
 <section id="architecture" class="level3">
@@ -610,8 +622,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -729,7 +739,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
