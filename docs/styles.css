@@ -1,10 +1,15 @@
 /* css styles */
 
 strong {
-    color: #008c8c; 
-    font-weight: bold
+  color: #008c8c;
+  font-weight: bold;
 }
 
-em{
-    color: #81D8D0
+em {
+  color: #81d8d0;
+}
+
+@font-face {
+  font-family: "MyFont";
+  src: url("cmunrm.ttf");
 }
