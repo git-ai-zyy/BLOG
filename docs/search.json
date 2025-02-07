@@ -28,10 +28,45 @@
     "text": "Projects"
   },
   {
+    "objectID": "posts/Courses.html",
+    "href": "posts/Courses.html",
+    "title": "All Courses lead to AI Expert",
+    "section": "",
+    "text": "Course Resource: https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/\nCourse Video: https://www.youtube.com/playlist?list=PL49CF3715CB9EF31D\nGilbert Strang is the Best Professor in the world and one of the most recognized names in the mathematics. This Linear Algebra courses build from basic to advance. This course is the best math course I have taken.\n\n\n\nCourse Resource: https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/\nCourse Video: https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k\nThis course is another course of the Gilbert Strang, which is build on the [MIT 18.06](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/). It first review some basic concepts of the Linear Algebra, such as Eigenvalues & EigenVectors, SVD, PCA. Then it introduce some numerical linear algebra methods to solve the linear equations. After that, he introduce the Low-Rank Approximation methods, which are important in current LLM, using to fine-tuning the models. In the end, it introduce the optimization algorithms such as gradient descent and stochastic gradient descent, which are basic idea in the optimization in the neural network.\nThis course is important, after harness those tools and algorithms, you can easily understand the complex equations in the AI papers.\n\n\n\nMIT 18.01 Course Website: https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/\nMIT 18.01 Course Video: https://www.youtube.com/playlist?list=PL590CCC2BC5AF3BC1\nMIT 18.02 Course Website: https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/\nMIT 18.02 Couse Video: https://www.youtube.com/playlist?list=PL4C4C8A7D06566F38\nCalculus are important in the optimization algorithms. Those two course will build the foundation for the further optimization algorithms. The concept of Jacobian Matrix, Hessian Matrix, Chain Rule are important.\n\n\n\nCourse Website: https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/\nCourse Video: https://www.youtube.com/playlist?list=PLUl4u3cNGP62EaLLH92E_VCN4izBKK6OE\nThe core concept of this course is to view the derivative as linearization. It introduce how to get the first-order and second-order derivative from different function. It also introduce how to calculate the gradient of a functional and stochastic functions. Get the derivative of the random function is important in the training some model. The two method:\n\nRe-parameterized trick/pathwise is the way to get the derivative of the continuous function. The most knowing application is the Variational Autoencoder\nLikelikehood ratio estimator is used to estimate the derivative of the discrete function. The widely known application is the REINFORCE algorithm in the Reinforcement Learning algorithm."
+  },
+  {
+    "objectID": "posts/Courses.html#linear-algebra-mit-18.06",
+    "href": "posts/Courses.html#linear-algebra-mit-18.06",
+    "title": "All Courses lead to AI Expert",
+    "section": "",
+    "text": "Course Resource: https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/\nCourse Video: https://www.youtube.com/playlist?list=PL49CF3715CB9EF31D\nGilbert Strang is the Best Professor in the world and one of the most recognized names in the mathematics. This Linear Algebra courses build from basic to advance. This course is the best math course I have taken."
+  },
+  {
+    "objectID": "posts/Courses.html#matrix-methods-from-data-mit-18.065",
+    "href": "posts/Courses.html#matrix-methods-from-data-mit-18.065",
+    "title": "All Courses lead to AI Expert",
+    "section": "",
+    "text": "Course Resource: https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/\nCourse Video: https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k\nThis course is another course of the Gilbert Strang, which is build on the [MIT 18.06](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/). It first review some basic concepts of the Linear Algebra, such as Eigenvalues & EigenVectors, SVD, PCA. Then it introduce some numerical linear algebra methods to solve the linear equations. After that, he introduce the Low-Rank Approximation methods, which are important in current LLM, using to fine-tuning the models. In the end, it introduce the optimization algorithms such as gradient descent and stochastic gradient descent, which are basic idea in the optimization in the neural network.\nThis course is important, after harness those tools and algorithms, you can easily understand the complex equations in the AI papers."
+  },
+  {
+    "objectID": "posts/Courses.html#calculus-mit-18.01-mit-18.02",
+    "href": "posts/Courses.html#calculus-mit-18.01-mit-18.02",
+    "title": "All Courses lead to AI Expert",
+    "section": "",
+    "text": "MIT 18.01 Course Website: https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/\nMIT 18.01 Course Video: https://www.youtube.com/playlist?list=PL590CCC2BC5AF3BC1\nMIT 18.02 Course Website: https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/\nMIT 18.02 Couse Video: https://www.youtube.com/playlist?list=PL4C4C8A7D06566F38\nCalculus are important in the optimization algorithms. Those two course will build the foundation for the further optimization algorithms. The concept of Jacobian Matrix, Hessian Matrix, Chain Rule are important."
+  },
+  {
+    "objectID": "posts/Courses.html#matrix-calculus-mit-18.s096",
+    "href": "posts/Courses.html#matrix-calculus-mit-18.s096",
+    "title": "All Courses lead to AI Expert",
+    "section": "",
+    "text": "Course Website: https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/\nCourse Video: https://www.youtube.com/playlist?list=PLUl4u3cNGP62EaLLH92E_VCN4izBKK6OE\nThe core concept of this course is to view the derivative as linearization. It introduce how to get the first-order and second-order derivative from different function. It also introduce how to calculate the gradient of a functional and stochastic functions. Get the derivative of the random function is important in the training some model. The two method:\n\nRe-parameterized trick/pathwise is the way to get the derivative of the continuous function. The most knowing application is the Variational Autoencoder\nLikelikehood ratio estimator is used to estimate the derivative of the discrete function. The widely known application is the REINFORCE algorithm in the Reinforcement Learning algorithm."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Yuyang’s Blog",
     "section": "",
-    "text": "All Courses lead to AI Expert\n\n\n\n\n\nIn this blog, I am going to summary all the AI courses I have taken during my Master Degree\n\n\n\n\n\nFeb 8, 2025\n\n\n1 min\n\n\n1 words\n\n\n2/8/25, 12:48:59 AM\n\n\n\n\n\n\nNo matching items"
+    "text": "All Courses lead to AI Expert\n\n\n\n\n\nIn this blog, I am going to summary all the AI courses I have taken during my Master Degree\n\n\n\n\n\nFeb 8, 2025\n\n\n2 min\n\n\n333 words\n\n\n2/8/25, 1:37:40 AM\n\n\n\n\n\n\nNo matching items"
   }
 ]
