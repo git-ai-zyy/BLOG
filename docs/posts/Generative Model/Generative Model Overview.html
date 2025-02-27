@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-02-27">
+<meta name="description" content="In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance">
 
-<title>Yuyang’s Blog</title>
+<title>What a Generative Models? – Yuyang’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="././icon.avif" rel="icon">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-0626ff4d7a71b55c8707dcae1d04a9b6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-e25cc82807363e79c52e96bc8b7855f1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3166b6e4baa0f85f4fe58aa75f148e34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-19d84ff7c05484e349e59360d635ec3a.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0626ff4d7a71b55c8707dcae1d04a9b6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-e25cc82807363e79c52e96bc8b7855f1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-3166b6e4baa0f85f4fe58aa75f148e34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-19d84ff7c05484e349e59360d635ec3a.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,81 +70,24 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-author','listing-reading-time','listing-description','listing-word-count','listing-categories','listing-file-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <link href="https://fonts.cdnfonts.com/css/cmu-sans-serif" rel="stylesheet">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Yuyang’s Blog">
-<meta property="og:image" content="./posts/LLM/images/course_cover.png">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="What a Generative Models? – Yuyang’s Blog">
+<meta property="og:description" content="In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance">
+<meta property="og:image" content="images/course_cover.png">
 <meta property="og:site_name" content="Yuyang's Blog">
 </head>
 
-<body class="floating nav-fixed">
+<body class="floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Yuyang’s Blog</span>
     </a>
   </div>
@@ -156,7 +98,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -178,207 +120,83 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Yuyang’s Blog</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#what-is-the-generative-models-and-generative-ai" id="toc-what-is-the-generative-models-and-generative-ai" class="nav-link active" data-scroll-target="#what-is-the-generative-models-and-generative-ai">What is the Generative Models and Generative AI?</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+</nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="R2VuZXJhdGl2ZSUyME1vZGVs">Generative Model <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVs">Large Language Model <span class="quarto-category-count">(1)</span></div><div class="category" data-category="T3ZlcnZpZXc=">Overview <span class="quarto-category-count">(2)</span></div></div></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">What a Generative Models?</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Generative Model</div>
+    <div class="quarto-category">Overview</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">2025-02-27</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Last modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">2025-02-27</p>
+    </div>
+  </div>
+    
+  </div>
+  
 
 
+</header>
 
 
+<section id="what-is-the-generative-models-and-generative-ai" class="level1 page-columns page-full">
+<h1>What is the Generative Models and Generative AI?</h1>
+<p>Generative models, as the name indicated, are models that can <em>generative</em> new content. Unlike <strong>discriminate models</strong>, the generative models are sometime hard to train. But why we need generative models in the first place? We want generative models because:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Density_estimation">Density Estimation</a>:</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Density Estimation is the type of task that</p>
+</div></div></section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>In the blog, we has explore go through several generative models. We explore why we need generative models. For different purposes, we can different choice of the models. On the other hand, we can combine different models to get better performance. There are still more room for the generative models.</p>
 
 
+</section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="R2VuZXJhdGl2ZSUyME1vZGVsJTJDT3ZlcnZpZXc=" data-listing-date-sort="1740672000000" data-listing-file-modified-sort="1740639753732" data-listing-date-modified-sort="1740639753000" data-listing-reading-time-sort="2" data-listing-word-count-sort="287">
-<div class="thumbnail">
-<p><a href="./posts/LLM/LLM-Overview.html" class="no-external"></a></p><a href="./posts/LLM/LLM-Overview.html" class="no-external">
-<p><img loading="lazy" src="./posts/LLM/images/course_cover.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/LLM/LLM-Overview.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/LLM/LLM-Overview.html" class="no-external">Let’s understand Large Language Model from scratch</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/LLM/LLM-Overview.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R2VuZXJhdGl2ZSUyME1vZGVs'); return false;">
-Generative Model
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('T3ZlcnZpZXc='); return false;">
-Overview
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/LLM/LLM-Overview.html" class="no-external">In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/LLM/LLM-Overview.html" class="no-external">
-<div class="listing-date">
-Feb 28, 2025
-</div>
-<div class="listing-reading-time">
-2 min
-</div>
-<div class="metadata-value listing-word-count">
-287 words
-</div>
-<div class="metadata-value listing-file-modified">
-2/27/25, 3:02:33 PM
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="R2VuZXJhdGl2ZSUyME1vZGVsJTJDT3ZlcnZpZXc=" data-listing-date-sort="1740672000000" data-listing-file-modified-sort="1740637859573" data-listing-date-modified-sort="1740637859000" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
-<div class="thumbnail">
-<p><a href="./posts/Generative Model/Generative Model Overview.html" class="no-external"></a></p><a href="./posts/Generative Model/Generative Model Overview.html" class="no-external">
-<p><img loading="lazy" src="./posts/Generative Model/images/course_cover.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/Generative Model/Generative Model Overview.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Generative Model/Generative Model Overview.html" class="no-external">What a Generative Models?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Generative Model/Generative Model Overview.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R2VuZXJhdGl2ZSUyME1vZGVs'); return false;">
-Generative Model
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('T3ZlcnZpZXc='); return false;">
-Overview
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Generative Model/Generative Model Overview.html" class="no-external">In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Generative Model/Generative Model Overview.html" class="no-external">
-<div class="listing-date">
-Feb 28, 2025
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-<div class="metadata-value listing-word-count">
-102 words
-</div>
-<div class="metadata-value listing-file-modified">
-2/27/25, 2:30:59 PM
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="R2VuZXJhdGl2ZSUyME1vZGVsJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVs" data-listing-date-sort="1740672000000" data-listing-file-modified-sort="1740637019819" data-listing-date-modified-sort="1740637019000" data-listing-reading-time-sort="1" data-listing-word-count-sort="44">
-<div class="thumbnail">
-<p><a href="./posts/Generative Model/Diffusion Model.html" class="no-external"></a></p><a href="./posts/Generative Model/Diffusion Model.html" class="no-external">
-<p><img loading="lazy" src="./posts/Generative Model/images/course_cover.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/Generative Model/Diffusion Model.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Generative Model/Diffusion Model.html" class="no-external">Deep Dive into Diffusion Models</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Generative Model/Diffusion Model.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R2VuZXJhdGl2ZSUyME1vZGVs'); return false;">
-Generative Model
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVs'); return false;">
-Large Language Model
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Generative Model/Diffusion Model.html" class="no-external">This blog is my learning notes on the Diffusion Models, which is the state-of-art generative models. This blog will cover that is the diffusion models, how to use diffusion models to generate image, text-to-image, video. It also cover lagnuage diffusion model.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Generative Model/Diffusion Model.html" class="no-external">
-<div class="listing-date">
-Feb 28, 2025
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-<div class="metadata-value listing-word-count">
-44 words
-</div>
-<div class="metadata-value listing-file-modified">
-2/27/25, 2:16:59 PM
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1740672000000" data-listing-file-modified-sort="1738949860115" data-listing-date-modified-sort="1738949860000" data-listing-reading-time-sort="2" data-listing-word-count-sort="333">
-<div class="thumbnail">
-<p><a href="./posts/Courses.html" class="no-external"></a></p><a href="./posts/Courses.html" class="no-external">
-<p><img loading="lazy" src="./posts/images/course_cover.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/Courses.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Courses.html" class="no-external">All Courses lead to AI Expert</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Courses.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/Courses.html" class="no-external">In this blog, I am going to summary all the AI courses I have taken during my Master Degree</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Courses.html" class="no-external">
-<div class="listing-date">
-Feb 28, 2025
-</div>
-<div class="listing-reading-time">
-2 min
-</div>
-<div class="metadata-value listing-word-count">
-333 words
-</div>
-<div class="metadata-value listing-file-modified">
-2/8/25, 1:37:40 AM
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
