@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-03-03">
+<meta name="description" content="An Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.">
 
-<title>Yuyang’s Blog</title>
+<title>Math Toolbox for AI – Yuyang’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +25,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="././icon.avif" rel="icon">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-0626ff4d7a71b55c8707dcae1d04a9b6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-e25cc82807363e79c52e96bc8b7855f1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3166b6e4baa0f85f4fe58aa75f148e34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-19d84ff7c05484e349e59360d635ec3a.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href=".././icon.avif" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0626ff4d7a71b55c8707dcae1d04a9b6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-e25cc82807363e79c52e96bc8b7855f1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-3166b6e4baa0f85f4fe58aa75f148e34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-19d84ff7c05484e349e59360d635ec3a.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,35 +71,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-author','listing-reading-time','listing-description','listing-word-count','listing-categories','listing-file-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <link href="https://fonts.cdnfonts.com/css/cmu-sans-serif" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
@@ -132,20 +103,21 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Yuyang’s Blog">
-<meta property="og:image" content="./posts/LLM/images/course_cover.png">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Math Toolbox for AI – Yuyang’s Blog">
+<meta property="og:description" content="An Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.">
+<meta property="og:image" content="images/math_meme.jpg">
 <meta property="og:site_name" content="Yuyang's Blog">
 </head>
 
 <body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Yuyang’s Blog</span>
     </a>
   </div>
@@ -156,7 +128,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -178,241 +150,162 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Yuyang’s Blog</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#linear-algebra" id="toc-linear-algebra" class="nav-link active" data-scroll-target="#linear-algebra">Linear Algebra</a>
+  <ul class="collapse">
+  <li><a href="#norm-of-the-vectorslp-norm" id="toc-norm-of-the-vectorslp-norm" class="nav-link" data-scroll-target="#norm-of-the-vectorslp-norm">1. Norm of the Vectors(Lp-Norm)</a></li>
+  <li><a href="#vector-space" id="toc-vector-space" class="nav-link" data-scroll-target="#vector-space">2. Vector Space</a></li>
+  <li><a href="#compare-vectors" id="toc-compare-vectors" class="nav-link" data-scroll-target="#compare-vectors">3. Compare Vectors</a></li>
+  </ul></li>
+  <li><a href="#calculus" id="toc-calculus" class="nav-link" data-scroll-target="#calculus">Calculus</a></li>
+  <li><a href="#probability-statistics" id="toc-probability-statistics" class="nav-link" data-scroll-target="#probability-statistics">Probability &amp; Statistics</a></li>
+  <li><a href="#optimization" id="toc-optimization" class="nav-link" data-scroll-target="#optimization">Optimization</a></li>
+  <li><a href="#graph-theory" id="toc-graph-theory" class="nav-link" data-scroll-target="#graph-theory">Graph Theory</a></li>
+  <li><a href="#complex-number" id="toc-complex-number" class="nav-link" data-scroll-target="#complex-number">Complex Number</a></li>
+  </ul>
+</nav>
+</nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="R2VuZXJhdGl2ZSUyME1vZGVs">Generative Model <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVs">Large Language Model <span class="quarto-category-count">(1)</span></div><div class="category" data-category="T3ZlcnZpZXc=">Overview <span class="quarto-category-count">(2)</span></div></div></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Math Toolbox for AI</h1>
+</div>
+
+<div>
+  <div class="description">
+    An Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">2025-03-03</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Last modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">2025-03-03</p>
+    </div>
+  </div>
+    
+  </div>
+  
 
 
+</header>
 
 
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Update
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Add Vector Normalization</p>
+</div>
+</div>
+<p>Mathematics is the important and the most confusion part of artificial intelligence. You might think AI is all about fancy neural networks and mind-blowing predictions, but behind every impressive AI breakthrough is a solid foundation of math. Without math, AI is just a bunch of random code guessing its way through problems like a lost tourist with no GPS.</p>
+<p>So why am I writing this blog? Because AI is everywhere—from recommending your next Netflix binge to predicting stock market trends. Yet, many aspiring AI enthusiasts underestimate the power of mathematics. If you’ve ever wondered, “Do I really need to know linear algebra and calculus to work with AI?” The answer is a resounding YES! And I’m here to make it a little less intimidating (and hopefully a bit more fun).</p>
+<p>Now, let’s talk about the real struggle: the fancy names. When you first start learning AI, it feels like math is just out to confuse you. One moment you’re fine with basic addition, and the next, you’re drowning in terms like “eigenvalues,” “Jacobian matrices,” and “Markov chains.” You hear about “gradient descent” and think, “Oh, that sounds cool,” only to realize it involves partial derivatives and a whole lot of Greek letters that make your head spin. And don’t even get me started on “Lagrange multipliers”—it sounds like something from a sci-fi movie, but turns out to be just another way math likes to keep us on our toes.</p>
+<p>This blog is about the some keep concept in the mathematics and how they used in the AI. Each part is self-contains, readers can choose parts most interested them.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This blog is different from others. It will updated from time to time, when I learned the new concepts.</p>
+</div>
+</div>
+<section id="linear-algebra" class="level1">
+<h1>Linear Algebra</h1>
+<section id="norm-of-the-vectorslp-norm" class="level2">
+<h2 class="anchored" data-anchor-id="norm-of-the-vectorslp-norm">1. Norm of the Vectors(Lp-Norm)</h2>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Many people confuse <strong>normalization</strong> with the <strong>length (norm) of a vector</strong>, but they are fundamentally different. The Normalization is defined as:</p>
+<p><span class="math display">\[
+v_{\text{normlized}} = \frac{v}{\| v\|_p}
+\]</span></p>
+<p>where <span class="math inline">\(\| v \|_p\)</span> is the Norm of the vector, this form is called <strong>Lp-Norm</strong>.</p>
+<p><strong>Normalization</strong> is the process of <u>rescaling a vector so that its norm (magnitude) becomes <strong>1</strong>, while preserving its direction</u>. It ensures that all vectors in a dataset have the same scale, which is <u>crucial for numerical stability and model performance</u> in machine learning and deep learning.</p>
+</div>
+</div>
+<p>The <strong>Lp-Norm</strong> is a generalization of different norms, including <strong>L1-Norm</strong>, <strong>L2-Norm</strong>, and others. It measures the magnitude of a vector in various ways depending on the value of&nbsp;<span class="math inline">\(p\)</span> . Lp-Norm is widely used in <strong>machine learning</strong>, <strong>deep learning</strong>, and <strong>signal processing</strong> for tasks like feature scaling, similarity measurements, and optimization. Mathematically, it defined as:</p>
+<p><span class="math display">\[
+\| v\|_p = (\sum_i^d |v_i|^p)^{1 / p}
+\]</span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(p\)</span>: is a positive real number</li>
+</ul>
+<!-- -->
+<ul>
+<li><span class="math inline">\(|v_i|\)</span> represents the absolute value of each component of the vectors</li>
+</ul>
+<p>There are some special case of the</p>
+</section>
+<section id="vector-space" class="level2">
+<h2 class="anchored" data-anchor-id="vector-space">2. Vector Space</h2>
+</section>
+<section id="compare-vectors" class="level2">
+<h2 class="anchored" data-anchor-id="compare-vectors">3. Compare Vectors</h2>
+</section>
+</section>
+<section id="calculus" class="level1">
+<h1>Calculus</h1>
+</section>
+<section id="probability-statistics" class="level1">
+<h1>Probability &amp; Statistics</h1>
+</section>
+<section id="optimization" class="level1">
+<h1>Optimization</h1>
+</section>
+<section id="graph-theory" class="level1">
+<h1>Graph Theory</h1>
+</section>
+<section id="complex-number" class="level1">
+<h1>Complex Number</h1>
 
 
+</section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1740931200000" data-listing-file-modified-sort="1740940175186" data-listing-date-modified-sort="1740940175000" data-listing-reading-time-sort="3" data-listing-word-count-sort="479">
-<div class="thumbnail">
-<p><a href="./posts/MathToolBox.html" class="no-external"></a></p><a href="./posts/MathToolBox.html" class="no-external">
-<p><img loading="lazy" src="./posts/images/math_meme.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/MathToolBox.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/MathToolBox.html" class="no-external">Math Toolbox for AI</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/MathToolBox.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/MathToolBox.html" class="no-external">An Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/MathToolBox.html" class="no-external">
-<div class="listing-date">
-Mar 3, 2025
-</div>
-<div class="listing-reading-time">
-3 min
-</div>
-<div class="metadata-value listing-word-count">
-479 words
-</div>
-<div class="metadata-value listing-file-modified">
-3/3/25, 2:29:35 AM
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="R2VuZXJhdGl2ZSUyME1vZGVsJTJDT3ZlcnZpZXc=" data-listing-date-sort="1740931200000" data-listing-file-modified-sort="1740639753732" data-listing-date-modified-sort="1740639753000" data-listing-reading-time-sort="2" data-listing-word-count-sort="287">
-<div class="thumbnail">
-<p><a href="./posts/LLM/LLM-Overview.html" class="no-external"></a></p><a href="./posts/LLM/LLM-Overview.html" class="no-external">
-<p><img loading="lazy" src="./posts/LLM/images/course_cover.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/LLM/LLM-Overview.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/LLM/LLM-Overview.html" class="no-external">Let’s understand Large Language Model from scratch</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/LLM/LLM-Overview.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R2VuZXJhdGl2ZSUyME1vZGVs'); return false;">
-Generative Model
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('T3ZlcnZpZXc='); return false;">
-Overview
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/LLM/LLM-Overview.html" class="no-external">In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/LLM/LLM-Overview.html" class="no-external">
-<div class="listing-date">
-Mar 3, 2025
-</div>
-<div class="listing-reading-time">
-2 min
-</div>
-<div class="metadata-value listing-word-count">
-287 words
-</div>
-<div class="metadata-value listing-file-modified">
-2/27/25, 3:02:33 PM
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="R2VuZXJhdGl2ZSUyME1vZGVsJTJDT3ZlcnZpZXc=" data-listing-date-sort="1740931200000" data-listing-file-modified-sort="1740637859573" data-listing-date-modified-sort="1740637859000" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
-<div class="thumbnail">
-<p><a href="./posts/Generative Model/Generative Model Overview.html" class="no-external"></a></p><a href="./posts/Generative Model/Generative Model Overview.html" class="no-external">
-<p><img loading="lazy" src="./posts/Generative Model/images/course_cover.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/Generative Model/Generative Model Overview.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Generative Model/Generative Model Overview.html" class="no-external">What a Generative Models?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Generative Model/Generative Model Overview.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R2VuZXJhdGl2ZSUyME1vZGVs'); return false;">
-Generative Model
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('T3ZlcnZpZXc='); return false;">
-Overview
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Generative Model/Generative Model Overview.html" class="no-external">In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Generative Model/Generative Model Overview.html" class="no-external">
-<div class="listing-date">
-Mar 3, 2025
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-<div class="metadata-value listing-word-count">
-102 words
-</div>
-<div class="metadata-value listing-file-modified">
-2/27/25, 2:30:59 PM
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="R2VuZXJhdGl2ZSUyME1vZGVsJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVs" data-listing-date-sort="1740931200000" data-listing-file-modified-sort="1740637019819" data-listing-date-modified-sort="1740637019000" data-listing-reading-time-sort="1" data-listing-word-count-sort="44">
-<div class="thumbnail">
-<p><a href="./posts/Generative Model/Diffusion Model.html" class="no-external"></a></p><a href="./posts/Generative Model/Diffusion Model.html" class="no-external">
-<p><img loading="lazy" src="./posts/Generative Model/images/course_cover.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/Generative Model/Diffusion Model.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Generative Model/Diffusion Model.html" class="no-external">Deep Dive into Diffusion Models</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Generative Model/Diffusion Model.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R2VuZXJhdGl2ZSUyME1vZGVs'); return false;">
-Generative Model
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVs'); return false;">
-Large Language Model
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Generative Model/Diffusion Model.html" class="no-external">This blog is my learning notes on the Diffusion Models, which is the state-of-art generative models. This blog will cover that is the diffusion models, how to use diffusion models to generate image, text-to-image, video. It also cover lagnuage diffusion model.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Generative Model/Diffusion Model.html" class="no-external">
-<div class="listing-date">
-Mar 3, 2025
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-<div class="metadata-value listing-word-count">
-44 words
-</div>
-<div class="metadata-value listing-file-modified">
-2/27/25, 2:16:59 PM
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1740931200000" data-listing-file-modified-sort="1738949860115" data-listing-date-modified-sort="1738949860000" data-listing-reading-time-sort="2" data-listing-word-count-sort="333">
-<div class="thumbnail">
-<p><a href="./posts/Courses.html" class="no-external"></a></p><a href="./posts/Courses.html" class="no-external">
-<p><img loading="lazy" src="./posts/images/course_cover.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/Courses.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Courses.html" class="no-external">All Courses lead to AI Expert</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Courses.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/Courses.html" class="no-external">In this blog, I am going to summary all the AI courses I have taken during my Master Degree</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Courses.html" class="no-external">
-<div class="listing-date">
-Mar 3, 2025
-</div>
-<div class="listing-reading-time">
-2 min
-</div>
-<div class="metadata-value listing-word-count">
-333 words
-</div>
-<div class="metadata-value listing-file-modified">
-2/8/25, 1:37:40 AM
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
