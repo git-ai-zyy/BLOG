@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Gaussian.html",
       "/posts/Generative Model/Generative Model Overview.html",
       "/posts/Generative Model/Diffusion Model.html",
       "/posts/LLM/LLM-Overview.html",

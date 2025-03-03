@@ -28,39 +28,18 @@
     "text": "Projects"
   },
   {
-    "objectID": "posts/MathToolBox.html",
-    "href": "posts/MathToolBox.html",
-    "title": "Math Toolbox for AI",
+    "objectID": "posts/Gaussian.html",
+    "href": "posts/Gaussian.html",
+    "title": "Gaussian Distribution is All you need",
     "section": "",
-    "text": "Update\n\n\n\nAdd Vector Normalization\nMathematics is the important and the most confusion part of artificial intelligence. You might think AI is all about fancy neural networks and mind-blowing predictions, but behind every impressive AI breakthrough is a solid foundation of math. Without math, AI is just a bunch of random code guessing its way through problems like a lost tourist with no GPS.\nSo why am I writing this blog? Because AI is everywhere—from recommending your next Netflix binge to predicting stock market trends. Yet, many aspiring AI enthusiasts underestimate the power of mathematics. If you’ve ever wondered, “Do I really need to know linear algebra and calculus to work with AI?” The answer is a resounding YES! And I’m here to make it a little less intimidating (and hopefully a bit more fun).\nNow, let’s talk about the real struggle: the fancy names. When you first start learning AI, it feels like math is just out to confuse you. One moment you’re fine with basic addition, and the next, you’re drowning in terms like “eigenvalues,” “Jacobian matrices,” and “Markov chains.” You hear about “gradient descent” and think, “Oh, that sounds cool,” only to realize it involves partial derivatives and a whole lot of Greek letters that make your head spin. And don’t even get me started on “Lagrange multipliers”—it sounds like something from a sci-fi movie, but turns out to be just another way math likes to keep us on our toes.\nThis blog is about the some keep concept in the mathematics and how they used in the AI. Each part is self-contains, readers can choose parts most interested them."
+    "text": "Gaussian Distribution, one of the most important and widely used probability distributions in statistics and machine learning. It is also known as the normal distribution, which is a continuous probability distribution that is symmetric about the mean, showing that data near the mean are more frequent in occurrence than data far from the mean."
   },
   {
-    "objectID": "posts/MathToolBox.html#norm-of-the-vectorslp-norm",
-    "href": "posts/MathToolBox.html#norm-of-the-vectorslp-norm",
-    "title": "Math Toolbox for AI",
-    "section": "1. Norm of the Vectors(Lp-Norm)",
-    "text": "1. Norm of the Vectors(Lp-Norm)\n\n\n\n\n\n\nCaution\n\n\n\nMany people confuse normalization with the length (norm) of a vector, but they are fundamentally different. The Normalization is defined as:\n\\[\nv_{\\text{normlized}} = \\frac{v}{\\| v\\|_p}\n\\]\nwhere \\(\\| v \\|_p\\) is the Norm of the vector, this form is called Lp-Norm.\nNormalization is the process of rescaling a vector so that its norm (magnitude) becomes 1, while preserving its direction. It ensures that all vectors in a dataset have the same scale, which is crucial for numerical stability and model performance in machine learning and deep learning.\n\n\nThe Lp-Norm is a generalization of different norms, including L1-Norm, L2-Norm, and others. It measures the magnitude of a vector in various ways depending on the value of \\(p\\) . Lp-Norm is widely used in machine learning, deep learning, and signal processing for tasks like feature scaling, similarity measurements, and optimization. Mathematically, it defined as:\n\\[\n\\| v\\|_p = (\\sum_i^d |v_i|^p)^{1 / p}\n\\]\nwhere:\n\n\\(p\\): is a positive real number\n\\(|v_i|\\) represents the absolute value of each component of the vectors\n\nThere are some special case of the"
-  },
-  {
-    "objectID": "posts/MathToolBox.html#vector-space",
-    "href": "posts/MathToolBox.html#vector-space",
-    "title": "Math Toolbox for AI",
-    "section": "2. Vector Space",
-    "text": "2. Vector Space\n\nHilbert Sapce"
-  },
-  {
-    "objectID": "posts/MathToolBox.html#compare-vectors",
-    "href": "posts/MathToolBox.html#compare-vectors",
-    "title": "Math Toolbox for AI",
-    "section": "3. Compare Vectors",
-    "text": "3. Compare Vectors"
-  },
-  {
-    "objectID": "posts/Generative Model/Diffusion Model.html",
-    "href": "posts/Generative Model/Diffusion Model.html",
-    "title": "Deep Dive into Diffusion Models",
+    "objectID": "posts/Generative Model/Generative Model Overview.html",
+    "href": "posts/Generative Model/Generative Model Overview.html",
+    "title": "What a Generative Models?",
     "section": "",
-    "text": "What is the Diffusion Models?\nDiffusion Model is know\n\n\nDiffusion Model for Discrete Data\nRecently, there are some good exploration for the diffusion model when apply on the. For example, Inception is the first commercial-scale diffusion language model. Which is is faster than the general language model."
+    "text": "What is the Generative Models and Generative AI?\nGenerative models, as the name indicated, are models that can generative new content. Unlike discriminate models, the generative models are sometime hard to train. But why we need generative models in the first place? We want generative models because:\n\nDensity Estimation:\n\n\n\nDensity Estimation is the type of task that\n\n\nConclusion\nIn the blog, we has explore go through several generative models. We explore why we need generative models. For different purposes, we can different choice of the models. On the other hand, we can combine different models to get better performance. There are still more room for the generative models."
   },
   {
     "objectID": "posts/LLM/LLM-Overview.html#word-level",
@@ -245,17 +224,45 @@
     "text": "LLM as Optimizer"
   },
   {
-    "objectID": "posts/Generative Model/Generative Model Overview.html",
-    "href": "posts/Generative Model/Generative Model Overview.html",
-    "title": "What a Generative Models?",
+    "objectID": "posts/Generative Model/Diffusion Model.html",
+    "href": "posts/Generative Model/Diffusion Model.html",
+    "title": "Deep Dive into Diffusion Models",
     "section": "",
-    "text": "What is the Generative Models and Generative AI?\nGenerative models, as the name indicated, are models that can generative new content. Unlike discriminate models, the generative models are sometime hard to train. But why we need generative models in the first place? We want generative models because:\n\nDensity Estimation:\n\n\n\nDensity Estimation is the type of task that\n\n\nConclusion\nIn the blog, we has explore go through several generative models. We explore why we need generative models. For different purposes, we can different choice of the models. On the other hand, we can combine different models to get better performance. There are still more room for the generative models."
+    "text": "What is the Diffusion Models?\nDiffusion Model is know\n\n\nDiffusion Model for Discrete Data\nRecently, there are some good exploration for the diffusion model when apply on the. For example, Inception is the first commercial-scale diffusion language model. Which is is faster than the general language model."
+  },
+  {
+    "objectID": "posts/MathToolBox.html",
+    "href": "posts/MathToolBox.html",
+    "title": "Math Toolbox for AI",
+    "section": "",
+    "text": "Update\n\n\n\nAdd Vector Normalization\nMathematics is the important and the most confusion part of artificial intelligence. You might think AI is all about fancy neural networks and mind-blowing predictions, but behind every impressive AI breakthrough is a solid foundation of math. Without math, AI is just a bunch of random code guessing its way through problems like a lost tourist with no GPS.\nSo why am I writing this blog? Because AI is everywhere—from recommending your next Netflix binge to predicting stock market trends. Yet, many aspiring AI enthusiasts underestimate the power of mathematics. If you’ve ever wondered, “Do I really need to know linear algebra and calculus to work with AI?” The answer is a resounding YES! And I’m here to make it a little less intimidating (and hopefully a bit more fun).\nNow, let’s talk about the real struggle: the fancy names. When you first start learning AI, it feels like math is just out to confuse you. One moment you’re fine with basic addition, and the next, you’re drowning in terms like “eigenvalues,” “Jacobian matrices,” and “Markov chains.” You hear about “gradient descent” and think, “Oh, that sounds cool,” only to realize it involves partial derivatives and a whole lot of Greek letters that make your head spin. And don’t even get me started on “Lagrange multipliers”—it sounds like something from a sci-fi movie, but turns out to be just another way math likes to keep us on our toes.\nThis blog is about the some keep concept in the mathematics and how they used in the AI. Each part is self-contains, readers can choose parts most interested them."
+  },
+  {
+    "objectID": "posts/MathToolBox.html#norm-of-the-vectorslp-norm",
+    "href": "posts/MathToolBox.html#norm-of-the-vectorslp-norm",
+    "title": "Math Toolbox for AI",
+    "section": "1. Norm of the Vectors(Lp-Norm)",
+    "text": "1. Norm of the Vectors(Lp-Norm)\n\n\n\n\n\n\nCaution\n\n\n\nMany people confuse normalization with the length (norm) of a vector, but they are fundamentally different. The Normalization is defined as:\n\\[\nv_{\\text{normlized}} = \\frac{v}{\\| v\\|_p}\n\\]\nwhere \\(\\| v \\|_p\\) is the Norm of the vector, this form is called Lp-Norm.\nNormalization is the process of rescaling a vector so that its norm (magnitude) becomes 1, while preserving its direction. It ensures that all vectors in a dataset have the same scale, which is crucial for numerical stability and model performance in machine learning and deep learning.\n\n\nThe Lp-Norm is a generalization of different norms, including L1-Norm, L2-Norm, and others. It measures the magnitude of a vector in various ways depending on the value of \\(p\\) . Lp-Norm is widely used in machine learning, deep learning, and signal processing for tasks like feature scaling, similarity measurements, and optimization. Mathematically, it defined as:\n\\[\n\\| v\\|_p = (\\sum_i^d |v_i|^p)^{1 / p}\n\\]\nwhere:\n\n\\(p\\): is a positive real number\n\\(|v_i|\\) represents the absolute value of each component of the vectors\n\nThere are some special case of the"
+  },
+  {
+    "objectID": "posts/MathToolBox.html#vector-space",
+    "href": "posts/MathToolBox.html#vector-space",
+    "title": "Math Toolbox for AI",
+    "section": "2. Vector Space",
+    "text": "2. Vector Space\n\nHilbert Sapce"
+  },
+  {
+    "objectID": "posts/MathToolBox.html#compare-vectors",
+    "href": "posts/MathToolBox.html#compare-vectors",
+    "title": "Math Toolbox for AI",
+    "section": "3. Compare Vectors",
+    "text": "3. Compare Vectors"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Yuyang’s Blog",
     "section": "",
-    "text": "What a Generative Models?\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\nMar 3, 2025\n\n\n1 min\n\n\n101 words\n\n\n3/3/25, 4:20:11 PM\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Dive into Diffusion Models\n\n\n\n\n\n\nGenerative Model\n\n\nLarge Language Model\n\n\n\nThis blog is my learning notes on the Diffusion Models, which is the state-of-art generative models. This blog will cover that is the diffusion models, how to use diffusion models to generate image, text-to-image, video. It also cover lagnuage diffusion model.\n\n\n\n\n\nMar 3, 2025\n\n\n1 min\n\n\n44 words\n\n\n3/3/25, 4:20:04 PM\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s understand Large Language Model from scratch\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\nMar 3, 2025\n\n\n2 min\n\n\n287 words\n\n\n3/3/25, 4:18:36 PM\n\n\n\n\n\n\n\n\n\n\n\n\nMath Toolbox for AI\n\n\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\nMar 3, 2025\n\n\n3 min\n\n\n481 words\n\n\n3/3/25, 3:33:14 PM\n\n\n\n\n\n\nNo matching items"
+    "text": "Gaussian Distribution is All you need\n\n\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\nMar 3, 2025\n\n\n1 min\n\n\n54 words\n\n\n3/3/25, 4:30:06 PM\n\n\n\n\n\n\n\n\n\n\n\n\nWhat a Generative Models?\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\nMar 3, 2025\n\n\n1 min\n\n\n101 words\n\n\n3/3/25, 4:20:11 PM\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Dive into Diffusion Models\n\n\n\n\n\n\nGenerative Model\n\n\nLarge Language Model\n\n\n\nThis blog is my learning notes on the Diffusion Models, which is the state-of-art generative models. This blog will cover that is the diffusion models, how to use diffusion models to generate image, text-to-image, video. It also cover lagnuage diffusion model.\n\n\n\n\n\nMar 3, 2025\n\n\n1 min\n\n\n44 words\n\n\n3/3/25, 4:20:04 PM\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s understand Large Language Model from scratch\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\nMar 3, 2025\n\n\n2 min\n\n\n287 words\n\n\n3/3/25, 4:18:36 PM\n\n\n\n\n\n\n\n\n\n\n\n\nMath Toolbox for AI\n\n\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\nMar 3, 2025\n\n\n3 min\n\n\n481 words\n\n\n3/3/25, 3:33:14 PM\n\n\n\n\n\n\nNo matching items"
   }
 ]
