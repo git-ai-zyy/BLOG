@@ -28,46 +28,32 @@
     "text": "Projects"
   },
   {
-    "objectID": "posts/Courses.html",
-    "href": "posts/Courses.html",
-    "title": "All Courses lead to AI Expert",
+    "objectID": "posts/MathToolBox.html",
+    "href": "posts/MathToolBox.html",
+    "title": "Math Toolbox for AI",
     "section": "",
-    "text": "Course Resource: https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/\nCourse Video: https://www.youtube.com/playlist?list=PL49CF3715CB9EF31D\nGilbert Strang is the Best Professor in the world and one of the most recognized names in the mathematics. This Linear Algebra courses build from basic to advance. This course is the best math course I have taken.\n\n\n\nCourse Resource: https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/\nCourse Video: https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k\nThis course is another course of the Gilbert Strang, which is build on the [MIT 18.06](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/). It first review some basic concepts of the Linear Algebra, such as Eigenvalues & EigenVectors, SVD, PCA. Then it introduce some numerical linear algebra methods to solve the linear equations. After that, he introduce the Low-Rank Approximation methods, which are important in current LLM, using to fine-tuning the models. In the end, it introduce the optimization algorithms such as gradient descent and stochastic gradient descent, which are basic idea in the optimization in the neural network.\nThis course is important, after harness those tools and algorithms, you can easily understand the complex equations in the AI papers.\n\n\n\nMIT 18.01 Course Website: https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/\nMIT 18.01 Course Video: https://www.youtube.com/playlist?list=PL590CCC2BC5AF3BC1\nMIT 18.02 Course Website: https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/\nMIT 18.02 Couse Video: https://www.youtube.com/playlist?list=PL4C4C8A7D06566F38\nCalculus are important in the optimization algorithms. Those two course will build the foundation for the further optimization algorithms. The concept of Jacobian Matrix, Hessian Matrix, Chain Rule are important.\n\n\n\nCourse Website: https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/\nCourse Video: https://www.youtube.com/playlist?list=PLUl4u3cNGP62EaLLH92E_VCN4izBKK6OE\nThe core concept of this course is to view the derivative as linearization. It introduce how to get the first-order and second-order derivative from different function. It also introduce how to calculate the gradient of a functional and stochastic functions. Get the derivative of the random function is important in the training some model. The two method:\n\nRe-parameterized trick/pathwise is the way to get the derivative of the continuous function. The most knowing application is the Variational Autoencoder\nLikelikehood ratio estimator is used to estimate the derivative of the discrete function. The widely known application is the REINFORCE algorithm in the Reinforcement Learning algorithm."
+    "text": "Update\n\n\n\nAdd Vector Normalization\nMathematics is the important and the most confusion part of artificial intelligence. You might think AI is all about fancy neural networks and mind-blowing predictions, but behind every impressive AI breakthrough is a solid foundation of math. Without math, AI is just a bunch of random code guessing its way through problems like a lost tourist with no GPS.\nSo why am I writing this blog? Because AI is everywhere—from recommending your next Netflix binge to predicting stock market trends. Yet, many aspiring AI enthusiasts underestimate the power of mathematics. If you’ve ever wondered, “Do I really need to know linear algebra and calculus to work with AI?” The answer is a resounding YES! And I’m here to make it a little less intimidating (and hopefully a bit more fun).\nNow, let’s talk about the real struggle: the fancy names. When you first start learning AI, it feels like math is just out to confuse you. One moment you’re fine with basic addition, and the next, you’re drowning in terms like “eigenvalues,” “Jacobian matrices,” and “Markov chains.” You hear about “gradient descent” and think, “Oh, that sounds cool,” only to realize it involves partial derivatives and a whole lot of Greek letters that make your head spin. And don’t even get me started on “Lagrange multipliers”—it sounds like something from a sci-fi movie, but turns out to be just another way math likes to keep us on our toes.\nThis blog is about the some keep concept in the mathematics and how they used in the AI. Each part is self-contains, readers can choose parts most interested them."
   },
   {
-    "objectID": "posts/Courses.html#linear-algebra-mit-18.06",
-    "href": "posts/Courses.html#linear-algebra-mit-18.06",
-    "title": "All Courses lead to AI Expert",
-    "section": "",
-    "text": "Course Resource: https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/\nCourse Video: https://www.youtube.com/playlist?list=PL49CF3715CB9EF31D\nGilbert Strang is the Best Professor in the world and one of the most recognized names in the mathematics. This Linear Algebra courses build from basic to advance. This course is the best math course I have taken."
+    "objectID": "posts/MathToolBox.html#norm-of-the-vectorslp-norm",
+    "href": "posts/MathToolBox.html#norm-of-the-vectorslp-norm",
+    "title": "Math Toolbox for AI",
+    "section": "1. Norm of the Vectors(Lp-Norm)",
+    "text": "1. Norm of the Vectors(Lp-Norm)\n\n\n\n\n\n\nCaution\n\n\n\nMany people confuse normalization with the length (norm) of a vector, but they are fundamentally different. The Normalization is defined as:\n\\[\nv_{\\text{normlized}} = \\frac{v}{\\| v\\|_p}\n\\]\nwhere \\(\\| v \\|_p\\) is the Norm of the vector, this form is called Lp-Norm.\nNormalization is the process of rescaling a vector so that its norm (magnitude) becomes 1, while preserving its direction. It ensures that all vectors in a dataset have the same scale, which is crucial for numerical stability and model performance in machine learning and deep learning.\n\n\nThe Lp-Norm is a generalization of different norms, including L1-Norm, L2-Norm, and others. It measures the magnitude of a vector in various ways depending on the value of \\(p\\) . Lp-Norm is widely used in machine learning, deep learning, and signal processing for tasks like feature scaling, similarity measurements, and optimization. Mathematically, it defined as:\n\\[\n\\| v\\|_p = (\\sum_i^d |v_i|^p)^{1 / p}\n\\]\nwhere:\n\n\\(p\\): is a positive real number\n\\(|v_i|\\) represents the absolute value of each component of the vectors\n\nThere are some special case of the"
   },
   {
-    "objectID": "posts/Courses.html#matrix-methods-from-data-mit-18.065",
-    "href": "posts/Courses.html#matrix-methods-from-data-mit-18.065",
-    "title": "All Courses lead to AI Expert",
-    "section": "",
-    "text": "Course Resource: https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/\nCourse Video: https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k\nThis course is another course of the Gilbert Strang, which is build on the [MIT 18.06](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/). It first review some basic concepts of the Linear Algebra, such as Eigenvalues & EigenVectors, SVD, PCA. Then it introduce some numerical linear algebra methods to solve the linear equations. After that, he introduce the Low-Rank Approximation methods, which are important in current LLM, using to fine-tuning the models. In the end, it introduce the optimization algorithms such as gradient descent and stochastic gradient descent, which are basic idea in the optimization in the neural network.\nThis course is important, after harness those tools and algorithms, you can easily understand the complex equations in the AI papers."
+    "objectID": "posts/MathToolBox.html#vector-space",
+    "href": "posts/MathToolBox.html#vector-space",
+    "title": "Math Toolbox for AI",
+    "section": "2. Vector Space",
+    "text": "2. Vector Space\n\nHilbert Sapce"
   },
   {
-    "objectID": "posts/Courses.html#calculus-mit-18.01-mit-18.02",
-    "href": "posts/Courses.html#calculus-mit-18.01-mit-18.02",
-    "title": "All Courses lead to AI Expert",
-    "section": "",
-    "text": "MIT 18.01 Course Website: https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/\nMIT 18.01 Course Video: https://www.youtube.com/playlist?list=PL590CCC2BC5AF3BC1\nMIT 18.02 Course Website: https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/\nMIT 18.02 Couse Video: https://www.youtube.com/playlist?list=PL4C4C8A7D06566F38\nCalculus are important in the optimization algorithms. Those two course will build the foundation for the further optimization algorithms. The concept of Jacobian Matrix, Hessian Matrix, Chain Rule are important."
-  },
-  {
-    "objectID": "posts/Courses.html#matrix-calculus-mit-18.s096",
-    "href": "posts/Courses.html#matrix-calculus-mit-18.s096",
-    "title": "All Courses lead to AI Expert",
-    "section": "",
-    "text": "Course Website: https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/\nCourse Video: https://www.youtube.com/playlist?list=PLUl4u3cNGP62EaLLH92E_VCN4izBKK6OE\nThe core concept of this course is to view the derivative as linearization. It introduce how to get the first-order and second-order derivative from different function. It also introduce how to calculate the gradient of a functional and stochastic functions. Get the derivative of the random function is important in the training some model. The two method:\n\nRe-parameterized trick/pathwise is the way to get the derivative of the continuous function. The most knowing application is the Variational Autoencoder\nLikelikehood ratio estimator is used to estimate the derivative of the discrete function. The widely known application is the REINFORCE algorithm in the Reinforcement Learning algorithm."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Yuyang’s Blog",
-    "section": "",
-    "text": "Math Toolbox for AI\n\n\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\nMar 3, 2025\n\n\n3 min\n\n\n479 words\n\n\n3/3/25, 2:29:35 AM\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s understand Large Language Model from scratch\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\nMar 3, 2025\n\n\n2 min\n\n\n287 words\n\n\n2/27/25, 3:02:33 PM\n\n\n\n\n\n\n\n\n\n\n\n\nWhat a Generative Models?\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\nMar 3, 2025\n\n\n1 min\n\n\n102 words\n\n\n2/27/25, 2:30:59 PM\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Dive into Diffusion Models\n\n\n\n\n\n\nGenerative Model\n\n\nLarge Language Model\n\n\n\nThis blog is my learning notes on the Diffusion Models, which is the state-of-art generative models. This blog will cover that is the diffusion models, how to use diffusion models to generate image, text-to-image, video. It also cover lagnuage diffusion model.\n\n\n\n\n\nMar 3, 2025\n\n\n1 min\n\n\n44 words\n\n\n2/27/25, 2:16:59 PM\n\n\n\n\n\n\n\n\n\n\n\n\nAll Courses lead to AI Expert\n\n\n\n\n\nIn this blog, I am going to summary all the AI courses I have taken during my Master Degree\n\n\n\n\n\nMar 3, 2025\n\n\n2 min\n\n\n333 words\n\n\n2/8/25, 1:37:40 AM\n\n\n\n\n\n\nNo matching items"
+    "objectID": "posts/MathToolBox.html#compare-vectors",
+    "href": "posts/MathToolBox.html#compare-vectors",
+    "title": "Math Toolbox for AI",
+    "section": "3. Compare Vectors",
+    "text": "3. Compare Vectors"
   },
   {
     "objectID": "posts/Generative Model/Diffusion Model.html",
@@ -75,13 +61,6 @@
     "title": "Deep Dive into Diffusion Models",
     "section": "",
     "text": "What is the Diffusion Models?\nDiffusion Model is know\n\n\nDiffusion Model for Discrete Data\nRecently, there are some good exploration for the diffusion model when apply on the. For example, Inception is the first commercial-scale diffusion language model. Which is is faster than the general language model."
-  },
-  {
-    "objectID": "posts/Generative Model/Generative Model Overview.html",
-    "href": "posts/Generative Model/Generative Model Overview.html",
-    "title": "What a Generative Models?",
-    "section": "",
-    "text": "What is the Generative Models and Generative AI?\nGenerative models, as the name indicated, are models that can generative new content. Unlike discriminate models, the generative models are sometime hard to train. But why we need generative models in the first place? We want generative models because:\n\nDensity Estimation:\n\n\n\nDensity Estimation is the type of task that\n\n\nConclusion\nIn the blog, we has explore go through several generative models. We explore why we need generative models. For different purposes, we can different choice of the models. On the other hand, we can combine different models to get better performance. There are still more room for the generative models."
   },
   {
     "objectID": "posts/LLM/LLM-Overview.html#word-level",
@@ -266,38 +245,17 @@
     "text": "LLM as Optimizer"
   },
   {
-    "objectID": "posts/MathToolBox.html",
-    "href": "posts/MathToolBox.html",
-    "title": "Math Toolbox for AI",
+    "objectID": "posts/Generative Model/Generative Model Overview.html",
+    "href": "posts/Generative Model/Generative Model Overview.html",
+    "title": "What a Generative Models?",
     "section": "",
-    "text": "Update\n\n\n\nAdd Vector Normalization\nMathematics is the important and the most confusion part of artificial intelligence. You might think AI is all about fancy neural networks and mind-blowing predictions, but behind every impressive AI breakthrough is a solid foundation of math. Without math, AI is just a bunch of random code guessing its way through problems like a lost tourist with no GPS.\nSo why am I writing this blog? Because AI is everywhere—from recommending your next Netflix binge to predicting stock market trends. Yet, many aspiring AI enthusiasts underestimate the power of mathematics. If you’ve ever wondered, “Do I really need to know linear algebra and calculus to work with AI?” The answer is a resounding YES! And I’m here to make it a little less intimidating (and hopefully a bit more fun).\nNow, let’s talk about the real struggle: the fancy names. When you first start learning AI, it feels like math is just out to confuse you. One moment you’re fine with basic addition, and the next, you’re drowning in terms like “eigenvalues,” “Jacobian matrices,” and “Markov chains.” You hear about “gradient descent” and think, “Oh, that sounds cool,” only to realize it involves partial derivatives and a whole lot of Greek letters that make your head spin. And don’t even get me started on “Lagrange multipliers”—it sounds like something from a sci-fi movie, but turns out to be just another way math likes to keep us on our toes.\nThis blog is about the some keep concept in the mathematics and how they used in the AI. Each part is self-contains, readers can choose parts most interested them."
+    "text": "What is the Generative Models and Generative AI?\nGenerative models, as the name indicated, are models that can generative new content. Unlike discriminate models, the generative models are sometime hard to train. But why we need generative models in the first place? We want generative models because:\n\nDensity Estimation:\n\n\n\nDensity Estimation is the type of task that\n\n\nConclusion\nIn the blog, we has explore go through several generative models. We explore why we need generative models. For different purposes, we can different choice of the models. On the other hand, we can combine different models to get better performance. There are still more room for the generative models."
   },
   {
-    "objectID": "posts/MathToolBox.html#norm-of-the-vectors",
-    "href": "posts/MathToolBox.html#norm-of-the-vectors",
-    "title": "Math Toolbox for AI",
-    "section": "1. Norm of the Vectors",
-    "text": "1. Norm of the Vectors\n\n\n\n\n\n\nCaution\n\n\n\nMany people confuse normalization with the length (norm) of a vector, but they are fundamentally different. The Normalization is defined as:\n\\[\nv_{\\text{normlized}} = \\frac{v}{\\| v\\|_p}\n\\]\nwhere \\(\\| v \\|_p\\) is the Norm of the vector, this form is called Lp-Norm.\n\n\nThe Lp-Norm is a generalization of different norms, including L1-Norm, L2-Norm, and others. It measures the magnitude of a vector in various ways depending on the value of  p . Lp-Norm is widely used in machine learning, deep learning, and signal processing for tasks like feature scaling, similarity measurements, and optimization."
-  },
-  {
-    "objectID": "posts/MathToolBox.html#vector-space",
-    "href": "posts/MathToolBox.html#vector-space",
-    "title": "Math Toolbox for AI",
-    "section": "2. Vector Space",
-    "text": "2. Vector Space"
-  },
-  {
-    "objectID": "posts/MathToolBox.html#compare-vectors",
-    "href": "posts/MathToolBox.html#compare-vectors",
-    "title": "Math Toolbox for AI",
-    "section": "3. Compare Vectors",
-    "text": "3. Compare Vectors"
-  },
-  {
-    "objectID": "posts/MathToolBox.html#norm-of-the-vectorslp-norm",
-    "href": "posts/MathToolBox.html#norm-of-the-vectorslp-norm",
-    "title": "Math Toolbox for AI",
-    "section": "1. Norm of the Vectors(Lp-Norm)",
-    "text": "1. Norm of the Vectors(Lp-Norm)\n\n\n\n\n\n\nCaution\n\n\n\nMany people confuse normalization with the length (norm) of a vector, but they are fundamentally different. The Normalization is defined as:\n\\[\nv_{\\text{normlized}} = \\frac{v}{\\| v\\|_p}\n\\]\nwhere \\(\\| v \\|_p\\) is the Norm of the vector, this form is called Lp-Norm.\nNormalization is the process of rescaling a vector so that its norm (magnitude) becomes 1, while preserving its direction. It ensures that all vectors in a dataset have the same scale, which is crucial for numerical stability and model performance in machine learning and deep learning.\n\n\nThe Lp-Norm is a generalization of different norms, including L1-Norm, L2-Norm, and others. It measures the magnitude of a vector in various ways depending on the value of \\(p\\) . Lp-Norm is widely used in machine learning, deep learning, and signal processing for tasks like feature scaling, similarity measurements, and optimization. Mathematically, it defined as:\n\\[\n\\| v\\|_p = (\\sum_i^d |v_i|^p)^{1 / p}\n\\]\nwhere:\n\n\\(p\\): is a positive real number\n\n\n\n\\(|v_i|\\) represents the absolute value of each component of the vectors\n\nThere are some special case of the"
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Yuyang’s Blog",
+    "section": "",
+    "text": "Math Toolbox for AI\n\n\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\nMar 3, 2025\n\n\n3 min\n\n\n481 words\n\n\n3/3/25, 3:33:14 PM\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s understand Large Language Model from scratch\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\nMar 3, 2025\n\n\n2 min\n\n\n287 words\n\n\n2/27/25, 3:02:33 PM\n\n\n\n\n\n\n\n\n\n\n\n\nWhat a Generative Models?\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\nMar 3, 2025\n\n\n1 min\n\n\n102 words\n\n\n2/27/25, 2:30:59 PM\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Dive into Diffusion Models\n\n\n\n\n\n\nGenerative Model\n\n\nLarge Language Model\n\n\n\nThis blog is my learning notes on the Diffusion Models, which is the state-of-art generative models. This blog will cover that is the diffusion models, how to use diffusion models to generate image, text-to-image, video. It also cover lagnuage diffusion model.\n\n\n\n\n\nMar 3, 2025\n\n\n1 min\n\n\n44 words\n\n\n2/27/25, 2:16:59 PM\n\n\n\n\n\n\nNo matching items"
   }
 ]
