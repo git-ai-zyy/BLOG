@@ -39,7 +39,7 @@
     "href": "posts/Generative Model/Generative Model Overview.html",
     "title": "What a Generative Models?",
     "section": "",
-    "text": "What is the Generative Models and Generative AI?\nGenerative models, as the name indicated, are models that can generative new content. Unlike discriminate models, the generative models are sometime hard to train. But why we need generative models in the first place? We want generative models because:\n\nDensity Estimation:\n\n\n\nDensity Estimation is the type of task that\n\n\nConclusion\nIn the blog, we has explore go through several generative models. We explore why we need generative models. For different purposes, we can different choice of the models. On the other hand, we can combine different models to get better performance. There are still more room for the generative models."
+    "text": "This website contains my notes and thoughts on various topics.\n\nWhat is the Generative Models and Generative AI?\nGenerative models, as the name indicated, are models that can generative new content. Unlike discriminate models, the generative models are sometime hard to train. But why we need generative models in the first place? We want generative models because:\n\nDensity Estimation:\n\n\n\nDensity Estimation is the type of task that\n\n\nConclusion\nIn the blog, we has explore go through several generative models. We explore why we need generative models. For different purposes, we can different choice of the models. On the other hand, we can combine different models to get better performance. There are still more room for the generative models."
   },
   {
     "objectID": "posts/LLM/LLM-Overview.html#word-level",
@@ -261,8 +261,50 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Yuyang’s Blog",
+    "title": "👋🏻Welcome to Yuyang’s Blog",
     "section": "",
-    "text": "Gaussian Distribution is All you need\n\n\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\nMar 3, 2025\n\n\n1 min\n\n\n54 words\n\n\n3/3/25, 4:30:06 PM\n\n\n\n\n\n\n\n\n\n\n\n\nWhat a Generative Models?\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\nMar 3, 2025\n\n\n1 min\n\n\n101 words\n\n\n3/3/25, 4:20:11 PM\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Dive into Diffusion Models\n\n\n\n\n\n\nGenerative Model\n\n\nLarge Language Model\n\n\n\nThis blog is my learning notes on the Diffusion Models, which is the state-of-art generative models. This blog will cover that is the diffusion models, how to use diffusion models to generate image, text-to-image, video. It also cover lagnuage diffusion model.\n\n\n\n\n\nMar 3, 2025\n\n\n1 min\n\n\n44 words\n\n\n3/3/25, 4:20:04 PM\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s understand Large Language Model from scratch\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\nMar 3, 2025\n\n\n2 min\n\n\n287 words\n\n\n3/3/25, 4:18:36 PM\n\n\n\n\n\n\n\n\n\n\n\n\nMath Toolbox for AI\n\n\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\nMar 3, 2025\n\n\n3 min\n\n\n481 words\n\n\n3/3/25, 3:33:14 PM\n\n\n\n\n\n\nNo matching items"
+    "text": "Gaussian Distribution is All you need\n\n\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\nMar 3, 2025\n\n\n3 min\n\n\n557 words\n\n\n3/3/25, 7:18:06 PM\n\n\n\n\n\n\n\n\n\n\n\n\nWhat a Generative Models?\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\nMar 3, 2025\n\n\n1 min\n\n\n101 words\n\n\n3/3/25, 4:20:11 PM\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Dive into Diffusion Models\n\n\n\n\n\n\nGenerative Model\n\n\nLarge Language Model\n\n\n\nThis blog is my learning notes on the Diffusion Models, which is the state-of-art generative models. This blog will cover that is the diffusion models, how to use diffusion models to generate image, text-to-image, video. It also cover lagnuage diffusion model.\n\n\n\n\n\nMar 3, 2025\n\n\n1 min\n\n\n44 words\n\n\n3/3/25, 4:20:04 PM\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s understand Large Language Model from scratch\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\nMar 3, 2025\n\n\n2 min\n\n\n287 words\n\n\n3/3/25, 4:18:36 PM\n\n\n\n\n\n\n\n\n\n\n\n\nMath Toolbox for AI\n\n\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\nMar 3, 2025\n\n\n3 min\n\n\n481 words\n\n\n3/3/25, 3:33:14 PM\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#description-an-open-source-technical-publishing-system-for-creating-beautiful-articles-websites-blogs-books-slides-and-more.-supports-python-r-julia-and-javascript.",
+    "href": "index.html#description-an-open-source-technical-publishing-system-for-creating-beautiful-articles-websites-blogs-books-slides-and-more.-supports-python-r-julia-and-javascript.",
+    "title": "Yuyang's Blog",
+    "section": "description: An open source technical publishing system for creating beautiful articles, websites, blogs, books, slides, and more. Supports Python, R, Julia, and JavaScript.",
+    "text": "description: An open source technical publishing system for creating beautiful articles, websites, blogs, books, slides, and more. Supports Python, R, Julia, and JavaScript."
+  },
+  {
+    "objectID": "posts/Gaussian.html#gaussian-distribution",
+    "href": "posts/Gaussian.html#gaussian-distribution",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Gaussian Distribution",
+    "text": "Gaussian Distribution\nGaussian distribution, also know as the Normal Distribution, is defined, for a single real-valued variable \\(x\\) as:\n\\[\n\\mathcal{N}(x | \\mu, \\sigma^2) = \\frac{1}{(2\\pi\\sigma^2)^{1/2}}\\exp\\left\\{- \\frac{1}{2\\sigma^2} (x - \\mu)^2\\right\\}\n\\tag{1}\\]\nwhere:\n\n\\(\\mu\\) called the mean\n\\(\\sigma^2\\) called the variance\n\n\\(\\sigma\\) called the standard deviation\n\n\\(\\beta = 1/\\sigma^2\\) called the precision."
+  },
+  {
+    "objectID": "posts/Gaussian.html#multivariate-gaussian-distribution",
+    "href": "posts/Gaussian.html#multivariate-gaussian-distribution",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Multivariate Gaussian Distribution",
+    "text": "Multivariate Gaussian Distribution\nNow, we consider the \\(D\\)-dimensional \\(\\mathbf{x}\\), this lead to the Multivariate Gaussian, which is defined as:\n\\[\n\\mathcal{N}(\\mathcal{\\mathbf{x}|\\boldsymbol{\\mu}, \\boldsymbol{\\Sigma}})= \\frac{1}{(2\\pi)^{D / 2}|\\boldsymbol{\\Sigma}|^{1 / 2}} \\exp\\left\\{  - \\frac{1}{2}  (\\mathbf{x}- \\mathbf{\\mu})^{T} \\boldsymbol{\\Sigma}^{-1}(\\mathbf{x} - \\boldsymbol{\\mu})\\right\\}\n\\tag{2}\\]\nwhere:\n\n\\(\\boldsymbol{\\mu}\\) is the \\(D\\)-dimensional mean vector\n\\(\\boldsymbol{\\Sigma}\\) is the \\(D \\times D\\) covariance matrix - \\(\\det \\boldsymbol{\\Sigma}\\) is the determinant of \\(\\boldsymbol{\\Sigma}\\)\n\\(\\Lambda \\equiv  \\boldsymbol{\\Sigma}^{-1}\\) is the precision matrix."
+  },
+  {
+    "objectID": "posts/Gaussian.html#mixture-of-gaussian",
+    "href": "posts/Gaussian.html#mixture-of-gaussian",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Mixture of Gaussian",
+    "text": "Mixture of Gaussian\nMore complexity, when we take the linear combination of the basic distribution of Normal Distribution, we will get Mixture of Gaussian Distribution, which is defined as:\n\\[\np(\\mathbf{x}) = \\sum_{k=1}^{K}\\pi_{k}\\mathcal{N}(\\mathbf{x} | \\boldsymbol{\\mu}_{k}, \\boldsymbol{\\Sigma}_{k})\n\\tag{3}\\]\nwhere:\n\n\\(\\pi_k\\) called the mixing coefficients, who has constraints that\n\\[\n\\begin{array} &\\sum_{k=1}^K \\pi_k = 1  \\\\ 0 \\leq \\pi_{k} \\leq 1\\end{array}\n\\]\n\\(\\mathcal{N}(\\mathbf{x} | \\boldsymbol{\\mu}{k}, \\boldsymbol{\\Sigma}{k})\\) is called a component of the mixture, has its own \\(\\boldsymbol{\\mu}\\) and \\(\\boldsymbol{\\Sigma}_k\\)"
+  },
+  {
+    "objectID": "posts/Gaussian.html#maximum-likelihood-learning",
+    "href": "posts/Gaussian.html#maximum-likelihood-learning",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Maximum Likelihood Learning",
+    "text": "Maximum Likelihood Learning\nThe first methods we introduce is the maximum likelihood learning, which is defined as:\n\\[\n\\max P(\\mathcal{D} | \\mu, \\Sigma)\n\\tag{4}\\]\nThe \\(P(\\mathcal{D} | \\mu, \\Sigma)\\) is called the likelihood of the dataset, as we defined in the question, the data points are i.i.d. so, we can write the likelihood function as:\n\\[\nP(\\mathcal{D} | \\mu, \\Sigma) = \\prod_{n = 1}^N \\mathcal{N}(\\mathbf{x}_n | \\mu, \\Sigma)\n\\tag{5}\\]\n\n\n\n\n\n\nLog-Trick\n\n\n\nIn the practice, because the \\(0 \\leq \\mathcal{N}(\\mathbf{x}_n | \\mu, \\Sigma) \\leq 1\\), when multiplying \\(N\\) small number together, might cause the under-flow problem in the computer. So, we use \\(\\log\\)-form of the function to prevent the under-flow. Because the \\(\\log\\) function is the monomtic function, so, when we maximimzie \\(\\log f\\) is same as \\(\\max f\\).\n\n\nSo, the objective function we want to maximize is:\n\\[\n\\ln P(\\mathcal{D} | \\mu, \\Sigma) = \\sum_{n = 1}^N \\ln\\mathcal{N}(\\mathbf{x}_n | \\mu, \\Sigma)\n\\tag{6}\\]\nHow to maximize the Equation 6. The most intuitive of way is set the derivative of the function with respect to 0.\n\nBias of Maximum Likelihood Learning.\nAs we can see, we used the sample mean to derive the sample variance. Because the sample mean estimated from the dataset \\(\\mathcal{D}\\) , it is not same as the true \\(\\mu\\)."
+  },
+  {
+    "objectID": "posts/Gaussian.html#maxium-a-posteriormap-estimate",
+    "href": "posts/Gaussian.html#maxium-a-posteriormap-estimate",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Maxium A Posterior(MAP) Estimate",
+    "text": "Maxium A Posterior(MAP) Estimate"
   }
 ]
