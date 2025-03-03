@@ -1,45 +1,52 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
+    "objectID": "resource.html",
+    "href": "resource.html",
+    "title": "Resources",
     "section": "",
-    "text": "I am a master student of Singapore Management University majoring in IT in Business with AI track. I am passionate about AI. I have a strong background in computer science and big data. I am proficient in Python. I have experience in machine learning, deep learning. I am a quick learner and a good team player. I like to learn new things summary and show them with each other. Currently I’m looking for a full-time job in AI field."
+    "text": "MIT 18.065: Matrix Methods in Data Analysis, Signal Processing, and Machine Learning\n\n\n\nMathematics\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nMIT\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMIT 6.5940: TinyML and Efficient Deep Learning Computing\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nMIT\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUCB CS285: Deep Reinforcement Learning\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nUCB\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUCB CS294/194-196 Large Language Model Agents\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nUCB\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUCB CS294/194-196: Advanced Large Language Model Agents\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nUCB\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
-    "title": "About Me",
-    "section": "Education",
-    "text": "Education\nSingapore Management University | Singapre Master of IT in Business(AI track) | Sept 2023 -\nUniversity of Wollongong | Computer Science B.S in Big Data | March 2020 - March 2023"
-  },
-  {
-    "objectID": "about.html#technical-skills",
-    "href": "about.html#technical-skills",
-    "title": "About Me",
-    "section": "Technical Skills",
-    "text": "Technical Skills\n\nMachine Learning & Deep Learning\nComputer Vision\nNatural Language Processing\nReinforcement Learning\nMeta Learning\nGenerative Model\nUnsupervised Learning\nLarge Language Model\nConvex Optmization\nProbabilitic Graphical Model\nDeep Graph Learning"
-  },
-  {
-    "objectID": "about.html#projects",
-    "href": "about.html#projects",
-    "title": "About Me",
-    "section": "Projects",
-    "text": "Projects"
-  },
-  {
-    "objectID": "posts/Gaussian.html",
-    "href": "posts/Gaussian.html",
-    "title": "Gaussian Distribution is All you need",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "👋🏻Welcome to Yuyang’s Blog",
     "section": "",
-    "text": "Gaussian Distribution, one of the most important and widely used probability distributions in statistics and machine learning. It is also known as the normal distribution, which is a continuous probability distribution that is symmetric about the mean, showing that data near the mean are more frequent in occurrence than data far from the mean."
+    "text": "Let’s understand Large Language Model from scratch\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\n2025-03-04\n\n\n2 min\n\n\n257 words\n\n\n2025-03-04\n\n\n\n\n\n\n\n\n\n\n\n\nGaussian Distribution is All you need\n\n\n\n\n\n\nMathematics\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\n2025-03-04\n\n\n7 min\n\n\n1,205 words\n\n\n2025-03-04\n\n\n\n\n\n\n\n\n\n\n\n\nMath Toolbox for AI\n\n\n\n\n\n\nMathematics\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\n2025-03-04\n\n\n3 min\n\n\n480 words\n\n\n2025-03-04\n\n\n\n\n\n\n\n\n\n\n\n\nWhat a Generative Models?\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\n2025-03-04\n\n\n1 min\n\n\n101 words\n\n\n2025-03-03\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Dive into Diffusion Models\n\n\n\n\n\n\nGenerative Model\n\n\nLarge Language Model\n\n\n\nThis blog is my learning notes on the Diffusion Models, which is the state-of-art generative models. This blog will cover that is the diffusion models, how to use diffusion models to generate image, text-to-image, video. It also cover lagnuage diffusion model.\n\n\n\n\n\n2025-03-04\n\n\n1 min\n\n\n44 words\n\n\n2025-03-03\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/Generative Model/Generative Model Overview.html",
-    "href": "posts/Generative Model/Generative Model Overview.html",
-    "title": "What a Generative Models?",
+    "objectID": "posts/MathToolBox.html",
+    "href": "posts/MathToolBox.html",
+    "title": "Math Toolbox for AI",
     "section": "",
-    "text": "This website contains my notes and thoughts on various topics.\n\nWhat is the Generative Models and Generative AI?\nGenerative models, as the name indicated, are models that can generative new content. Unlike discriminate models, the generative models are sometime hard to train. But why we need generative models in the first place? We want generative models because:\n\nDensity Estimation:\n\n\n\nDensity Estimation is the type of task that\n\n\nConclusion\nIn the blog, we has explore go through several generative models. We explore why we need generative models. For different purposes, we can different choice of the models. On the other hand, we can combine different models to get better performance. There are still more room for the generative models."
+    "text": "Update\n\n\n\nAdd Vector Normalization\nMathematics is the important and the most confusion part of artificial intelligence. You might think AI is all about fancy neural networks and mind-blowing predictions, but behind every impressive AI breakthrough is a solid foundation of math. Without math, AI is just a bunch of random code guessing its way through problems like a lost tourist with no GPS.\nSo why am I writing this blog? Because AI is everywhere—from recommending your next Netflix binge to predicting stock market trends. Yet, many aspiring AI enthusiasts underestimate the power of mathematics. If you’ve ever wondered, “Do I really need to know linear algebra and calculus to work with AI?” The answer is a resounding YES! And I’m here to make it a little less intimidating (and hopefully a bit more fun).\nNow, let’s talk about the real struggle: the fancy names. When you first start learning AI, it feels like math is just out to confuse you. One moment you’re fine with basic addition, and the next, you’re drowning in terms like “eigenvalues,” “Jacobian matrices,” and “Markov chains.” You hear about “gradient descent” and think, “Oh, that sounds cool,” only to realize it involves partial derivatives and a whole lot of Greek letters that make your head spin. And don’t even get me started on “Lagrange multipliers”—it sounds like something from a sci-fi movie, but turns out to be just another way math likes to keep us on our toes.\nThis blog is about the some keep concept in the mathematics and how they used in the AI. Each part is self-contains, readers can choose parts most interested them."
+  },
+  {
+    "objectID": "posts/MathToolBox.html#norm-of-the-vectorslp-norm",
+    "href": "posts/MathToolBox.html#norm-of-the-vectorslp-norm",
+    "title": "Math Toolbox for AI",
+    "section": "1. Norm of the Vectors(Lp-Norm)",
+    "text": "1. Norm of the Vectors(Lp-Norm)\n\n\n\n\n\n\nCaution\n\n\n\nMany people confuse normalization with the length (norm) of a vector, but they are fundamentally different. The Normalization is defined as:\n\\[\nv_{\\text{normlized}} = \\frac{v}{\\| v\\|_p}\n\\]\nwhere \\(\\| v \\|_p\\) is the Norm of the vector, this form is called Lp-Norm.\nNormalization is the process of rescaling a vector so that its norm (magnitude) becomes 1, while preserving its direction. It ensures that all vectors in a dataset have the same scale, which is crucial for numerical stability and model performance in machine learning and deep learning.\n\n\nThe Lp-Norm is a generalization of different norms, including L1-Norm, L2-Norm, and others. It measures the magnitude of a vector in various ways depending on the value of \\(p\\) . Lp-Norm is widely used in machine learning, deep learning, and signal processing for tasks like feature scaling, similarity measurements, and optimization. Mathematically, it defined as:\n\\[\n\\| v\\|_p = (\\sum_i^d |v_i|^p)^{1 / p}\n\\]\nwhere:\n\n\\(p\\): is a positive real number\n\\(|v_i|\\) represents the absolute value of each component of the vectors\n\nThere are some special case of the"
+  },
+  {
+    "objectID": "posts/MathToolBox.html#vector-space",
+    "href": "posts/MathToolBox.html#vector-space",
+    "title": "Math Toolbox for AI",
+    "section": "2. Vector Space",
+    "text": "2. Vector Space\n\nHilbert Sapce"
+  },
+  {
+    "objectID": "posts/MathToolBox.html#compare-vectors",
+    "href": "posts/MathToolBox.html#compare-vectors",
+    "title": "Math Toolbox for AI",
+    "section": "3. Compare Vectors",
+    "text": "3. Compare Vectors"
+  },
+  {
+    "objectID": "posts/Generative Model/Diffusion Model.html",
+    "href": "posts/Generative Model/Diffusion Model.html",
+    "title": "Deep Dive into Diffusion Models",
+    "section": "",
+    "text": "What is the Diffusion Models?\nDiffusion Model is know\n\n\nDiffusion Model for Discrete Data\nRecently, there are some good exploration for the diffusion model when apply on the. For example, Inception is the first commercial-scale diffusion language model. Which is is faster than the general language model."
   },
   {
     "objectID": "posts/LLM/LLM-Overview.html#word-level",
@@ -224,53 +231,18 @@
     "text": "LLM as Optimizer"
   },
   {
-    "objectID": "posts/Generative Model/Diffusion Model.html",
-    "href": "posts/Generative Model/Diffusion Model.html",
-    "title": "Deep Dive into Diffusion Models",
+    "objectID": "posts/Generative Model/Generative Model Overview.html",
+    "href": "posts/Generative Model/Generative Model Overview.html",
+    "title": "What a Generative Models?",
     "section": "",
-    "text": "What is the Diffusion Models?\nDiffusion Model is know\n\n\nDiffusion Model for Discrete Data\nRecently, there are some good exploration for the diffusion model when apply on the. For example, Inception is the first commercial-scale diffusion language model. Which is is faster than the general language model."
+    "text": "What is the Generative Models and Generative AI?\nGenerative models, as the name indicated, are models that can generative new content. Unlike discriminate models, the generative models are sometime hard to train. But why we need generative models in the first place? We want generative models because:\n\nDensity Estimation:\n\n\n\nDensity Estimation is the type of task that\n\n\nConclusion\nIn the blog, we has explore go through several generative models. We explore why we need generative models. For different purposes, we can different choice of the models. On the other hand, we can combine different models to get better performance. There are still more room for the generative models."
   },
   {
-    "objectID": "posts/MathToolBox.html",
-    "href": "posts/MathToolBox.html",
-    "title": "Math Toolbox for AI",
+    "objectID": "posts/Gaussian.html",
+    "href": "posts/Gaussian.html",
+    "title": "Gaussian Distribution is All you need",
     "section": "",
-    "text": "Update\n\n\n\nAdd Vector Normalization\nMathematics is the important and the most confusion part of artificial intelligence. You might think AI is all about fancy neural networks and mind-blowing predictions, but behind every impressive AI breakthrough is a solid foundation of math. Without math, AI is just a bunch of random code guessing its way through problems like a lost tourist with no GPS.\nSo why am I writing this blog? Because AI is everywhere—from recommending your next Netflix binge to predicting stock market trends. Yet, many aspiring AI enthusiasts underestimate the power of mathematics. If you’ve ever wondered, “Do I really need to know linear algebra and calculus to work with AI?” The answer is a resounding YES! And I’m here to make it a little less intimidating (and hopefully a bit more fun).\nNow, let’s talk about the real struggle: the fancy names. When you first start learning AI, it feels like math is just out to confuse you. One moment you’re fine with basic addition, and the next, you’re drowning in terms like “eigenvalues,” “Jacobian matrices,” and “Markov chains.” You hear about “gradient descent” and think, “Oh, that sounds cool,” only to realize it involves partial derivatives and a whole lot of Greek letters that make your head spin. And don’t even get me started on “Lagrange multipliers”—it sounds like something from a sci-fi movie, but turns out to be just another way math likes to keep us on our toes.\nThis blog is about the some keep concept in the mathematics and how they used in the AI. Each part is self-contains, readers can choose parts most interested them."
-  },
-  {
-    "objectID": "posts/MathToolBox.html#norm-of-the-vectorslp-norm",
-    "href": "posts/MathToolBox.html#norm-of-the-vectorslp-norm",
-    "title": "Math Toolbox for AI",
-    "section": "1. Norm of the Vectors(Lp-Norm)",
-    "text": "1. Norm of the Vectors(Lp-Norm)\n\n\n\n\n\n\nCaution\n\n\n\nMany people confuse normalization with the length (norm) of a vector, but they are fundamentally different. The Normalization is defined as:\n\\[\nv_{\\text{normlized}} = \\frac{v}{\\| v\\|_p}\n\\]\nwhere \\(\\| v \\|_p\\) is the Norm of the vector, this form is called Lp-Norm.\nNormalization is the process of rescaling a vector so that its norm (magnitude) becomes 1, while preserving its direction. It ensures that all vectors in a dataset have the same scale, which is crucial for numerical stability and model performance in machine learning and deep learning.\n\n\nThe Lp-Norm is a generalization of different norms, including L1-Norm, L2-Norm, and others. It measures the magnitude of a vector in various ways depending on the value of \\(p\\) . Lp-Norm is widely used in machine learning, deep learning, and signal processing for tasks like feature scaling, similarity measurements, and optimization. Mathematically, it defined as:\n\\[\n\\| v\\|_p = (\\sum_i^d |v_i|^p)^{1 / p}\n\\]\nwhere:\n\n\\(p\\): is a positive real number\n\\(|v_i|\\) represents the absolute value of each component of the vectors\n\nThere are some special case of the"
-  },
-  {
-    "objectID": "posts/MathToolBox.html#vector-space",
-    "href": "posts/MathToolBox.html#vector-space",
-    "title": "Math Toolbox for AI",
-    "section": "2. Vector Space",
-    "text": "2. Vector Space\n\nHilbert Sapce"
-  },
-  {
-    "objectID": "posts/MathToolBox.html#compare-vectors",
-    "href": "posts/MathToolBox.html#compare-vectors",
-    "title": "Math Toolbox for AI",
-    "section": "3. Compare Vectors",
-    "text": "3. Compare Vectors"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "👋🏻Welcome to Yuyang’s Blog",
-    "section": "",
-    "text": "Gaussian Distribution is All you need\n\n\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\nMar 3, 2025\n\n\n3 min\n\n\n557 words\n\n\n3/3/25, 7:18:06 PM\n\n\n\n\n\n\n\n\n\n\n\n\nWhat a Generative Models?\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\nMar 3, 2025\n\n\n1 min\n\n\n101 words\n\n\n3/3/25, 4:20:11 PM\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Dive into Diffusion Models\n\n\n\n\n\n\nGenerative Model\n\n\nLarge Language Model\n\n\n\nThis blog is my learning notes on the Diffusion Models, which is the state-of-art generative models. This blog will cover that is the diffusion models, how to use diffusion models to generate image, text-to-image, video. It also cover lagnuage diffusion model.\n\n\n\n\n\nMar 3, 2025\n\n\n1 min\n\n\n44 words\n\n\n3/3/25, 4:20:04 PM\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s understand Large Language Model from scratch\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\nMar 3, 2025\n\n\n2 min\n\n\n287 words\n\n\n3/3/25, 4:18:36 PM\n\n\n\n\n\n\n\n\n\n\n\n\nMath Toolbox for AI\n\n\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\nMar 3, 2025\n\n\n3 min\n\n\n481 words\n\n\n3/3/25, 3:33:14 PM\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html#description-an-open-source-technical-publishing-system-for-creating-beautiful-articles-websites-blogs-books-slides-and-more.-supports-python-r-julia-and-javascript.",
-    "href": "index.html#description-an-open-source-technical-publishing-system-for-creating-beautiful-articles-websites-blogs-books-slides-and-more.-supports-python-r-julia-and-javascript.",
-    "title": "Yuyang's Blog",
-    "section": "description: An open source technical publishing system for creating beautiful articles, websites, blogs, books, slides, and more. Supports Python, R, Julia, and JavaScript.",
-    "text": "description: An open source technical publishing system for creating beautiful articles, websites, blogs, books, slides, and more. Supports Python, R, Julia, and JavaScript."
+    "text": "Gaussian Distribution, one of the most important and widely used probability distributions in statistics and machine learning. It is also known as the normal distribution, which is a continuous probability distribution that is symmetric about the mean, showing that data near the mean are more frequent in occurrence than data far from the mean. In the blog, I will walk through the AI field from basic normal distribution, and see how this tree spread across the world."
   },
   {
     "objectID": "posts/Gaussian.html#gaussian-distribution",
@@ -294,11 +266,25 @@
     "text": "Mixture of Gaussian\nMore complexity, when we take the linear combination of the basic distribution of Normal Distribution, we will get Mixture of Gaussian Distribution, which is defined as:\n\\[\np(\\mathbf{x}) = \\sum_{k=1}^{K}\\pi_{k}\\mathcal{N}(\\mathbf{x} | \\boldsymbol{\\mu}_{k}, \\boldsymbol{\\Sigma}_{k})\n\\tag{3}\\]\nwhere:\n\n\\(\\pi_k\\) called the mixing coefficients, who has constraints that\n\\[\n\\begin{array} &\\sum_{k=1}^K \\pi_k = 1  \\\\ 0 \\leq \\pi_{k} \\leq 1\\end{array}\n\\]\n\\(\\mathcal{N}(\\mathbf{x} | \\boldsymbol{\\mu}{k}, \\boldsymbol{\\Sigma}{k})\\) is called a component of the mixture, has its own \\(\\boldsymbol{\\mu}\\) and \\(\\boldsymbol{\\Sigma}_k\\)"
   },
   {
+    "objectID": "posts/Gaussian.html#linear-gaussian-model",
+    "href": "posts/Gaussian.html#linear-gaussian-model",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Linear Gaussian Model",
+    "text": "Linear Gaussian Model"
+  },
+  {
+    "objectID": "posts/Gaussian.html#gaussian-in-high-dimension",
+    "href": "posts/Gaussian.html#gaussian-in-high-dimension",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Gaussian In High-Dimension",
+    "text": "Gaussian In High-Dimension"
+  },
+  {
     "objectID": "posts/Gaussian.html#maximum-likelihood-learning",
     "href": "posts/Gaussian.html#maximum-likelihood-learning",
     "title": "Gaussian Distribution is All you need",
     "section": "Maximum Likelihood Learning",
-    "text": "Maximum Likelihood Learning\nThe first methods we introduce is the maximum likelihood learning, which is defined as:\n\\[\n\\max P(\\mathcal{D} | \\mu, \\Sigma)\n\\tag{4}\\]\nThe \\(P(\\mathcal{D} | \\mu, \\Sigma)\\) is called the likelihood of the dataset, as we defined in the question, the data points are i.i.d. so, we can write the likelihood function as:\n\\[\nP(\\mathcal{D} | \\mu, \\Sigma) = \\prod_{n = 1}^N \\mathcal{N}(\\mathbf{x}_n | \\mu, \\Sigma)\n\\tag{5}\\]\n\n\n\n\n\n\nLog-Trick\n\n\n\nIn the practice, because the \\(0 \\leq \\mathcal{N}(\\mathbf{x}_n | \\mu, \\Sigma) \\leq 1\\), when multiplying \\(N\\) small number together, might cause the under-flow problem in the computer. So, we use \\(\\log\\)-form of the function to prevent the under-flow. Because the \\(\\log\\) function is the monomtic function, so, when we maximimzie \\(\\log f\\) is same as \\(\\max f\\).\n\n\nSo, the objective function we want to maximize is:\n\\[\n\\ln P(\\mathcal{D} | \\mu, \\Sigma) = \\sum_{n = 1}^N \\ln\\mathcal{N}(\\mathbf{x}_n | \\mu, \\Sigma)\n\\tag{6}\\]\nHow to maximize the Equation 6. The most intuitive of way is set the derivative of the function with respect to 0.\n\nBias of Maximum Likelihood Learning.\nAs we can see, we used the sample mean to derive the sample variance. Because the sample mean estimated from the dataset \\(\\mathcal{D}\\) , it is not same as the true \\(\\mu\\)."
+    "text": "Maximum Likelihood Learning\nThe first methods we introduce is the maximum likelihood learning, which is defined as:\n\\[\n\\max P(\\mathcal{D} | \\mu, \\Sigma)\n\\tag{4}\\]\nThe \\(P(\\mathcal{D} | \\mu, \\Sigma)\\) is called the likelihood of the dataset, as we defined in the question, the data points are i.i.d. so, we can write the likelihood function as:\n\\[\nP(\\mathcal{D} | \\mu, \\Sigma) = \\prod_{n = 1}^N \\mathcal{N}(\\mathbf{x}_n | \\mu, \\Sigma)\n\\tag{5}\\]\n\n\n\n\n\n\nLog Trick\n\n\n\nIn the practice, because the \\(0 \\leq \\mathcal{N}(\\mathbf{x}_n | \\mu, \\Sigma) \\leq 1\\), when multiplying \\(N\\) small number together, might cause the under-flow problem in the computer. So, we use \\(\\log\\)-form of the function to prevent the under-flow. Because the \\(\\log\\) function is the monomtic function, so, when we maximimzie \\(\\log f\\) is same as \\(\\max f\\).\n\n\nSo, the objective function we want to maximize is:\n\\[\n\\ln P(\\mathcal{D} | \\mu, \\Sigma) = \\sum_{n = 1}^N \\ln\\mathcal{N}(\\mathbf{x}_n | \\mu, \\Sigma)\n\\tag{6}\\]\nHow to maximize the Equation 6. The most intuitive of way is set the derivative of the function with respect to 0.\n\nGradient Descent\n\n\nBias of Maximum Likelihood Learning.\nAs we can see, we used the sample mean to derive the sample variance. Because the sample mean estimated from the dataset \\(\\mathcal{D}\\) , it is not same as the true \\(\\mu\\)."
   },
   {
     "objectID": "posts/Gaussian.html#maxium-a-posteriormap-estimate",
@@ -306,5 +292,152 @@
     "title": "Gaussian Distribution is All you need",
     "section": "Maxium A Posterior(MAP) Estimate",
     "text": "Maxium A Posterior(MAP) Estimate"
+  },
+  {
+    "objectID": "posts/Gaussian.html#expectation-maximizationem-algorithms",
+    "href": "posts/Gaussian.html#expectation-maximizationem-algorithms",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Expectation-Maximization(EM) Algorithms",
+    "text": "Expectation-Maximization(EM) Algorithms"
+  },
+  {
+    "objectID": "posts/Gaussian.html#sequential-estimation",
+    "href": "posts/Gaussian.html#sequential-estimation",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Sequential Estimation",
+    "text": "Sequential Estimation\nSo far we have assume that we can “see” the whole dataset at once. In practice, we sometime cannot get the whole dataset at one, because:\n\nThe data points comes in sequential, e.g. Online Learning\nThe dataset is too big that can not fit into the memory of the computer.\n\nWe have to way to learn the parameters in sequential version. One of the method is called Robbins-Monro algorithm.\n\nWelford’s Algorithm\n\nRobbins-Monro Algorithm\n\n\n\nKalman Filter\n\n\nStochastic Gradient Descent\n\n\nExpoential Moving Average(EMA)"
+  },
+  {
+    "objectID": "posts/Gaussian.html#linear-regression",
+    "href": "posts/Gaussian.html#linear-regression",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Linear Regression",
+    "text": "Linear Regression"
+  },
+  {
+    "objectID": "posts/Gaussian.html#gaussian-process",
+    "href": "posts/Gaussian.html#gaussian-process",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Gaussian Process",
+    "text": "Gaussian Process"
+  },
+  {
+    "objectID": "posts/Gaussian.html#clustering",
+    "href": "posts/Gaussian.html#clustering",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Clustering",
+    "text": "Clustering"
+  },
+  {
+    "objectID": "posts/Gaussian.html#deep-learning",
+    "href": "posts/Gaussian.html#deep-learning",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Deep Learning",
+    "text": "Deep Learning\n\nModel Initilization\nAs mention in the (He et al. 2015)\n\nLoRA\n(Hu et al. 2021)\n\n\n\nLoRA Image Source:(Hu et al. 2021)\n\n\nIn the LLM, the number of parameters is huge, how we can file-tune those huge parameters. Using parameters efficient fine-tuning technique is one technique. LoRA is one of the PEFT that widely used in the file-tuning huge data.\nThe \\(A\\) matrix is initilization as the Normal DistributionEquation 2"
+  },
+  {
+    "objectID": "posts/Gaussian.html#normalization",
+    "href": "posts/Gaussian.html#normalization",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Normalization",
+    "text": "Normalization\n\nLayer Normlization\n(Xiong et al. 2020)\n\n\nRMS Normlization\nThis is the RMS with (Zhang and Sennrich, n.d.)"
+  },
+  {
+    "objectID": "posts/Gaussian.html#generative-models",
+    "href": "posts/Gaussian.html#generative-models",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Generative Models",
+    "text": "Generative Models\nIn the Generative Models, the Normal Distribution is sometime used as the noise add to the original data, or the prior distribution of some unknown distribution that we are trying to get. In this chapter,"
+  },
+  {
+    "objectID": "posts/Gaussian.html#generative-adversarial-networks",
+    "href": "posts/Gaussian.html#generative-adversarial-networks",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Generative Adversarial Networks",
+    "text": "Generative Adversarial Networks\nThe Latent Space input to the generator is of sampled from a Gaussian Distribution (Goodfellow et al. 2014)\n\nVariational Autoencoders(VAE)\nVAEs uses a Gaussian Latent space to learn a generative model of data. (Kingma and Welling 2022)\nA VAE assumes that data is generated from a latent variable \\(Z\\), which follows a Gaussian prior: \\(Z \\sim \\mathcal{N}(0, I)\\). The VAE model learn a probabilistic mapping from \\(Z\\) to the observed data \\(X\\) using:\n\nEncoder: \\(q(Z |X ) \\sim \\mathcal{N}(\\mu_\\theta(X), \\sigma^2_\\theta(X))\\)\nDecoder: \\(P(X | Z)\\) reconstructs \\(X\\) from \\(Z\\)"
+  },
+  {
+    "objectID": "posts/Gaussian.html#diffusion-models",
+    "href": "posts/Gaussian.html#diffusion-models",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Diffusion Models",
+    "text": "Diffusion Models\n(For more details, check my this blog about diffusion models)\nThis paper (Ho, Jain, and Abbeel, n.d.)"
+  },
+  {
+    "objectID": "posts/Gaussian.html#reinforcement-learning",
+    "href": "posts/Gaussian.html#reinforcement-learning",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Reinforcement Learning",
+    "text": "Reinforcement Learning\nIn the Reinforcement Learning, Gaussian Distribution are commonly used in policy gradient methods like Trust Region Optimization(TRPO) and Proximal Policy Optimization(PPO), where policies are modeled as Gaussian distribution.\nWhen Exploration the environment, the exploration is often handled by Gaussian noise, such as in Deep Deterministc Policy Gradient"
+  },
+  {
+    "objectID": "posts/Gaussian.html#meta-learning",
+    "href": "posts/Gaussian.html#meta-learning",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Meta Learning",
+    "text": "Meta Learning\nBayesian Meta Learning: Gaussian priors over parameters enable fast adaptation to new tasks in few-shot learning.\nLatent Task Representation: Many meta-learning frameworks use Gaussian distributions in the latent space to generalize across different tasks efficiently\nUncertainty Estimation: Gaussian-based models in meta-learning help quantify uncertainty, improving robustness in real-world application."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "I am a master student of Singapore Management University majoring in IT in Business with AI track. I am passionate about AI. I have a strong background in computer science and big data. I am proficient in Python. I have experience in machine learning, deep learning. I am a quick learner and a good team player. I like to learn new things summary and show them with each other. Currently I’m looking for a full-time job in AI field."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About Me",
+    "section": "Education",
+    "text": "Education\nSingapore Management University | Singapre Master of IT in Business(AI track) | Sept 2023 -\nUniversity of Wollongong | Computer Science B.S in Big Data | March 2020 - March 2023"
+  },
+  {
+    "objectID": "about.html#technical-skills",
+    "href": "about.html#technical-skills",
+    "title": "About Me",
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\nMachine Learning & Deep Learning\nComputer Vision\nNatural Language Processing\nReinforcement Learning\nMeta Learning\nGenerative Model\nUnsupervised Learning\nLarge Language Model\nConvex Optmization\nProbabilitic Graphical Model\nDeep Graph Learning"
+  },
+  {
+    "objectID": "about.html#projects",
+    "href": "about.html#projects",
+    "title": "About Me",
+    "section": "Projects",
+    "text": "Projects"
+  },
+  {
+    "objectID": "courses/mit-matrix-method.html",
+    "href": "courses/mit-matrix-method.html",
+    "title": "MIT 18.065: Matrix Methods in Data Analysis, Signal Processing, and Machine Learning",
+    "section": "",
+    "text": "Course Link"
+  },
+  {
+    "objectID": "courses/mit-tinyML.html",
+    "href": "courses/mit-tinyML.html",
+    "title": "MIT 6.5940: TinyML and Efficient Deep Learning Computing",
+    "section": "",
+    "text": "Course Link"
+  },
+  {
+    "objectID": "courses/ucb-llm-agent.html",
+    "href": "courses/ucb-llm-agent.html",
+    "title": "UCB CS294/194-196 Large Language Model Agents",
+    "section": "",
+    "text": "Course Link"
+  },
+  {
+    "objectID": "courses/ucb-llm-agent2.html",
+    "href": "courses/ucb-llm-agent2.html",
+    "title": "UCB CS294/194-196: Advanced Large Language Model Agents",
+    "section": "",
+    "text": "Course Link"
+  },
+  {
+    "objectID": "courses/ucb-cs285-drl.html",
+    "href": "courses/ucb-cs285-drl.html",
+    "title": "UCB CS285: Deep Reinforcement Learning",
+    "section": "",
+    "text": "Course Link"
   }
 ]

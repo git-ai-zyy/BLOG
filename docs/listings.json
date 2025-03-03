@@ -1,12 +1,22 @@
 [
   {
+    "listing": "/resource.html",
+    "items": [
+      "/courses/mit-matrix-method.html",
+      "/courses/mit-tinyML.html",
+      "/courses/ucb-cs285-drl.html",
+      "/courses/ucb-llm-agent.html",
+      "/courses/ucb-llm-agent2.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
-      "/posts/Gaussian.html",
-      "/posts/Generative Model/Generative Model Overview.html",
-      "/posts/Generative Model/Diffusion Model.html",
       "/posts/LLM/LLM-Overview.html",
-      "/posts/MathToolBox.html"
+      "/posts/Gaussian.html",
+      "/posts/MathToolBox.html",
+      "/posts/Generative Model/Generative Model Overview.html",
+      "/posts/Generative Model/Diffusion Model.html"
     ]
   }
 ]
