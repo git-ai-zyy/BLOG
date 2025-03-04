@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A collection of research outputs, including working papers, talks, and posters.">
+<meta name="description" content="This page is a collection of resources for learning machine learning, deep learning, and artificial intelligence. It includes online courses, books, blogs, and YouTube channels. The resources are categorized into different sections based on the topics. The resources are collected from various sources and are free to access. The page is updated regularly with new resources.">
 
 <title>Resources</title>
 <style>
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-research .list');
+    const listingTargetEl = window.document.querySelector('#listing-Mathematic .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -88,7 +88,343 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-research'] = new List('listing-research', options);
+    window['quarto-listings']['listing-Mathematic'] = new List('listing-Mathematic', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-intro-ai .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-image','listing-description','listing-categories','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-intro-ai'] = new List('listing-intro-ai', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-Computer-Algorithms .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-image','listing-description','listing-categories','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-Computer-Algorithms'] = new List('listing-Computer-Algorithms', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-Deep-Learning .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-image','listing-description','listing-categories','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-Deep-Learning'] = new List('listing-Deep-Learning', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-CV .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-image','listing-description','listing-categories','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-CV'] = new List('listing-CV', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-NLP .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-image','listing-description','listing-categories','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-NLP'] = new List('listing-NLP', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-RL .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-image','listing-description','listing-categories','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-RL'] = new List('listing-RL', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-Generative .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-image','listing-description','listing-categories','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-Generative'] = new List('listing-Generative', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-Others .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-image','listing-description','listing-categories','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-Others'] = new List('listing-Others', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-Hardware .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-image','listing-description','listing-categories','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-Hardware'] = new List('listing-Hardware', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-Youtube .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-image","listing-link"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-Youtube'] = new List('listing-Youtube', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-blogs .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-image"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-blogs'] = new List('listing-blogs', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-books .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-image"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-books'] = new List('listing-books', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -136,8 +472,8 @@ window.Quarto = {
 <link rel="stylesheet" href="style/styles.css">
 <link rel="stylesheet" href="s.css">
 <meta property="og:title" content="Resources">
-<meta property="og:description" content="A collection of research outputs, including working papers, talks, and posters.">
-<meta property="og:image" content="./courses/images/mit-18065.png">
+<meta property="og:description" content="This page is a collection of resources for learning machine learning, deep learning, and artificial intelligence. It includes online courses, books, blogs, and YouTube channels. The resources are categorized into different sections based on the topics. The resources are collected from various sources and are free to access. The page is updated regularly with new resources.">
+<meta property="og:image" content="./courses/images/mit-calculus1.png">
 </head>
 
 <body class="floating nav-fixed">
@@ -187,13 +523,39 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#mathematics-basic" id="toc-mathematics-basic" class="nav-link active" data-scroll-target="#mathematics-basic">Mathematics Basic</a></li>
+  <li><a href="#computer-basics-algorithms" id="toc-computer-basics-algorithms" class="nav-link" data-scroll-target="#computer-basics-algorithms">Computer Basics &amp; Algorithms</a></li>
+  <li><a href="#introduction-to-ai" id="toc-introduction-to-ai" class="nav-link" data-scroll-target="#introduction-to-ai">Introduction to AI</a></li>
+  <li><a href="#machine-learning-deep-learning-basic" id="toc-machine-learning-deep-learning-basic" class="nav-link" data-scroll-target="#machine-learning-deep-learning-basic">Machine Learning &amp; Deep Learning Basic</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a>
+  <ul class="collapse">
+  <li><a href="#computer-vision" id="toc-computer-vision" class="nav-link" data-scroll-target="#computer-vision">Computer Vision</a></li>
+  <li><a href="#natural-language-processing" id="toc-natural-language-processing" class="nav-link" data-scroll-target="#natural-language-processing">Natural Language Processing</a></li>
+  <li><a href="#reinforcement-learning-robotics" id="toc-reinforcement-learning-robotics" class="nav-link" data-scroll-target="#reinforcement-learning-robotics">Reinforcement Learning &amp; Robotics</a></li>
+  <li><a href="#generative-models" id="toc-generative-models" class="nav-link" data-scroll-target="#generative-models">Generative Models</a></li>
+  <li><a href="#others" id="toc-others" class="nav-link" data-scroll-target="#others">Others</a></li>
+  </ul></li>
+  <li><a href="#mldl-system-hardware" id="toc-mldl-system-hardware" class="nav-link" data-scroll-target="#mldl-system-hardware">ML/DL System &amp; Hardware</a></li>
+  <li><a href="#other-resources" id="toc-other-resources" class="nav-link" data-scroll-target="#other-resources">Other Resources</a>
+  <ul class="collapse">
+  <li><a href="#youtuber" id="toc-youtuber" class="nav-link" data-scroll-target="#youtuber">Youtuber</a></li>
+  <li><a href="#blogs" id="toc-blogs" class="nav-link" data-scroll-target="#blogs">Blogs</a></li>
+  <li><a href="#books" id="toc-books" class="nav-link" data-scroll-target="#books">Books</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-right" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -202,12 +564,12 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    A collection of research outputs, including working papers, talks, and posters.
+    <p>This page is a collection of resources for learning <em>machine learning</em>, <em>deep learning</em>, and <em>artificial intelligence</em>. It includes online courses, books, blogs, and YouTube channels. The resources are categorized into different sections based on the topics. The resources are collected from various sources and are free to access. The page is updated regularly with new resources.</p>
   </div>
 </div>
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-right">
 
     
   
@@ -219,25 +581,352 @@ window.Quarto = {
 </header>
 
 
+<section id="mathematics-basic" class="level1">
+<h1>Mathematics Basic</h1>
+<p>THis is is some content about mathematics</p>
+<div id="listing-Mathematic" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="JUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThG" data-listing-file-modified-sort="1741093730889" data-listing-reading-time-sort="1" data-listing-word-count-sort="152" data-listing-title-sort="**MIT 18.01: Single Variable Calculus**">
+<a href="./courses/mit-calculus1.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/mit-calculus1.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title" data-anchor-id="mathematics-basic">
+<strong>MIT 18.01: Single Variable Calculus</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('JUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThG'); return false;">
+⭐️⭐️⭐️⭐️⭐️
+</div>
+</div>
+<div class="card-text listing-description">
+MIT’s 18.01 Single Variable Calculus is a foundational mathematics course covering <em>differential</em> and <em>integral calculus</em>. It focuses on the fundamental concepts of…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="JUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThG" data-listing-file-modified-sort="1741093923349" data-listing-reading-time-sort="1" data-listing-word-count-sort="83" data-listing-title-sort="**MIT 18.02: Multivariable Calculus**">
+<a href="./courses/mit-calculus2.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/mit-calculus2.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>MIT 18.02: Multivariable Calculus</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('JUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThG'); return false;">
+⭐️⭐️⭐️⭐️⭐️
+</div>
+</div>
+<div class="card-text listing-description">
+MIT’s 18.02 Multivariable Calculus extends the principles of single-variable calculus to functions of multiple variables. It introduces <strong>partial derivatives</strong>, *multiple…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="JUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThG" data-listing-file-modified-sort="1741094107560" data-listing-reading-time-sort="1" data-listing-word-count-sort="176" data-listing-title-sort="**MIT 18.06: Linear Algebra**">
+<a href="./courses/mit-la.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/mit-la.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>MIT 18.06: Linear Algebra</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('JUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThG'); return false;">
+⭐️⭐️⭐️⭐️⭐️
+</div>
+</div>
+<div class="card-text listing-description">
+MIT’s 18.06 Linear Algebra is a foundational course that explores the fundamental concepts of vectors, matrices, determinants, eigenvalues, and linear transformations.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-research">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="TWF0aGVtYXRpY3M=" data-listing-file-modified-sort="1741030254966" data-listing-reading-time-sort="1" data-listing-word-count-sort="2" data-listing-title-sort="**MIT 18.065: Matrix Methods in Data Analysis, Signal Processing, and Machine Learning**">
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="JUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThG" data-listing-file-modified-sort="1741094339564" data-listing-reading-time-sort="2" data-listing-word-count-sort="226" data-listing-title-sort="**MIT 18.065: Matrix Methods in Data Analysis, Signal Processing, and Machine Learning**">
 <a href="./courses/mit-matrix-method.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./courses/images/mit-18065.png" class="thumbnail-image card-img" style="height: 250px;">
+<img loading="lazy" src="./courses/images/mit-18065.png" class="thumbnail-image card-img" style="height: 270px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 <strong>MIT 18.065: Matrix Methods in Data Analysis, Signal Processing, and Machine Learning</strong>
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TWF0aGVtYXRpY3M='); return false;">
-Mathematics
+<div class="listing-category" onclick="window.quartoListingCategory('JUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThG'); return false;">
+⭐️⭐️⭐️⭐️
+</div>
+</div>
+<div class="card-text listing-description">
+MIT’s <strong>18.065 Matrix Methods in Data Analysis, Signal Processing, and Machine Learning</strong> is an applied mathematics course that explores the **use of matrix algebra in data…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+MIT
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="JUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThG" data-listing-file-modified-sort="1741094234012" data-listing-reading-time-sort="2" data-listing-word-count-sort="218" data-listing-title-sort="**MIT 18.S096: Matrix Calculus For Machine Learning And Beyond**">
+<a href="./courses/mit-matrix-calculus.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/mit-matrix-calculus.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>MIT 18.S096: Matrix Calculus For Machine Learning And Beyond</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('JUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThGJUUyJUFEJTkwJUVGJUI4JThG'); return false;">
+⭐️⭐️⭐️
+</div>
+</div>
+<div class="card-text listing-description">
+MIT’s <strong>18.S096 Matrix Calculus for Machine Learning and Beyond</strong> is an advanced mathematics course designed to provide a <strong>deep understanding of matrix calculus</strong> and its…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741079326413" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**Stanford CS109: Probability for Computer Scientists**">
+<a href="./courses/stanford-prob.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/stanford-prob.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>Stanford CS109: Probability for Computer Scientists</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="6" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741076098243" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**CMU 10-708: Probabilistic Graphical Models**">
+<a href="./courses/cmu-pgm.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/cmu-pgm.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>CMU 10-708: Probabilistic Graphical Models</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="7" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741076021222" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**CMU 10-725: Convex Optimization**">
+<a href="./courses/cmu-convexoptimization.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/cmu-convex.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>CMU 10-725: Convex Optimization</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="8" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741088441174" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**MIT RES.18-009: Learn Differential Equations: Up Close With Gilbert Strang And Cleve Moler**">
+<a href="./courses/mit-ds.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/mit-de.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>MIT RES.18-009: Learn Differential Equations: Up Close With Gilbert Strang And Cleve Moler</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="computer-basics-algorithms" class="level1">
+<h1>Computer Basics &amp; Algorithms</h1>
+<div id="listing-Computer-Algorithms" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741089447142" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**UCB CS 61A: Structure and Interpretation of Computer Programs**">
+<a href="./courses/ucb-cs61a.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/ucb-cs61a.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title" data-anchor-id="computer-basics-algorithms">
+<strong>UCB CS 61A: Structure and Interpretation of Computer Programs</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741076722400" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**MIT 6.006: Introduction To Algorithms**">
+<a href="./courses/mit-algorithms.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/mit-algorithms.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>MIT 6.006: Introduction To Algorithms</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741079292676" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**MIT 6.854/18.415J: Advanced Algorithms**">
+<a href="./courses/mit-aalg.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/mit-aalg.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>MIT 6.854/18.415J: Advanced Algorithms</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
 </div>
 </div>
 <div class="card-text listing-description">
@@ -252,11 +941,361 @@ MIT
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741030250720" data-listing-reading-time-sort="1" data-listing-word-count-sort="2" data-listing-title-sort="**MIT 6.5940: TinyML and Efficient Deep Learning Computing**">
+<div class="g-col-1" data-index="3" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741076663459" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**UCB CS170: Efficient Algorithms and Intractable Problems**">
+<a href="./courses/ucb-algorithms.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/ucb-algorithms.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>UCB CS170: Efficient Algorithms and Intractable Problems</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741089550089" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**CMU 15-213: Introduction to Computer Systems**">
+<a href="./courses/cmu-os.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/cmu-os.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>CMU 15-213: Introduction to Computer Systems</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+CMU
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741079613797" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**Stanford CS149: Parallel Computing**">
+<a href="./courses/stanford-parallel-computing.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/stanford-pc.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>Stanford CS149: Parallel Computing</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="introduction-to-ai" class="level1">
+<h1>Introduction to AI</h1>
+<div id="listing-intro-ai" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741088610749" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**UCB CS188: Introduction to Artificial Intelligence **">
+<a href="./courses/ucb-intro-ai.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/ucb-introai.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title" data-anchor-id="introduction-to-ai">
+<strong>UCB CS188: Introduction to Artificial Intelligence </strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741088828593" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**Stanford CS221: Artificial Intelligence: Principles and Techniques**">
+<a href="./courses/stanford-intro-ai.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/stanford-introai.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>Stanford CS221: Artificial Intelligence: Principles and Techniques</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="machine-learning-deep-learning-basic" class="level1">
+<h1>Machine Learning &amp; Deep Learning Basic</h1>
+<div id="listing-Deep-Learning" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741077321624" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**Coursera: Machine Learning Specialization**">
+<a href="./courses/coursera-ml.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/coursera-ml.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title" data-anchor-id="machine-learning-deep-learning-basic">
+<strong>Coursera: Machine Learning Specialization</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741077361469" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**Coursera: Deep Learning Specialization**">
+<a href="./courses/coursera-dl.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/coursera-dl.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>Coursera: Deep Learning Specialization</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741078426657" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**CS4780: Machine Learning for Intelligent Systems**">
+<a href="./courses/cornell-ml.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/cornell-ml.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>CS4780: Machine Learning for Intelligent Systems</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741075600378" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**Stanford CS229: Machine Learning**">
+<a href="./courses/stanford-ml.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/stanford-ml.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>Stanford CS229: Machine Learning</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741075909421" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**UCB CS182/282A: Designing, Visualizing and Understanding Deep Neural Networks**">
+<a href="./courses/ucb-dl.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/ucb-dl.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>UCB CS182/282A: Designing, Visualizing and Understanding Deep Neural Networks</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741076193140" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**CMU 11-785: Introduction to Deep Learning**">
+<a href="./courses/cmu-dl.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/cmu-dl.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>CMU 11-785: Introduction to Deep Learning</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+CMU
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="6" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741030250720" data-listing-reading-time-sort="1" data-listing-word-count-sort="2" data-listing-title-sort="**MIT 6.5940: TinyML and Efficient Deep Learning Computing**">
 <a href="./courses/mit-tinyML.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./courses/images/mit-65940.png" class="thumbnail-image card-img" style="height: 250px;">
+<img loading="lazy" src="./courses/images/mit-65940.png" class="thumbnail-image card-img" style="height: 270px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -282,15 +1321,27 @@ MIT
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741030318688" data-listing-reading-time-sort="1" data-listing-word-count-sort="2" data-listing-title-sort="**UCB CS285: Deep Reinforcement Learning**">
-<a href="./courses/ucb-cs285-drl.html" class="quarto-grid-link">
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="applications" class="level1">
+<h1>Applications</h1>
+<section id="computer-vision" class="level2">
+<h2 class="anchored" data-anchor-id="computer-vision">Computer Vision</h2>
+<div id="listing-CV" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741077418410" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**CS231n: Deep Learning for Computer Vision**">
+<a href="./courses/stanford-cv.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./courses/images/ucb-cs285.png" class="thumbnail-image card-img" style="height: 250px;">
+<img loading="lazy" src="./courses/images/stanford-cv.png" class="thumbnail-image card-img" style="height: 270px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-<strong>UCB CS285: Deep Reinforcement Learning</strong>
+<strong>CS231n: Deep Learning for Computer Vision</strong>
 </h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
@@ -305,7 +1356,107 @@ In this blog, I am going to summary the 5 most common generative models: Auto-Re
 </div>
 <div class="card-attribution card-text-small start">
 <div class="listing-author">
-UCB
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="natural-language-processing" class="level2">
+<h2 class="anchored" data-anchor-id="natural-language-processing">Natural Language Processing</h2>
+<div id="listing-NLP" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741088960260" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**Stanford CS224N: Natural Language Processing with Deep Learning**">
+<a href="./courses/stanford-nlp.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/stanford-nlp.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>Stanford CS224N: Natural Language Processing with Deep Learning</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741077641988" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**CMU 11-711: Advanced NLP**">
+<a href="./courses/cmu-anlp.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/cmu-anlp.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>CMU 11-711: Advanced NLP</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741077766533" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**CMU 11-667:Large Language Models: Methods and Applications**">
+<a href="./courses/cmu-llm.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/cmu-llm.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>CMU 11-667:Large Language Models: Methods and Applications</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
 </div>
 </div>
 </div>
@@ -316,7 +1467,7 @@ UCB
 <a href="./courses/ucb-llm-agent.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./courses/images/ucb-cs294.png" class="thumbnail-image card-img" style="height: 250px;">
+<img loading="lazy" src="./courses/images/ucb-cs294.png" class="thumbnail-image card-img" style="height: 270px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -346,7 +1497,7 @@ UCB
 <a href="./courses/ucb-llm-agent2.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./courses/images/ucb-cs294-allm.png" class="thumbnail-image card-img" style="height: 250px;">
+<img loading="lazy" src="./courses/images/ucb-cs294-allm.png" class="thumbnail-image card-img" style="height: 270px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -376,7 +1527,829 @@ UCB
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div></main> <!-- /main -->
+</div>
+</section>
+<section id="reinforcement-learning-robotics" class="level2">
+<h2 class="anchored" data-anchor-id="reinforcement-learning-robotics">Reinforcement Learning &amp; Robotics</h2>
+<div id="listing-RL" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741075081411" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**Stanford CS234: Reinforcement Learning**">
+<a href="./courses/stanford-rl.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/stanford-rl.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>Stanford CS234: Reinforcement Learning</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741075909421" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**UCB CS182/282A: Designing, Visualizing and Understanding Deep Neural Networks**">
+<a href="./courses/ucb-dl.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/ucb-dl.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>UCB CS182/282A: Designing, Visualizing and Understanding Deep Neural Networks</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="generative-models" class="level2">
+<h2 class="anchored" data-anchor-id="generative-models">Generative Models</h2>
+<div id="listing-Generative" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741076413678" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**Stanford CS236: Deep Generative Models**">
+<a href="./courses/stanford-dgm.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/stanford-dgm.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>Stanford CS236: Deep Generative Models</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741076549535" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**UCB CS294-158: Deep Unsupervised Learning**">
+<a href="./courses/ucb-unsupervised.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/ucb-dul.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>UCB CS294-158: Deep Unsupervised Learning</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="others" class="level2">
+<h2 class="anchored" data-anchor-id="others">Others</h2>
+<div id="listing-Others" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741075170681" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**Stanford CS224W: Machine Learning with Graphs**">
+<a href="./courses/stanford-graph.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/stanford-graph.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>Stanford CS224W: Machine Learning with Graphs</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741075108745" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**Stanford CS 330: Deep Multi-Task and Meta Learning**">
+<a href="./courses/stanford-meta.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/stanford-meta.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>Stanford CS 330: Deep Multi-Task and Meta Learning</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741076347121" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**CMU 11-777: MultiModal Machine Learning**">
+<a href="./courses/cmu-mml.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/cmu-mml.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>CMU 11-777: MultiModal Machine Learning</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741089186507" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**Stanford CS246: Mining Massive Data Sets**">
+<a href="./courses/stanford-massive.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/stanford-massive.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>Stanford CS246: Mining Massive Data Sets</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+</section>
+<section id="mldl-system-hardware" class="level1">
+<h1>ML/DL System &amp; Hardware</h1>
+<div id="listing-Hardware" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741077493108" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**CMU 11-714: Deep Learning Systems**">
+<a href="./courses/cmu-dls.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/cmu-dls.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title" data-anchor-id="mldl-system-hardware">
+<strong>CMU 11-714: Deep Learning Systems</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741077544089" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**CMU 15-849: Machine Learning Systems**">
+<a href="./courses/cmu-mls.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/cmu-mls.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>CMU 15-849: Machine Learning Systems</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741077704199" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**CMU 11-868: Large Language Model Systems**">
+<a href="./courses/cmu-llms.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/cmu-llms.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>CMU 11-868: Large Language Model Systems</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741077865524" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**CS 5775: Machine Learning Hardware and Systems**">
+<a href="./courses/cornell-mlh.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/cornell-mlhs.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>CS 5775: Machine Learning Hardware and Systems</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="Tk4lMkNCYXNpYw==" data-listing-file-modified-sort="1741077958413" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="**GPU Mode**">
+<a href="./courses/gpu-mode.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./courses/images/gpu-mode.png" class="thumbnail-image card-img" style="height: 270px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>GPU Mode</strong>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tk4='); return false;">
+NN
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmFzaWM='); return false;">
+Basic
+</div>
+</div>
+<div class="card-text listing-description">
+In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Stanford
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="other-resources" class="level1">
+<h1>Other Resources</h1>
+<section id="youtuber" class="level2">
+<h2 class="anchored" data-anchor-id="youtuber">Youtuber</h2>
+<div id="listing-Youtube" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-left" data-index="0">
+<div class="thumbnail">
+<p><a href="https://www.youtube.com/@Eigensteve" class="no-external"></a></p><a href="https://www.youtube.com/@Eigensteve" class="no-external">
+<p><img loading="lazy" src="./reourece-images/youtube-steve-brunton.png" class="thumbnail-image"></p>
+</a><p><a href="https://www.youtube.com/@Eigensteve" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="https://www.youtube.com/@Eigensteve" class="no-external"><strong>Steve Brunton</strong></a>
+</h3>
+<div class="listing-subtitle">
+<a href="https://www.youtube.com/@Eigensteve" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="https://www.youtube.com/@Eigensteve" class="no-external">MIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="https://www.youtube.com/@Eigensteve" class="no-external"></a></p><a href="https://www.youtube.com/@Eigensteve" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="1">
+<div class="thumbnail">
+<p><a href="https://www.youtube.com/@AndrejKarpathy" class="no-external"></a></p><a href="https://www.youtube.com/@AndrejKarpathy" class="no-external">
+<p><img loading="lazy" src="./reourece-images/youtube-Andrej.png" class="thumbnail-image"></p>
+</a><p><a href="https://www.youtube.com/@AndrejKarpathy" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="https://www.youtube.com/@AndrejKarpathy" class="no-external"><strong>Andrej Karpathy</strong></a>
+</h3>
+<div class="listing-subtitle">
+<a href="https://www.youtube.com/@AndrejKarpathy" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="https://www.youtube.com/@AndrejKarpathy" class="no-external">MIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="https://www.youtube.com/@AndrejKarpathy" class="no-external"></a></p><a href="https://www.youtube.com/@AndrejKarpathy" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="2">
+<div class="thumbnail">
+<p><a href="https://www.youtube.com/@3blue1brown" class="no-external"></a></p><a href="https://www.youtube.com/@3blue1brown" class="no-external">
+<p><img loading="lazy" src="./reourece-images/youtube-3b1b.png" class="thumbnail-image"></p>
+</a><p><a href="https://www.youtube.com/@3blue1brown" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="https://www.youtube.com/@3blue1brown" class="no-external"><strong>3Blue1Brown</strong></a>
+</h3>
+<div class="listing-subtitle">
+<a href="https://www.youtube.com/@3blue1brown" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="https://www.youtube.com/@3blue1brown" class="no-external">MIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="https://www.youtube.com/@3blue1brown" class="no-external"></a></p><a href="https://www.youtube.com/@3blue1brown" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="3">
+<div class="thumbnail">
+<p><a href="https://www.youtube.com/@statquest" class="no-external"></a></p><a href="https://www.youtube.com/@statquest" class="no-external">
+<p><img loading="lazy" src="./reourece-images/youtube-stats.png" class="thumbnail-image"></p>
+</a><p><a href="https://www.youtube.com/@statquest" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="https://www.youtube.com/@statquest" class="no-external"><strong>StatQuest with Josh Starmer</strong></a>
+</h3>
+<div class="listing-subtitle">
+<a href="https://www.youtube.com/@statquest" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="https://www.youtube.com/@statquest" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="https://www.youtube.com/@statquest" class="no-external"></a></p><a href="https://www.youtube.com/@statquest" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="4">
+<div class="thumbnail">
+<p><a href="https://www.youtube.com/@lexfridman" class="no-external"></a></p><a href="https://www.youtube.com/@lexfridman" class="no-external">
+<p><img loading="lazy" src="./reourece-images/youtube-lex.png" class="thumbnail-image"></p>
+</a><p><a href="https://www.youtube.com/@lexfridman" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="https://www.youtube.com/@lexfridman" class="no-external"><strong>Lex Fridman</strong></a>
+</h3>
+<div class="listing-subtitle">
+<a href="https://www.youtube.com/@lexfridman" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="https://www.youtube.com/@lexfridman" class="no-external">MIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="https://www.youtube.com/@lexfridman" class="no-external"></a></p><a href="https://www.youtube.com/@lexfridman" class="no-external">
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="blogs" class="level2">
+<h2 class="anchored" data-anchor-id="blogs">Blogs</h2>
+<div id="listing-blogs" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-left" data-index="0">
+<div class="thumbnail">
+<p><a href="https://lilianweng.github.io" class="no-external"></a></p><a href="https://lilianweng.github.io" class="no-external">
+<p><img loading="lazy" src="./reourece-images/blog-lili.png" class="thumbnail-image"></p>
+</a><p><a href="https://lilianweng.github.io" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="https://lilianweng.github.io" class="no-external"><strong>Lil’Log</strong></a>
+</h3>
+<div class="listing-subtitle">
+<a href="https://lilianweng.github.io" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="https://lilianweng.github.io" class="no-external">MIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="https://lilianweng.github.io" class="no-external"></a></p><a href="https://lilianweng.github.io" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="1">
+<div class="thumbnail">
+<p><a href="https://www.realworldml.net/blog" class="no-external"></a></p><a href="https://www.realworldml.net/blog" class="no-external">
+<p><img loading="lazy" src="./reourece-images/blog-rwml.png" class="thumbnail-image"></p>
+</a><p><a href="https://www.realworldml.net/blog" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="https://www.realworldml.net/blog" class="no-external"><strong>The Real-World ML Blog</strong></a>
+</h3>
+<div class="listing-subtitle">
+<a href="https://www.realworldml.net/blog" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="https://www.realworldml.net/blog" class="no-external">MIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="https://www.realworldml.net/blog" class="no-external"></a></p><a href="https://www.realworldml.net/blog" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="2">
+<div class="thumbnail">
+<p><a href="https://huggingface.co/papers" class="no-external"></a></p><a href="https://huggingface.co/papers" class="no-external">
+<p><img loading="lazy" src="./reourece-images/blog-hg.png" class="thumbnail-image"></p>
+</a><p><a href="https://huggingface.co/papers" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="https://huggingface.co/papers" class="no-external"><strong>Hugging Face Daily Paper</strong></a>
+</h3>
+<div class="listing-subtitle">
+<a href="https://huggingface.co/papers" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="https://huggingface.co/papers" class="no-external">MIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="https://huggingface.co/papers" class="no-external"></a></p><a href="https://huggingface.co/papers" class="no-external">
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="books" class="level2">
+<h2 class="anchored" data-anchor-id="books">Books</h2>
+<div id="listing-books" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-left" data-index="0">
+<div class="thumbnail">
+<p><a href="https://link.springer.com/book/9780387310732" class="no-external"></a></p><a href="https://link.springer.com/book/9780387310732" class="no-external">
+<p><img loading="lazy" src="./reourece-images/book-prml.png" class="thumbnail-image"></p>
+</a><p><a href="https://link.springer.com/book/9780387310732" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="https://link.springer.com/book/9780387310732" class="no-external"><strong>Pattern Recognition and Machine Learning</strong></a>
+</h3>
+<div class="listing-subtitle">
+<a href="https://link.springer.com/book/9780387310732" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="https://link.springer.com/book/9780387310732" class="no-external">MIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="https://link.springer.com/book/9780387310732" class="no-external"></a></p><a href="https://link.springer.com/book/9780387310732" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="1">
+<div class="thumbnail">
+<p><a href="https://www.bishopbook.com" class="no-external"></a></p><a href="https://www.bishopbook.com" class="no-external">
+<p><img loading="lazy" src="./reourece-images/book-dlfc.png" class="thumbnail-image"></p>
+</a><p><a href="https://www.bishopbook.com" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="https://www.bishopbook.com" class="no-external"><strong>Deep Learning: Foundations and Concepts</strong></a>
+</h3>
+<div class="listing-subtitle">
+<a href="https://www.bishopbook.com" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="https://www.bishopbook.com" class="no-external">MIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="https://www.bishopbook.com" class="no-external"></a></p><a href="https://www.bishopbook.com" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="2">
+<div class="thumbnail">
+<p><a href="https://probml.github.io/pml-book/book1.html" class="no-external"></a></p><a href="https://probml.github.io/pml-book/book1.html" class="no-external">
+<p><img loading="lazy" src="./reourece-images/book-rml-a.png" class="thumbnail-image"></p>
+</a><p><a href="https://probml.github.io/pml-book/book1.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="https://probml.github.io/pml-book/book1.html" class="no-external"><strong>Probabilistic Machine Learning: An Introduction</strong></a>
+</h3>
+<div class="listing-subtitle">
+<a href="https://probml.github.io/pml-book/book1.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="https://probml.github.io/pml-book/book1.html" class="no-external">MIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="https://probml.github.io/pml-book/book1.html" class="no-external"></a></p><a href="https://probml.github.io/pml-book/book1.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="3">
+<div class="thumbnail">
+<p><a href="https://probml.github.io/pml-book/book2.html" class="no-external"></a></p><a href="https://probml.github.io/pml-book/book2.html" class="no-external">
+<p><img loading="lazy" src="./reourece-images/book-pml-b.png" class="thumbnail-image"></p>
+</a><p><a href="https://probml.github.io/pml-book/book2.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="https://probml.github.io/pml-book/book2.html" class="no-external"><strong>Probabilistic Machine Learning: Advanced Topics</strong></a>
+</h3>
+<div class="listing-subtitle">
+<a href="https://probml.github.io/pml-book/book2.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="https://probml.github.io/pml-book/book2.html" class="no-external">MIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="https://probml.github.io/pml-book/book2.html" class="no-external"></a></p><a href="https://probml.github.io/pml-book/book2.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="4">
+<div class="thumbnail">
+<p><a href="https://mml-book.github.io" class="no-external"></a></p><a href="https://mml-book.github.io" class="no-external">
+<p><img loading="lazy" src="./reourece-images/book-mml.png" class="thumbnail-image"></p>
+</a><p><a href="https://mml-book.github.io" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="https://mml-book.github.io" class="no-external"><strong>Mathematics for Machine Learning</strong></a>
+</h3>
+<div class="listing-subtitle">
+<a href="https://mml-book.github.io" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="https://mml-book.github.io" class="no-external">MIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="https://mml-book.github.io" class="no-external"></a></p><a href="https://mml-book.github.io" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="5">
+<div class="thumbnail">
+<p><a href="https://aima.cs.berkeley.edu" class="no-external"></a></p><a href="https://aima.cs.berkeley.edu" class="no-external">
+<p><img loading="lazy" src="./reourece-images/book-aiama.png" class="thumbnail-image"></p>
+</a><p><a href="https://aima.cs.berkeley.edu" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="https://aima.cs.berkeley.edu" class="no-external"><strong>Artificial Intelligence: A Modern Approach</strong></a>
+</h3>
+<div class="listing-subtitle">
+<a href="https://aima.cs.berkeley.edu" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="https://aima.cs.berkeley.edu" class="no-external">MIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="https://aima.cs.berkeley.edu" class="no-external"></a></p><a href="https://aima.cs.berkeley.edu" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="6">
+<div class="thumbnail">
+<p><a href="https://link.springer.com/book/10.1007/978-3-030-40344-7" class="no-external"></a></p><a href="https://link.springer.com/book/10.1007/978-3-030-40344-7" class="no-external">
+<p><img loading="lazy" src="./reourece-images/book-laoml.png" class="thumbnail-image"></p>
+</a><p><a href="https://link.springer.com/book/10.1007/978-3-030-40344-7" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="https://link.springer.com/book/10.1007/978-3-030-40344-7" class="no-external"><strong>Linear Algebra and Optimization for Machine Learning: A Textbook</strong></a>
+</h3>
+<div class="listing-subtitle">
+<a href="https://link.springer.com/book/10.1007/978-3-030-40344-7" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="https://link.springer.com/book/10.1007/978-3-030-40344-7" class="no-external">MIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="https://link.springer.com/book/10.1007/978-3-030-40344-7" class="no-external"></a></p><a href="https://link.springer.com/book/10.1007/978-3-030-40344-7" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="7">
+<div class="thumbnail">
+<p><a href="https://link.springer.com/book/10.1007/978-3-642-20192-9" class="no-external"></a></p><a href="https://link.springer.com/book/10.1007/978-3-642-20192-9" class="no-external">
+<p><img loading="lazy" src="./reourece-images/book-shdd.png" class="thumbnail-image"></p>
+</a><p><a href="https://link.springer.com/book/10.1007/978-3-642-20192-9" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="https://link.springer.com/book/10.1007/978-3-642-20192-9" class="no-external"><strong>Statistics for High-Dimensional Data</strong></a>
+</h3>
+<div class="listing-subtitle">
+<a href="https://link.springer.com/book/10.1007/978-3-642-20192-9" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="https://link.springer.com/book/10.1007/978-3-642-20192-9" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="https://link.springer.com/book/10.1007/978-3-642-20192-9" class="no-external"></a></p><a href="https://link.springer.com/book/10.1007/978-3-642-20192-9" class="no-external">
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

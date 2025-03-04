@@ -4,7 +4,7 @@
     "href": "resource.html",
     "title": "Resources",
     "section": "",
-    "text": "MIT 18.065: Matrix Methods in Data Analysis, Signal Processing, and Machine Learning\n\n\n\nMathematics\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nMIT\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMIT 6.5940: TinyML and Efficient Deep Learning Computing\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nMIT\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUCB CS285: Deep Reinforcement Learning\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nUCB\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUCB CS294/194-196 Large Language Model Agents\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nUCB\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUCB CS294/194-196: Advanced Large Language Model Agents\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nUCB\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "THis is is some content about mathematics\n\n\n\n\n\n\n\n\n\n\n\n\n⭐️⭐️⭐️⭐️⭐️\n\n\n\nMIT’s 18.01 Single Variable Calculus is a foundational mathematics course covering differential and integral calculus. It focuses on the fundamental concepts of…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n⭐️⭐️⭐️⭐️⭐️\n\n\n\nMIT’s 18.02 Multivariable Calculus extends the principles of single-variable calculus to functions of multiple variables. It introduces partial derivatives, *multiple…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n⭐️⭐️⭐️⭐️⭐️\n\n\n\nMIT’s 18.06 Linear Algebra is a foundational course that explores the fundamental concepts of vectors, matrices, determinants, eigenvalues, and linear transformations.…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n⭐️⭐️⭐️⭐️\n\n\n\nMIT’s 18.065 Matrix Methods in Data Analysis, Signal Processing, and Machine Learning is an applied mathematics course that explores the **use of matrix algebra in data…\n\n\n\nMIT\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n⭐️⭐️⭐️\n\n\n\nMIT’s 18.S096 Matrix Calculus for Machine Learning and Beyond is an advanced mathematics course designed to provide a deep understanding of matrix calculus and its…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -439,5 +439,418 @@
     "title": "UCB CS285: Deep Reinforcement Learning",
     "section": "",
     "text": "Course Link"
+  },
+  {
+    "objectID": "resource.html#lab-reports",
+    "href": "resource.html#lab-reports",
+    "title": "Resources",
+    "section": "",
+    "text": "NN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMathematics\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nMIT\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "resource.html#meeting-notes",
+    "href": "resource.html#meeting-notes",
+    "title": "Resources",
+    "section": "",
+    "text": "Mathematics\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMathematics\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "courses/mit-flow-mathcing.html",
+    "href": "courses/mit-flow-mathcing.html",
+    "title": "MIT 6.S184: Introduction to Flow Matching and Diffusion Models",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/mit-diffusionmodel.html",
+    "href": "courses/mit-diffusionmodel.html",
+    "title": "MIT 6.S183: A Practical Introduction to Diffusion Models",
+    "section": "",
+    "text": "Course Link"
+  },
+  {
+    "objectID": "courses/mit-datacentric.html",
+    "href": "courses/mit-datacentric.html",
+    "title": "MIT Introduction to Data-Centric AI",
+    "section": "",
+    "text": "Course Link"
+  },
+  {
+    "objectID": "courses/stanford-graph.html",
+    "href": "courses/stanford-graph.html",
+    "title": "Stanford CS224W: Machine Learning with Graphs",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/stanford-rl.html",
+    "href": "courses/stanford-rl.html",
+    "title": "Stanford CS234: Reinforcement Learning",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/stanford-meta.html",
+    "href": "courses/stanford-meta.html",
+    "title": "Stanford CS 330: Deep Multi-Task and Meta Learning",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/cmu-dl.html",
+    "href": "courses/cmu-dl.html",
+    "title": "CMU 11-785: Introduction to Deep Learning",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/ucb-dl.html",
+    "href": "courses/ucb-dl.html",
+    "title": "UCB CS182/282A: Designing, Visualizing and Understanding Deep Neural Networks",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/cmu-convexoptimization.html",
+    "href": "courses/cmu-convexoptimization.html",
+    "title": "CMU 10-725: Convex Optimization",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/cmu-pgm.html",
+    "href": "courses/cmu-pgm.html",
+    "title": "CMU 10-708: Probabilistic Graphical Models",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/stanford-ml.html",
+    "href": "courses/stanford-ml.html",
+    "title": "Stanford CS229: Machine Learning",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/hdp.html",
+    "href": "courses/hdp.html",
+    "title": "High-Dimensional Probability and Applications in Data Science",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/stanford-cv.html",
+    "href": "courses/stanford-cv.html",
+    "title": "CS231n: Deep Learning for Computer Vision",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/cmu-llms.html",
+    "href": "courses/cmu-llms.html",
+    "title": "CMU 11-868: Large Language Model Systems",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/mit-aalg.html",
+    "href": "courses/mit-aalg.html",
+    "title": "MIT 6.854/18.415J: Advanced Algorithms",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/cornell-mlh.html",
+    "href": "courses/cornell-mlh.html",
+    "title": "CS 5775: Machine Learning Hardware and Systems",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/cmu-dls.html",
+    "href": "courses/cmu-dls.html",
+    "title": "CMU 11-714: Deep Learning Systems",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/stanford-dgm.html",
+    "href": "courses/stanford-dgm.html",
+    "title": "Stanford CS236: Deep Generative Models",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/ucb-unsupervised.html",
+    "href": "courses/ucb-unsupervised.html",
+    "title": "UCB CS294-158: Deep Unsupervised Learning",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/cmu-mml.html",
+    "href": "courses/cmu-mml.html",
+    "title": "CMU 11-777: MultiModal Machine Learning",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/coursera-dl.html",
+    "href": "courses/coursera-dl.html",
+    "title": "Coursera: Deep Learning Specialization",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/stanford-prob.html",
+    "href": "courses/stanford-prob.html",
+    "title": "Stanford CS109: Probability for Computer Scientists",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/ucb-algorithms.html",
+    "href": "courses/ucb-algorithms.html",
+    "title": "UCB CS170: Efficient Algorithms and Intractable Problems",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/cmu-llm.html",
+    "href": "courses/cmu-llm.html",
+    "title": "CMU 11-667:Large Language Models: Methods and Applications",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/cmu-anlp.html",
+    "href": "courses/cmu-anlp.html",
+    "title": "CMU 11-711: Advanced NLP",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/coursera-ml.html",
+    "href": "courses/coursera-ml.html",
+    "title": "Coursera: Machine Learning Specialization",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/gpu-mode.html",
+    "href": "courses/gpu-mode.html",
+    "title": "GPU Mode",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/mit-algorithms.html",
+    "href": "courses/mit-algorithms.html",
+    "title": "MIT 6.006: Introduction To Algorithms",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/cmu-mls.html",
+    "href": "courses/cmu-mls.html",
+    "title": "CMU 15-849: Machine Learning Systems",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "resource.html#computer-vision",
+    "href": "resource.html#computer-vision",
+    "title": "Resources",
+    "section": "Computer Vision",
+    "text": "Computer Vision\n\n\n\n\n\n\n\n\n\n\nCS231n: Deep Learning for Computer Vision\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "resource.html#natural-language-processing",
+    "href": "resource.html#natural-language-processing",
+    "title": "Resources",
+    "section": "Natural Language Processing",
+    "text": "Natural Language Processing\n\n\n\n\n\n\n\n\n\n\nStanford CS224N: Natural Language Processing with Deep Learning\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCMU 11-711: Advanced NLP\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCMU 11-667:Large Language Models: Methods and Applications\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUCB CS294/194-196 Large Language Model Agents\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nUCB\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUCB CS294/194-196: Advanced Large Language Model Agents\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nUCB\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "resource.html#reinforcement-learning-robotics",
+    "href": "resource.html#reinforcement-learning-robotics",
+    "title": "Resources",
+    "section": "Reinforcement Learning & Robotics",
+    "text": "Reinforcement Learning & Robotics\n\n\n\n\n\n\n\n\n\n\nStanford CS234: Reinforcement Learning\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUCB CS182/282A: Designing, Visualizing and Understanding Deep Neural Networks\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "resource.html#generative-models",
+    "href": "resource.html#generative-models",
+    "title": "Resources",
+    "section": "Generative Models",
+    "text": "Generative Models\n\n\n\n\n\n\n\n\n\n\nStanford CS236: Deep Generative Models\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUCB CS294-158: Deep Unsupervised Learning\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "resource.html#others",
+    "href": "resource.html#others",
+    "title": "Resources",
+    "section": "Others",
+    "text": "Others\n\n\n\n\n\n\n\n\n\n\nStanford CS224W: Machine Learning with Graphs\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStanford CS 330: Deep Multi-Task and Meta Learning\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCMU 11-777: MultiModal Machine Learning\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStanford CS246: Mining Massive Data Sets\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "courses/cornell-ml.html",
+    "href": "courses/cornell-ml.html",
+    "title": "CS4780: Machine Learning for Intelligent Systems",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "resource.html#hardware",
+    "href": "resource.html#hardware",
+    "title": "Resources",
+    "section": "Hardware",
+    "text": "Hardware\n\n\n\n\n\n\n\n\n\n\nCMU 11-714: Deep Learning Systems\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCMU 11-868: Large Language Model Systems\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCMU 15-849: Machine Learning Systems\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCS 5775: Machine Learning Hardware and Systems\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGPU Mode\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "courses/mit-la.html",
+    "href": "courses/mit-la.html",
+    "title": "MIT 18.06: Linear Algebra",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/stanford-parallel-computing.html",
+    "href": "courses/stanford-parallel-computing.html",
+    "title": "Stanford CS149: Parallel Computing",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/mit-matrix-calculus.html",
+    "href": "courses/mit-matrix-calculus.html",
+    "title": "MIT 18.S096: Matrix Calculus For Machine Learning And Beyond",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/mit-calculus1.html",
+    "href": "courses/mit-calculus1.html",
+    "title": "MIT 18.01: Single Variable Calculus",
+    "section": "",
+    "text": "Course Link"
+  },
+  {
+    "objectID": "courses/mit-calculus2.html",
+    "href": "courses/mit-calculus2.html",
+    "title": "MIT 18.02: Multivariable Calculus",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/ucb-intro-ai.html",
+    "href": "courses/ucb-intro-ai.html",
+    "title": "UCB CS188: Introduction to Artificial Intelligence ",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/stanford-intro-ai.html",
+    "href": "courses/stanford-intro-ai.html",
+    "title": "Stanford CS221: Artificial Intelligence: Principles and Techniques",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/mit-ds.html",
+    "href": "courses/mit-ds.html",
+    "title": "MIT RES.18-009: Learn Differential Equations: Up Close With Gilbert Strang And Cleve Moler",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/stanford-nlp.html",
+    "href": "courses/stanford-nlp.html",
+    "title": "Stanford CS224N: Natural Language Processing with Deep Learning",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "resource.html#youtube",
+    "href": "resource.html#youtube",
+    "title": "Resources",
+    "section": "Youtube",
+    "text": "Youtube\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Description\n        \n         \n          link\n        \n         \n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDescription\n\n\nlink\n\n\n \n\n\n\n\n\n\nMIT OpenCourseWare\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\nhttps://www.youtube.com/user/MIT\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "courses/ucb-cs61a.html",
+    "href": "courses/ucb-cs61a.html",
+    "title": "UCB CS 61A: Structure and Interpretation of Computer Programs",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/cmu-os.html",
+    "href": "courses/cmu-os.html",
+    "title": "CMU 15-213: Introduction to Computer Systems",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/stanford-massive.html",
+    "href": "courses/stanford-massive.html",
+    "title": "Stanford CS246: Mining Massive Data Sets",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "resource.html#youtuber",
+    "href": "resource.html#youtuber",
+    "title": "Resources",
+    "section": "Youtuber",
+    "text": "Youtuber\n\n\n\n\n\n\n\n\n\n\nSteve Brunton\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAndrej Karpathy\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3Blue1Brown\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStatQuest with Josh Starmer\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLex Fridman\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "resource.html#blogs",
+    "href": "resource.html#blogs",
+    "title": "Resources",
+    "section": "Blogs",
+    "text": "Blogs\n\n\n\n\n\n\n\n\n\n\nLil’Log\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Real-World ML Blog\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHugging Face Daily Paper\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "resource.html#books",
+    "href": "resource.html#books",
+    "title": "Resources",
+    "section": "Books",
+    "text": "Books\n\n\n\n\n\n\n\n\n\n\nPattern Recognition and Machine Learning\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Learning: Foundations and Concepts\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbabilistic Machine Learning: An Introduction\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbabilistic Machine Learning: Advanced Topics\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMathematics for Machine Learning\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nArtificial Intelligence: A Modern Approach\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinear Algebra and Optimization for Machine Learning: A Textbook\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStatistics for High-Dimensional Data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "courses/mit-calculus1.html#why-this-course",
+    "href": "courses/mit-calculus1.html#why-this-course",
+    "title": "MIT 18.01: Single Variable Calculus",
+    "section": "Why this course?",
+    "text": "Why this course?\n\nSingle Variable Calculus is one of the fundamental building blocks of AI and machine learning. Many key concepts in AI, such as gradient descent, optimization, and backpropagation, heavily rely on calculus principles.\nEssential for Understanding Optimization Algorithms\n\nMachine learning models are trained using optimization algorithms, which minimize loss functions.\nGradient Descent, the most widely used optimization technique, is based on derivatives to adjust model parameters.\nConvex functions and critical points help in finding optimal solutions.\n\nIntegral Calculus in Probabilistic Models\n\nMany AI models use probability distributions (e.g., Gaussian, Poisson, Exponential).\nIntegrals are needed to compute expectations, probabilities, and marginal distributions, essential in Bayesian statistics and deep learning.\n\nFoundations for Neural Networks & Deep Learning • Activation functions (e.g., Sigmoid, ReLU, Softmax) require differentiation. • Backpropagation, the core algorithm in neural networks, relies on chain rule differentiation to update weights."
+  },
+  {
+    "objectID": "courses/mit-calculus2.html#why-this-course",
+    "href": "courses/mit-calculus2.html#why-this-course",
+    "title": "MIT 18.02: Multivariable Calculus",
+    "section": "Why this course?",
+    "text": "Why this course?\n\nEssential for Machine Learning & Deep Learning • Many cost functions in deep learning involve multiple variables, requiring partial derivatives for optimization. • Gradient Descent in Higher Dimensions – In neural networks, weights are updated using gradients in multi-dimensional space. • Hessian Matrices & Second-Order Optimization – Used in advanced optimization algorithms like Newton’s method.\nFoundation for Probabilistic Machine Learning & Statistics • Multivariate Probability Distributions – Needed for Gaussian Mixture Models, Bayesian Inference, and Principal Component Analysis (PCA). • Expectation & Variance in Multiple Dimensions – Important for probabilistic AI models."
+  },
+  {
+    "objectID": "courses/mit-la.html#why-this-course",
+    "href": "courses/mit-la.html#why-this-course",
+    "title": "MIT 18.06: Linear Algebra",
+    "section": "Why this course?",
+    "text": "Why this course?\nAll operation in the world of AI is based on linear algebra. This course is a must for anyone who wants to understand the math behind AI.\n\nCore Foundation for Machine Learning and Deep Learning\n\nMachine learning models rely on matrix operations for training and prediction.\n\nNeural networks use weight matrices and activations that require linear transformations.\n\nGradient-based optimization techniques such as gradient descent involve matrix calculus.\n\nEssential for Dimensionality Reduction and Feature Engineering\n\nPrincipal Component Analysis (PCA) and Singular Value Decomposition (SVD) are used in data compression and feature extraction.\n\nLatent Semantic Analysis (LSA) in Natural Language Processing (NLP) relies on matrix factorization.\n\nOptimization and AI Model Training\n\nLeast Squares Regression and ridge regression are direct applications of orthogonal projections in vector spaces.\n\nMatrix calculus is necessary for computing gradients and optimizing model performance."
+  },
+  {
+    "objectID": "courses/mit-matrix-calculus.html#why-study-matrix-calculus-for-machine-learning",
+    "href": "courses/mit-matrix-calculus.html#why-study-matrix-calculus-for-machine-learning",
+    "title": "MIT 18.S096: Matrix Calculus For Machine Learning And Beyond",
+    "section": "Why Study Matrix Calculus for Machine Learning?",
+    "text": "Why Study Matrix Calculus for Machine Learning?\n\nEssential for Understanding Deep Learning\n\nBackpropagation, the core algorithm for training deep neural networks, relies on matrix differentiation.\n\nComputing gradients efficiently is necessary for updating model parameters using gradient descent.\n\nCrucial for Optimization and Training AI Models\n\nOptimization algorithms such as SGD, Adam, and Newton’s method require an understanding of matrix gradients.\n\nHessian matrices improve convergence rates in second-order optimization techniques.\n\nFoundational for Probabilistic Models and Variational Inference\n\nMany probabilistic models involve matrix calculus for deriving gradients of likelihood functions.\n\nGaussian Processes, Bayesian Neural Networks, and Expectation-Maximization (EM) algorithms rely on matrix derivatives.\n\nKey for Natural Language Processing and Transformer Models\n\nWord embeddings, self-attention mechanisms, and transformer architectures depend on efficient computation of matrix derivatives.\n\nUnderstanding Jacobian and Hessian computations helps in designing stable and efficient NLP models.\n\nApplied in Reinforcement Learning and Robotics\n\nPolicy gradients in reinforcement learning require differentiation of expectation functions.\n\nControl systems and robotics involve matrix calculus for trajectory optimization and system modeling."
+  },
+  {
+    "objectID": "courses/mit-matrix-method.html#why-study-matrix-methods-for-data-analysis-and-machine-learning",
+    "href": "courses/mit-matrix-method.html#why-study-matrix-methods-for-data-analysis-and-machine-learning",
+    "title": "MIT 18.065: Matrix Methods in Data Analysis, Signal Processing, and Machine Learning",
+    "section": "Why Study Matrix Methods for Data Analysis and Machine Learning?",
+    "text": "Why Study Matrix Methods for Data Analysis and Machine Learning?\n\nEssential for High-Dimensional Data Analysis\n\nPrincipal Component Analysis (PCA) and SVD help in reducing dimensionality and extracting meaningful insights from large datasets.\n\nEigenvalue decomposition and low-rank approximations are widely used in exploratory data analysis.\n\nCrucial for Machine Learning and AI Optimization\n\n\n\nLeast squares regression is a fundamental method in supervised learning and optimization.\n\nMany ML algorithms, including kernel methods, support vector machines, and deep learning architectures, rely on matrix factorization techniques.\n\n\nKey for Signal Processing and Image Recognition\n\nFourier transforms and wavelets are used in speech processing, medical imaging, and object recognition.\n\nLow-rank matrix approximations improve efficiency in compressing high-dimensional signals.\n\nApplied in Graph Learning and Network Analysis\n\nSpectral clustering and graph embeddings use matrix methods to analyze social networks and biological datasets.\n\nEigenvalues and adjacency matrices play a role in recommendation systems, fraud detection, and NLP applications.\n\nSupports Scalable and Computationally Efficient AI Systems\n\nMany big data applications rely on fast matrix decompositions for computational efficiency.\n\nOptimization in neural networks is enhanced by understanding matrix methods for large-scale training."
   }
 ]
