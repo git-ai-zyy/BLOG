@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-04">
+<meta name="dcterms.date" content="2025-03-05">
 <meta name="description" content="An Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.">
 
 <title>Gaussian Distribution is All you need</title>
@@ -64,6 +64,8 @@ div.csl-indent {
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-84d7a8ef3889528402b2843d79d8b358.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark-c78261d34ac147cb369eea006dc2f79f.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -186,6 +188,8 @@ window.Quarto = {
   <li><a href="#gaussian-distribution" id="toc-gaussian-distribution" class="nav-link" data-scroll-target="#gaussian-distribution">Gaussian Distribution</a></li>
   <li><a href="#multivariate-gaussian-distribution" id="toc-multivariate-gaussian-distribution" class="nav-link" data-scroll-target="#multivariate-gaussian-distribution">Multivariate Gaussian Distribution</a></li>
   <li><a href="#mixture-of-gaussian" id="toc-mixture-of-gaussian" class="nav-link" data-scroll-target="#mixture-of-gaussian">Mixture of Gaussian</a></li>
+  <li><a href="#conditional-distribution" id="toc-conditional-distribution" class="nav-link" data-scroll-target="#conditional-distribution">Conditional Distribution</a></li>
+  <li><a href="#marginal-distribution" id="toc-marginal-distribution" class="nav-link" data-scroll-target="#marginal-distribution">Marginal Distribution</a></li>
   <li><a href="#linear-gaussian-model" id="toc-linear-gaussian-model" class="nav-link" data-scroll-target="#linear-gaussian-model">Linear Gaussian Model</a></li>
   <li><a href="#gaussian-in-high-dimension" id="toc-gaussian-in-high-dimension" class="nav-link" data-scroll-target="#gaussian-in-high-dimension">Gaussian In High-Dimension</a></li>
   </ul></li>
@@ -197,7 +201,10 @@ window.Quarto = {
   <li><a href="#bias-of-maximum-likelihood-learning." id="toc-bias-of-maximum-likelihood-learning." class="nav-link" data-scroll-target="#bias-of-maximum-likelihood-learning.">Bias of Maximum Likelihood Learning.</a></li>
   </ul></li>
   <li><a href="#maxium-a-posteriormap-estimate" id="toc-maxium-a-posteriormap-estimate" class="nav-link" data-scroll-target="#maxium-a-posteriormap-estimate">Maxium A Posterior(MAP) Estimate</a></li>
-  <li><a href="#expectation-maximizationem-algorithms" id="toc-expectation-maximizationem-algorithms" class="nav-link" data-scroll-target="#expectation-maximizationem-algorithms">Expectation-Maximization(EM) Algorithms</a></li>
+  <li><a href="#expectation-maximizationem-algorithms" id="toc-expectation-maximizationem-algorithms" class="nav-link" data-scroll-target="#expectation-maximizationem-algorithms">Expectation-Maximization(EM) Algorithms</a>
+  <ul class="collapse">
+  <li><a href="#em-algorithms-for-gaussian-mxiture-model" id="toc-em-algorithms-for-gaussian-mxiture-model" class="nav-link" data-scroll-target="#em-algorithms-for-gaussian-mxiture-model">EM Algorithms for Gaussian Mxiture Model</a></li>
+  </ul></li>
   <li><a href="#sequential-estimation" id="toc-sequential-estimation" class="nav-link" data-scroll-target="#sequential-estimation">Sequential Estimation</a>
   <ul class="collapse">
   <li><a href="#welfords-algorithm" id="toc-welfords-algorithm" class="nav-link" data-scroll-target="#welfords-algorithm">Welford’s Algorithm</a></li>
@@ -208,6 +215,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a>
   <ul class="collapse">
+  <li><a href="#kernl-density-estimation" id="toc-kernl-density-estimation" class="nav-link" data-scroll-target="#kernl-density-estimation">Kernl Density Estimation</a></li>
   <li><a href="#linear-regression" id="toc-linear-regression" class="nav-link" data-scroll-target="#linear-regression">Linear Regression</a></li>
   <li><a href="#gaussian-process" id="toc-gaussian-process" class="nav-link" data-scroll-target="#gaussian-process">Gaussian Process</a></li>
   <li><a href="#clustering" id="toc-clustering" class="nav-link" data-scroll-target="#clustering">Clustering</a></li>
@@ -260,14 +268,14 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2025-03-04</p>
+      <p class="date">2025-03-05</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2025-03-04</p>
+      <p class="date-modified">2025-03-05</p>
     </div>
   </div>
     
@@ -316,36 +324,6 @@ TL;DR
 <p>Almost everything in the world that involves&nbsp;<strong>continuous values</strong>&nbsp;is related to the&nbsp;<strong>Gaussian distribution</strong>&nbsp;at some level. The Gaussian distribution underpins&nbsp;<strong>statistical modeling, machine learning, reinforcement learning, meta-learning, and uncertainty quantification</strong>, making it a fundamental concept in understanding real-world data.</p>
 </div>
 </div>
-<table class="caption-top table" data-quarto-postprocess="true">
-<tbody>
-<tr class="odd">
-<td><img src="https://placehold.co/600x400/png" class="img-fluid" data-<="" data-td=""></td>
-<td style="vertical-align: top">vertical-align: top</td>
-<td style="vertical-align: middle">vertical-align: middle</td>
-<td style="vertical-align: bottom">vertical-align: bottom</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">text-align: left</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">text-align: center</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">text-align: right</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
- 
 <section id="definitation-of-normal-distribution" class="level1">
 <h1>Definitation of Normal Distribution</h1>
 <section id="gaussian-distribution" class="level2">
@@ -391,6 +369,24 @@ p(\mathbf{x}) = \sum_{k=1}^{K}\pi_{k}\mathcal{N}(\mathbf{x} | \boldsymbol{\mu}_{
 \]</span></p></li>
 <li><p><span class="math inline">\(\mathcal{N}(\mathbf{x} | \boldsymbol{\mu}{k}, \boldsymbol{\Sigma}{k})\)</span> is called a <strong>component</strong> of the mixture, has its own <span class="math inline">\(\boldsymbol{\mu}\)</span> and <span class="math inline">\(\boldsymbol{\Sigma}_k\)</span></p></li>
 </ul>
+</section>
+<section id="conditional-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="conditional-distribution">Conditional Distribution</h2>
+<p>The conditional distribution is defined as</p>
+<p><span class="math display">\[
+p(\mathrm{x} | \mathrm{y})
+\]</span></p>
+<p>which mean the probability distribution function of <span class="math inline">\(\mathrm{x}\)</span> is dependent on the value of <span class="math inline">\(\mathrm{y}\)</span>. One of the nice property of Gaussian Distribution is that:</p>
+<p>If the joint distribution of the two random variable are gaussian distribution, then the conditional distribution is also a Gaussian distribution.</p>
+</section>
+<section id="marginal-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="marginal-distribution">Marginal Distribution</h2>
+<p>The marginal distribution is defined as:</p>
+<p><span class="math display">\[
+p(\mathrm{x})= \int p(\mathrm{x}, \mathrm{y}) d\mathrm{y}
+\]</span></p>
+<p>Another good property of the normal distribution is that:</p>
+<p>If the joint distribution of the two random variable are gaussian distribution, then the marginal distribution is also gaussian.</p>
 </section>
 <section id="linear-gaussian-model" class="level2">
 <h2 class="anchored" data-anchor-id="linear-gaussian-model">Linear Gaussian Model</h2>
@@ -473,6 +469,10 @@ Log Trick
 </section>
 <section id="expectation-maximizationem-algorithms" class="level2">
 <h2 class="anchored" data-anchor-id="expectation-maximizationem-algorithms">Expectation-Maximization(EM) Algorithms</h2>
+<section id="em-algorithms-for-gaussian-mxiture-model" class="level3">
+<h3 class="anchored" data-anchor-id="em-algorithms-for-gaussian-mxiture-model">EM Algorithms for Gaussian Mxiture Model</h3>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/download.mp4"></video></div>
+</section>
 </section>
 <section id="sequential-estimation" class="level2">
 <h2 class="anchored" data-anchor-id="sequential-estimation">Sequential Estimation</h2>
@@ -501,6 +501,9 @@ Log Trick
 </section>
 <section id="applications" class="level1">
 <h1>Applications</h1>
+<section id="kernl-density-estimation" class="level2">
+<h2 class="anchored" data-anchor-id="kernl-density-estimation">Kernl Density Estimation</h2>
+</section>
 <section id="linear-regression" class="level2">
 <h2 class="anchored" data-anchor-id="linear-regression">Linear Regression</h2>
 </section>
@@ -1170,6 +1173,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>videojs(video_shortcode_videojs_video1);</script>
 
 
 
