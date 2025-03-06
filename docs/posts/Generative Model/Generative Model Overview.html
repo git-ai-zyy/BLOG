@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-04">
+<meta name="dcterms.date" content="2025-03-06">
 <meta name="description" content="In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance">
 
 <title>What a Generative Models?</title>
@@ -133,6 +133,21 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#what-is-the-generative-models-and-generative-ai" id="toc-what-is-the-generative-models-and-generative-ai" class="nav-link active" data-scroll-target="#what-is-the-generative-models-and-generative-ai">What is the Generative Models and Generative AI?</a></li>
+  <li><a href="#auto-regressive-models" id="toc-auto-regressive-models" class="nav-link" data-scroll-target="#auto-regressive-models">Auto-Regressive Models</a></li>
+  <li><a href="#variational-infrence-models" id="toc-variational-infrence-models" class="nav-link" data-scroll-target="#variational-infrence-models">Variational Infrence Models</a></li>
+  <li><a href="#generative-adversial-networks" id="toc-generative-adversial-networks" class="nav-link" data-scroll-target="#generative-adversial-networks">Generative Adversial Networks</a></li>
+  <li><a href="#energy-based-models" id="toc-energy-based-models" class="nav-link" data-scroll-target="#energy-based-models">Energy-Based Models</a></li>
+  <li><a href="#flow-based-models" id="toc-flow-based-models" class="nav-link" data-scroll-target="#flow-based-models">Flow-Based Models</a></li>
+  <li><a href="#diffusion-models" id="toc-diffusion-models" class="nav-link" data-scroll-target="#diffusion-models">Diffusion Models</a></li>
+  <li><a href="#combining-different-models" id="toc-combining-different-models" class="nav-link" data-scroll-target="#combining-different-models">Combining Different Models</a>
+  <ul class="collapse">
+  <li><a href="#diffusion-models-vae" id="toc-diffusion-models-vae" class="nav-link" data-scroll-target="#diffusion-models-vae">Diffusion Models + VAE</a></li>
+  <li><a href="#auto-regressive-vae" id="toc-auto-regressive-vae" class="nav-link" data-scroll-target="#auto-regressive-vae">Auto-Regressive + VAE</a></li>
+  <li><a href="#auto-regressive-flow-models" id="toc-auto-regressive-flow-models" class="nav-link" data-scroll-target="#auto-regressive-flow-models">Auto-Regressive + Flow Models</a></li>
+  <li><a href="#flow-model-vae" id="toc-flow-model-vae" class="nav-link" data-scroll-target="#flow-model-vae">Flow Model + VAE</a></li>
+  <li><a href="#flow-model-gan" id="toc-flow-model-gan" class="nav-link" data-scroll-target="#flow-model-gan">Flow Model + GAN</a></li>
+  <li><a href="#vae-gan" id="toc-vae-gan" class="nav-link" data-scroll-target="#vae-gan">VAE + GAN</a></li>
+  </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
@@ -166,14 +181,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2025-03-04</p>
+      <p class="date">2025-03-06</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2025-03-03</p>
+      <p class="date-modified">2025-03-06</p>
     </div>
   </div>
     
@@ -193,7 +208,57 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Density Estimation is the type of task that</p>
-</div></div></section>
+</div></div><div id="fig-overview-generative-models" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-overview-generative-models-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/202503062129654.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-overview-generative-models-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Summary of various kinds of deep generative models. (Image Source: Probabilistic Machine Learning)
+</figcaption>
+</figure>
+</div>
+<p>There are 6 types of generative models, as showed in the <a href="#fig-overview-generative-models" class="quarto-xref">Figure&nbsp;1</a>. In this article, we will go through those 6 different types. Get into the details of each different types and compare those models. How to combine those model to get more complex and useful generative models.</p>
+</section>
+<section id="auto-regressive-models" class="level1">
+<h1>Auto-Regressive Models</h1>
+</section>
+<section id="variational-infrence-models" class="level1">
+<h1>Variational Infrence Models</h1>
+</section>
+<section id="generative-adversial-networks" class="level1">
+<h1>Generative Adversial Networks</h1>
+</section>
+<section id="energy-based-models" class="level1">
+<h1>Energy-Based Models</h1>
+</section>
+<section id="flow-based-models" class="level1">
+<h1>Flow-Based Models</h1>
+</section>
+<section id="diffusion-models" class="level1">
+<h1>Diffusion Models</h1>
+</section>
+<section id="combining-different-models" class="level1">
+<h1>Combining Different Models</h1>
+<section id="diffusion-models-vae" class="level2">
+<h2 class="anchored" data-anchor-id="diffusion-models-vae">Diffusion Models + VAE</h2>
+</section>
+<section id="auto-regressive-vae" class="level2">
+<h2 class="anchored" data-anchor-id="auto-regressive-vae">Auto-Regressive + VAE</h2>
+</section>
+<section id="auto-regressive-flow-models" class="level2">
+<h2 class="anchored" data-anchor-id="auto-regressive-flow-models">Auto-Regressive + Flow Models</h2>
+</section>
+<section id="flow-model-vae" class="level2">
+<h2 class="anchored" data-anchor-id="flow-model-vae">Flow Model + VAE</h2>
+</section>
+<section id="flow-model-gan" class="level2">
+<h2 class="anchored" data-anchor-id="flow-model-gan">Flow Model + GAN</h2>
+</section>
+<section id="vae-gan" class="level2">
+<h2 class="anchored" data-anchor-id="vae-gan">VAE + GAN</h2>
+</section>
+</section>
 <section id="conclusion" class="level1">
 <h1>Conclusion</h1>
 <p>In the blog, we has explore go through several generative models. We explore why we need generative models. For different purposes, we can different choice of the models. On the other hand, we can combine different models to get better performance. There are still more room for the generative models.</p>
