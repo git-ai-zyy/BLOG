@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-04">
+<meta name="dcterms.date" content="2025-03-17">
 <meta name="description" content="This blog is my learning notes on the Diffusion Models, which is the state-of-art generative models. This blog will cover that is the diffusion models, how to use diffusion models to generate image, text-to-image, video. It also cover lagnuage diffusion model.">
 
 <title>Deep Dive into Diffusion Models</title>
@@ -192,7 +192,7 @@ window.Quarto = {
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/JAZ201107"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/Yyzhang2000"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -254,7 +254,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2025-03-04</p>
+      <p class="date">2025-03-17</p>
     </div>
   </div>
   
@@ -283,7 +283,7 @@ window.Quarto = {
 <p><cite>Deep LearningFoundations and Concepts</cite></p>
 </blockquote>
 <p>The corrupt process is defined as:</p>
-<div id="4088e825" class="cell">
+<div id="b9e9d99b" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">def</span> corrupt(x, amount):</span>
@@ -323,7 +323,7 @@ Figure&nbsp;1: Corrupt images with differnt level of noise.
 </figure>
 </div>
 </div></div><p>Now, we got everything we need to trained a neural network, data, model, loss function, let’s start training!!</p>
-<div id="ec0bd7ff" class="cell">
+<div id="42c7926c" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>batch_size <span class="op">=</span> <span class="dv">128</span></span>
@@ -360,7 +360,7 @@ Figure&nbsp;2: Result of one pass U-Net model
 </figure>
 </div>
 <p>Though, for the image with higher noise-level(more like Gaussian Distribution), the network perform well. One small trick we can use it to pass the image through model several times. We hope each time, the predicted image will get better.</p>
-<div id="b750e485" class="cell">
+<div id="37c910b6" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>n_steps <span class="op">=</span> <span class="dv">8</span></span>
@@ -427,7 +427,7 @@ Summary for now
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-ronnebergerUNetConvolutionalNetworks2015" class="csl-entry" role="listitem">
-Ronneberger, Olaf, Philipp Fischer, and Thomas Brox. 2015. <span>“U-<span>Net</span>: <span>Convolutional Networks</span> for <span>Biomedical Image Segmentation</span>.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.1505.04597">https://doi.org/10.48550/arXiv.1505.04597</a>.
+Ronneberger, Olaf, Philipp Fischer, and Thomas Brox. 2015. <span>“U-<span>Net</span>: <span>Convolutional Networks</span> for <span>Biomedical Image Segmentation</span>.”</span> May 18, 2015. <a href="https://doi.org/10.48550/arXiv.1505.04597">https://doi.org/10.48550/arXiv.1505.04597</a>.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

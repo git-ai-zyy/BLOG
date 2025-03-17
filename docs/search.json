@@ -7,46 +7,480 @@
     "text": "THis is is some content about mathematics\n\n\n\n\n\n\n\n\n\n\n\n\n⭐️⭐️⭐️⭐️⭐️\n\n\n\nMIT’s 18.01 Single Variable Calculus is a foundational mathematics course covering differential and integral calculus. It focuses on the fundamental concepts of…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n⭐️⭐️⭐️⭐️⭐️\n\n\n\nMIT’s 18.02 Multivariable Calculus extends the principles of single-variable calculus to functions of multiple variables. It introduces partial derivatives, *multiple…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n⭐️⭐️⭐️⭐️⭐️\n\n\n\nMIT’s 18.06 Linear Algebra is a foundational course that explores the fundamental concepts of vectors, matrices, determinants, eigenvalues, and linear transformations.…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n⭐️⭐️⭐️⭐️\n\n\n\nMIT’s 18.065 Matrix Methods in Data Analysis, Signal Processing, and Machine Learning is an applied mathematics course that explores the **use of matrix algebra in data…\n\n\n\nMIT\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n⭐️⭐️⭐️\n\n\n\nMIT’s 18.S096 Matrix Calculus for Machine Learning and Beyond is an advanced mathematics course designed to provide a deep understanding of matrix calculus and its…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "👋🏻Welcome to Yuyang’s Blog",
+    "objectID": "resource.html#computer-vision",
+    "href": "resource.html#computer-vision",
+    "title": "Resources",
+    "section": "Computer Vision",
+    "text": "Computer Vision\n\n\n\n\n\n\n\n\n\n\nCS231n: Deep Learning for Computer Vision\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "resource.html#natural-language-processing",
+    "href": "resource.html#natural-language-processing",
+    "title": "Resources",
+    "section": "Natural Language Processing",
+    "text": "Natural Language Processing\n\n\n\n\n\n\n\n\n\n\nStanford CS224N: Natural Language Processing with Deep Learning\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCMU 11-711: Advanced NLP\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCMU 11-667:Large Language Models: Methods and Applications\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUCB CS294/194-196 Large Language Model Agents\n\n\n\n⭐️⭐️⭐️\n\n\n\nThis course focuses on the development and application of Large Language Models (LLMs) as agents capable of interacting with the world and performing various tasks. The…\n\n\n\nUCB\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUCB CS294/194-196: Advanced Large Language Model Agents\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nUCB\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "resource.html#reinforcement-learning-robotics",
+    "href": "resource.html#reinforcement-learning-robotics",
+    "title": "Resources",
+    "section": "Reinforcement Learning & Robotics",
+    "text": "Reinforcement Learning & Robotics\n\n\n\n\n\n\n\n\n\n\nStanford CS234: Reinforcement Learning\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUCB CS182/282A: Designing, Visualizing and Understanding Deep Neural Networks\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "resource.html#generative-models",
+    "href": "resource.html#generative-models",
+    "title": "Resources",
+    "section": "Generative Models",
+    "text": "Generative Models\n\n\n\n\n\n\n\n\n\n\nStanford CS236: Deep Generative Models\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUCB CS294-158: Deep Unsupervised Learning\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "resource.html#others",
+    "href": "resource.html#others",
+    "title": "Resources",
+    "section": "Others",
+    "text": "Others\n\n\n\n\n\n\n\n\n\n\nStanford CS224W: Machine Learning with Graphs\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStanford CS 330: Deep Multi-Task and Meta Learning\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCMU 11-777: MultiModal Machine Learning\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStanford CS246: Mining Massive Data Sets\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "resource.html#youtuber",
+    "href": "resource.html#youtuber",
+    "title": "Resources",
+    "section": "Youtuber",
+    "text": "Youtuber\n\n\n\n\n\n\n\n\n\n\nSteve Brunton\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAndrej Karpathy\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3Blue1Brown\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStatQuest with Josh Starmer\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLex Fridman\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "resource.html#blogs",
+    "href": "resource.html#blogs",
+    "title": "Resources",
+    "section": "Blogs",
+    "text": "Blogs\n\n\n\n\n\n\n\n\n\n\nLil’Log\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Real-World ML Blog\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHugging Face Daily Paper\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "resource.html#books",
+    "href": "resource.html#books",
+    "title": "Resources",
+    "section": "Books",
+    "text": "Books\n\n\n\n\n\n\n\n\n\n\nPattern Recognition and Machine Learning\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Learning: Foundations and Concepts\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbabilistic Machine Learning: An Introduction\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbabilistic Machine Learning: Advanced Topics\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMathematics for Machine Learning\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nArtificial Intelligence: A Modern Approach\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinear Algebra and Optimization for Machine Learning: A Textbook\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStatistics for High-Dimensional Data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "courses/mit-matrix-method.html",
+    "href": "courses/mit-matrix-method.html",
+    "title": "MIT 18.065: Matrix Methods in Data Analysis, Signal Processing, and Machine Learning",
     "section": "",
-    "text": "What a Generative Models?\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\n2025-03-06\n\n\n2 min\n\n\n210 words\n\n\n2025-03-06\n\n\n\n\n\n\n\n\n\n\n\n\nGaussian Distribution is All you need\n\n\n\n\n\n\nMathematics\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\n2025-03-06\n\n\n7 min\n\n\n1,243 words\n\n\n2025-03-05\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Dive into Diffusion Models\n\n\n\n\n\n\nGenerative Model\n\n\nLarge Language Model\n\n\n\nThis blog is my learning notes on the Diffusion Models, which is the state-of-art generative models. This blog will cover that is the diffusion models, how to use diffusion models to generate image, text-to-image, video. It also cover lagnuage diffusion model.\n\n\n\n\n\n2025-03-06\n\n\n4 min\n\n\n738 words\n\n\n2025-03-04\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s understand Large Language Model from scratch\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\n2025-03-06\n\n\n2 min\n\n\n257 words\n\n\n2025-03-04\n\n\n\n\n\n\n\n\n\n\n\n\nMath Toolbox for AI\n\n\n\n\n\n\nMathematics\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\n2025-03-06\n\n\n3 min\n\n\n480 words\n\n\n2025-03-04\n\n\n\n\n\n\nNo matching items"
+    "text": "Course Link"
   },
   {
-    "objectID": "posts/MathToolBox.html",
-    "href": "posts/MathToolBox.html",
-    "title": "Math Toolbox for AI",
+    "objectID": "courses/mit-matrix-method.html#why-study-matrix-methods-for-data-analysis-and-machine-learning",
+    "href": "courses/mit-matrix-method.html#why-study-matrix-methods-for-data-analysis-and-machine-learning",
+    "title": "MIT 18.065: Matrix Methods in Data Analysis, Signal Processing, and Machine Learning",
+    "section": "Why Study Matrix Methods for Data Analysis and Machine Learning?",
+    "text": "Why Study Matrix Methods for Data Analysis and Machine Learning?\n\nEssential for High-Dimensional Data Analysis\n\nPrincipal Component Analysis (PCA) and SVD help in reducing dimensionality and extracting meaningful insights from large datasets.\n\nEigenvalue decomposition and low-rank approximations are widely used in exploratory data analysis.\n\nCrucial for Machine Learning and AI Optimization\n\n\n\nLeast squares regression is a fundamental method in supervised learning and optimization.\n\nMany ML algorithms, including kernel methods, support vector machines, and deep learning architectures, rely on matrix factorization techniques.\n\n\nKey for Signal Processing and Image Recognition\n\nFourier transforms and wavelets are used in speech processing, medical imaging, and object recognition.\n\nLow-rank matrix approximations improve efficiency in compressing high-dimensional signals.\n\nApplied in Graph Learning and Network Analysis\n\nSpectral clustering and graph embeddings use matrix methods to analyze social networks and biological datasets.\n\nEigenvalues and adjacency matrices play a role in recommendation systems, fraud detection, and NLP applications.\n\nSupports Scalable and Computationally Efficient AI Systems\n\nMany big data applications rely on fast matrix decompositions for computational efficiency.\n\nOptimization in neural networks is enhanced by understanding matrix methods for large-scale training."
+  },
+  {
+    "objectID": "courses/stanford-meta.html",
+    "href": "courses/stanford-meta.html",
+    "title": "Stanford CS 330: Deep Multi-Task and Meta Learning",
     "section": "",
-    "text": "Update\n\n\n\nAdd Vector Normalization\nMathematics is the important and the most confusion part of artificial intelligence. You might think AI is all about fancy neural networks and mind-blowing predictions, but behind every impressive AI breakthrough is a solid foundation of math. Without math, AI is just a bunch of random code guessing its way through problems like a lost tourist with no GPS.\nSo why am I writing this blog? Because AI is everywhere—from recommending your next Netflix binge to predicting stock market trends. Yet, many aspiring AI enthusiasts underestimate the power of mathematics. If you’ve ever wondered, “Do I really need to know linear algebra and calculus to work with AI?” The answer is a resounding YES! And I’m here to make it a little less intimidating (and hopefully a bit more fun).\nNow, let’s talk about the real struggle: the fancy names. When you first start learning AI, it feels like math is just out to confuse you. One moment you’re fine with basic addition, and the next, you’re drowning in terms like “eigenvalues,” “Jacobian matrices,” and “Markov chains.” You hear about “gradient descent” and think, “Oh, that sounds cool,” only to realize it involves partial derivatives and a whole lot of Greek letters that make your head spin. And don’t even get me started on “Lagrange multipliers”—it sounds like something from a sci-fi movie, but turns out to be just another way math likes to keep us on our toes.\nThis blog is about the some keep concept in the mathematics and how they used in the AI. Each part is self-contains, readers can choose parts most interested them."
+    "text": "course"
   },
   {
-    "objectID": "posts/MathToolBox.html#norm-of-the-vectorslp-norm",
-    "href": "posts/MathToolBox.html#norm-of-the-vectorslp-norm",
-    "title": "Math Toolbox for AI",
-    "section": "1. Norm of the Vectors(Lp-Norm)",
-    "text": "1. Norm of the Vectors(Lp-Norm)\n\n\n\n\n\n\nCaution\n\n\n\nMany people confuse normalization with the length (norm) of a vector, but they are fundamentally different. The Normalization is defined as:\n\\[\nv_{\\text{normlized}} = \\frac{v}{\\| v\\|_p}\n\\]\nwhere \\(\\| v \\|_p\\) is the Norm of the vector, this form is called Lp-Norm.\nNormalization is the process of rescaling a vector so that its norm (magnitude) becomes 1, while preserving its direction. It ensures that all vectors in a dataset have the same scale, which is crucial for numerical stability and model performance in machine learning and deep learning.\n\n\nThe Lp-Norm is a generalization of different norms, including L1-Norm, L2-Norm, and others. It measures the magnitude of a vector in various ways depending on the value of \\(p\\) . Lp-Norm is widely used in machine learning, deep learning, and signal processing for tasks like feature scaling, similarity measurements, and optimization. Mathematically, it defined as:\n\\[\n\\| v\\|_p = (\\sum_i^d |v_i|^p)^{1 / p}\n\\]\nwhere:\n\n\\(p\\): is a positive real number\n\\(|v_i|\\) represents the absolute value of each component of the vectors\n\nThere are some special case of the"
-  },
-  {
-    "objectID": "posts/MathToolBox.html#vector-space",
-    "href": "posts/MathToolBox.html#vector-space",
-    "title": "Math Toolbox for AI",
-    "section": "2. Vector Space",
-    "text": "2. Vector Space\n\nHilbert Sapce"
-  },
-  {
-    "objectID": "posts/MathToolBox.html#compare-vectors",
-    "href": "posts/MathToolBox.html#compare-vectors",
-    "title": "Math Toolbox for AI",
-    "section": "3. Compare Vectors",
-    "text": "3. Compare Vectors"
-  },
-  {
-    "objectID": "posts/Generative Model/Diffusion Model.html",
-    "href": "posts/Generative Model/Diffusion Model.html",
-    "title": "Deep Dive into Diffusion Models",
+    "objectID": "courses/stanford-ml.html",
+    "href": "courses/stanford-ml.html",
+    "title": "Stanford CS229: Machine Learning",
     "section": "",
-    "text": "Diffusion Model is know\n\n\nLet’s first create a very simple diffusion model based on MNIST data. (Full code is available here)\n\nThe central idea is to take each training image and to corrupt it using a multi-step noise process to transform it into a sample from Gaussian distribution. A deep neural network is then trained to invert this process, and once trained the network can then generate new images starting with samples from Gaussian as input\nDeep LearningFoundations and Concepts\n\nThe corrupt process is defined as:\n\n\nShow the code\ndef corrupt(x, amount):\n    \"\"\"\n    corrupt the input `x` by mixing it with noise\n    x: (B, 1, 28, 28)\n    amount: (B) different amount of noise for different samples\n    \"\"\"\n    noise = torch.rand_like(x)\n    amount = amount.view(-1, 1, 1, 1)\n    return x * (1 - amount) + noise * amount\n\n\nWe take a batch of image in, and corrupt the image the according to different level of noise.\n\n\n\n\n\n\nFigure 1: Corrupt images with differnt level of noise.\n\n\n\nAfter we get images and corresponding corrupted images, we need to create a neural network to invert this process, which mean we need the neural network take the noise image in, get the de-noised(real) image out. And we want those two as close as possible. So, the loss function \\(\\mathcal{L}\\) is:\n\\[\n\\mathcal{L}(\\theta) = \\sum_{i = 1}^{N}\\| f_\\theta(\\hat{\\mathrm{x}}_i) - \\mathrm{x}_i \\|^2\n\\tag{1}\\]\nwhich is the Mean Square Loss.\nSo, there are different types of neural network, which one should we choose? Since we need the output has same shape as the input, the U-Net(Ronneberger, Fischer, and Brox 2015) is perfect choice.\n\n\n\n\n\nU-Net\n\n\nNow, we got everything we need to trained a neural network, data, model, loss function, let’s start training!!\n\n\nShow the code\nbatch_size = 128\ntrain_dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)\nepochs = 10\n\nnet = UNet()  # This UNet is trained to predict the original image from the corrupted image\ncriterion = nn.MSELoss()\noptimizer = torch.optim.Adam(net.parameters(), lr=1e-3)\n\nfor epoch in range(epochs):\n    for x, _ in tqdm(train_dataloader):\n        noise_amount = torch.rand(x.shape[0]) # Random Generate some noise level[0, 1] add to image x\n        noisy_x = corrupt(x, noise_amount) # Corrput the image\n\n        pred = net(noisy_x) # NN predict what the de-noised image x\n        loss = criterion(pred, x) # Compare \n\n        # Optimize\n        optimizer.zero_grad()\n        loss.backward()\n        optimizer.step()\n\n\nAfter we trained the model for 10 epochs, we can see that it predict not-bad output.\n\n\n\n\n\n\nFigure 2: Result of one pass U-Net model\n\n\n\nThough, for the image with higher noise-level(more like Gaussian Distribution), the network perform well. One small trick we can use it to pass the image through model several times. We hope each time, the predicted image will get better.\n\n\nShow the code\nn_steps = 8\nx = torch.rand(8, 1, 28, 28).to(device)\nstep_history = [x.detach().cpu()]\npred_output_history = []\n\nfor i in range(n_steps):\n    with torch.no_grad():\n        pred = net(x)\n\n    step_history.append(x.detach().cpu())\n    pred_output_history.append(pred.detach().cpu())\n    mix_factor = 1 / (n_steps - i)\n    x = x * (1 - mix_factor) + pred * mix_factor\n\n\nAfter we pass the model 8 times, we get the result:\n\n\n\n\n\n\nFigure 3: The result of the pass model 8 times. On the left of the row is the input to the model and on the right is the denoised images\n\n\n\nIt shows that the output truly get better each times.\nWe increase the number of steps, the result will get better. Below is how it look like after we pass the model 40 times.\n\n\n\n\n\n\nFigure 4: The result of passing model 40 times\n\n\n\n\n\n\n\n\n\nSummary for now\n\n\n\nIn the above example, we see how the Diffusion Model work, we first corrupt the images, and then pass the pass the corrupted images to the model to get the de-noised images back. We training the the model using Mean Square Loss Equation 1. To improve the quality of sampling, we can pass the out back to the model several times Figure 3. The Full code is available here"
+    "text": "course"
+  },
+  {
+    "objectID": "courses/mit-datacentric.html",
+    "href": "courses/mit-datacentric.html",
+    "title": "MIT Introduction to Data-Centric AI",
+    "section": "",
+    "text": "Course Link"
+  },
+  {
+    "objectID": "courses/mit-algorithms.html",
+    "href": "courses/mit-algorithms.html",
+    "title": "MIT 6.006: Introduction To Algorithms",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/gpu-mode.html",
+    "href": "courses/gpu-mode.html",
+    "title": "GPU Mode",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/coursera-ml.html",
+    "href": "courses/coursera-ml.html",
+    "title": "Coursera: Machine Learning Specialization",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/stanford-rl.html",
+    "href": "courses/stanford-rl.html",
+    "title": "Stanford CS234: Reinforcement Learning",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/mit-flow-mathcing.html",
+    "href": "courses/mit-flow-mathcing.html",
+    "title": "MIT 6.S184: Introduction to Flow Matching and Diffusion Models",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/mit-tinyML.html",
+    "href": "courses/mit-tinyML.html",
+    "title": "MIT 6.5940: TinyML and Efficient Deep Learning Computing",
+    "section": "",
+    "text": "Course Link"
+  },
+  {
+    "objectID": "courses/mit-aalg.html",
+    "href": "courses/mit-aalg.html",
+    "title": "MIT 6.854/18.415J: Advanced Algorithms",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/mit-calculus1.html",
+    "href": "courses/mit-calculus1.html",
+    "title": "MIT 18.01: Single Variable Calculus",
+    "section": "",
+    "text": "Course Link"
+  },
+  {
+    "objectID": "courses/mit-calculus1.html#why-this-course",
+    "href": "courses/mit-calculus1.html#why-this-course",
+    "title": "MIT 18.01: Single Variable Calculus",
+    "section": "Why this course?",
+    "text": "Why this course?\n\nSingle Variable Calculus is one of the fundamental building blocks of AI and machine learning. Many key concepts in AI, such as gradient descent, optimization, and backpropagation, heavily rely on calculus principles.\nEssential for Understanding Optimization Algorithms\n\nMachine learning models are trained using optimization algorithms, which minimize loss functions.\nGradient Descent, the most widely used optimization technique, is based on derivatives to adjust model parameters.\nConvex functions and critical points help in finding optimal solutions.\n\nIntegral Calculus in Probabilistic Models\n\nMany AI models use probability distributions (e.g., Gaussian, Poisson, Exponential).\nIntegrals are needed to compute expectations, probabilities, and marginal distributions, essential in Bayesian statistics and deep learning.\n\nFoundations for Neural Networks & Deep Learning • Activation functions (e.g., Sigmoid, ReLU, Softmax) require differentiation. • Backpropagation, the core algorithm in neural networks, relies on chain rule differentiation to update weights."
+  },
+  {
+    "objectID": "courses/ucb-intro-ai.html",
+    "href": "courses/ucb-intro-ai.html",
+    "title": "UCB CS188: Introduction to Artificial Intelligence ",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/cornell-mlh.html",
+    "href": "courses/cornell-mlh.html",
+    "title": "CS 5775: Machine Learning Hardware and Systems",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/cmu-pgm.html",
+    "href": "courses/cmu-pgm.html",
+    "title": "CMU 10-708: Probabilistic Graphical Models",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/cmu-llm.html",
+    "href": "courses/cmu-llm.html",
+    "title": "CMU 11-667:Large Language Models: Methods and Applications",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/ucb-algorithms.html",
+    "href": "courses/ucb-algorithms.html",
+    "title": "UCB CS170: Efficient Algorithms and Intractable Problems",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/mit-la.html",
+    "href": "courses/mit-la.html",
+    "title": "MIT 18.06: Linear Algebra",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/mit-la.html#why-this-course",
+    "href": "courses/mit-la.html#why-this-course",
+    "title": "MIT 18.06: Linear Algebra",
+    "section": "Why this course?",
+    "text": "Why this course?\nAll operation in the world of AI is based on linear algebra. This course is a must for anyone who wants to understand the math behind AI.\n\nCore Foundation for Machine Learning and Deep Learning\n\nMachine learning models rely on matrix operations for training and prediction.\n\nNeural networks use weight matrices and activations that require linear transformations.\n\nGradient-based optimization techniques such as gradient descent involve matrix calculus.\n\nEssential for Dimensionality Reduction and Feature Engineering\n\nPrincipal Component Analysis (PCA) and Singular Value Decomposition (SVD) are used in data compression and feature extraction.\n\nLatent Semantic Analysis (LSA) in Natural Language Processing (NLP) relies on matrix factorization.\n\nOptimization and AI Model Training\n\nLeast Squares Regression and ridge regression are direct applications of orthogonal projections in vector spaces.\n\nMatrix calculus is necessary for computing gradients and optimizing model performance."
+  },
+  {
+    "objectID": "courses/stanford-nlp.html",
+    "href": "courses/stanford-nlp.html",
+    "title": "Stanford CS224N: Natural Language Processing with Deep Learning",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/ucb-unsupervised.html",
+    "href": "courses/ucb-unsupervised.html",
+    "title": "UCB CS294-158: Deep Unsupervised Learning",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/cmu-os.html",
+    "href": "courses/cmu-os.html",
+    "title": "CMU 15-213: Introduction to Computer Systems",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/mit-diffusionmodel.html",
+    "href": "courses/mit-diffusionmodel.html",
+    "title": "MIT 6.S183: A Practical Introduction to Diffusion Models",
+    "section": "",
+    "text": "Course Link"
+  },
+  {
+    "objectID": "courses/cmu-mml.html",
+    "href": "courses/cmu-mml.html",
+    "title": "CMU 11-777: MultiModal Machine Learning",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "I am a master student of Singapore Management University majoring in IT in Business with AI track. I am passionate about AI. I have a strong background in computer science and big data. I am proficient in Python. I have experience in machine learning, deep learning. I am a quick learner and a good team player. I like to learn new things summary and show them with each other. Currently I’m looking for a full-time job in AI field."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About Me",
+    "section": "Education",
+    "text": "Education\nSingapore Management University | Singapre Master of IT in Business(AI track) | Sept 2023 -\nUniversity of Wollongong | Computer Science B.S in Big Data | March 2020 - March 2023"
+  },
+  {
+    "objectID": "about.html#technical-skills",
+    "href": "about.html#technical-skills",
+    "title": "About Me",
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\nMachine Learning & Deep Learning\nComputer Vision\nNatural Language Processing\nReinforcement Learning\nMeta Learning\nGenerative Model\nUnsupervised Learning\nLarge Language Model\nConvex Optmization\nProbabilitic Graphical Model\nDeep Graph Learning"
+  },
+  {
+    "objectID": "about.html#projects",
+    "href": "about.html#projects",
+    "title": "About Me",
+    "section": "Projects",
+    "text": "Projects"
+  },
+  {
+    "objectID": "posts/Gaussian.html",
+    "href": "posts/Gaussian.html",
+    "title": "Gaussian Distribution is All you need",
+    "section": "",
+    "text": "Gaussian Distribution, one of the most important and widely used probability distributions in statistics and machine learning. It is also known as the normal distribution, which is a continuous probability distribution that is symmetric about the mean, showing that data near the mean are more frequent in occurrence than data far from the mean. In the blog, I will walk through the AI field from basic normal distribution, and see how this tree spread across the world."
+  },
+  {
+    "objectID": "posts/Gaussian.html#gaussian-distribution",
+    "href": "posts/Gaussian.html#gaussian-distribution",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Gaussian Distribution",
+    "text": "Gaussian Distribution\nGaussian distribution, also know as the Normal Distribution, is defined, for a single real-valued variable \\(x\\) as:\n\\[\n\\mathcal{N}(x | \\mu, \\sigma^2) = \\frac{1}{(2\\pi\\sigma^2)^{1/2}}\\exp\\left\\{- \\frac{1}{2\\sigma^2} (x - \\mu)^2\\right\\}\n\\tag{1}\\]\nwhere:\n\n\\(\\mu\\) called the mean\n\\(\\sigma^2\\) called the variance\n\n\\(\\sigma\\) called the standard deviation\n\n\\(\\beta = 1/\\sigma^2\\) called the precision."
+  },
+  {
+    "objectID": "posts/Gaussian.html#multivariate-gaussian-distribution",
+    "href": "posts/Gaussian.html#multivariate-gaussian-distribution",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Multivariate Gaussian Distribution",
+    "text": "Multivariate Gaussian Distribution\nNow, we consider the \\(D\\)-dimensional \\(\\mathbf{x}\\), this lead to the Multivariate Gaussian, which is defined as:\n\\[\n\\mathcal{N}(\\mathcal{\\mathbf{x}|\\boldsymbol{\\mu}, \\boldsymbol{\\Sigma}})= \\frac{1}{(2\\pi)^{D / 2}|\\boldsymbol{\\Sigma}|^{1 / 2}} \\exp\\left\\{  - \\frac{1}{2}  (\\mathbf{x}- \\mathbf{\\mu})^{T} \\boldsymbol{\\Sigma}^{-1}(\\mathbf{x} - \\boldsymbol{\\mu})\\right\\}\n\\tag{2}\\]\nwhere:\n\n\\(\\boldsymbol{\\mu}\\) is the \\(D\\)-dimensional mean vector\n\\(\\boldsymbol{\\Sigma}\\) is the \\(D \\times D\\) covariance matrix - \\(\\det \\boldsymbol{\\Sigma}\\) is the determinant of \\(\\boldsymbol{\\Sigma}\\)\n\\(\\Lambda \\equiv  \\boldsymbol{\\Sigma}^{-1}\\) is the precision matrix."
+  },
+  {
+    "objectID": "posts/Gaussian.html#mixture-of-gaussian",
+    "href": "posts/Gaussian.html#mixture-of-gaussian",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Mixture of Gaussian",
+    "text": "Mixture of Gaussian\nMore complexity, when we take the linear combination of the basic distribution of Normal Distribution, we will get Mixture of Gaussian Distribution, which is defined as:\n\\[\np(\\mathbf{x}) = \\sum_{k=1}^{K}\\pi_{k}\\mathcal{N}(\\mathbf{x} | \\boldsymbol{\\mu}_{k}, \\boldsymbol{\\Sigma}_{k})\n\\tag{3}\\]\nwhere:\n\n\\(\\pi_k\\) called the mixing coefficients, who has constraints that\n\\[\n\\begin{array} &\\sum_{k=1}^K \\pi_k = 1  \\\\ 0 \\leq \\pi_{k} \\leq 1\\end{array}\n\\]\n\\(\\mathcal{N}(\\mathbf{x} | \\boldsymbol{\\mu}{k}, \\boldsymbol{\\Sigma}{k})\\) is called a component of the mixture, has its own \\(\\boldsymbol{\\mu}\\) and \\(\\boldsymbol{\\Sigma}_k\\)"
+  },
+  {
+    "objectID": "posts/Gaussian.html#conditional-distribution",
+    "href": "posts/Gaussian.html#conditional-distribution",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Conditional Distribution",
+    "text": "Conditional Distribution\nThe conditional distribution is defined as\n\\[\np(\\mathrm{x} | \\mathrm{y})\n\\]\nwhich mean the probability distribution function of \\(\\mathrm{x}\\) is dependent on the value of \\(\\mathrm{y}\\). One of the nice property of Gaussian Distribution is that:\nIf the joint distribution of the two random variable are gaussian distribution, then the conditional distribution is also a Gaussian distribution."
+  },
+  {
+    "objectID": "posts/Gaussian.html#marginal-distribution",
+    "href": "posts/Gaussian.html#marginal-distribution",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Marginal Distribution",
+    "text": "Marginal Distribution\nThe marginal distribution is defined as:\n\\[\np(\\mathrm{x})= \\int p(\\mathrm{x}, \\mathrm{y}) d\\mathrm{y}\n\\]\nAnother good property of the normal distribution is that:\nIf the joint distribution of the two random variable are gaussian distribution, then the marginal distribution is also gaussian."
+  },
+  {
+    "objectID": "posts/Gaussian.html#linear-gaussian-model",
+    "href": "posts/Gaussian.html#linear-gaussian-model",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Linear Gaussian Model",
+    "text": "Linear Gaussian Model"
+  },
+  {
+    "objectID": "posts/Gaussian.html#gaussian-in-high-dimension",
+    "href": "posts/Gaussian.html#gaussian-in-high-dimension",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Gaussian In High-Dimension",
+    "text": "Gaussian In High-Dimension"
+  },
+  {
+    "objectID": "posts/Gaussian.html#maximum-likelihood-learning",
+    "href": "posts/Gaussian.html#maximum-likelihood-learning",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Maximum Likelihood Learning",
+    "text": "Maximum Likelihood Learning\nThe first methods we introduce is the maximum likelihood learning, which is defined as:\n\\[\n\\max P(\\mathcal{D} | \\mu, \\Sigma)\n\\tag{4}\\]\nThe \\(P(\\mathcal{D} | \\mu, \\Sigma)\\) is called the likelihood of the dataset, as we defined in the question, the data points are i.i.d. so, we can write the likelihood function as:\n\\[\nP(\\mathcal{D} | \\mu, \\Sigma) = \\prod_{n = 1}^N \\mathcal{N}(\\mathbf{x}_n | \\mu, \\Sigma)\n\\tag{5}\\]\n\n\n\n\n\n\nLog Trick\n\n\n\nIn the practice, because the \\(0 \\leq \\mathcal{N}(\\mathbf{x}_n | \\mu, \\Sigma) \\leq 1\\), when multiplying \\(N\\) small number together, might cause the under-flow problem in the computer. So, we use \\(\\log\\)-form of the function to prevent the under-flow. Because the \\(\\log\\) function is the monomtic function, so, when we maximimzie \\(\\log f\\) is same as \\(\\max f\\).\n\n\nSo, the objective function we want to maximize is:\n\\[\n\\ln P(\\mathcal{D} | \\mu, \\Sigma) = \\sum_{n = 1}^N \\ln\\mathcal{N}(\\mathbf{x}_n | \\mu, \\Sigma)\n\\tag{6}\\]\nHow to maximize the Equation 6. The most intuitive of way is set the derivative of the function with respect to 0.\n\nGradient Descent\n\n\nBias of Maximum Likelihood Learning.\nAs we can see, we used the sample mean to derive the sample variance. Because the sample mean estimated from the dataset \\(\\mathcal{D}\\) , it is not same as the true \\(\\mu\\)."
+  },
+  {
+    "objectID": "posts/Gaussian.html#maxium-a-posteriormap-estimate",
+    "href": "posts/Gaussian.html#maxium-a-posteriormap-estimate",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Maxium A Posterior(MAP) Estimate",
+    "text": "Maxium A Posterior(MAP) Estimate"
+  },
+  {
+    "objectID": "posts/Gaussian.html#expectation-maximizationem-algorithms",
+    "href": "posts/Gaussian.html#expectation-maximizationem-algorithms",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Expectation-Maximization(EM) Algorithms",
+    "text": "Expectation-Maximization(EM) Algorithms\n\nEM Algorithms for Gaussian Mxiture Model"
+  },
+  {
+    "objectID": "posts/Gaussian.html#sequential-estimation",
+    "href": "posts/Gaussian.html#sequential-estimation",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Sequential Estimation",
+    "text": "Sequential Estimation\nSo far we have assume that we can “see” the whole dataset at once. In practice, we sometime cannot get the whole dataset at one, because:\n\nThe data points comes in sequential, e.g. Online Learning\nThe dataset is too big that can not fit into the memory of the computer.\n\nWe have to way to learn the parameters in sequential version. One of the method is called Robbins-Monro algorithm.\n\nWelford’s Algorithm\n\nRobbins-Monro Algorithm\n\n\n\nKalman Filter\n\n\nStochastic Gradient Descent\n\n\nExpoential Moving Average(EMA)"
+  },
+  {
+    "objectID": "posts/Gaussian.html#kernl-density-estimation",
+    "href": "posts/Gaussian.html#kernl-density-estimation",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Kernl Density Estimation",
+    "text": "Kernl Density Estimation"
+  },
+  {
+    "objectID": "posts/Gaussian.html#linear-regression",
+    "href": "posts/Gaussian.html#linear-regression",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Linear Regression",
+    "text": "Linear Regression"
+  },
+  {
+    "objectID": "posts/Gaussian.html#gaussian-process",
+    "href": "posts/Gaussian.html#gaussian-process",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Gaussian Process",
+    "text": "Gaussian Process"
+  },
+  {
+    "objectID": "posts/Gaussian.html#clustering",
+    "href": "posts/Gaussian.html#clustering",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Clustering",
+    "text": "Clustering"
+  },
+  {
+    "objectID": "posts/Gaussian.html#deep-learning",
+    "href": "posts/Gaussian.html#deep-learning",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Deep Learning",
+    "text": "Deep Learning\n\nModel Initilization\nAs mention in the (He et al. 2015)\n\nLoRA\n(Hu et al. 2021)\n\n\n\nLoRA Image Source:(Hu et al. 2021)\n\n\nIn the LLM, the number of parameters is huge, how we can file-tune those huge parameters. Using parameters efficient fine-tuning technique is one technique. LoRA is one of the PEFT that widely used in the file-tuning huge data.\nThe \\(A\\) matrix is initilization as the Normal DistributionEquation 2"
+  },
+  {
+    "objectID": "posts/Gaussian.html#normalization",
+    "href": "posts/Gaussian.html#normalization",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Normalization",
+    "text": "Normalization\n\nLayer Normlization\n(xiong2020?)\n\n\nRMS Normlization\nThis is the RMS with (zhang?)"
+  },
+  {
+    "objectID": "posts/Gaussian.html#generative-models",
+    "href": "posts/Gaussian.html#generative-models",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Generative Models",
+    "text": "Generative Models\nIn the Generative Models, the Normal Distribution is sometime used as the noise add to the original data, or the prior distribution of some unknown distribution that we are trying to get. In this chapter,"
+  },
+  {
+    "objectID": "posts/Gaussian.html#generative-adversarial-networks",
+    "href": "posts/Gaussian.html#generative-adversarial-networks",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Generative Adversarial Networks",
+    "text": "Generative Adversarial Networks\nThe Latent Space input to the generator is of sampled from a Gaussian Distribution (Goodfellow et al. 2014)\n\nVariational Autoencoders(VAE)\nVAEs uses a Gaussian Latent space to learn a generative model of data. (Kingma and Welling 2022)\nA VAE assumes that data is generated from a latent variable \\(Z\\), which follows a Gaussian prior: \\(Z \\sim \\mathcal{N}(0, I)\\). The VAE model learn a probabilistic mapping from \\(Z\\) to the observed data \\(X\\) using:\n\nEncoder: \\(q(Z |X ) \\sim \\mathcal{N}(\\mu_\\theta(X), \\sigma^2_\\theta(X))\\)\nDecoder: \\(P(X | Z)\\) reconstructs \\(X\\) from \\(Z\\)"
+  },
+  {
+    "objectID": "posts/Gaussian.html#diffusion-models",
+    "href": "posts/Gaussian.html#diffusion-models",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Diffusion Models",
+    "text": "Diffusion Models\n(For more details, check my this blog about diffusion models)\nThis paper (ho?)"
+  },
+  {
+    "objectID": "posts/Gaussian.html#reinforcement-learning",
+    "href": "posts/Gaussian.html#reinforcement-learning",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Reinforcement Learning",
+    "text": "Reinforcement Learning\nIn the Reinforcement Learning, Gaussian Distribution are commonly used in policy gradient methods like Trust Region Optimization(TRPO) and Proximal Policy Optimization(PPO), where policies are modeled as Gaussian distribution.\nWhen Exploration the environment, the exploration is often handled by Gaussian noise, such as in Deep Deterministc Policy Gradient"
+  },
+  {
+    "objectID": "posts/Gaussian.html#meta-learning",
+    "href": "posts/Gaussian.html#meta-learning",
+    "title": "Gaussian Distribution is All you need",
+    "section": "Meta Learning",
+    "text": "Meta Learning\nBayesian Meta Learning: Gaussian priors over parameters enable fast adaptation to new tasks in few-shot learning.\nLatent Task Representation: Many meta-learning frameworks use Gaussian distributions in the latent space to generalize across different tasks efficiently\nUncertainty Estimation: Gaussian-based models in meta-learning help quantify uncertainty, improving robustness in real-world application."
+  },
+  {
+    "objectID": "posts/Generative Model/Generative Model Overview.html",
+    "href": "posts/Generative Model/Generative Model Overview.html",
+    "title": "What a Generative Models?",
+    "section": "",
+    "text": "Generative models, as the name indicated, are models that can generative new content. Unlike discriminate models, the generative models are sometime hard to train. But why we need generative models in the first place? We want generative models because:\n\nDensity Estimation:\n\n\n\nDensity Estimation is the type of task that\n\n\n\n\n\n\nFigure 1: Summary of various kinds of deep generative models. (Image Source: Probabilistic Machine Learning)\n\n\n\nThere are 6 types of generative models, as showed in the Figure 1. In this article, we will go through those 6 different types. Get into the details of each different types and compare those models. How to combine those model to get more complex and useful generative models."
+  },
+  {
+    "objectID": "posts/Generative Model/Generative Model Overview.html#diffusion-models-vae",
+    "href": "posts/Generative Model/Generative Model Overview.html#diffusion-models-vae",
+    "title": "What a Generative Models?",
+    "section": "Diffusion Models + VAE",
+    "text": "Diffusion Models + VAE"
+  },
+  {
+    "objectID": "posts/Generative Model/Generative Model Overview.html#auto-regressive-vae",
+    "href": "posts/Generative Model/Generative Model Overview.html#auto-regressive-vae",
+    "title": "What a Generative Models?",
+    "section": "Auto-Regressive + VAE",
+    "text": "Auto-Regressive + VAE"
+  },
+  {
+    "objectID": "posts/Generative Model/Generative Model Overview.html#auto-regressive-flow-models",
+    "href": "posts/Generative Model/Generative Model Overview.html#auto-regressive-flow-models",
+    "title": "What a Generative Models?",
+    "section": "Auto-Regressive + Flow Models",
+    "text": "Auto-Regressive + Flow Models"
+  },
+  {
+    "objectID": "posts/Generative Model/Generative Model Overview.html#flow-model-vae",
+    "href": "posts/Generative Model/Generative Model Overview.html#flow-model-vae",
+    "title": "What a Generative Models?",
+    "section": "Flow Model + VAE",
+    "text": "Flow Model + VAE"
+  },
+  {
+    "objectID": "posts/Generative Model/Generative Model Overview.html#flow-model-gan",
+    "href": "posts/Generative Model/Generative Model Overview.html#flow-model-gan",
+    "title": "What a Generative Models?",
+    "section": "Flow Model + GAN",
+    "text": "Flow Model + GAN"
+  },
+  {
+    "objectID": "posts/Generative Model/Generative Model Overview.html#vae-gan",
+    "href": "posts/Generative Model/Generative Model Overview.html#vae-gan",
+    "title": "What a Generative Models?",
+    "section": "VAE + GAN",
+    "text": "VAE + GAN"
   },
   {
     "objectID": "posts/LLM/LLM-Overview.html#word-level",
@@ -103,6 +537,13 @@
     "title": "Let’s understand Large Language Model from scratch",
     "section": "RMS Normalization",
     "text": "RMS Normalization\n\nPost-Norm vs. Pre-Norm"
+  },
+  {
+    "objectID": "posts/LLM/LLM-Overview.html#without-normalization",
+    "href": "posts/LLM/LLM-Overview.html#without-normalization",
+    "title": "Let’s understand Large Language Model from scratch",
+    "section": "Without Normalization",
+    "text": "Without Normalization\nRecently, (Zhu et al. 2025) proposed that we can remove the normalization without harm the performance of the neural network. It replace the normalization layer with a scaled tanh function, named Dynamic Tanh, defined as:\n\\[\n\\text{DyT}(x) = \\gamma * \\tanh(\\alpha x) + \\beta\n\\tag{1}\\]\n\n\n\n\n\n\nFigure 1: Block with Dynamic Tanh(DyT) (Image Source: Transformers without Normalization)\n\n\n\nIt adjust the input activation range via a learnable scaling factor \\(\\alpha\\) and then squashed the extreme values through an S-shaped tanh function."
   },
   {
     "objectID": "posts/LLM/LLM-Overview.html#attention-mechnism",
@@ -224,373 +665,58 @@
     "text": "AI Agent"
   },
   {
-    "objectID": "posts/LLM/LLM-Overview.html#llm-as-optimizer",
-    "href": "posts/LLM/LLM-Overview.html#llm-as-optimizer",
-    "title": "Let’s understand Large Language Model from scratch",
-    "section": "LLM as Optimizer",
-    "text": "LLM as Optimizer"
-  },
-  {
-    "objectID": "posts/Generative Model/Generative Model Overview.html",
-    "href": "posts/Generative Model/Generative Model Overview.html",
-    "title": "What a Generative Models?",
+    "objectID": "posts/Generative Model/Diffusion Model.html",
+    "href": "posts/Generative Model/Diffusion Model.html",
+    "title": "Deep Dive into Diffusion Models",
     "section": "",
-    "text": "Generative models, as the name indicated, are models that can generative new content. Unlike discriminate models, the generative models are sometime hard to train. But why we need generative models in the first place? We want generative models because:\n\nDensity Estimation:\n\n\n\nDensity Estimation is the type of task that\n\n\n\n\n\n\nFigure 1: Summary of various kinds of deep generative models. (Image Source: Probabilistic Machine Learning)\n\n\n\nThere are 6 types of generative models, as showed in the Figure 1. In this article, we will go through those 6 different types. Get into the details of each different types and compare those models. How to combine those model to get more complex and useful generative models."
+    "text": "Diffusion Model is know\n\n\nLet’s first create a very simple diffusion model based on MNIST data. (Full code is available here)\n\nThe central idea is to take each training image and to corrupt it using a multi-step noise process to transform it into a sample from Gaussian distribution. A deep neural network is then trained to invert this process, and once trained the network can then generate new images starting with samples from Gaussian as input\nDeep LearningFoundations and Concepts\n\nThe corrupt process is defined as:\n\n\nShow the code\ndef corrupt(x, amount):\n    \"\"\"\n    corrupt the input `x` by mixing it with noise\n    x: (B, 1, 28, 28)\n    amount: (B) different amount of noise for different samples\n    \"\"\"\n    noise = torch.rand_like(x)\n    amount = amount.view(-1, 1, 1, 1)\n    return x * (1 - amount) + noise * amount\n\n\nWe take a batch of image in, and corrupt the image the according to different level of noise.\n\n\n\n\n\n\nFigure 1: Corrupt images with differnt level of noise.\n\n\n\nAfter we get images and corresponding corrupted images, we need to create a neural network to invert this process, which mean we need the neural network take the noise image in, get the de-noised(real) image out. And we want those two as close as possible. So, the loss function \\(\\mathcal{L}\\) is:\n\\[\n\\mathcal{L}(\\theta) = \\sum_{i = 1}^{N}\\| f_\\theta(\\hat{\\mathrm{x}}_i) - \\mathrm{x}_i \\|^2\n\\tag{1}\\]\nwhich is the Mean Square Loss.\nSo, there are different types of neural network, which one should we choose? Since we need the output has same shape as the input, the U-Net(Ronneberger, Fischer, and Brox 2015) is perfect choice.\n\n\n\n\n\nU-Net\n\n\nNow, we got everything we need to trained a neural network, data, model, loss function, let’s start training!!\n\n\nShow the code\nbatch_size = 128\ntrain_dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)\nepochs = 10\n\nnet = UNet()  # This UNet is trained to predict the original image from the corrupted image\ncriterion = nn.MSELoss()\noptimizer = torch.optim.Adam(net.parameters(), lr=1e-3)\n\nfor epoch in range(epochs):\n    for x, _ in tqdm(train_dataloader):\n        noise_amount = torch.rand(x.shape[0]) # Random Generate some noise level[0, 1] add to image x\n        noisy_x = corrupt(x, noise_amount) # Corrput the image\n\n        pred = net(noisy_x) # NN predict what the de-noised image x\n        loss = criterion(pred, x) # Compare \n\n        # Optimize\n        optimizer.zero_grad()\n        loss.backward()\n        optimizer.step()\n\n\nAfter we trained the model for 10 epochs, we can see that it predict not-bad output.\n\n\n\n\n\n\nFigure 2: Result of one pass U-Net model\n\n\n\nThough, for the image with higher noise-level(more like Gaussian Distribution), the network perform well. One small trick we can use it to pass the image through model several times. We hope each time, the predicted image will get better.\n\n\nShow the code\nn_steps = 8\nx = torch.rand(8, 1, 28, 28).to(device)\nstep_history = [x.detach().cpu()]\npred_output_history = []\n\nfor i in range(n_steps):\n    with torch.no_grad():\n        pred = net(x)\n\n    step_history.append(x.detach().cpu())\n    pred_output_history.append(pred.detach().cpu())\n    mix_factor = 1 / (n_steps - i)\n    x = x * (1 - mix_factor) + pred * mix_factor\n\n\nAfter we pass the model 8 times, we get the result:\n\n\n\n\n\n\nFigure 3: The result of the pass model 8 times. On the left of the row is the input to the model and on the right is the denoised images\n\n\n\nIt shows that the output truly get better each times.\nWe increase the number of steps, the result will get better. Below is how it look like after we pass the model 40 times.\n\n\n\n\n\n\nFigure 4: The result of passing model 40 times\n\n\n\n\n\n\n\n\n\nSummary for now\n\n\n\nIn the above example, we see how the Diffusion Model work, we first corrupt the images, and then pass the pass the corrupted images to the model to get the de-noised images back. We training the the model using Mean Square Loss Equation 1. To improve the quality of sampling, we can pass the out back to the model several times Figure 3. The Full code is available here"
   },
   {
-    "objectID": "posts/Gaussian.html",
-    "href": "posts/Gaussian.html",
-    "title": "Gaussian Distribution is All you need",
+    "objectID": "posts/Generative Model/Diffusion Model.html#diffusion-models-in-nutshell",
+    "href": "posts/Generative Model/Diffusion Model.html#diffusion-models-in-nutshell",
+    "title": "Deep Dive into Diffusion Models",
     "section": "",
-    "text": "Gaussian Distribution, one of the most important and widely used probability distributions in statistics and machine learning. It is also known as the normal distribution, which is a continuous probability distribution that is symmetric about the mean, showing that data near the mean are more frequent in occurrence than data far from the mean. In the blog, I will walk through the AI field from basic normal distribution, and see how this tree spread across the world."
+    "text": "Let’s first create a very simple diffusion model based on MNIST data. (Full code is available here)\n\nThe central idea is to take each training image and to corrupt it using a multi-step noise process to transform it into a sample from Gaussian distribution. A deep neural network is then trained to invert this process, and once trained the network can then generate new images starting with samples from Gaussian as input\nDeep LearningFoundations and Concepts\n\nThe corrupt process is defined as:\n\n\nShow the code\ndef corrupt(x, amount):\n    \"\"\"\n    corrupt the input `x` by mixing it with noise\n    x: (B, 1, 28, 28)\n    amount: (B) different amount of noise for different samples\n    \"\"\"\n    noise = torch.rand_like(x)\n    amount = amount.view(-1, 1, 1, 1)\n    return x * (1 - amount) + noise * amount\n\n\nWe take a batch of image in, and corrupt the image the according to different level of noise.\n\n\n\n\n\n\nFigure 1: Corrupt images with differnt level of noise.\n\n\n\nAfter we get images and corresponding corrupted images, we need to create a neural network to invert this process, which mean we need the neural network take the noise image in, get the de-noised(real) image out. And we want those two as close as possible. So, the loss function \\(\\mathcal{L}\\) is:\n\\[\n\\mathcal{L}(\\theta) = \\sum_{i = 1}^{N}\\| f_\\theta(\\hat{\\mathrm{x}}_i) - \\mathrm{x}_i \\|^2\n\\tag{1}\\]\nwhich is the Mean Square Loss.\nSo, there are different types of neural network, which one should we choose? Since we need the output has same shape as the input, the U-Net(Ronneberger, Fischer, and Brox 2015) is perfect choice.\n\n\n\n\n\nU-Net\n\n\nNow, we got everything we need to trained a neural network, data, model, loss function, let’s start training!!\n\n\nShow the code\nbatch_size = 128\ntrain_dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)\nepochs = 10\n\nnet = UNet()  # This UNet is trained to predict the original image from the corrupted image\ncriterion = nn.MSELoss()\noptimizer = torch.optim.Adam(net.parameters(), lr=1e-3)\n\nfor epoch in range(epochs):\n    for x, _ in tqdm(train_dataloader):\n        noise_amount = torch.rand(x.shape[0]) # Random Generate some noise level[0, 1] add to image x\n        noisy_x = corrupt(x, noise_amount) # Corrput the image\n\n        pred = net(noisy_x) # NN predict what the de-noised image x\n        loss = criterion(pred, x) # Compare \n\n        # Optimize\n        optimizer.zero_grad()\n        loss.backward()\n        optimizer.step()\n\n\nAfter we trained the model for 10 epochs, we can see that it predict not-bad output.\n\n\n\n\n\n\nFigure 2: Result of one pass U-Net model\n\n\n\nThough, for the image with higher noise-level(more like Gaussian Distribution), the network perform well. One small trick we can use it to pass the image through model several times. We hope each time, the predicted image will get better.\n\n\nShow the code\nn_steps = 8\nx = torch.rand(8, 1, 28, 28).to(device)\nstep_history = [x.detach().cpu()]\npred_output_history = []\n\nfor i in range(n_steps):\n    with torch.no_grad():\n        pred = net(x)\n\n    step_history.append(x.detach().cpu())\n    pred_output_history.append(pred.detach().cpu())\n    mix_factor = 1 / (n_steps - i)\n    x = x * (1 - mix_factor) + pred * mix_factor\n\n\nAfter we pass the model 8 times, we get the result:\n\n\n\n\n\n\nFigure 3: The result of the pass model 8 times. On the left of the row is the input to the model and on the right is the denoised images\n\n\n\nIt shows that the output truly get better each times.\nWe increase the number of steps, the result will get better. Below is how it look like after we pass the model 40 times.\n\n\n\n\n\n\nFigure 4: The result of passing model 40 times\n\n\n\n\n\n\n\n\n\nSummary for now\n\n\n\nIn the above example, we see how the Diffusion Model work, we first corrupt the images, and then pass the pass the corrupted images to the model to get the de-noised images back. We training the the model using Mean Square Loss Equation 1. To improve the quality of sampling, we can pass the out back to the model several times Figure 3. The Full code is available here"
   },
   {
-    "objectID": "posts/Gaussian.html#gaussian-distribution",
-    "href": "posts/Gaussian.html#gaussian-distribution",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Gaussian Distribution",
-    "text": "Gaussian Distribution\nGaussian distribution, also know as the Normal Distribution, is defined, for a single real-valued variable \\(x\\) as:\n\\[\n\\mathcal{N}(x | \\mu, \\sigma^2) = \\frac{1}{(2\\pi\\sigma^2)^{1/2}}\\exp\\left\\{- \\frac{1}{2\\sigma^2} (x - \\mu)^2\\right\\}\n\\tag{1}\\]\nwhere:\n\n\\(\\mu\\) called the mean\n\\(\\sigma^2\\) called the variance\n\n\\(\\sigma\\) called the standard deviation\n\n\\(\\beta = 1/\\sigma^2\\) called the precision."
-  },
-  {
-    "objectID": "posts/Gaussian.html#multivariate-gaussian-distribution",
-    "href": "posts/Gaussian.html#multivariate-gaussian-distribution",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Multivariate Gaussian Distribution",
-    "text": "Multivariate Gaussian Distribution\nNow, we consider the \\(D\\)-dimensional \\(\\mathbf{x}\\), this lead to the Multivariate Gaussian, which is defined as:\n\\[\n\\mathcal{N}(\\mathcal{\\mathbf{x}|\\boldsymbol{\\mu}, \\boldsymbol{\\Sigma}})= \\frac{1}{(2\\pi)^{D / 2}|\\boldsymbol{\\Sigma}|^{1 / 2}} \\exp\\left\\{  - \\frac{1}{2}  (\\mathbf{x}- \\mathbf{\\mu})^{T} \\boldsymbol{\\Sigma}^{-1}(\\mathbf{x} - \\boldsymbol{\\mu})\\right\\}\n\\tag{2}\\]\nwhere:\n\n\\(\\boldsymbol{\\mu}\\) is the \\(D\\)-dimensional mean vector\n\\(\\boldsymbol{\\Sigma}\\) is the \\(D \\times D\\) covariance matrix - \\(\\det \\boldsymbol{\\Sigma}\\) is the determinant of \\(\\boldsymbol{\\Sigma}\\)\n\\(\\Lambda \\equiv  \\boldsymbol{\\Sigma}^{-1}\\) is the precision matrix."
-  },
-  {
-    "objectID": "posts/Gaussian.html#mixture-of-gaussian",
-    "href": "posts/Gaussian.html#mixture-of-gaussian",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Mixture of Gaussian",
-    "text": "Mixture of Gaussian\nMore complexity, when we take the linear combination of the basic distribution of Normal Distribution, we will get Mixture of Gaussian Distribution, which is defined as:\n\\[\np(\\mathbf{x}) = \\sum_{k=1}^{K}\\pi_{k}\\mathcal{N}(\\mathbf{x} | \\boldsymbol{\\mu}_{k}, \\boldsymbol{\\Sigma}_{k})\n\\tag{3}\\]\nwhere:\n\n\\(\\pi_k\\) called the mixing coefficients, who has constraints that\n\\[\n\\begin{array} &\\sum_{k=1}^K \\pi_k = 1  \\\\ 0 \\leq \\pi_{k} \\leq 1\\end{array}\n\\]\n\\(\\mathcal{N}(\\mathbf{x} | \\boldsymbol{\\mu}{k}, \\boldsymbol{\\Sigma}{k})\\) is called a component of the mixture, has its own \\(\\boldsymbol{\\mu}\\) and \\(\\boldsymbol{\\Sigma}_k\\)"
-  },
-  {
-    "objectID": "posts/Gaussian.html#linear-gaussian-model",
-    "href": "posts/Gaussian.html#linear-gaussian-model",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Linear Gaussian Model",
-    "text": "Linear Gaussian Model"
-  },
-  {
-    "objectID": "posts/Gaussian.html#gaussian-in-high-dimension",
-    "href": "posts/Gaussian.html#gaussian-in-high-dimension",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Gaussian In High-Dimension",
-    "text": "Gaussian In High-Dimension"
-  },
-  {
-    "objectID": "posts/Gaussian.html#maximum-likelihood-learning",
-    "href": "posts/Gaussian.html#maximum-likelihood-learning",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Maximum Likelihood Learning",
-    "text": "Maximum Likelihood Learning\nThe first methods we introduce is the maximum likelihood learning, which is defined as:\n\\[\n\\max P(\\mathcal{D} | \\mu, \\Sigma)\n\\tag{4}\\]\nThe \\(P(\\mathcal{D} | \\mu, \\Sigma)\\) is called the likelihood of the dataset, as we defined in the question, the data points are i.i.d. so, we can write the likelihood function as:\n\\[\nP(\\mathcal{D} | \\mu, \\Sigma) = \\prod_{n = 1}^N \\mathcal{N}(\\mathbf{x}_n | \\mu, \\Sigma)\n\\tag{5}\\]\n\n\n\n\n\n\nLog Trick\n\n\n\nIn the practice, because the \\(0 \\leq \\mathcal{N}(\\mathbf{x}_n | \\mu, \\Sigma) \\leq 1\\), when multiplying \\(N\\) small number together, might cause the under-flow problem in the computer. So, we use \\(\\log\\)-form of the function to prevent the under-flow. Because the \\(\\log\\) function is the monomtic function, so, when we maximimzie \\(\\log f\\) is same as \\(\\max f\\).\n\n\nSo, the objective function we want to maximize is:\n\\[\n\\ln P(\\mathcal{D} | \\mu, \\Sigma) = \\sum_{n = 1}^N \\ln\\mathcal{N}(\\mathbf{x}_n | \\mu, \\Sigma)\n\\tag{6}\\]\nHow to maximize the Equation 6. The most intuitive of way is set the derivative of the function with respect to 0.\n\nGradient Descent\n\n\nBias of Maximum Likelihood Learning.\nAs we can see, we used the sample mean to derive the sample variance. Because the sample mean estimated from the dataset \\(\\mathcal{D}\\) , it is not same as the true \\(\\mu\\)."
-  },
-  {
-    "objectID": "posts/Gaussian.html#maxium-a-posteriormap-estimate",
-    "href": "posts/Gaussian.html#maxium-a-posteriormap-estimate",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Maxium A Posterior(MAP) Estimate",
-    "text": "Maxium A Posterior(MAP) Estimate"
-  },
-  {
-    "objectID": "posts/Gaussian.html#expectation-maximizationem-algorithms",
-    "href": "posts/Gaussian.html#expectation-maximizationem-algorithms",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Expectation-Maximization(EM) Algorithms",
-    "text": "Expectation-Maximization(EM) Algorithms\n\nEM Algorithms for Gaussian Mxiture Model"
-  },
-  {
-    "objectID": "posts/Gaussian.html#sequential-estimation",
-    "href": "posts/Gaussian.html#sequential-estimation",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Sequential Estimation",
-    "text": "Sequential Estimation\nSo far we have assume that we can “see” the whole dataset at once. In practice, we sometime cannot get the whole dataset at one, because:\n\nThe data points comes in sequential, e.g. Online Learning\nThe dataset is too big that can not fit into the memory of the computer.\n\nWe have to way to learn the parameters in sequential version. One of the method is called Robbins-Monro algorithm.\n\nWelford’s Algorithm\n\nRobbins-Monro Algorithm\n\n\n\nKalman Filter\n\n\nStochastic Gradient Descent\n\n\nExpoential Moving Average(EMA)"
-  },
-  {
-    "objectID": "posts/Gaussian.html#linear-regression",
-    "href": "posts/Gaussian.html#linear-regression",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Linear Regression",
-    "text": "Linear Regression"
-  },
-  {
-    "objectID": "posts/Gaussian.html#gaussian-process",
-    "href": "posts/Gaussian.html#gaussian-process",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Gaussian Process",
-    "text": "Gaussian Process"
-  },
-  {
-    "objectID": "posts/Gaussian.html#clustering",
-    "href": "posts/Gaussian.html#clustering",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Clustering",
-    "text": "Clustering"
-  },
-  {
-    "objectID": "posts/Gaussian.html#deep-learning",
-    "href": "posts/Gaussian.html#deep-learning",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Deep Learning",
-    "text": "Deep Learning\n\nModel Initilization\nAs mention in the (He et al. 2015)\n\nLoRA\n(Hu et al. 2021)\n\n\n\nLoRA Image Source:(Hu et al. 2021)\n\n\nIn the LLM, the number of parameters is huge, how we can file-tune those huge parameters. Using parameters efficient fine-tuning technique is one technique. LoRA is one of the PEFT that widely used in the file-tuning huge data.\nThe \\(A\\) matrix is initilization as the Normal DistributionEquation 2"
-  },
-  {
-    "objectID": "posts/Gaussian.html#normalization",
-    "href": "posts/Gaussian.html#normalization",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Normalization",
-    "text": "Normalization\n\nLayer Normlization\n(Xiong et al. 2020)\n\n\nRMS Normlization\nThis is the RMS with (Zhang and Sennrich, n.d.)"
-  },
-  {
-    "objectID": "posts/Gaussian.html#generative-models",
-    "href": "posts/Gaussian.html#generative-models",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Generative Models",
-    "text": "Generative Models\nIn the Generative Models, the Normal Distribution is sometime used as the noise add to the original data, or the prior distribution of some unknown distribution that we are trying to get. In this chapter,"
-  },
-  {
-    "objectID": "posts/Gaussian.html#generative-adversarial-networks",
-    "href": "posts/Gaussian.html#generative-adversarial-networks",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Generative Adversarial Networks",
-    "text": "Generative Adversarial Networks\nThe Latent Space input to the generator is of sampled from a Gaussian Distribution (Goodfellow et al. 2014)\n\nVariational Autoencoders(VAE)\nVAEs uses a Gaussian Latent space to learn a generative model of data. (Kingma and Welling 2022)\nA VAE assumes that data is generated from a latent variable \\(Z\\), which follows a Gaussian prior: \\(Z \\sim \\mathcal{N}(0, I)\\). The VAE model learn a probabilistic mapping from \\(Z\\) to the observed data \\(X\\) using:\n\nEncoder: \\(q(Z |X ) \\sim \\mathcal{N}(\\mu_\\theta(X), \\sigma^2_\\theta(X))\\)\nDecoder: \\(P(X | Z)\\) reconstructs \\(X\\) from \\(Z\\)"
-  },
-  {
-    "objectID": "posts/Gaussian.html#diffusion-models",
-    "href": "posts/Gaussian.html#diffusion-models",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Diffusion Models",
-    "text": "Diffusion Models\n(For more details, check my this blog about diffusion models)\nThis paper (Ho, Jain, and Abbeel, n.d.)"
-  },
-  {
-    "objectID": "posts/Gaussian.html#reinforcement-learning",
-    "href": "posts/Gaussian.html#reinforcement-learning",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Reinforcement Learning",
-    "text": "Reinforcement Learning\nIn the Reinforcement Learning, Gaussian Distribution are commonly used in policy gradient methods like Trust Region Optimization(TRPO) and Proximal Policy Optimization(PPO), where policies are modeled as Gaussian distribution.\nWhen Exploration the environment, the exploration is often handled by Gaussian noise, such as in Deep Deterministc Policy Gradient"
-  },
-  {
-    "objectID": "posts/Gaussian.html#meta-learning",
-    "href": "posts/Gaussian.html#meta-learning",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Meta Learning",
-    "text": "Meta Learning\nBayesian Meta Learning: Gaussian priors over parameters enable fast adaptation to new tasks in few-shot learning.\nLatent Task Representation: Many meta-learning frameworks use Gaussian distributions in the latent space to generalize across different tasks efficiently\nUncertainty Estimation: Gaussian-based models in meta-learning help quantify uncertainty, improving robustness in real-world application."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
+    "objectID": "posts/MathToolBox.html",
+    "href": "posts/MathToolBox.html",
+    "title": "Math Toolbox for AI",
     "section": "",
-    "text": "I am a master student of Singapore Management University majoring in IT in Business with AI track. I am passionate about AI. I have a strong background in computer science and big data. I am proficient in Python. I have experience in machine learning, deep learning. I am a quick learner and a good team player. I like to learn new things summary and show them with each other. Currently I’m looking for a full-time job in AI field."
+    "text": "Update\n\n\n\nAdd Vector Normalization\nMathematics is the important and the most confusion part of artificial intelligence. You might think AI is all about fancy neural networks and mind-blowing predictions, but behind every impressive AI breakthrough is a solid foundation of math. Without math, AI is just a bunch of random code guessing its way through problems like a lost tourist with no GPS.\nSo why am I writing this blog? Because AI is everywhere—from recommending your next Netflix binge to predicting stock market trends. Yet, many aspiring AI enthusiasts underestimate the power of mathematics. If you’ve ever wondered, “Do I really need to know linear algebra and calculus to work with AI?” The answer is a resounding YES! And I’m here to make it a little less intimidating (and hopefully a bit more fun).\nNow, let’s talk about the real struggle: the fancy names. When you first start learning AI, it feels like math is just out to confuse you. One moment you’re fine with basic addition, and the next, you’re drowning in terms like “eigenvalues,” “Jacobian matrices,” and “Markov chains.” You hear about “gradient descent” and think, “Oh, that sounds cool,” only to realize it involves partial derivatives and a whole lot of Greek letters that make your head spin. And don’t even get me started on “Lagrange multipliers”—it sounds like something from a sci-fi movie, but turns out to be just another way math likes to keep us on our toes.\nThis blog is about the some keep concept in the mathematics and how they used in the AI. Each part is self-contains, readers can choose parts most interested them."
   },
   {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
-    "title": "About Me",
-    "section": "Education",
-    "text": "Education\nSingapore Management University | Singapre Master of IT in Business(AI track) | Sept 2023 -\nUniversity of Wollongong | Computer Science B.S in Big Data | March 2020 - March 2023"
+    "objectID": "posts/MathToolBox.html#norm-of-the-vectorslp-norm",
+    "href": "posts/MathToolBox.html#norm-of-the-vectorslp-norm",
+    "title": "Math Toolbox for AI",
+    "section": "1. Norm of the Vectors(Lp-Norm)",
+    "text": "1. Norm of the Vectors(Lp-Norm)\n\n\n\n\n\n\nCaution\n\n\n\nMany people confuse normalization with the length (norm) of a vector, but they are fundamentally different. The Normalization is defined as:\n\\[\nv_{\\text{normlized}} = \\frac{v}{\\| v\\|_p}\n\\]\nwhere \\(\\| v \\|_p\\) is the Norm of the vector, this form is called Lp-Norm.\nNormalization is the process of rescaling a vector so that its norm (magnitude) becomes 1, while preserving its direction. It ensures that all vectors in a dataset have the same scale, which is crucial for numerical stability and model performance in machine learning and deep learning.\n\n\nThe Lp-Norm is a generalization of different norms, including L1-Norm, L2-Norm, and others. It measures the magnitude of a vector in various ways depending on the value of \\(p\\) . Lp-Norm is widely used in machine learning, deep learning, and signal processing for tasks like feature scaling, similarity measurements, and optimization. Mathematically, it defined as:\n\\[\n\\| v\\|_p = (\\sum_i^d |v_i|^p)^{1 / p}\n\\]\nwhere:\n\n\\(p\\): is a positive real number\n\\(|v_i|\\) represents the absolute value of each component of the vectors\n\nThere are some special case of the"
   },
   {
-    "objectID": "about.html#technical-skills",
-    "href": "about.html#technical-skills",
-    "title": "About Me",
-    "section": "Technical Skills",
-    "text": "Technical Skills\n\nMachine Learning & Deep Learning\nComputer Vision\nNatural Language Processing\nReinforcement Learning\nMeta Learning\nGenerative Model\nUnsupervised Learning\nLarge Language Model\nConvex Optmization\nProbabilitic Graphical Model\nDeep Graph Learning"
+    "objectID": "posts/MathToolBox.html#vector-space",
+    "href": "posts/MathToolBox.html#vector-space",
+    "title": "Math Toolbox for AI",
+    "section": "2. Vector Space",
+    "text": "2. Vector Space\n\nHilbert Sapce"
   },
   {
-    "objectID": "about.html#projects",
-    "href": "about.html#projects",
-    "title": "About Me",
-    "section": "Projects",
-    "text": "Projects"
+    "objectID": "posts/MathToolBox.html#compare-vectors",
+    "href": "posts/MathToolBox.html#compare-vectors",
+    "title": "Math Toolbox for AI",
+    "section": "3. Compare Vectors",
+    "text": "3. Compare Vectors"
   },
   {
-    "objectID": "courses/mit-matrix-method.html",
-    "href": "courses/mit-matrix-method.html",
-    "title": "MIT 18.065: Matrix Methods in Data Analysis, Signal Processing, and Machine Learning",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "👋🏻Welcome to Yuyang’s Blog",
     "section": "",
-    "text": "Course Link"
-  },
-  {
-    "objectID": "courses/mit-tinyML.html",
-    "href": "courses/mit-tinyML.html",
-    "title": "MIT 6.5940: TinyML and Efficient Deep Learning Computing",
-    "section": "",
-    "text": "Course Link"
-  },
-  {
-    "objectID": "courses/ucb-llm-agent.html",
-    "href": "courses/ucb-llm-agent.html",
-    "title": "UCB CS294/194-196 Large Language Model Agents",
-    "section": "",
-    "text": "Course Link"
-  },
-  {
-    "objectID": "courses/ucb-llm-agent2.html",
-    "href": "courses/ucb-llm-agent2.html",
-    "title": "UCB CS294/194-196: Advanced Large Language Model Agents",
-    "section": "",
-    "text": "Course Link"
-  },
-  {
-    "objectID": "courses/ucb-cs285-drl.html",
-    "href": "courses/ucb-cs285-drl.html",
-    "title": "UCB CS285: Deep Reinforcement Learning",
-    "section": "",
-    "text": "Course Link"
-  },
-  {
-    "objectID": "resource.html#lab-reports",
-    "href": "resource.html#lab-reports",
-    "title": "Resources",
-    "section": "",
-    "text": "NN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMathematics\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nMIT\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "resource.html#meeting-notes",
-    "href": "resource.html#meeting-notes",
-    "title": "Resources",
-    "section": "",
-    "text": "Mathematics\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMathematics\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "courses/mit-flow-mathcing.html",
-    "href": "courses/mit-flow-mathcing.html",
-    "title": "MIT 6.S184: Introduction to Flow Matching and Diffusion Models",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/mit-diffusionmodel.html",
-    "href": "courses/mit-diffusionmodel.html",
-    "title": "MIT 6.S183: A Practical Introduction to Diffusion Models",
-    "section": "",
-    "text": "Course Link"
-  },
-  {
-    "objectID": "courses/mit-datacentric.html",
-    "href": "courses/mit-datacentric.html",
-    "title": "MIT Introduction to Data-Centric AI",
-    "section": "",
-    "text": "Course Link"
-  },
-  {
-    "objectID": "courses/stanford-graph.html",
-    "href": "courses/stanford-graph.html",
-    "title": "Stanford CS224W: Machine Learning with Graphs",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/stanford-rl.html",
-    "href": "courses/stanford-rl.html",
-    "title": "Stanford CS234: Reinforcement Learning",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/stanford-meta.html",
-    "href": "courses/stanford-meta.html",
-    "title": "Stanford CS 330: Deep Multi-Task and Meta Learning",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/cmu-dl.html",
-    "href": "courses/cmu-dl.html",
-    "title": "CMU 11-785: Introduction to Deep Learning",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/ucb-dl.html",
-    "href": "courses/ucb-dl.html",
-    "title": "UCB CS182/282A: Designing, Visualizing and Understanding Deep Neural Networks",
-    "section": "",
-    "text": "course"
+    "text": "Let’s understand Large Language Model from scratch\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\n2025-03-17\n\n\n2 min\n\n\n328 words\n\n\n2025-03-17\n\n\n\n\n\n\n\n\n\n\n\n\nWhat a Generative Models?\n\n\n\n\n\n\nGenerative Model\n\n\nOverview\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance\n\n\n\n\n\n2025-03-17\n\n\n2 min\n\n\n210 words\n\n\n2025-03-06\n\n\n\n\n\n\n\n\n\n\n\n\nGaussian Distribution is All you need\n\n\n\n\n\n\nMathematics\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\n2025-03-17\n\n\n7 min\n\n\n1,243 words\n\n\n2025-03-05\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Dive into Diffusion Models\n\n\n\n\n\n\nGenerative Model\n\n\nLarge Language Model\n\n\n\nThis blog is my learning notes on the Diffusion Models, which is the state-of-art generative models. This blog will cover that is the diffusion models, how to use diffusion models to generate image, text-to-image, video. It also cover lagnuage diffusion model.\n\n\n\n\n\n2025-03-17\n\n\n4 min\n\n\n738 words\n\n\n2025-03-04\n\n\n\n\n\n\n\n\n\n\n\n\nMath Toolbox for AI\n\n\n\n\n\n\nMathematics\n\n\n\nAn Toolbox of essential math for artificial intelligence, including linear algebra, probability, calculus, and optimization.\n\n\n\n\n\n2025-03-17\n\n\n3 min\n\n\n480 words\n\n\n2025-03-04\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "courses/cmu-convexoptimization.html",
     "href": "courses/cmu-convexoptimization.html",
     "title": "CMU 10-725: Convex Optimization",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/cmu-pgm.html",
-    "href": "courses/cmu-pgm.html",
-    "title": "CMU 10-708: Probabilistic Graphical Models",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/stanford-ml.html",
-    "href": "courses/stanford-ml.html",
-    "title": "Stanford CS229: Machine Learning",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/hdp.html",
-    "href": "courses/hdp.html",
-    "title": "High-Dimensional Probability and Applications in Data Science",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/stanford-cv.html",
-    "href": "courses/stanford-cv.html",
-    "title": "CS231n: Deep Learning for Computer Vision",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/cmu-llms.html",
-    "href": "courses/cmu-llms.html",
-    "title": "CMU 11-868: Large Language Model Systems",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/mit-aalg.html",
-    "href": "courses/mit-aalg.html",
-    "title": "MIT 6.854/18.415J: Advanced Algorithms",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/cornell-mlh.html",
-    "href": "courses/cornell-mlh.html",
-    "title": "CS 5775: Machine Learning Hardware and Systems",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/cmu-dls.html",
-    "href": "courses/cmu-dls.html",
-    "title": "CMU 11-714: Deep Learning Systems",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/stanford-dgm.html",
-    "href": "courses/stanford-dgm.html",
-    "title": "Stanford CS236: Deep Generative Models",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/ucb-unsupervised.html",
-    "href": "courses/ucb-unsupervised.html",
-    "title": "UCB CS294-158: Deep Unsupervised Learning",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/cmu-mml.html",
-    "href": "courses/cmu-mml.html",
-    "title": "CMU 11-777: MultiModal Machine Learning",
     "section": "",
     "text": "course"
   },
@@ -602,6 +728,20 @@
     "text": "course"
   },
   {
+    "objectID": "courses/ucb-dl.html",
+    "href": "courses/ucb-dl.html",
+    "title": "UCB CS182/282A: Designing, Visualizing and Understanding Deep Neural Networks",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/ucb-cs285-drl.html",
+    "href": "courses/ucb-cs285-drl.html",
+    "title": "UCB CS285: Deep Reinforcement Learning",
+    "section": "",
+    "text": "Course Link"
+  },
+  {
     "objectID": "courses/stanford-prob.html",
     "href": "courses/stanford-prob.html",
     "title": "Stanford CS109: Probability for Computer Scientists",
@@ -609,16 +749,44 @@
     "text": "course"
   },
   {
-    "objectID": "courses/ucb-algorithms.html",
-    "href": "courses/ucb-algorithms.html",
-    "title": "UCB CS170: Efficient Algorithms and Intractable Problems",
+    "objectID": "courses/ucb-cs61a.html",
+    "href": "courses/ucb-cs61a.html",
+    "title": "UCB CS 61A: Structure and Interpretation of Computer Programs",
     "section": "",
     "text": "course"
   },
   {
-    "objectID": "courses/cmu-llm.html",
-    "href": "courses/cmu-llm.html",
-    "title": "CMU 11-667:Large Language Models: Methods and Applications",
+    "objectID": "courses/stanford-dgm.html",
+    "href": "courses/stanford-dgm.html",
+    "title": "Stanford CS236: Deep Generative Models",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/cmu-dls.html",
+    "href": "courses/cmu-dls.html",
+    "title": "CMU 11-714: Deep Learning Systems",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/mit-calculus2.html",
+    "href": "courses/mit-calculus2.html",
+    "title": "MIT 18.02: Multivariable Calculus",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/mit-calculus2.html#why-this-course",
+    "href": "courses/mit-calculus2.html#why-this-course",
+    "title": "MIT 18.02: Multivariable Calculus",
+    "section": "Why this course?",
+    "text": "Why this course?\n\nEssential for Machine Learning & Deep Learning • Many cost functions in deep learning involve multiple variables, requiring partial derivatives for optimization. • Gradient Descent in Higher Dimensions – In neural networks, weights are updated using gradients in multi-dimensional space. • Hessian Matrices & Second-Order Optimization – Used in advanced optimization algorithms like Newton’s method.\nFoundation for Probabilistic Machine Learning & Statistics • Multivariate Probability Distributions – Needed for Gaussian Mixture Models, Bayesian Inference, and Principal Component Analysis (PCA). • Expectation & Variance in Multiple Dimensions – Important for probabilistic AI models."
+  },
+  {
+    "objectID": "courses/stanford-parallel-computing.html",
+    "href": "courses/stanford-parallel-computing.html",
+    "title": "Stanford CS149: Parallel Computing",
     "section": "",
     "text": "course"
   },
@@ -630,163 +798,16 @@
     "text": "course"
   },
   {
-    "objectID": "courses/coursera-ml.html",
-    "href": "courses/coursera-ml.html",
-    "title": "Coursera: Machine Learning Specialization",
+    "objectID": "courses/ucb-llm-agent2.html",
+    "href": "courses/ucb-llm-agent2.html",
+    "title": "UCB CS294/194-196: Advanced Large Language Model Agents",
     "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/gpu-mode.html",
-    "href": "courses/gpu-mode.html",
-    "title": "GPU Mode",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/mit-algorithms.html",
-    "href": "courses/mit-algorithms.html",
-    "title": "MIT 6.006: Introduction To Algorithms",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/cmu-mls.html",
-    "href": "courses/cmu-mls.html",
-    "title": "CMU 15-849: Machine Learning Systems",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "resource.html#computer-vision",
-    "href": "resource.html#computer-vision",
-    "title": "Resources",
-    "section": "Computer Vision",
-    "text": "Computer Vision\n\n\n\n\n\n\n\n\n\n\nCS231n: Deep Learning for Computer Vision\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "resource.html#natural-language-processing",
-    "href": "resource.html#natural-language-processing",
-    "title": "Resources",
-    "section": "Natural Language Processing",
-    "text": "Natural Language Processing\n\n\n\n\n\n\n\n\n\n\nStanford CS224N: Natural Language Processing with Deep Learning\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCMU 11-711: Advanced NLP\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCMU 11-667:Large Language Models: Methods and Applications\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUCB CS294/194-196 Large Language Model Agents\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nUCB\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUCB CS294/194-196: Advanced Large Language Model Agents\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nUCB\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "resource.html#reinforcement-learning-robotics",
-    "href": "resource.html#reinforcement-learning-robotics",
-    "title": "Resources",
-    "section": "Reinforcement Learning & Robotics",
-    "text": "Reinforcement Learning & Robotics\n\n\n\n\n\n\n\n\n\n\nStanford CS234: Reinforcement Learning\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUCB CS182/282A: Designing, Visualizing and Understanding Deep Neural Networks\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "resource.html#generative-models",
-    "href": "resource.html#generative-models",
-    "title": "Resources",
-    "section": "Generative Models",
-    "text": "Generative Models\n\n\n\n\n\n\n\n\n\n\nStanford CS236: Deep Generative Models\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUCB CS294-158: Deep Unsupervised Learning\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "resource.html#others",
-    "href": "resource.html#others",
-    "title": "Resources",
-    "section": "Others",
-    "text": "Others\n\n\n\n\n\n\n\n\n\n\nStanford CS224W: Machine Learning with Graphs\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStanford CS 330: Deep Multi-Task and Meta Learning\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCMU 11-777: MultiModal Machine Learning\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStanford CS246: Mining Massive Data Sets\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Course Link"
   },
   {
     "objectID": "courses/cornell-ml.html",
     "href": "courses/cornell-ml.html",
     "title": "CS4780: Machine Learning for Intelligent Systems",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "resource.html#hardware",
-    "href": "resource.html#hardware",
-    "title": "Resources",
-    "section": "Hardware",
-    "text": "Hardware\n\n\n\n\n\n\n\n\n\n\nCMU 11-714: Deep Learning Systems\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCMU 11-868: Large Language Model Systems\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCMU 15-849: Machine Learning Systems\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCS 5775: Machine Learning Hardware and Systems\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGPU Mode\n\n\n\nNN\n\n\nBasic\n\n\n\nIn this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model.…\n\n\n\nStanford\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "courses/mit-la.html",
-    "href": "courses/mit-la.html",
-    "title": "MIT 18.06: Linear Algebra",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/stanford-parallel-computing.html",
-    "href": "courses/stanford-parallel-computing.html",
-    "title": "Stanford CS149: Parallel Computing",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/mit-matrix-calculus.html",
-    "href": "courses/mit-matrix-calculus.html",
-    "title": "MIT 18.S096: Matrix Calculus For Machine Learning And Beyond",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/mit-calculus1.html",
-    "href": "courses/mit-calculus1.html",
-    "title": "MIT 18.01: Single Variable Calculus",
-    "section": "",
-    "text": "Course Link"
-  },
-  {
-    "objectID": "courses/mit-calculus2.html",
-    "href": "courses/mit-calculus2.html",
-    "title": "MIT 18.02: Multivariable Calculus",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/ucb-intro-ai.html",
-    "href": "courses/ucb-intro-ai.html",
-    "title": "UCB CS188: Introduction to Artificial Intelligence ",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/stanford-intro-ai.html",
-    "href": "courses/stanford-intro-ai.html",
-    "title": "Stanford CS221: Artificial Intelligence: Principles and Techniques",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/mit-ds.html",
-    "href": "courses/mit-ds.html",
-    "title": "MIT RES.18-009: Learn Differential Equations: Up Close With Gilbert Strang And Cleve Moler",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/stanford-nlp.html",
-    "href": "courses/stanford-nlp.html",
-    "title": "Stanford CS224N: Natural Language Processing with Deep Learning",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "resource.html#youtube",
-    "href": "resource.html#youtube",
-    "title": "Resources",
-    "section": "Youtube",
-    "text": "Youtube\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Description\n        \n         \n          link\n        \n         \n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDescription\n\n\nlink\n\n\n \n\n\n\n\n\n\nMIT OpenCourseWare\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\nhttps://www.youtube.com/user/MIT\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "courses/ucb-cs61a.html",
-    "href": "courses/ucb-cs61a.html",
-    "title": "UCB CS 61A: Structure and Interpretation of Computer Programs",
-    "section": "",
-    "text": "course"
-  },
-  {
-    "objectID": "courses/cmu-os.html",
-    "href": "courses/cmu-os.html",
-    "title": "CMU 15-213: Introduction to Computer Systems",
     "section": "",
     "text": "course"
   },
@@ -798,46 +819,60 @@
     "text": "course"
   },
   {
-    "objectID": "resource.html#youtuber",
-    "href": "resource.html#youtuber",
-    "title": "Resources",
-    "section": "Youtuber",
-    "text": "Youtuber\n\n\n\n\n\n\n\n\n\n\nSteve Brunton\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAndrej Karpathy\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3Blue1Brown\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStatQuest with Josh Starmer\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLex Fridman\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "objectID": "courses/stanford-intro-ai.html",
+    "href": "courses/stanford-intro-ai.html",
+    "title": "Stanford CS221: Artificial Intelligence: Principles and Techniques",
+    "section": "",
+    "text": "course"
   },
   {
-    "objectID": "resource.html#blogs",
-    "href": "resource.html#blogs",
-    "title": "Resources",
-    "section": "Blogs",
-    "text": "Blogs\n\n\n\n\n\n\n\n\n\n\nLil’Log\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Real-World ML Blog\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHugging Face Daily Paper\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "objectID": "courses/cmu-dl.html",
+    "href": "courses/cmu-dl.html",
+    "title": "CMU 11-785: Introduction to Deep Learning",
+    "section": "",
+    "text": "course"
   },
   {
-    "objectID": "resource.html#books",
-    "href": "resource.html#books",
-    "title": "Resources",
-    "section": "Books",
-    "text": "Books\n\n\n\n\n\n\n\n\n\n\nPattern Recognition and Machine Learning\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Learning: Foundations and Concepts\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbabilistic Machine Learning: An Introduction\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbabilistic Machine Learning: Advanced Topics\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMathematics for Machine Learning\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nArtificial Intelligence: A Modern Approach\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinear Algebra and Optimization for Machine Learning: A Textbook\n\n\n\n\n\nMIT OpenCourseWare is a web-based publication of virtually all MIT course content. OCW is open and available to the world and is a permanent MIT activity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStatistics for High-Dimensional Data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "objectID": "courses/stanford-graph.html",
+    "href": "courses/stanford-graph.html",
+    "title": "Stanford CS224W: Machine Learning with Graphs",
+    "section": "",
+    "text": "course"
   },
   {
-    "objectID": "courses/mit-calculus1.html#why-this-course",
-    "href": "courses/mit-calculus1.html#why-this-course",
-    "title": "MIT 18.01: Single Variable Calculus",
-    "section": "Why this course?",
-    "text": "Why this course?\n\nSingle Variable Calculus is one of the fundamental building blocks of AI and machine learning. Many key concepts in AI, such as gradient descent, optimization, and backpropagation, heavily rely on calculus principles.\nEssential for Understanding Optimization Algorithms\n\nMachine learning models are trained using optimization algorithms, which minimize loss functions.\nGradient Descent, the most widely used optimization technique, is based on derivatives to adjust model parameters.\nConvex functions and critical points help in finding optimal solutions.\n\nIntegral Calculus in Probabilistic Models\n\nMany AI models use probability distributions (e.g., Gaussian, Poisson, Exponential).\nIntegrals are needed to compute expectations, probabilities, and marginal distributions, essential in Bayesian statistics and deep learning.\n\nFoundations for Neural Networks & Deep Learning • Activation functions (e.g., Sigmoid, ReLU, Softmax) require differentiation. • Backpropagation, the core algorithm in neural networks, relies on chain rule differentiation to update weights."
+    "objectID": "courses/cmu-llms.html",
+    "href": "courses/cmu-llms.html",
+    "title": "CMU 11-868: Large Language Model Systems",
+    "section": "",
+    "text": "course"
   },
   {
-    "objectID": "courses/mit-calculus2.html#why-this-course",
-    "href": "courses/mit-calculus2.html#why-this-course",
-    "title": "MIT 18.02: Multivariable Calculus",
-    "section": "Why this course?",
-    "text": "Why this course?\n\nEssential for Machine Learning & Deep Learning • Many cost functions in deep learning involve multiple variables, requiring partial derivatives for optimization. • Gradient Descent in Higher Dimensions – In neural networks, weights are updated using gradients in multi-dimensional space. • Hessian Matrices & Second-Order Optimization – Used in advanced optimization algorithms like Newton’s method.\nFoundation for Probabilistic Machine Learning & Statistics • Multivariate Probability Distributions – Needed for Gaussian Mixture Models, Bayesian Inference, and Principal Component Analysis (PCA). • Expectation & Variance in Multiple Dimensions – Important for probabilistic AI models."
+    "objectID": "courses/stanford-cv.html",
+    "href": "courses/stanford-cv.html",
+    "title": "CS231n: Deep Learning for Computer Vision",
+    "section": "",
+    "text": "course"
   },
   {
-    "objectID": "courses/mit-la.html#why-this-course",
-    "href": "courses/mit-la.html#why-this-course",
-    "title": "MIT 18.06: Linear Algebra",
-    "section": "Why this course?",
-    "text": "Why this course?\nAll operation in the world of AI is based on linear algebra. This course is a must for anyone who wants to understand the math behind AI.\n\nCore Foundation for Machine Learning and Deep Learning\n\nMachine learning models rely on matrix operations for training and prediction.\n\nNeural networks use weight matrices and activations that require linear transformations.\n\nGradient-based optimization techniques such as gradient descent involve matrix calculus.\n\nEssential for Dimensionality Reduction and Feature Engineering\n\nPrincipal Component Analysis (PCA) and Singular Value Decomposition (SVD) are used in data compression and feature extraction.\n\nLatent Semantic Analysis (LSA) in Natural Language Processing (NLP) relies on matrix factorization.\n\nOptimization and AI Model Training\n\nLeast Squares Regression and ridge regression are direct applications of orthogonal projections in vector spaces.\n\nMatrix calculus is necessary for computing gradients and optimizing model performance."
+    "objectID": "courses/hdp.html",
+    "href": "courses/hdp.html",
+    "title": "High-Dimensional Probability and Applications in Data Science",
+    "section": "",
+    "text": "course"
+  },
+  {
+    "objectID": "courses/ucb-llm-agent.html",
+    "href": "courses/ucb-llm-agent.html",
+    "title": "UCB CS294/194-196 Large Language Model Agents",
+    "section": "",
+    "text": "Course Link￼\nCourse Structure and Content:\n\nFoundations of LLMs: The course begins by discussing the fundamental concepts underlying LLMs, including their architectures and training methodologies.\nEssential Abilities for Task Automation: Students will delve into the reasoning and planning capabilities of LLMs, focusing on how these models can utilize tools and perform complex tasks autonomously.\nAgent Development Infrastructure: The curriculum covers the infrastructures required for developing LLM agents, such as retrieval-augmented generation techniques and agentic AI frameworks.\nApplication Domains:\n\nCode Generation and Data Science: Exploration of how LLMs can assist in software development and data analysis tasks. • Multimodal Agents and Robotics: Investigation into LLMs’ capabilities in processing and integrating multiple data modalities, including their applications in robotics. ￼\nWeb Automation and Scientific Discovery: Study of LLM agents’ roles in automating web interactions and contributing to scientific research. ￼\nEvaluation and Benchmarking: The course emphasizes the importance of assessing LLM agents’ performance through rigorous evaluation and benchmarking methodologies.\n\nPrivacy, Safety, and Ethics: Discussions on the limitations, potential risks, and ethical considerations associated with current LLM agents, along with insights into directions for further improvement. ￼\nHuman-Agent Interaction and Alignment: Examination of how LLM agents interact with humans, focusing on personalization and alignment with user intentions.\nMulti-Agent Collaboration: Exploration of scenarios where multiple LLM agents collaborate to achieve complex objectives.\n\n\nLecture 01: LLM Reasoning\n\n\n\n\n\n\nNote\n\n\n\nAI should be able to learn from just a few examples, like what humans usually do. Huamns can learn from just a few examples because humans can reason\n\n\nThe basic LLM is just parrot mimic human languages. We can add a reasoning process before get answer. For example:\n\nThe reasoning process can be see as intermediate steps before get answer. So, we can conclude see that:\n\n\n\n\n\n\nNote\n\n\n\nKey Idea:\nDerive the Final Answer through Intermediate Steps\n\n\nHow we can add those property?\nWe need,\n\nTraining with intermediate steps\nFiletuning with intermediate steps\nPrompting with intermediate steps\n\nwith curated dataset, for example, GSM8K (Cobbe et al., n.d.). One of the example data is:\n{\"question\": \"Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May?\", \n\"answer\": \"Natalia sold 48/2 = &lt;&lt;48/2=24&gt;&gt;24 clips in May.\\nNatalia sold 48+24 = &lt;&lt;48+24=72&gt;&gt;72 clips altogether in April and May.\\n#### 72\"}\nBUT, why intermediate steps are helpful?\nOne of the theory proposed by (Li et al., n.d.) is that:\n\nConstant-depth transformers can solve any inherently serial problem as long as it generates sufficiently long intermediate reasoning steps\nTransformers which directly generate final answers either requires a huge depth to solve or cannot solve at all\n\nthat means:\n\nGenerating more intermediate steps (think longer)\nToo long to generate? Calling external tools, e.g. MCTS\n\nFurther more, we can trigger step by step reasoning without using demonstrate examples:\n\nby just add prompt let's think step by step\nHowevery, this zero-shot(not provide any example) is worse than few-shot learning(provide several examples). How can we improve the zero-shot learning ability. One of the good discover is that LLMs are analogical reasoners (Yasunaga et al., n.d.). Which mean:\n\nadaptively generate relevant examples and knowledge, rather than just using a fix set of examples\n\nWhat more? Well, we are so lazy, is there any method that we can not even pass let's think step by step prompts? (chai?) propose a chain-of-thought decoding, which enable LLM do the reasoning process without explicit prompts.\nOne notice is that, we don’t want intermediate steps, what we want is just the final answer. How we can utilise the reason process to get better answer. One basic idea is we merge all the intermediate steps. This is call Self-Consistency (10.48550/arXiv.2203.11171?), which get the most highest probability answer,\nSo far, we talk good side about the LLM. what is the silver side? Well, LLM is easily distracted by irrelevant context. And it cannot Self-Correct Reasoning.\n\n\n\n\n\nReferences\n\nCobbe, Karl, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias Plappert, et al. n.d. “Training Verifiers to Solve Math Word Problems.” https://doi.org/10.48550/arXiv.2110.14168.\n\n\nLi, Zhiyuan, Hong Liu, Denny Zhou, and Tengyu Ma. n.d. “Chain of Thought Empowers Transformers to Solve Inherently Serial Problems.” https://doi.org/10.48550/arXiv.2402.12875.\n\n\nYasunaga, Michihiro, Xinyun Chen, Yujia Li, Panupong Pasupat, Jure Leskovec, Percy Liang, Ed H. Chi, and Denny Zhou. n.d. “Large Language Models as Analogical Reasoners.” https://doi.org/10.48550/arXiv.2310.01714."
+  },
+  {
+    "objectID": "courses/mit-matrix-calculus.html",
+    "href": "courses/mit-matrix-calculus.html",
+    "title": "MIT 18.S096: Matrix Calculus For Machine Learning And Beyond",
+    "section": "",
+    "text": "course"
   },
   {
     "objectID": "courses/mit-matrix-calculus.html#why-study-matrix-calculus-for-machine-learning",
@@ -847,80 +882,17 @@
     "text": "Why Study Matrix Calculus for Machine Learning?\n\nEssential for Understanding Deep Learning\n\nBackpropagation, the core algorithm for training deep neural networks, relies on matrix differentiation.\n\nComputing gradients efficiently is necessary for updating model parameters using gradient descent.\n\nCrucial for Optimization and Training AI Models\n\nOptimization algorithms such as SGD, Adam, and Newton’s method require an understanding of matrix gradients.\n\nHessian matrices improve convergence rates in second-order optimization techniques.\n\nFoundational for Probabilistic Models and Variational Inference\n\nMany probabilistic models involve matrix calculus for deriving gradients of likelihood functions.\n\nGaussian Processes, Bayesian Neural Networks, and Expectation-Maximization (EM) algorithms rely on matrix derivatives.\n\nKey for Natural Language Processing and Transformer Models\n\nWord embeddings, self-attention mechanisms, and transformer architectures depend on efficient computation of matrix derivatives.\n\nUnderstanding Jacobian and Hessian computations helps in designing stable and efficient NLP models.\n\nApplied in Reinforcement Learning and Robotics\n\nPolicy gradients in reinforcement learning require differentiation of expectation functions.\n\nControl systems and robotics involve matrix calculus for trajectory optimization and system modeling."
   },
   {
-    "objectID": "courses/mit-matrix-method.html#why-study-matrix-methods-for-data-analysis-and-machine-learning",
-    "href": "courses/mit-matrix-method.html#why-study-matrix-methods-for-data-analysis-and-machine-learning",
-    "title": "MIT 18.065: Matrix Methods in Data Analysis, Signal Processing, and Machine Learning",
-    "section": "Why Study Matrix Methods for Data Analysis and Machine Learning?",
-    "text": "Why Study Matrix Methods for Data Analysis and Machine Learning?\n\nEssential for High-Dimensional Data Analysis\n\nPrincipal Component Analysis (PCA) and SVD help in reducing dimensionality and extracting meaningful insights from large datasets.\n\nEigenvalue decomposition and low-rank approximations are widely used in exploratory data analysis.\n\nCrucial for Machine Learning and AI Optimization\n\n\n\nLeast squares regression is a fundamental method in supervised learning and optimization.\n\nMany ML algorithms, including kernel methods, support vector machines, and deep learning architectures, rely on matrix factorization techniques.\n\n\nKey for Signal Processing and Image Recognition\n\nFourier transforms and wavelets are used in speech processing, medical imaging, and object recognition.\n\nLow-rank matrix approximations improve efficiency in compressing high-dimensional signals.\n\nApplied in Graph Learning and Network Analysis\n\nSpectral clustering and graph embeddings use matrix methods to analyze social networks and biological datasets.\n\nEigenvalues and adjacency matrices play a role in recommendation systems, fraud detection, and NLP applications.\n\nSupports Scalable and Computationally Efficient AI Systems\n\nMany big data applications rely on fast matrix decompositions for computational efficiency.\n\nOptimization in neural networks is enhanced by understanding matrix methods for large-scale training."
-  },
-  {
-    "objectID": "posts/Generative Model/Diffusion Model.html#diffusion-models-in-nutshell",
-    "href": "posts/Generative Model/Diffusion Model.html#diffusion-models-in-nutshell",
-    "title": "Deep Dive into Diffusion Models",
+    "objectID": "courses/cmu-mls.html",
+    "href": "courses/cmu-mls.html",
+    "title": "CMU 15-849: Machine Learning Systems",
     "section": "",
-    "text": "Let’s first create a very simple diffusion model based on MNIST data. (Full code is available here)\n\nThe central idea is to take each training image and to corrupt it using a multi-step noise process to transform it into a sample from Gaussian distribution. A deep neural network is then trained to invert this process, and once trained the network can then generate new images starting with samples from Gaussian as input\nDeep LearningFoundations and Concepts\n\nThe corrupt process is defined as:\n\n\nShow the code\ndef corrupt(x, amount):\n    \"\"\"\n    corrupt the input `x` by mixing it with noise\n    x: (B, 1, 28, 28)\n    amount: (B) different amount of noise for different samples\n    \"\"\"\n    noise = torch.rand_like(x)\n    amount = amount.view(-1, 1, 1, 1)\n    return x * (1 - amount) + noise * amount\n\n\nWe take a batch of image in, and corrupt the image the according to different level of noise.\n\n\n\n\n\n\nFigure 1: Corrupt images with differnt level of noise.\n\n\n\nAfter we get images and corresponding corrupted images, we need to create a neural network to invert this process, which mean we need the neural network take the noise image in, get the de-noised(real) image out. And we want those two as close as possible. So, the loss function \\(\\mathcal{L}\\) is:\n\\[\n\\mathcal{L}(\\theta) = \\sum_{i = 1}^{N}\\| f_\\theta(\\hat{\\mathrm{x}}_i) - \\mathrm{x}_i \\|^2\n\\tag{1}\\]\nwhich is the Mean Square Loss.\nSo, there are different types of neural network, which one should we choose? Since we need the output has same shape as the input, the U-Net(Ronneberger, Fischer, and Brox 2015) is perfect choice.\n\n\n\n\n\nU-Net\n\n\nNow, we got everything we need to trained a neural network, data, model, loss function, let’s start training!!\n\n\nShow the code\nbatch_size = 128\ntrain_dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)\nepochs = 10\n\nnet = UNet()  # This UNet is trained to predict the original image from the corrupted image\ncriterion = nn.MSELoss()\noptimizer = torch.optim.Adam(net.parameters(), lr=1e-3)\n\nfor epoch in range(epochs):\n    for x, _ in tqdm(train_dataloader):\n        noise_amount = torch.rand(x.shape[0]) # Random Generate some noise level[0, 1] add to image x\n        noisy_x = corrupt(x, noise_amount) # Corrput the image\n\n        pred = net(noisy_x) # NN predict what the de-noised image x\n        loss = criterion(pred, x) # Compare \n\n        # Optimize\n        optimizer.zero_grad()\n        loss.backward()\n        optimizer.step()\n\n\nAfter we trained the model for 10 epochs, we can see that it predict not-bad output.\n\n\n\n\n\n\nFigure 2: Result of one pass U-Net model\n\n\n\nThough, for the image with higher noise-level(more like Gaussian Distribution), the network perform well. One small trick we can use it to pass the image through model several times. We hope each time, the predicted image will get better.\n\n\nShow the code\nn_steps = 8\nx = torch.rand(8, 1, 28, 28).to(device)\nstep_history = [x.detach().cpu()]\npred_output_history = []\n\nfor i in range(n_steps):\n    with torch.no_grad():\n        pred = net(x)\n\n    step_history.append(x.detach().cpu())\n    pred_output_history.append(pred.detach().cpu())\n    mix_factor = 1 / (n_steps - i)\n    x = x * (1 - mix_factor) + pred * mix_factor\n\n\nAfter we pass the model 8 times, we get the result:\n\n\n\n\n\n\nFigure 3: The result of the pass model 8 times. On the left of the row is the input to the model and on the right is the denoised images\n\n\n\nIt shows that the output truly get better each times.\nWe increase the number of steps, the result will get better. Below is how it look like after we pass the model 40 times.\n\n\n\n\n\n\nFigure 4: The result of passing model 40 times\n\n\n\n\n\n\n\n\n\nSummary for now\n\n\n\nIn the above example, we see how the Diffusion Model work, we first corrupt the images, and then pass the pass the corrupted images to the model to get the de-noised images back. We training the the model using Mean Square Loss Equation 1. To improve the quality of sampling, we can pass the out back to the model several times Figure 3. The Full code is available here"
+    "text": "course"
   },
   {
-    "objectID": "posts/Gaussian.html#conditional-distribution",
-    "href": "posts/Gaussian.html#conditional-distribution",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Conditional Distribution",
-    "text": "Conditional Distribution\nThe conditional distribution is defined as\n\\[\np(\\mathrm{x} | \\mathrm{y})\n\\]\nwhich mean the probability distribution function of \\(\\mathrm{x}\\) is dependent on the value of \\(\\mathrm{y}\\). One of the nice property of Gaussian Distribution is that:\nIf the joint distribution of the two random variable are gaussian distribution, then the conditional distribution is also a Gaussian distribution."
-  },
-  {
-    "objectID": "posts/Gaussian.html#marginal-distribution",
-    "href": "posts/Gaussian.html#marginal-distribution",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Marginal Distribution",
-    "text": "Marginal Distribution\nThe marginal distribution is defined as:\n\\[\np(\\mathrm{x})= \\int p(\\mathrm{x}, \\mathrm{y}) d\\mathrm{y}\n\\]\nAnother good property of the normal distribution is that:\nIf the joint distribution of the two random variable are gaussian distribution, then the marginal distribution is also gaussian."
-  },
-  {
-    "objectID": "posts/Gaussian.html#kernl-density-estimation",
-    "href": "posts/Gaussian.html#kernl-density-estimation",
-    "title": "Gaussian Distribution is All you need",
-    "section": "Kernl Density Estimation",
-    "text": "Kernl Density Estimation"
-  },
-  {
-    "objectID": "posts/Generative Model/Generative Model Overview.html#diffusion-models-vae",
-    "href": "posts/Generative Model/Generative Model Overview.html#diffusion-models-vae",
-    "title": "What a Generative Models?",
-    "section": "Diffusion Models + VAE",
-    "text": "Diffusion Models + VAE"
-  },
-  {
-    "objectID": "posts/Generative Model/Generative Model Overview.html#auto-regressive-vae",
-    "href": "posts/Generative Model/Generative Model Overview.html#auto-regressive-vae",
-    "title": "What a Generative Models?",
-    "section": "Auto-Regressive + VAE",
-    "text": "Auto-Regressive + VAE"
-  },
-  {
-    "objectID": "posts/Generative Model/Generative Model Overview.html#auto-regressive-flow-models",
-    "href": "posts/Generative Model/Generative Model Overview.html#auto-regressive-flow-models",
-    "title": "What a Generative Models?",
-    "section": "Auto-Regressive + Flow Models",
-    "text": "Auto-Regressive + Flow Models"
-  },
-  {
-    "objectID": "posts/Generative Model/Generative Model Overview.html#flow-model-vae",
-    "href": "posts/Generative Model/Generative Model Overview.html#flow-model-vae",
-    "title": "What a Generative Models?",
-    "section": "Flow Model + VAE",
-    "text": "Flow Model + VAE"
-  },
-  {
-    "objectID": "posts/Generative Model/Generative Model Overview.html#flow-model-gan",
-    "href": "posts/Generative Model/Generative Model Overview.html#flow-model-gan",
-    "title": "What a Generative Models?",
-    "section": "Flow Model + GAN",
-    "text": "Flow Model + GAN"
-  },
-  {
-    "objectID": "posts/Generative Model/Generative Model Overview.html#vae-gan",
-    "href": "posts/Generative Model/Generative Model Overview.html#vae-gan",
-    "title": "What a Generative Models?",
-    "section": "VAE + GAN",
-    "text": "VAE + GAN"
+    "objectID": "courses/mit-ds.html",
+    "href": "courses/mit-ds.html",
+    "title": "MIT RES.18-009: Learn Differential Equations: Up Close With Gilbert Strang And Cleve Moler",
+    "section": "",
+    "text": "course"
   }
 ]

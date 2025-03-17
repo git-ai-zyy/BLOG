@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-04">
+<meta name="dcterms.date" content="2025-03-17">
 <meta name="description" content="In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance">
 
 <title>Let’s understand Large Language Model from scratch</title>
@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -73,6 +93,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <link href="https://fonts.cdnfonts.com/css/cmu-sans-serif" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../style/styles.css">
 <meta property="og:title" content="Let’s understand Large Language Model from scratch">
@@ -107,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/JAZ201107"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/Yyzhang2000"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -150,6 +199,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#post-norm-vs.-pre-norm" id="toc-post-norm-vs.-pre-norm" class="nav-link" data-scroll-target="#post-norm-vs.-pre-norm">Post-Norm vs.&nbsp;Pre-Norm</a></li>
   </ul></li>
+  <li><a href="#without-normalization" id="toc-without-normalization" class="nav-link" data-scroll-target="#without-normalization">Without Normalization</a></li>
   <li><a href="#attention-mechnism" id="toc-attention-mechnism" class="nav-link" data-scroll-target="#attention-mechnism">Attention Mechnism</a></li>
   <li><a href="#feed-forward-network" id="toc-feed-forward-network" class="nav-link" data-scroll-target="#feed-forward-network">Feed Forward Network</a>
   <ul class="collapse">
@@ -237,14 +287,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2025-03-04</p>
+      <p class="date">2025-03-17</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2025-03-04</p>
+      <p class="date-modified">2025-03-17</p>
     </div>
   </div>
     
@@ -305,6 +355,24 @@ ul.task-list li input[type="checkbox"] {
 <section id="post-norm-vs.-pre-norm" class="level3">
 <h3 class="anchored" data-anchor-id="post-norm-vs.-pre-norm">Post-Norm vs.&nbsp;Pre-Norm</h3>
 </section>
+</section>
+<section id="without-normalization" class="level2">
+<h2 class="anchored" data-anchor-id="without-normalization">Without Normalization</h2>
+<p>Recently, <span class="citation" data-cites="zhuTransformersNormalization2025">(<a href="#ref-zhuTransformersNormalization2025" role="doc-biblioref">Zhu et al. 2025</a>)</span> proposed that we can remove the normalization without harm the performance of the neural network. It replace the normalization layer with a scaled tanh function, named <strong>Dynamic Tanh</strong>, defined as:</p>
+<p><span id="eq-dynamic-tanh"><span class="math display">\[
+\text{DyT}(x) = \gamma * \tanh(\alpha x) + \beta
+\tag{1}\]</span></span></p>
+<div id="fig-dynamic-tanh" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dynamic-tanh-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/202503171426134.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dynamic-tanh-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Block with Dynamic Tanh(DyT) (Image Source: Transformers without Normalization)
+</figcaption>
+</figure>
+</div>
+<p>It adjust the input activation range via a learnable scaling factor <span class="math inline">\(\alpha\)</span> and then squashed the extreme values through an S-shaped tanh function.</p>
 </section>
 <section id="attention-mechnism" class="level2">
 <h2 class="anchored" data-anchor-id="attention-mechnism">Attention Mechnism</h2>
@@ -408,13 +476,18 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="ai-agent">AI Agent</h2>
 </section>
 <section id="llm-as-optimizer" class="level2">
-<h2 class="anchored" data-anchor-id="llm-as-optimizer">LLM as Optimizer</h2>
+
+
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">LLM as Optimizer</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-zhuTransformersNormalization2025" class="csl-entry" role="listitem">
+Zhu, Jiachen, Xinlei Chen, Kaiming He, Yann LeCun, and Zhuang Liu. 2025. <span>“Transformers Without <span>Normalization</span>.”</span> March 13, 2025. <a href="https://doi.org/10.48550/arXiv.2503.10622">https://doi.org/10.48550/arXiv.2503.10622</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="UCB">
-<meta name="description" content="In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance">
+<meta name="description" content="This course focuses on the development and application of Large Language Models (LLMs) as agents capable of interacting with the world and performing various tasks. The curriculum is designed to explore the foundational concepts, essential abilities, and infrastructures necessary for LLM agents, as well as their applications across diverse domains.">
 
 <title>UCB CS294/194-196 Large Language Model Agents</title>
 <style>
@@ -22,7 +22,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -76,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../style/styles.css">
 <meta property="og:title" content="UCB CS294/194-196 Large Language Model Agents">
-<meta property="og:description" content="In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance">
+<meta property="og:description" content="This course focuses on the development and application of Large Language Models (LLMs) as agents capable of interacting with the world and performing various tasks. The curriculum is designed to explore the foundational concepts, essential abilities, and infrastructures necessary for LLM agents, as well as their applications across diverse domains.">
 <meta property="og:image" content="./images/ucb-cs294.png">
 </head>
 
@@ -107,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/JAZ201107"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/Yyzhang2000"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -128,7 +182,13 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#lecture-01-llm-reasoning" id="toc-lecture-01-llm-reasoning" class="nav-link active" data-scroll-target="#lecture-01-llm-reasoning">Lecture 01: LLM Reasoning</a></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -141,14 +201,13 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title">
 <h1 class="title"><strong>UCB CS294/194-196 Large Language Model Agents</strong></h1>
   <div class="quarto-categories">
-    <div class="quarto-category">NN</div>
-    <div class="quarto-category">Basic</div>
+    <div class="quarto-category">⭐️⭐️⭐️</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    In this blog, I am going to summary the 5 most common generative models: Auto-Regreesive Model, Variational AutoEncoder, Engery Based Model, Flow Model and Diffusion Model. I will also display the pros and cons between different models, and how we can combine those models to get better performance
+    This course focuses on the development and application of Large Language Models (LLMs) as agents capable of interacting with the world and performing various tasks. The curriculum is designed to explore the foundational concepts, essential abilities, and infrastructures necessary for LLM agents, as well as their applications across diverse domains.
   </div>
 </div>
 
@@ -171,11 +230,101 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="https://rdi.berkeley.edu/llm-agents/f24">Course Link</a></p>
+<p><a href="https://rdi.berkeley.edu/llm-agents/f24">Course Link</a>￼</p>
+<p>Course Structure and Content:</p>
+<ul>
+<li><strong>Foundations of LLMs</strong>: The course begins by discussing the fundamental concepts underlying LLMs, including their architectures and training methodologies.</li>
+<li><strong>Essential Abilities for Task Automation</strong>: Students will delve into the reasoning and planning capabilities of LLMs, focusing on how these models can utilize tools and perform complex tasks autonomously.</li>
+<li><strong>Agent Development Infrastructure</strong>: The curriculum covers the infrastructures required for developing LLM agents, such as retrieval-augmented generation techniques and agentic AI frameworks.</li>
+<li><strong>Application Domains</strong>:
+<ul>
+<li><strong>Code Generation and Data Science</strong>: Exploration of how LLMs can assist in software development and data analysis tasks. • Multimodal Agents and Robotics: Investigation into LLMs’ capabilities in processing and integrating multiple data modalities, including their applications in robotics. ￼</li>
+<li><strong>Web Automation and Scientific Discovery</strong>: Study of LLM agents’ roles in automating web interactions and contributing to scientific research. ￼</li>
+<li><strong>Evaluation and Benchmarking</strong>: The course emphasizes the importance of assessing LLM agents’ performance through rigorous evaluation and benchmarking methodologies.</li>
+</ul></li>
+<li><strong>Privacy, Safety, and Ethics</strong>: Discussions on the limitations, potential risks, and ethical considerations associated with current LLM agents, along with insights into directions for further improvement. ￼</li>
+<li><strong>Human-Agent Interaction and Alignment</strong>: Examination of how LLM agents interact with humans, focusing on personalization and alignment with user intentions.</li>
+<li><strong>Multi-Agent Collaboration</strong>: Exploration of scenarios where multiple LLM agents collaborate to achieve complex objectives.</li>
+</ul>
+<section id="lecture-01-llm-reasoning" class="level1">
+<h1>Lecture 01: LLM Reasoning</h1>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>AI should be able to learn from just a few examples, like what humans usually do. Huamns can learn from just a few examples because <strong>humans can reason</strong></p>
+</div>
+</div>
+<p>The basic LLM is just parrot mimic human languages. We can add a reasoning process before get answer. For example:</p>
+<p><img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/202503070001318.png" class="img-fluid"></p>
+<p>The reasoning process can be see as intermediate steps before get answer. So, we can conclude see that:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Key Idea:</p>
+<p>Derive the Final Answer through <strong>Intermediate Steps</strong></p>
+</div>
+</div>
+<p>How we can add those property?</p>
+<p>We need,</p>
+<ul>
+<li>Training with intermediate steps</li>
+<li>Filetuning with intermediate steps</li>
+<li>Prompting with intermediate steps</li>
+</ul>
+<p>with curated dataset, for example, GSM8K <span class="citation" data-cites="cobbe">(<a href="#ref-cobbe" role="doc-biblioref">Cobbe et al., n.d.</a>)</span>. One of the example data is:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>{"question": "Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May?", </span>
+<span id="cb1-2"><a href="#cb1-2"></a>"answer": "Natalia sold 48/2 = &lt;&lt;48/2=24&gt;&gt;24 clips in May.\nNatalia sold 48+24 = &lt;&lt;48+24=72&gt;&gt;72 clips altogether in April and May.\n#### 72"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>BUT, why intermediate steps are helpful?</p>
+<p>One of the theory proposed by <span class="citation" data-cites="li">(<a href="#ref-li" role="doc-biblioref">Li et al., n.d.</a>)</span> is that:</p>
+<ul>
+<li><strong>Constant-depth transformers</strong> can solve any inherently serial problem as long as it generates sufficiently long intermediate reasoning steps</li>
+<li><em>Transformers which directly generate final answers</em> either requires a huge depth to solve or cannot solve at all</li>
+</ul>
+<p>that means:</p>
+<ul>
+<li>Generating more intermediate steps (think longer)</li>
+<li>Too long to generate? Calling external tools, e.g.&nbsp;<a href="https://en.wikipedia.org/wiki/Monte_Carlo_tree_search">MCTS</a></li>
+</ul>
+<p>Further more, we can trigger step by step reasoning without using demonstrate examples:</p>
+<p><img src="https://noblecatt-1304922865.cos.ap-singapore.myqcloud.com/202503070014388.png" class="img-fluid"></p>
+<p>by just add prompt <code>let's think step by step</code></p>
+<p>Howevery, this zero-shot(not provide any example) is worse than few-shot learning(provide several examples). How can we improve the zero-shot learning ability. One of the good discover is that LLMs are analogical reasoners <span class="citation" data-cites="yasunaga">(<a href="#ref-yasunaga" role="doc-biblioref">Yasunaga et al., n.d.</a>)</span>. Which mean:</p>
+<blockquote class="blockquote">
+<p>adaptively generate relevant examples and knowledge, rather than just using a fix set of examples</p>
+</blockquote>
+<p>What more? Well, we are so lazy, is there any method that we can not even pass <code>let's think step by step</code> prompts? <span class="citation" data-cites="chai">(<a href="#ref-chai" role="doc-biblioref"><strong>chai?</strong></a>)</span> propose a chain-of-thought decoding, which enable LLM do the reasoning process without explicit prompts.</p>
+<p>One notice is that, we don’t want intermediate steps, what we want is just the final answer. How we can utilise the reason process to get better answer. One basic idea is we merge all the intermediate steps. This is call Self-Consistency <span class="citation" data-cites="10.48550/arXiv.2203.11171">(<a href="#ref-10.48550/arXiv.2203.11171" role="doc-biblioref"><strong>10.48550/arXiv.2203.11171?</strong></a>)</span>, which get the most highest probability answer,</p>
+<p>So far, we talk good side about the LLM. what is the silver side? Well, LLM is easily distracted by irrelevant context. And it cannot Self-Correct Reasoning.</p>
 
 
 
-</main> <!-- /main -->
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-cobbe" class="csl-entry" role="listitem">
+Cobbe, Karl, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias Plappert, et al. n.d. <span>“Training Verifiers to Solve Math Word Problems.”</span> <a href="https://doi.org/10.48550/arXiv.2110.14168">https://doi.org/10.48550/arXiv.2110.14168</a>.
+</div>
+<div id="ref-li" class="csl-entry" role="listitem">
+Li, Zhiyuan, Hong Liu, Denny Zhou, and Tengyu Ma. n.d. <span>“Chain of Thought Empowers Transformers to Solve Inherently Serial Problems.”</span> <a href="https://doi.org/10.48550/arXiv.2402.12875">https://doi.org/10.48550/arXiv.2402.12875</a>.
+</div>
+<div id="ref-yasunaga" class="csl-entry" role="listitem">
+Yasunaga, Michihiro, Xinyun Chen, Yujia Li, Panupong Pasupat, Jure Leskovec, Percy Liang, Ed H. Chi, and Denny Zhou. n.d. <span>“Large Language Models as Analogical Reasoners.”</span> <a href="https://doi.org/10.48550/arXiv.2310.01714">https://doi.org/10.48550/arXiv.2310.01714</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
