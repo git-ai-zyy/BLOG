@@ -49,6 +49,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Generative Model/VAE.html",
+      "/posts/Rl.html",
       "/posts/Un-supervised-Learning.html",
       "/posts/LLM/LLM-Overview.html",
       "/posts/Generative Model/Generative Model Overview.html",
